@@ -10,6 +10,8 @@ import LaptopBlock from "./components/LaptopBlock/LaptopBlock";
 import ChartBlock from "./components/ChartBlock/ChartBlock";
 import CalculatorBlock from "./components/СalculatorBlock/CalculatorBlock";
 import FormBlock from "./components/FormBlock/FormBlock";
+import CosmosFeatureBlock from './components/CosmosBlock/CosmosBlock';
+import SecurityBlock from './components/SecurityBlock/SecurityBlock';
 
 function App() {
   const formBlockRef = useRef(null);
@@ -20,8 +22,10 @@ function App() {
         <div  className={Styles.mainWrapper}>
             <HeroBlock formBlockRef={formBlockRef} />
             <AppsBlock formBlockRef={formBlockRef} />
-            <FeatureBlock/>
+            <CosmosFeatureBlock />
             <LaptopBlock/>
+            <SecurityBlock/>
+            <FeatureBlock/>
             <ChartBlock formBlockRef={formBlockRef} />
             <CalculatorBlock/>
             <FormBlock formBlockRef={formBlockRef}/>
