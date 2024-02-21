@@ -1,0 +1,108 @@
+@import "@/assets/styles/variables.scss";
+@import "@/assets/styles/index.scss";
+
+.FeatureBlock {
+  margin-bottom: 150px;
+  position: relative;
+  @media (max-width: $media-tablet-landscape) {
+    margin-bottom: 90px;
+  }
+}
+//.FeatureBlock:after {
+//  content: " ";
+//  background: url("../../assets/img/gradBgInfr.svg");
+//  background-size: contain;
+//  background-position: center;
+//  background-repeat: no-repeat;
+//  width: 1642px;
+//  height: 464px;
+//  position: absolute;
+//  top: -106px;
+//  left: -910px;
+//  z-index: -1;
+//  @media (max-width: $media-tablet-landscape) {
+//    display: none;
+//  }
+//}
+
+.title {
+  margin-bottom: 60px;
+  font-size: 60px;
+  line-height: 60px;
+  @media (max-width: $media-tablet-landscape) {
+    text-align: left;
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 36px;
+  }
+}
+
+.Features {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $media-tablet-landscape) {
+    overflow-y: scroll;
+    justify-content: flex-start;
+
+    //width: 280px;
+  }
+
+}
+
+.Features::-webkit-scrollbar {
+  display: none;
+}
+
+/* Скрываем scrollbar для IE, Edge и Firefox */
+.Features {
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.Features__item {
+  padding: 24px;
+  background-image: url("../../assets/img/1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 32px;
+  width: 380px;
+  @media (max-width: $media-tablet-landscape) {
+    min-width: 280px;
+    width: 100%;
+  }
+  .icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 36px;
+    //background-image: url("../../assets/img/FeatureGuard.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media (max-width: $media-tablet-landscape) {
+      margin-bottom: 24px;
+    }
+  }
+  .title {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 16px;
+  }
+  .text {
+    color: #818AA7;
+    font-size: 18px;
+    line-height: 25px;
+    @media (max-width: $media-tablet-landscape) {
+     font-size: 16px;
+      line-height: 22px;
+    }
+
+  }
+}
+.Features__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+
+

@@ -1,0 +1,245 @@
+@import "@/assets/styles/variables.scss";
+@import "@/assets/styles/index.scss";
+
+.Block {
+    width: 100%;
+    position: relative;
+    //height: 100vh;
+    //margin-bottom: 150px;
+}
+
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 200px;
+    @media (max-width: $media-tablet-landscape) {
+        text-align: left;
+        margin-top: 146px;
+    }
+}
+
+.Hero {
+// test
+    @media (max-width: $media-tablet-landscape) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.Hero:before {
+    content: " ";
+    background-image: url("../../assets/img/mainBg.svg");
+    width: 1301px;
+    height: 1301px;
+    left: -65px;
+    top: -160px;
+    z-index: -10;
+    position: absolute;
+    @media (max-width: $media-tablet-landscape) {
+        left: -265px;
+        top: -360px;
+    }
+}
+
+
+.HeroInfo {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 56px;
+    @media (max-width: $media-tablet-landscape) {
+        align-items: flex-start;
+    }
+    .HeroInfo__title {
+        font-size: 72px;
+        font-weight: 500;
+        line-height: 65px;
+        margin-bottom: 21px;
+        @media (max-width: $media-tablet-landscape) {
+            text-align: left;
+            font-size: 32px;
+            line-height: 35px;
+            margin-bottom: 16px;
+        }
+    }
+    .HeroInfo__subtitle {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 48px;
+        @media (max-width: $media-tablet-landscape) {
+            text-align: left;
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 36px;
+        }
+    }
+    .HeroInfo__button,.HeroInfo__buttonMob {
+        width: 100%;
+        max-width: 180px;
+        height: 40px;
+        padding: 8px 20px;
+        justify-content: center;
+        align-items: center;
+        gap:  4px;
+        display: flex;
+        border-radius: 4px;
+        background: #0072F8;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 20px;
+        transition: background-color .3s;
+        @media (max-width: $media-tablet-landscape) {
+            max-width: unset;
+        }
+    }
+    .HeroInfo__button {
+        display: flex;
+        @media (max-width: $media-tablet-landscape) {
+         display: none;
+        }
+    }
+    .HeroInfo__buttonMob {
+        display: none;
+        @media (max-width: $media-tablet-landscape) {
+         display: flex;
+        }
+    }
+
+    .HeroInfo__button:hover {
+        background-color: #268AFF;
+    }
+
+}
+
+.HeroFeature {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .HeroFeature__image {
+        background-image: url("../../assets/img/MainLaptop.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 1082px;
+        height: 791px;
+        @media (max-width: $media-tablet-landscape) {
+         height: 500px;
+                background-size: contain;
+                background-position: left;
+        }
+    }
+
+    .HeroFeature__features {
+        position: relative;
+        top: -180px;
+        display: grid;
+        background-image: url("../../assets/img/mainFeatureBg.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 60px;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        border-radius: 32px;
+        @media (max-width: $media-tablet-landscape) {
+            top: -120px;
+            grid-template-columns: 1fr;
+            padding: 24px;
+            background-position: unset;
+            max-width: 340px;
+        }
+        //background: #000;
+        .features__item {
+            position: relative;
+            padding: 0px 20px;
+            margin-bottom: 36px;
+            @media (max-width: $media-tablet-landscape) {
+                margin-bottom: 24px;
+            }
+            .item__title {
+                font-size: 20px;
+                line-height: 26px;
+                margin-bottom: 16px;
+                @media (max-width: $media-tablet-landscape) {
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+            }
+            .item__subtitle {
+                color:#818AA7;
+                font-size: 16px;
+                line-height: 22px;
+                @media (max-width: $media-tablet-landscape) {
+                 display: none;
+                }
+            }
+        }
+        .features__item:nth-child(4),.features__item:nth-child(5), .features__item:nth-child(6) {
+            margin-bottom: 0px;
+        }
+        .features__item:not(:last-child):after {
+            display: none;
+            content: " ";
+            position: absolute;
+            left: 0px;
+            top: 99%;
+            width: 292px;
+            z-index: 10;
+            height: 1px;
+            background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0%, #5C6C8C 51.56%, rgba(92, 108, 140, 0.00) 100%);
+            @media (max-width: $media-tablet-landscape) {
+                display: block;
+            }
+        }
+    }
+    .HeroFeature__features:before {
+        content: " ";
+        position: absolute;
+        left: 220px;
+        top: 200px;
+        transform: rotate(90deg);
+        width: 348px;
+        z-index: 10;
+        height: 1px;
+        background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0%, #5C6C8C 71.35%, rgba(92, 108, 140, 0.00) 100%), #000;
+        @media (max-width: $media-tablet-landscape) {
+            display: none;
+        }
+    }
+    .HeroFeature__features:after {
+        content: " ";
+        position: absolute;
+        right: 250px;
+        top: 200px;
+        transform: rotate(90deg);
+        width: 348px;
+        z-index: 10;
+        height: 1px;
+        background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0%, #5C6C8C 71.35%, rgba(92, 108, 140, 0.00) 100%), #000;
+        @media (max-width: $media-tablet-landscape) {
+            display: none;
+        }
+    }
+}
+
+.HeroFeature:after {
+    content: " ";
+    background: url("../../assets/img/mainGradBg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 2437px;
+    height: 2022px;
+    position: absolute;
+    top: -306px;
+    left: -600px;
+    z-index: -1;
+    @media (max-width: $media-tablet-landscape) {
+     //display: none;
+     left: -450px;
+    }
+}

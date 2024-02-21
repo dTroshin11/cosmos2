@@ -1,0 +1,193 @@
+@import "@/assets/styles/variables.scss";
+@import "@/assets/styles/index.scss";
+
+.Apps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  @media (max-width: $media-tablet-landscape) {
+    flex-direction: column;
+    margin-bottom: 90px;
+  }
+}
+
+.Apps__info {
+  .Apps__texts {
+    margin-bottom: 48px;
+    @media (max-width: $media-tablet-landscape) {
+      margin-bottom: 0px;
+    }
+    .texts_title {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 24px;
+      @media (max-width: $media-tablet-landscape) {
+       text-align: left;
+        font-size: 28px;
+        line-height: 30px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .texts_subtitle {
+      font-size: 18px;
+      line-height: 25px;
+      @media (max-width: $media-tablet-landscape) {
+        text-align: left;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+  .Apps__GoForm {
+    .Apps__button {
+      display: flex;
+      width: 100%;
+      max-width: 180px;
+      height: 40px;
+      padding: 8px 20px;
+      justify-content: center;
+      align-items: center;
+      gap:  4px;
+      border-radius: 4px;
+      background: #0072F8;
+      cursor: pointer;
+      margin-bottom: 16px;
+      transition: background-color .3s;
+
+      @media (max-width: $media-tablet-landscape) {
+       margin-top: 24px;
+       max-width: unset;
+      }
+    }
+    .Apps__desk {
+      display: block;
+      @media (max-width: $media-tablet-landscape) {
+        display: none;
+      }
+    }
+    .Apps__mob {
+      display: none;
+      @media (max-width: $media-tablet-landscape) {
+        display: block;
+      }
+    }
+    .Apps__button:hover {
+      background-color: #268AFF;
+    }
+    .Apps__buttonInfo {
+      font-size: 14px;
+      line-height: 21px;
+      color: #818AA7;
+      @media (max-width: $media-tablet-landscape) {
+        text-align: left;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+  }
+}
+.Apps__img {
+  background-image: url("../../assets/img/poItems.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  //width: 100%;
+  //height: 100%;
+  //max-width: 418px;
+  //max-height: 330px;
+  width: 418px;
+  height: 330px;
+  @media (max-width: $media-tablet-landscape) {
+    display: none;
+  }
+}
+
+.Apps__mob {
+  display: none;
+  //max-width: 380px;
+  @media (max-width: $media-tablet-landscape) {
+    display: block;
+  }
+  .wrap {
+    max-width: 340px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+  .items_wrap {
+    position: relative;
+    display: flex;
+    //overflow: hidden;
+    user-select: none;
+    gap: 20px;
+  }
+  .items_wrap:before,
+  .items_wrap:after {
+    content: "";
+    height: 100%;
+    top: 0;
+    width: 10%;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .items_wrap:before {
+    left: -20px;
+    background: linear-gradient(
+                    90deg,
+                    rgb(0, 0, 0,1) 0%,
+                    rgba(255, 255, 255, 0) 100%
+    );
+  }
+  .items_wrap:after {
+    right: -20px;
+    background: linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgb(0, 0, 0,1) 100%
+    );
+  }
+  .items {
+    flex-shrink: 0;
+    display: flex;
+    gap: 12px;
+    //counter-reset: item;
+    justify-content: space-around;
+    min-width: 100%;
+  }
+  .item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 0 0 auto;
+    width: 56px;
+    height: 56px;
+    //counter-increment: item;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    transition: all 0.1s ease-in-out;
+  }
+  .marquee {
+    animation: scroll 50s linear infinite;
+  }
+  .reverce {
+    animation-direction: reverse;
+  }
+
+
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 20px));
+    }
+  }
+}
+
+

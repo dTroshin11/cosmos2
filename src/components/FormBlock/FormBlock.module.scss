@@ -1,0 +1,205 @@
+@import "@/assets/styles/variables.scss";
+@import "@/assets/styles/index.scss";
+
+
+.FormBlock {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 60px;
+  background-image: url("../../assets/img/formBg.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 32px;
+  margin-bottom: 150px;
+  @media (max-width: $media-tablet-landscape) {
+    padding: 24px;
+    flex-direction: column-reverse;
+    margin-bottom: 90px;
+  }
+  .img {
+    width: 500px;
+    height: 468px;
+    background-image: url("../../assets/img/FormLaptop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 85px;
+    @media (max-width: $media-tablet-landscape) {
+      margin-top: 48px;
+      width: 268px;
+      height: 250px;
+      margin-right: 0px;
+      margin-bottom: 24px;
+    }
+  }
+  .info {
+    max-width: 450px;
+   .info__text {
+     .text__title {
+       font-size: 60px;
+       line-height: 60px;
+       margin-bottom: 24px;
+       @media (max-width: $media-tablet-landscape) {
+         font-size: 28px;
+         line-height: 30px;
+         text-align: left;
+         margin-bottom: 16px;
+       }
+     }
+     .text__subtitle {
+       color: #818AA7;
+       font-size: 18px;
+       line-height: 25px;
+       margin-bottom: 36px;
+       @media (max-width: $media-tablet-landscape) {
+         font-size: 16px;
+         line-height: 22px;
+         text-align: left;
+         margin-bottom: 24px;
+       }
+     }
+   }
+    .info__form {
+
+      display: flex;
+      flex-direction: column;
+      @media (max-width: $media-tablet-landscape) {
+        display: none;
+      }
+      .form__title {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 16px;
+      }
+      .form__input {
+        padding: 16px 32px 16px 20px;
+        margin-bottom: 8px;
+        background: #12151F;
+        border-radius: 4px;
+        color: #818AA7;
+        border: none;
+      }
+      .FormContainer {
+        display: flex;
+        flex-direction: column;
+      }
+      .errorsInput {
+        color: #F95721 !important;
+
+      }
+      .errorText {
+        color: #F95721;
+        margin-top: 3px;
+        margin-bottom: 10px;
+      }
+      .form__checkbox {
+        display: flex;
+        margin-top: 8px;
+        margin-bottom: 24px;
+        .checkbox__checkbox {
+          //width: 16px;
+          //height: 16px;
+          //background-color: gray;
+          margin-right: 8px;
+        }
+        .checkbox__text {
+          font-size: 12px;
+          line-height: 18px;
+          a {
+            color: #80A7FF;
+            text-decoration: underline;
+          }
+        }
+
+      }
+      .form__button {
+        color: white;
+        font-size: 14px;
+        display: flex;
+        line-height: 20px;
+        height: 40px;
+        padding: 8px 20px;
+        justify-content: center;
+        align-items: center;
+        gap:  4px;
+        border-radius: 4px;
+        background: #0072F8;
+        cursor: pointer;
+        margin-bottom: 16px;
+        border: none;
+        transition: background-color .3s;
+      }
+      .form__button:hover {
+        background-color: #268AFF;
+      }
+
+    }
+    .info__mobForm {
+      display: none;
+      @media (max-width: $media-tablet-landscape) {
+        display: block;
+        .form__title {
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 16px;
+          text-align: left;
+          color: #818AA7;
+        }
+        .form__button {
+          color: white;
+          font-size: 14px;
+          max-width: 293px;
+          width: 100%;
+          line-height: 20px;
+          height: 40px;
+          padding: 8px 20px;
+          justify-content: center;
+          align-items: center;
+          gap:  4px;
+          border-radius: 4px;
+          background: #0072F8;
+          cursor: pointer;
+          margin-bottom: 16px;
+          border: none;
+          transition: background-color .3s;
+          @media (max-width: $media-tablet-landscape) {
+            margin-bottom: 0px;
+            max-width: unset;
+          }
+        }
+        .form__button:hover {
+          background-color: #268AFF;
+        }
+      }
+    }
+  }
+  .form__input {
+    padding: 16px 32px 16px 20px;
+    margin-bottom: 8px;
+    background: #12151F;
+    border-radius: 4px;
+    color: #818AA7;
+    border: none;
+  }
+  input::placeholder {
+    color: #818AA7;
+  }
+}
+.FormBlock:after {
+  content: " ";
+  background: url("../../assets/img/mainGradBg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1437px;
+  height: 1000px;
+  position: absolute;
+  top:  -173px;
+  left: -225px;
+  z-index: -1;
+  @media (max-width: $media-tablet-landscape) {
+    display: none;
+  }
+}

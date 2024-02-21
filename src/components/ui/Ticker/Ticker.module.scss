@@ -1,0 +1,16 @@
+.Ticker {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+.Ticker p {
+  display: inline-block;
+  animation: Ticker 10s linear infinite;
+}
+
+@keyframes Ticker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
