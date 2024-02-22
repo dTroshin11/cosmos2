@@ -1,6 +1,5 @@
 import React from 'react';
 import Styles from "./SecurityBlock.module.scss";
-import Security from '../../assets/img/security.png'
 
 
 const item = [
@@ -14,7 +13,7 @@ const item = [
 const SecurityBlock = () => {
     return (
         <div className={Styles.SecurityBlock}>
-            <img className={Styles.image} src={Security} alt="" />
+            <div className={Styles.image} alt="" />
             <div className={Styles.content}>
                 <div className={Styles.title}>
                     Аппаратный ключ <br/>

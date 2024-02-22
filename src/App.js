@@ -10,8 +10,11 @@ import LaptopBlock from "./components/LaptopBlock/LaptopBlock";
 import ChartBlock from "./components/ChartBlock/ChartBlock";
 import CalculatorBlock from "./components/СalculatorBlock/CalculatorBlock";
 import FormBlock from "./components/FormBlock/FormBlock";
-import CosmosFeatureBlock from './components/CosmosBlock/CosmosBlock';
+import CosmosBlock from './components/CosmosBlock/CosmosBlock';
 import SecurityBlock from './components/SecurityBlock/SecurityBlock';
+import TariffsBlock from './components/TariffsBlock/TariffsBlock';
+import CosmosSchemeBlock from './components/CosmosSchemeBlock/CosmosSchemeBlock';
+import TarriffsSchemeBlock from './components/TarriffsSchemeBlock/TarriffsSchemeBlock';
 
 function App() {
   const formBlockRef = useRef(null);
@@ -20,14 +23,17 @@ function App() {
     <main className={Styles.Block}>
       <Container>
         <div  className={Styles.mainWrapper}>
-            <HeroBlock formBlockRef={formBlockRef} />
-            <AppsBlock formBlockRef={formBlockRef} />
-            <CosmosFeatureBlock />
+            <HeroBlock formBlockRef={formBlockRef}/>
+            <AppsBlock formBlockRef={formBlockRef}/>
+            <CosmosBlock/>
             <LaptopBlock/>
             <SecurityBlock/>
             <FeatureBlock/>
-            <ChartBlock formBlockRef={formBlockRef} />
+            <CosmosSchemeBlock/>
+            <TariffsBlock formBlockRef={formBlockRef}/>
+            <ChartBlock formBlockRef={formBlockRef}/>
             <CalculatorBlock/>
+            <TarriffsSchemeBlock/>
             <FormBlock formBlockRef={formBlockRef}/>
         </div>
       </Container>
