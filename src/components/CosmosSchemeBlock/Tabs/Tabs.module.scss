@@ -1,0 +1,25 @@
+@import "@/assets/styles/variables.scss";
+@import "@/assets/styles/index.scss";
+
+.Tabs {
+    display: flex;
+    gap: 24px;
+    font-size: 20px;
+    line-height: 26px;
+
+    .tab {
+        padding-bottom: 8px;
+
+        &:first-child {
+            color: #0072F8;
+        }
+    }
+
+    .active {
+        border-bottom: 1px solid #FFF;
+
+        &:first-child {
+            border-bottom: 1px solid #0072F8;
+        }
+    }
+}

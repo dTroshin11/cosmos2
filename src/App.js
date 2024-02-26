@@ -33,7 +33,7 @@ function App() {
             <TariffsBlock formBlockRef={formBlockRef}/>
             <ChartBlock formBlockRef={formBlockRef}/>
             <CalculatorBlock/>
-            <TarriffsSchemeBlock/>
+            <TarriffsSchemeBlock formBlockRef={formBlockRef}/>
             <FormBlock formBlockRef={formBlockRef}/>
         </div>
       </Container>

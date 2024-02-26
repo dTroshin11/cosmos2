@@ -1,7 +1,7 @@
 @import "@/assets/styles/variables.scss";
 @import "@/assets/styles/index.scss";
 
-.TarriffsSchemeBlock {
+.TariffsSchemeBlock {
   margin-bottom: 150px;
 
   @media (max-width: $media-tablet-landscape) {
@@ -23,88 +23,320 @@
 
 .content {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
-.columnText {
-  padding-top: 76px;
-  width: 50%;
+.columnMain {
+  width: 80%;
+}
 
-  .text {
-    color: #818AA7;
-    font-size: 16px;
-    line-height: 22px;
-    height: 82px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.titles {
+  padding-top: 32px;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainTitle {
+  color: #FFF;
+  line-height: 28px;
+  text-align: center;
+  font-size: 28px;
+  width: 22.5%;
+
+  @media (max-width: $media-tablet-landscape) {
+    font-size: 20px;
+    line-height: 26px;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  &:first-child {
+    width: 32.5%;
   }
 }
 
-.columnCosmos {
+.columnMainContent {
+  display: flex;
+  justify-content: space-between;
+
+  &:last-child {
+    font-size: 120px;
+  }
+}
+
+.text {
+  color: #818AA7;
+  font-size: 16px;
+  line-height: 22px;
+  width: 32.5%;
+
+  @media (max-width: $media-tablet-landscape) {
+    font-size: 12px;
+    line-height: 15px;
+    width: 50%;
+  }
+
+  div {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+  }
+}
+
+.free {
+  font-size: 16px;
+  line-height: 22px;
+  width: 22.5%;
+
+  @media (max-width: $media-tablet-landscape) {
+    font-size: 12px;
+    line-height: 15px;
+    width: 50%;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-align: center;
+
+    span {
+      width: 80%;
+
+      &:last-child {
+        color: #818AA7;
+      }
+    }
+
+  }
+}
+
+.light {
+  font-size: 16px;
+  line-height: 22px;
+  width: 22.5%;
+
+  @media (max-width: $media-tablet-landscape) {
+    font-size: 12px;
+    line-height: 15px;
+    width: 50%;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-align: center;
+
+    span {
+      width: 80%;
+
+      &:last-child {
+        color: #818AA7;
+      }
+    }
+  }
+}
+
+.standart {
+  font-size: 16px;
+  line-height: 22px;
+  width: 22.5%;
+
+  @media (max-width: $media-tablet-landscape) {
+    font-size: 12px;
+    line-height: 15px;
+    width: 50%;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-align: center;
+
+    span {
+      width: 80%;
+
+      &:last-child {
+        color: #818AA7;
+      }
+    }
+  }
+}
+
+.columnPremium {
   padding: 32px 16px;
-  height: 826px;
-  width: 25%;
+  height: 1090px;
+  width: 20%;
   border-radius: 32px;
   border: 1px solid #4E5C77;
+}
 
+.premiumTitle {
+  padding-bottom: 16px;
+  color: #0072F8;
+  line-height: 28px;
+  text-align: center;
+  font-size: 28px;
 
-  .cosmosTitle {
-    color: #0072F8;
-    line-height: 28px;
-    text-align: center;
-    margin-bottom: 16px;
-    font-size: 28px;
-  }
-
-
-  .cosmos {
-    font-size: 16px;
-    line-height: 22px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    align-items: center;
-    height: 82px;
-    justify-content: center;
+  @media (max-width: $media-tablet-landscape) {
+    font-size: 20px;
+    line-height: 26px;
+    text-align: left;
   }
 }
 
-.columnOther {
-  width: 25%;
+.premium {
+  font-size: 16px;
+  line-height: 22px;
 
-
-
-  .otherTitle {
-    padding-top: 32px;
-    line-height: 28px;
-    text-align: center;
-    margin-bottom: 16px;
-    font-size: 28px;
+  @media (max-width: $media-tablet-landscape) {
+    font-size: 12px;
+    line-height: 15px;
+    width: 50%;
   }
 
-
-  .other {
-    font-size: 16px;
-    line-height: 22px;
-    text-align: center;
+  div {
     display: flex;
     flex-direction: column;
-    gap: 4px;
     align-items: center;
-    height: 82px;
     justify-content: center;
+    gap: 2px;
+    text-align: center;
+
+    span {
+      &:last-child {
+        color: #818AA7;
+      }
+    }
   }
 }
 
 .divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0%, #5C6C8C 71.35%, rgba(92, 108, 140, 0.00) 100%), #000;
+  background: linear-gradient(270deg, rgba(92, 108, 140, 0.27) 0%, #5C6C8C 11.19%, #5C6C8C 80.19%, rgba(92, 108, 140, 0.27) 88.69%, rgba(92, 108, 140, 0.00) 100%), #000;
 
   &:last-child {
     display: none;
   }
 }
+
+.high {
+  height: 96px;
+
+  @media (max-width: $media-tablet-landscape) {
+    height: 72px;
+  }
+}
+
+.small {
+  height: 64px;
+
+  @media (max-width: $media-tablet-landscape) {
+    height: 40px;
+  }
+}
+
+.info_go {
+  display: block !important;
+
+  @media (max-width: $media-tablet-landscape) {
+    display: none !important;
+  }
+}
+
+.info_goMob {
+  display: none !important;
+
+  @media (max-width: $media-tablet-landscape) {
+    display: block !important;
+  }
+}
+
+.button {
+  vertical-align: bottom;
+  width: 100%;
+  padding: 8px 20px;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+
+  .buttonText {
+    font-size: 14px;
+    line-height: 21px;
+    color: #E7EAFA;
+    width: 100%;
+
+    @media (max-width: $media-tablet-landscape) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+.buttonHigh {
+  height: 96px;
+
+  @media (max-width: $media-tablet-landscape) {
+    margin-top: 24px;
+    height: auto;
+  }
+}
+
+.price {
+  color: #fff !important;
+  font-size: 16px !important;
+}
+
+.mobileContent {
+  display: flex;
+}
+
+.buttons {
+  display: flex;
+}
+
+.mobilePremium {
+  height: 162px;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.mobileStandart {
+  height: 162px;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.mobileLight {
+  height: 162px;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.mobileFree {
+  height: 162px;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.open {
+  height: 712px;
+}
+

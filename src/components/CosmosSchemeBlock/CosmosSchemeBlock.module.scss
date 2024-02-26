@@ -24,31 +24,58 @@
 .content {
   display: flex;
   gap: 20px;
+
+  @media (max-width: $media-tablet-landscape) {
+    gap: 8px;
+  }
 }
 
 .columnText {
   padding-top: 76px;
   width: 50%;
 
+  @media (max-width: $media-tablet-landscape) {
+    padding-top: 32px;
+  }
+
   .text {
     color: #818AA7;
     font-size: 16px;
     line-height: 22px;
-    height: 82px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+
+    @media (max-width: $media-tablet-landscape) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    div {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+
+      @media (max-width: $media-tablet-landscape) {
+        justify-content: flex-start;
+        padding-top: 12px;
+      }
+    }
   }
 }
 
 .columnCosmos {
   padding: 32px 16px;
-  height: 826px;
+  height: 880px;
   width: 25%;
   border-radius: 32px;
   border: 1px solid #4E5C77;
 
+  @media (max-width: $media-tablet-landscape) {
+    border: none;
+    height: auto;
+    padding: 32px 0px 0px 0px;
+    width: 50%;
+  }
 
   .cosmosTitle {
     color: #0072F8;
@@ -56,26 +83,39 @@
     text-align: center;
     margin-bottom: 16px;
     font-size: 28px;
-  }
 
+    @media (max-width: $media-tablet-landscape) {
+      display: none;
+    }
+  }
 
   .cosmos {
     font-size: 16px;
     line-height: 22px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    align-items: center;
-    height: 82px;
-    justify-content: center;
+
+    @media (max-width: $media-tablet-landscape) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
   }
 }
 
 .columnOther {
   width: 25%;
 
-
+  @media (max-width: $media-tablet-landscape) {
+    padding-top: 32px;
+    width: 50%;
+  }
 
   .otherTitle {
     padding-top: 32px;
@@ -83,6 +123,10 @@
     text-align: center;
     margin-bottom: 16px;
     font-size: 28px;
+
+    @media (max-width: $media-tablet-landscape) {
+      display: none;
+    }
   }
 
 
@@ -90,12 +134,35 @@
     font-size: 16px;
     line-height: 22px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    align-items: center;
-    height: 82px;
-    justify-content: center;
+
+    @media (max-width: $media-tablet-landscape) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+  }
+}
+
+.small {
+  height: 82px;
+
+  @media (max-width: $media-tablet-landscape) {
+    height: 76px;
+  }
+}
+
+.high {
+  height: 102px;
+
+  @media (max-width: $media-tablet-landscape) {
+    height: 84px;
   }
 }
 
@@ -108,3 +175,4 @@
     display: none;
   }
 }
+
