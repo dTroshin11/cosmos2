@@ -48,7 +48,6 @@ const HeroBlock = ({formBlockRef}) => {
 
   return (
     <div className={Styles.Block}>
-      <Header formBlockRef={formBlockRef} />
       <div className={Styles.Wrapper}>
               <div className={Styles.Hero}>
                   <div className={Styles.HeroInfo}>

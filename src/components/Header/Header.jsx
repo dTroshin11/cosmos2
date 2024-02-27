@@ -3,6 +3,7 @@ import Container from '../ui/Container/Container';
 import { useEffect, useState } from "react";
 import { useWindowSize } from "../../hooks/useWindowSize"
 import FormPopup from '../ui/FormPopup/FormPopup';
+import { Link } from 'react-router-dom';
 
 
 const Header = ({ formBlockRef }) => {
@@ -47,12 +48,12 @@ const Header = ({ formBlockRef }) => {
         ? <div className={Styles.Header}>
           <div className={Styles.Wrapper}>
             <div className={Styles.PageLinks}>
-              <a className={Styles.Link} href="#">О нас</a>
-              <a className={Styles.Link} href="#">Документация</a>
+              <Link className={Styles.Link} to={"/about"}>О нас</Link>
+              <Link className={Styles.Link} to={"/documents"}>Документация</Link>
             </div>
-            <div className={Styles.Logo}>
+            <Link to={'/'} className={Styles.Logo}>
               <img className={Styles.LogoIcon} src={'img/logo/logo.svg'} alt='Logo icon' width={'100%'} height={'100%'} />
-            </div>
+            </Link>
             {/*<b>height: {height} - {isVisible?"show":"hide"}</b>*/}
             <a id={"hide"} className={Styles.Btn} onClick={scrollToFormBlock} style={isVisible ? { opacity: "0", pointerEvents: "none", cursor: "auto" } : { opacity: "1", pointerEvents: "auto", cursor: "pointer" }} >
               Оставить заявку
@@ -65,9 +66,9 @@ const Header = ({ formBlockRef }) => {
       {windowWidth <= 1024
         ? <div className={Styles.MobileHeader}>
           <div className={Styles.MobileWrapper}>
-            <div className={Styles.Logo}>
+            <Link to={'/'} className={Styles.Logo}>
               <img className={Styles.LogoIcon} src={'img/logo/logo.svg'} alt='Logo icon' width={'100%'} height={'100%'} />
-            </div>
+            </Link>
             <div className={Styles.Burger} onClick={() => setMenuActive(!menuActive)}>
               {!menuActive && <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37" fill="none">
                 <g clip-path="url(#clip0_2479_16088)">
@@ -100,8 +101,8 @@ const Header = ({ formBlockRef }) => {
           </div>
           <div className={!menuActive ? Styles.Menu : Styles.Menu + ' ' + Styles.Active}>
             <div className={Styles.PageLinks}>
-              <a className={Styles.Link} href="#">О нас</a>
-              <a className={Styles.Link} href="#">Документация</a>
+              <Link className={Styles.Link} to={"/about"}>О нас</Link>
+              <Link className={Styles.Link} to={"/documents"}>Документация</Link>
             </div>
             <a className={Styles.MobileBtn} onClick={() => {setPopup(true)}}>
               Оставить заявку
