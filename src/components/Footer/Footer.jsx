@@ -7,7 +7,26 @@ const BlockContent = () => {
   return (
     <Container className={Styles.Container}>
       <div className={Styles.Footer}>
-        <div className={Styles.Wrapper}>
+        <div className={Styles.title}>
+          Документация
+        </div>
+        <div className={Styles.TopWrapper}>
+          <a href={"#"}
+            target="_blank"
+            rel='noopener'
+          >
+            Пользовательские соглашения
+          </a>
+
+          <a href={"#"}
+            target="_blank"
+            rel='noopener'
+          >
+            Инструкции по установке и использованию ПО
+          </a>
+        </div>
+        <div className={Styles.divider}></div>
+        <div className={Styles.BottomWrapper}>
           <div className={Styles.LeftLink}>
             <a
               href={
@@ -21,9 +40,9 @@ const BlockContent = () => {
           </div>
           <div className={Styles.RightLink}>
 
-              <p>
-                Продукт разработан командой <a href={'https://futurecrew.ru/'} target={'_blank'} rel='noopener'>FutureCrew</a>
-              </p>
+            <p>
+              Продукт разработан командой <a href={'https://futurecrew.ru/'} target={'_blank'} rel='noopener'>FutureCrew</a>
+            </p>
 
             <p>© 2024. Все права защищены</p>
           </div>

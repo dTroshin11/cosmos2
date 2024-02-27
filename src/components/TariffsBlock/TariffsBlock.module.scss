@@ -32,7 +32,7 @@
   align-items: center;
 
   @media (max-width: $media-tablet-landscape) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -59,88 +59,88 @@
     color: #818AA7;
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 36px;
+    height: 160px;
 
-    @media (max-width: $media-tablet-landscape) {
-      margin-bottom: 20px;
-    }
+  @media (max-width: $media-tablet-landscape) {
+    height: 140px;
   }
+}
 
-  .price {
-    vertical-align: bottom;
-    font-size: 28px;
-    line-height: 28px;
-    margin-bottom: 16px;
+.price {
+  vertical-align: bottom;
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 16px;
 
-    @media (max-width: $media-tablet-landscape) {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
+  @media (max-width: $media-tablet-landscape) {
+    font-size: 24px;
+    margin-bottom: 8px;
   }
+}
 
-  .info_go {
-    display: block;
+.info_go {
+  display: block;
 
-    @media (max-width: $media-tablet-landscape) {
-      display: none;
-    }
-
-    .button {
-      vertical-align: bottom;
-      width: 100%;
-      display: flex;
-      height: 40px;
-      padding: 8px 20px;
-      justify-content: center;
-      align-items: center;
-      gap: 4px;
-      border-radius: 4px;
-      cursor: pointer;
-
-      .buttonText {
-        font-size: 14px;
-        line-height: 21px;
-        color: #E7EAFA;
-
-        @media (max-width: $media-tablet-landscape) {
-          font-size: 12px;
-          line-height: 18px;
-        }
-      }
-    }
-  }
-
-  .info_goMob {
+  @media (max-width: $media-tablet-landscape) {
     display: none;
+  }
 
-    @media (max-width: $media-tablet-landscape) {
-      display: block;
-    }
+  .button {
+    vertical-align: bottom;
+    width: 100%;
+    display: flex;
+    height: 40px;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    cursor: pointer;
 
-    .button {
-      vertical-align: bottom;
-      width: 100%;
-      display: flex;
-      height: 40px;
-      padding: 8px 20px;
-      justify-content: center;
-      align-items: center;
-      gap: 4px;
-      border-radius: 4px;
-      cursor: pointer;
+    .buttonText {
+      font-size: 14px;
+      line-height: 21px;
+      color: #E7EAFA;
 
-      .buttonText {
-        font-size: 14px;
-        line-height: 21px;
-        color: #E7EAFA;
-
-        @media (max-width: $media-tablet-landscape) {
-          font-size: 12px;
-          line-height: 18px;
-        }
+      @media (max-width: $media-tablet-landscape) {
+        font-size: 12px;
+        line-height: 18px;
       }
     }
   }
+}
+
+.info_goMob {
+  display: none;
+
+  @media (max-width: $media-tablet-landscape) {
+    display: block;
+  }
+
+  .button {
+    vertical-align: bottom;
+    width: 100%;
+    display: flex;
+    height: 40px;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    .buttonText {
+      font-size: 14px;
+      line-height: 21px;
+      color: #E7EAFA;
+
+      @media (max-width: $media-tablet-landscape) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+}
 }
 
 .description {

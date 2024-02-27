@@ -582,6 +582,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                             <div className={Styles.buttonText}>Подробнее</div>
                         </div>
                     </div>
+                    <div className={Styles.description}>*Cтоимость указана без НДС</div>
                 </div>
                 : ''
             }

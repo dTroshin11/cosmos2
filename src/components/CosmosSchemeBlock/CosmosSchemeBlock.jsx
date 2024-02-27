@@ -8,7 +8,7 @@ const CosmosSchemeBlock = () => {
 
     const item = [
         {
-            text: <div className={Styles.small}>Поставляется только с собственным ноутбуком</div>,
+            text: <div className={Styles.small}>Поставляется только с&nbsp;собственным ноутбуком</div>,
             cosmos: <div className={Styles.small}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
@@ -24,7 +24,7 @@ const CosmosSchemeBlock = () => {
             </div>
         },
         {
-            text: <div className={Styles.small}>Поддержка и обновления</div>,
+            text: <div className={Styles.small}>Поддержка и&nbsp;обновления</div>,
             cosmos: <div className={Styles.small}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
@@ -46,8 +46,8 @@ const CosmosSchemeBlock = () => {
                     <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
                     <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
                 </svg>
-                <span>Входит в стоимость подписки
-                    на рабочее устройство</span>
+                <span>Входит в&nbsp;стоимость подписки
+                    на&nbsp;рабочее устройство</span>
             </div>,
             other: <div className={Styles.high}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
@@ -57,7 +57,7 @@ const CosmosSchemeBlock = () => {
             </div>
         },
         {
-            text: <div className={Styles.small}>Ограничения по рынкам присутствия</div>,
+            text: <div className={Styles.small}>Ограничения по&nbsp;рынкам присутствия</div>,
             cosmos: <div className={Styles.small}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
@@ -69,7 +69,7 @@ const CosmosSchemeBlock = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                     <path d="M5 12.0709H19" stroke="#818AA7" stroke-linejoin="round" />
                 </svg>
-                <span>С ограничениями</span>
+                <span>С&nbsp;ограничениями</span>
             </div>
         },
         {
@@ -85,7 +85,7 @@ const CosmosSchemeBlock = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                     <path d="M5 12.0709H19" stroke="#818AA7" stroke-linejoin="round" />
                 </svg>
-                <span>С ограничениями</span>
+                <span>С&nbsp;ограничениями</span>
             </div>
         },
         {
@@ -101,7 +101,7 @@ const CosmosSchemeBlock = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                     <path d="M5 12.0709H19" stroke="#818AA7" stroke-linejoin="round" />
                 </svg>
-                <span>От средней до высокой</span>
+                <span>От&nbsp;средней до&nbsp;высокой</span>
             </div>
         },
         {
@@ -111,13 +111,13 @@ const CosmosSchemeBlock = () => {
                     <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
                     <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
                 </svg>
-                <span>Под запрос клиента</span>
+                <span>Под&nbsp;запрос клиента</span>
             </div>,
             other: <div className={Styles.small}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                     <path d="M5 12.0709H19" stroke="#818AA7" stroke-linejoin="round" />
                 </svg>
-                <span>С ограничениями</span>
+                <span>С&nbsp;ограничениями</span>
             </div>
         },
         {
@@ -127,8 +127,8 @@ const CosmosSchemeBlock = () => {
                     <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
                     <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
                 </svg>
-                <span>Есть, локально и облако
-                    (данные не используются)</span>
+                <span>Есть, локально и&nbsp;облако
+                    (данные не&nbsp;используются)</span>
             </div>,
             other: <div className={Styles.high}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
@@ -139,7 +139,7 @@ const CosmosSchemeBlock = () => {
             </div>
         },
         {
-            text: <div className={Styles.small}>Скрытые трекеры и логирование</div>,
+            text: <div className={Styles.small}>Скрытые трекеры и&nbsp;логирование</div>,
             cosmos: <div className={Styles.small}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />

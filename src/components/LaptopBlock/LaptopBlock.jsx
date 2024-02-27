@@ -9,12 +9,15 @@ const infoLeft = [
     },
     {
         title: <div>Аппаратный <br/> контроль</div>,
-        subtitle: <div>Над веб-камерой, микрофонами и&nbsp;адаптером беспроводной связи</div>
+        subtitle: <div>Над веб-камерой, <br/>
+        микрофонами и&nbsp;адаптером <br/>
+        беспроводной связи</div>
     },
     {
         title: "Автономный",
         subtitle: <div>
-            Ёмкая батарея и&nbsp;быстрая зарядка на&nbsp;140W
+            Ёмкая батарея и&nbsp;быстрая <br/>
+            зарядка на&nbsp;140W
         </div>
     },
 ]
@@ -25,11 +28,12 @@ const infoRight = [
     },
     {
         title: <div>Корпус из&nbsp;высококачественного магниевого сплава</div>,
-        subtitle: <div>Устойчивый к&nbsp;царапинам и&nbsp;изгибанию</div>
+        subtitle: <div>Устойчивый к&nbsp;царапинам <br/>
+            и&nbsp;изгибанию</div>
     },
     {
         title: "Высокоскоростная беспроводная связь",
-        subtitle: "Wi-Fi 6, Bluetooth 5.2 и 4G/5G"
+        subtitle: "Wi-Fi 6E, Bluetooth 5.2 и 4G/5G"
     },
 ]
 const infoMob = [
@@ -39,7 +43,9 @@ const infoMob = [
     },
     {
         title: <div>Аппаратный <br/> контроль</div>,
-        subtitle: <div>Над работой веб-камеры, <br/> микрофонов и&nbsp;адаптеров<br/> беспроводной связи</div>
+        subtitle: <div>Над веб-камерой, <br/>
+        микрофонами и&nbsp;адаптером <br/>
+        беспроводной связи</div>
     },
     {
         title: "Автономный",
@@ -55,7 +61,7 @@ const infoMob = [
     },
     {
         title: <div>Высокоскоростная <br/> беспроводная связь</div>,
-        subtitle: <div>Wi-Fi 6, Bluetooth&nbsp;5.2<br/> и&nbsp;4G/5G</div>
+        subtitle: <div>Wi-Fi 6E, Bluetooth&nbsp;5.2<br/> и&nbsp;4G/5G</div>
     },
 ]
 

@@ -54,6 +54,7 @@
   flex-direction: column;
   gap: 12px;
   padding-left: 17px;
+  max-width: 370px;
 
   @media (max-width: $media-tablet-landscape) {
     gap: 16px;
