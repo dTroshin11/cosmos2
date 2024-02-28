@@ -1,50 +1,15 @@
-import Styles from './Header.module.scss';
-import Container from '../ui/Container/Container';
+import Styles from './SecondaryHeader.module.scss';
 import { useEffect, useState } from "react";
 import { useWindowSize } from "../../hooks/useWindowSize"
-import FormPopup from '../ui/FormPopup/FormPopup';
 import { Link } from 'react-router-dom';
 
 
-const Header = ({ formBlockRef }) => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [height, setHeight] = useState(0)
+const SecondaryHeader = ({links}) => {
   const { windowWidth } = useWindowSize();
   const [menuActive, setMenuActive] = useState(false)
-  const [popup ,setPopup] = useState(false)
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
-  const scrollToFormBlock = () => {
-    formBlockRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", listenToScroll);
-    return () =>
-      window.removeEventListener("scroll", listenToScroll);
-  }, [])
-  const listenToScroll = () => {
-    let heightToHideFrom = 500;
-    const winScroll = document.body.scrollTop ||
-      document.documentElement.scrollTop;
-    setHeight(winScroll);
-
-    if (winScroll > heightToHideFrom) {
-      isVisible && setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-  };
 
   return (
     <>
-
       {windowWidth <= 1024
         ? <div className={Styles.MobileHeader}>
           <div className={Styles.MobileWrapper}>
@@ -83,29 +48,17 @@ const Header = ({ formBlockRef }) => {
           </div>
           <div className={!menuActive ? Styles.Menu : Styles.Menu + ' ' + Styles.Active}>
             <div className={Styles.PageLinks}>
-              <Link className={Styles.Link} to={"/about"}>О нас</Link>
-              <Link className={Styles.Link} to={"/documents"}>Документация</Link>
+              <Link className={Styles.Link} to={links[0].href}>{links[0].text}</Link>
+              <Link className={Styles.Link} to={links[1].href}>{links[1].text}</Link>
             </div>
-            <a className={Styles.MobileBtn} onClick={() => {setPopup(true)}}>
-              Оставить заявку
-            </a>
           </div>
-          <FormPopup active={popup} setActive={setPopup}/>
         </div>
         : 
         <div className={Styles.Header}>
           <div className={Styles.Wrapper}>
-            <div className={Styles.PageLinks}>
-              <Link className={Styles.Link} to={"/about"}>О нас</Link>
-              <Link className={Styles.Link} to={"/documents"}>Документация</Link>
-            </div>
             <Link to={'/'} className={Styles.Logo}>
               <img className={Styles.LogoIcon} src={'img/logo/logo.svg'} alt='Logo icon' width={'100%'} height={'100%'} />
             </Link>
-            {/*<b>height: {height} - {isVisible?"show":"hide"}</b>*/}
-            <a id={"hide"} className={Styles.Btn} onClick={scrollToFormBlock} style={isVisible ? { opacity: "0", pointerEvents: "none", cursor: "auto" } : { opacity: "1", pointerEvents: "auto", cursor: "pointer" }} >
-              Оставить заявку
-            </a>
           </div>
         </div>
       }
@@ -113,4 +66,4 @@ const Header = ({ formBlockRef }) => {
   );
 };
 
-export default Header;
+export default SecondaryHeader;

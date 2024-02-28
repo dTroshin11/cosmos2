@@ -10,12 +10,14 @@ import SecurityBlock from '../../components/SecurityBlock/SecurityBlock';
 import TariffsBlock from '../../components/TariffsBlock/TariffsBlock';
 import CosmosSchemeBlock from '../../components/CosmosSchemeBlock/CosmosSchemeBlock';
 import TarriffsSchemeBlock from '../../components/TarriffsSchemeBlock/TarriffsSchemeBlock';
-
+import Footer from '../../components/Footer/Footer'
+import Header from '../../components/Header/Header'
 
 const Main = ({formBlockRef}) => {
 
     return (
         <>
+            <Header formBlockRef={formBlockRef} />
             <HeroBlock formBlockRef={formBlockRef} />
             <AppsBlock formBlockRef={formBlockRef} />
             <CosmosBlock />
@@ -28,6 +30,7 @@ const Main = ({formBlockRef}) => {
             <CalculatorBlock />
             <TarriffsSchemeBlock formBlockRef={formBlockRef} />
             <FormBlock formBlockRef={formBlockRef} />
+            <Footer />
         </>
 
     );

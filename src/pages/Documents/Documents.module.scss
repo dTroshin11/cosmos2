@@ -1,0 +1,147 @@
+@import "@/assets/styles/variables.scss";
+@import "@/assets/styles/index.scss";
+
+.Documents {
+    padding-top: 120px;
+    display: flex;
+    gap: 48px;
+
+    @media (max-width: $media-tablet-landscape) {
+        padding-top: 36px;
+        display: block;
+    }
+}
+
+.Menu {
+    padding: 60px 90px;
+    width: 40%;
+    background: #101010;
+    margin-bottom: 36px;
+
+    @media (max-width: $media-tablet-landscape) {
+        display: none;
+    }
+}
+
+.Links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    a {
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        text-decoration-line: underline;
+
+        &:first-child {
+            color: #818AA7;
+        }
+    }
+}
+
+.Content {
+    width: 60%;
+    padding-bottom: 93px;
+
+    @media (max-width: $media-tablet-landscape) {
+        width: 100%;
+    }
+}
+
+.Title {
+    font-size: 72px;
+    line-height: 64px;
+    margin-bottom: 56px;
+
+    @media (max-width: $media-tablet-landscape) {
+        font-size: 32px;
+        line-height: 35px;
+        margin-bottom: 36px;
+    }
+}
+
+.SubTitle {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 32px;
+
+    @media (max-width: $media-tablet-landscape) {
+        font-size: 24px;
+        line-height: 26px;
+        margin-bottom: 24px;
+    }
+}
+
+.Text {
+    color: #818AA7;
+    font-size: 18px;
+    line-height: 25px;
+
+    @media (max-width: $media-tablet-landscape) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    div:last-child {
+        margin-top: 24px;
+
+        @media (max-width: $media-tablet-landscape) {
+            margin-top: 16px;
+        }
+    }
+}
+
+.ListTitle {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 36px;
+    margin-bottom: 16px;
+
+    @media (max-width: $media-tablet-landscape) {
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 24px;
+    }
+}
+
+.ListText {
+    font-size: 18px;
+    color: #818AA7;
+    line-height: 25px;
+
+    @media (max-width: $media-tablet-landscape) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.Item{
+    margin-top: 4px;
+    display: flex;
+    gap: 24px;
+    
+}
+
+.ItemNumber {
+    font-size: 18px;
+    color: #818AA7;
+    line-height: 25px;
+
+    @media (max-width: $media-tablet-landscape) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.ItemText {
+    font-size: 18px;
+    color: #818AA7;
+    line-height: 25px;
+
+    @media (max-width: $media-tablet-landscape) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

@@ -1,6 +1,5 @@
 
 import Container from './components/ui/Container/Container';
-import Footer from './components/Footer/Footer';
 import '@assets/styles/index.scss';
 import Styles from '@assets/styles/Home.module.scss';
 import { useRef } from 'react';
@@ -19,14 +18,12 @@ function App() {
       <main className={Styles.Block}>
         <Container>
           <div className={Styles.mainWrapper}>
-            <Header formBlockRef={formBlockRef} />
             <Routes>
               <Route path="/" element={<Main formBlockRef={formBlockRef} />} />
-              <Route path="/documents" element={<Documents />} />
               <Route path="/about" element={<About />} />
-              <Route path="*" element={<NotFound/>} />
+              <Route path="/documents" element={<Documents />} />
+              <Route path="*" element={<NotFound formBlockRef={formBlockRef} />} />
             </Routes>
-            <Footer />
           </div>
         </Container>
       </main>
