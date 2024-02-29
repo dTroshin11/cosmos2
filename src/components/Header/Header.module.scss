@@ -128,12 +128,14 @@
 
 .Menu {
     background: linear-gradient(0turn,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 40%);
-    display: none;
-    padding: 0px 17px 50px 17px;
+    padding: 0px 17px 0px 17px;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    height: 0;
 }
 
 .Active {
-    display: block;
+    height: 220px;
 }
 
 .MobileBtn {

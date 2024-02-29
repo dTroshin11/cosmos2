@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from '@components/ui/Container/Container';
-
 import Styles from './Footer.module.scss';
+import { Link } from 'react-router-dom';
 
 const BlockContent = () => {
   return (
@@ -11,19 +11,17 @@ const BlockContent = () => {
           Документация
         </div>
         <div className={Styles.TopWrapper}>
-          <a href={"#"}
-            target="_blank"
+          <Link to={"/documents"}
             rel='noopener'
           >
             Пользовательские соглашения
-          </a>
+          </Link>
 
-          <a href={"#"}
-            target="_blank"
+          <Link to={"/instruction"}
             rel='noopener'
           >
             Инструкции по установке и использованию ПО
-          </a>
+          </Link>
         </div>
         <div className={Styles.divider}></div>
         <div className={Styles.BottomWrapper}>

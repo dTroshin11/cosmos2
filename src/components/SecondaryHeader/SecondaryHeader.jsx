@@ -4,9 +4,14 @@ import { useWindowSize } from "../../hooks/useWindowSize"
 import { Link } from 'react-router-dom';
 
 
-const SecondaryHeader = ({links}) => {
+const SecondaryHeader = ({ links, showAnchors }) => {
   const { windowWidth } = useWindowSize();
   const [menuActive, setMenuActive] = useState(false)
+  const [openAnchors, setOpenAnchors] = useState(false)
+
+  const scrollToFormBlock = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <>
@@ -50,10 +55,30 @@ const SecondaryHeader = ({links}) => {
             <div className={Styles.PageLinks}>
               <Link className={Styles.Link} to={links[0].href}>{links[0].text}</Link>
               <Link className={Styles.Link} to={links[1].href}>{links[1].text}</Link>
+              <Link className={Styles.Link} to={links[2]?.href}>{links[2]?.text}</Link>
             </div>
           </div>
+          {showAnchors && <div className={Styles.Anchors}>
+            <div className={Styles.Divider}></div>
+            <div className={Styles.AnchorsHeader} onClick={() => setOpenAnchors(!openAnchors)}>
+              <div>
+                Содержание
+              </div>
+              <div className={!openAnchors ? Styles.Arrow : Styles.Arrow + ' ' + Styles.ArrowOpen}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="38" viewBox="0 0 36 38" fill="none">
+                  <path d="M26.4851 15.0005L17.9998 23.4858L9.51455 15.0001" stroke="#818AA7" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div className={!openAnchors ? Styles.AnchorsCollapse : Styles.AnchorsCollapse + ' ' + Styles.AnchorsOpen}>
+              <div className={Styles.AnchorsBody}>
+                  <div className={Styles.Link} onClick={() => scrollToFormBlock(links[3].href)}>{links[3].text}</div>
+                  <div className={Styles.Link} onClick={() => scrollToFormBlock(links[4].href)}>{links[4].text}</div>
+              </div>
+            </div>
+          </div>}
         </div>
-        : 
+        :
         <div className={Styles.Header}>
           <div className={Styles.Wrapper}>
             <Link to={'/'} className={Styles.Logo}>

@@ -11,7 +11,7 @@ const Header = ({ formBlockRef }) => {
   const [height, setHeight] = useState(0)
   const { windowWidth } = useWindowSize();
   const [menuActive, setMenuActive] = useState(false)
-  const [popup ,setPopup] = useState(false)
+  const [popup, setPopup] = useState(false)
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -86,13 +86,13 @@ const Header = ({ formBlockRef }) => {
               <Link className={Styles.Link} to={"/about"}>О нас</Link>
               <Link className={Styles.Link} to={"/documents"}>Документация</Link>
             </div>
-            <a className={Styles.MobileBtn} onClick={() => {setPopup(true)}}>
+            <a className={Styles.MobileBtn} onClick={() => { setPopup(true) }}>
               Оставить заявку
             </a>
           </div>
-          <FormPopup active={popup} setActive={setPopup}/>
+          <FormPopup active={popup} setActive={setPopup} />
         </div>
-        : 
+        :
         <div className={Styles.Header}>
           <div className={Styles.Wrapper}>
             <div className={Styles.PageLinks}>

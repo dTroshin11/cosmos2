@@ -25,7 +25,7 @@ const CosmosFeatureBlock = () => {
                 <ul className={Styles.items__list}>
                 {item.map((el, index) => {
                 return  <li className={Styles.item} key={index}>
-                            <span className={Styles.text}>{el}</span>
+                            <div className={Styles.text}>{el}</div>
                         </li>
                     })}
                 </ul>
