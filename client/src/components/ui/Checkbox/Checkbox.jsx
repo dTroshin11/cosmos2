@@ -10,6 +10,7 @@ const CheckBox = ({ ariaLabel = '', id, register }) => {
                 aria-label={ariaLabel}
                 type='checkbox'
                 checked={isChecked}
+
                 id={id}
                 onChange={() => setIsChecked((prev) => !prev)}
             />

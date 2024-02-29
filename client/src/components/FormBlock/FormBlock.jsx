@@ -10,6 +10,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import axios, { post } from "axios";
 import classNames from "classnames";
 import { date } from "yup";
+import Checkbox from "../ui/Checkbox/Checkbox";
 
 const FormBlock = ({ formBlockRef }) => {
     const [backend, setBackEnd] = useState([{}])
@@ -23,21 +24,19 @@ const FormBlock = ({ formBlockRef }) => {
             }
         )
     }, []);
-    const userDataTwo = { name: "danil", phone: "89967405143", email: "test@mail.ru" }
-    //  отправка данных юзера постом
-    function senToBack() {
+    function senToBack(data) {
         fetch('/api/form', {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(userDataTwo)
+            body: JSON.stringify(data)
         }).then(response => response.json().then(data => {
             console.log("submit!" + " " + data)
         }))
     }
-    // эмуляция вызова, пока закоментил для теста
-    // senToBack()
+
+
     const [popup, setPopup] = useState(false)
     const instance = axios.create({
         headers: {
@@ -55,46 +54,21 @@ const FormBlock = ({ formBlockRef }) => {
         name: yup.string().required('Введите ФИО').matches(/^([^0-9]*)$/, 'Имя не должно содержать цифр'),
         phone: yup.string().required('Введите телефон').min(12, 'Введите корректный телефон').transform(cleanPhoneNumber),
         email: yup.string().required('Введите почту').email('Ведите корректную почту'),
-        // message: yup.string(),
-        // agreement: yup.boolean().oneOf([true], 'обязательное поле'),
+        agreement: yup.boolean().oneOf([true], 'обязательное поле'),
     });
     const formSubmit = (data) => {
         const distData = Object.values(data)
-        console.log(distData);
-        const email = distData[2]
-        const name = distData[4]
-        // const newData =  {
-        //     "apikey" : "18WH7YhvxJb26UVZSIJhozKpThuhP7k7TnERRxnHCQMecr9bjrbbAi9zRDa3mo5bP1RtWtA"
-        //     ,"action" : "member.set"
-        //     ,"email": email
-        //     ,"addr_type" : "email"
-        //     ,"source" : "81.23.182.239"
-        //     ,"newbie.confirm": "0"
-        //     ,"datakey" : [
-        //         [ "base.firstName", "set", name ]
-        //     ]
-        //     ,"return_fresh_obj" : "0"
-        // }
-        return instance
-            .post('https://www.googleapis.com/gmail/v1/users/me/messages/send', {
-                from: "eva11richards@gmail.com",
-                to: "troshind11@gmail.com",
-                subject: "test email",
-                message: "hello test message"
-            })
-            .then((response) => {
-                console.log(response)
-            })
-            .catch((error) => {
-                console.error('Ошибка при отправке запроса formSubmits:', error);
-                throw error;
-            });
-
-        // console.log('data',data)
-        // console.log('newData',newData)
-
+        senToBack(distData)
     }
 
+    // const {
+    //     register,
+    //     handleSubmit,
+    //     formState: { errors },
+    // } = useForm({
+    //     mode: 'onSubmit',
+    //     resolver: yupResolver(schemaForm),
+    // });
     const {
         register,
         handleSubmit,
@@ -138,6 +112,14 @@ const FormBlock = ({ formBlockRef }) => {
                     <div className={classNames(errors['email'] ? Styles.errorsInput : null, Styles.FormContainer)}>
                         <input id={'email'} {...register("email")} type={"text"} placeholder={'Почта*'} className={Styles.form__input} />
                         {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
+                    </div>
+                    <div className={Styles.form__checkbox}>
+                        <div className={Styles.checkbox__checkbox}>
+                            <Checkbox id={'agreement'}/>
+                        </div>
+                        <div className={Styles.checkbox__text}>
+                            Выражаю согласие с <a href="#">Политикой обработки персональных данных</a> и <a href="#">Условиями пользования сайтом</a>
+                        </div>
                     </div>
                     <button className={Styles.form__button}>
                         Оставить заявку

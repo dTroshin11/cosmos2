@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classNames from 'classnames';
 
 import Styles from './FormPopup.module.scss';
@@ -10,7 +10,28 @@ import * as yup from "yup";
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 const FormPopup = ({children, active,setActive}) => {
-
+    const [backend, setBackEnd] = useState([{}])
+    // получение гетом списка данных юзера
+    useEffect(() => {
+        fetch('/api').then(
+            response => response.json()
+        ).then(
+            data => {
+                setBackEnd(data)
+            }
+        )
+    }, []);
+    function senToBack(data) {
+        fetch('/api/form', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then(response => response.json().then(data => {
+            console.log("submit!" + " " + data)
+        }))
+    }
     const instance = axios.create({
         headers: {
             'Access-Control-Allow-Origin': '*',
@@ -31,31 +52,33 @@ const FormPopup = ({children, active,setActive}) => {
         // agreement: yup.boolean().oneOf([true], 'обязательное поле'),
     });
     const formSubmit = (data) => {
-        const distData =  Object.values(data)
-        console.log(distData);
-        const email = distData[2]
-        const name = distData[4]
-        const newData =  {
-            "apikey" : "18WH7YhvxJb26UVZSIJhozKpThuhP7k7TnERRxnHCQMecr9bjrbbAi9zRDa3mo5bP1RtWtA"
-            ,"action" : "member.set"
-            ,"email": email
-            ,"addr_type" : "email"
-            ,"source" : "81.23.182.239"
-            ,"newbie.confirm": "0"
-            ,"datakey" : [
-                [ "base.firstName", "set", name ]
-            ]
-            ,"return_fresh_obj" : "0"
-        }
-        return instance
-            .post('https://api.sendsay.ru/general/api/v100/json/x_1702990490671778', {newData} )
-            .then((response) => {
-                console.log(response)
-            })
-            .catch((error) => {
-                console.error('Ошибка при отправке запроса formSubmits:', error);
-                throw error;
-            });
+        const distData = Object.values(data)
+        senToBack(distData)
+
+        // console.log(distData);
+        // const email = distData[2]
+        // const name = distData[4]
+        // const newData =  {
+        //     "apikey" : "18WH7YhvxJb26UVZSIJhozKpThuhP7k7TnERRxnHCQMecr9bjrbbAi9zRDa3mo5bP1RtWtA"
+        //     ,"action" : "member.set"
+        //     ,"email": email
+        //     ,"addr_type" : "email"
+        //     ,"source" : "81.23.182.239"
+        //     ,"newbie.confirm": "0"
+        //     ,"datakey" : [
+        //         [ "base.firstName", "set", name ]
+        //     ]
+        //     ,"return_fresh_obj" : "0"
+        // }
+        // return instance
+        //     .post('https://api.sendsay.ru/general/api/v100/json/x_1702990490671778', {newData} )
+        //     .then((response) => {
+        //         console.log(response)
+        //     })
+        //     .catch((error) => {
+        //         console.error('Ошибка при отправке запроса formSubmits:', error);
+        //         throw error;
+        //     });
 
         // console.log('data',data)
         // console.log('newData',newData)
