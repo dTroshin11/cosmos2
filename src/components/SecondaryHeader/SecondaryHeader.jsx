@@ -17,7 +17,7 @@ const SecondaryHeader = ({ links, showAnchors }) => {
     <>
       <div className={Styles.Header}>
         <div className={Styles.Wrapper}>
-          <Link to={'/'} className={Styles.Logo}>
+          <Link to='/' className={Styles.Logo}>
             <img className={Styles.LogoIcon} src={'img/logo/logo.svg'} alt='Logo icon' width={'100%'} height={'100%'} />
           </Link>
         </div>
@@ -25,7 +25,7 @@ const SecondaryHeader = ({ links, showAnchors }) => {
 
       <div className={Styles.MobileHeader}>
         <div className={Styles.MobileWrapper}>
-          <Link to={'/'} className={Styles.Logo}>
+          <Link to='/' className={Styles.Logo}>
             <img className={Styles.LogoIcon} src={'img/logo/logo.svg'} alt='Logo icon' width={'100%'} height={'100%'} />
           </Link>
           <div className={Styles.Burger} onClick={() => setMenuActive(!menuActive)}>

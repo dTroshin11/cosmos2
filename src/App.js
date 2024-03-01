@@ -3,7 +3,6 @@ import Container from './components/ui/Container/Container';
 import '@assets/styles/index.scss';
 import Styles from '@assets/styles/Home.module.scss';
 import { useRef } from 'react';
-import Header from './components/Header/Header';
 import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from 'react-router-dom';
 import Main from './pages/Main/Main';
 import NotFound from './pages/NotFound/NotFound';
