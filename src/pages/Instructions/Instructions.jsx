@@ -1,8 +1,8 @@
 import Footer from '../../components/Footer/Footer'
 import SecondaryHeader from '../../components/SecondaryHeader/SecondaryHeader';
+import Styles from './Instructions.module.scss'
 
-
-const NotFound = () => {
+const Instructions = () => {
 
     const links = [
         {
@@ -22,12 +22,15 @@ const NotFound = () => {
     return (
         <div>
             <SecondaryHeader links={links} />
-                <div style={{padding: '240px 0 24px 0', fontSize: '222px', textAlign: 'center'}}>404</div>
-                <div style={{padding: '0 0 240px 0', fontSize: '32px', textAlign: 'center'}}>Такой страницы не существует</div>
+            <div className={Styles.Instructions}>
+                <div className={Styles.Title}>
+                    Инструкции по установке и&nbsp;использованию ПО
+                </div>
+            </div>
             <Footer />
         </div>
 
     );
 };
 
-export default NotFound;
+export default Instructions;

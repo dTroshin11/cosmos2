@@ -17,7 +17,7 @@ const BlockContent = () => {
             Пользовательские соглашения
           </Link>
 
-          <Link to={"/instruction"}
+          <Link to={"/instructions"}
             rel='noopener'
           >
             Инструкции по установке и использованию ПО

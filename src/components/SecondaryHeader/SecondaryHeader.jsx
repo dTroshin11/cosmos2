@@ -60,8 +60,8 @@ const SecondaryHeader = ({ links, showAnchors }) => {
         </div>
         <div className={!menuActive ? Styles.Menu : Styles.Menu + ' ' + Styles.Active}>
           <div className={Styles.PageLinks}>
-            <Link className={Styles.Link} to={links[0].href}>{links[0].text}</Link>
-            <Link className={Styles.Link} to={links[1].href}>{links[1].text}</Link>
+            <Link className={Styles.Link} to={links[0]?.href}>{links[0].text}</Link>
+            <Link className={Styles.Link} to={links[1]?.href}>{links[1].text}</Link>
             <Link className={Styles.Link} to={links[2]?.href}>{links[2]?.text}</Link>
           </div>
         </div>
@@ -79,8 +79,8 @@ const SecondaryHeader = ({ links, showAnchors }) => {
           </div>
           <div className={!openAnchors ? Styles.AnchorsCollapse : Styles.AnchorsCollapse + ' ' + Styles.AnchorsOpen}>
             <div className={Styles.AnchorsBody}>
-              <div className={Styles.Link} onClick={() => scrollToFormBlock(links[3].href)}>{links[3].text}</div>
-              <div className={Styles.Link} onClick={() => scrollToFormBlock(links[4].href)}>{links[4].text}</div>
+              <div className={Styles.Link} onClick={() => scrollToFormBlock(links[3]?.href)}>{links[3]?.text}</div>
+              <div className={Styles.Link} onClick={() => scrollToFormBlock(links[4]?.href)}>{links[4]?.text}</div>
             </div>
           </div>
         </div>}

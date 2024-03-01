@@ -1,0 +1,24 @@
+@import "@/assets/styles/variables.scss";
+@import "@/assets/styles/index.scss";
+
+.Instructions {
+    margin: 170px 0px 48px 0px;
+
+    @media (max-width: $media-tablet-landscape) {
+        margin: 90px 0px 36px 0px;
+        /* 35.2px */
+    }
+
+
+    .Title {
+        font-size: 72px;
+        font-weight: 500;
+        line-height: 90%;
+
+        @media (max-width: $media-tablet-landscape) {
+            font-size: 32px;
+            line-height: 110%;
+            /* 35.2px */
+        }
+    }
+}

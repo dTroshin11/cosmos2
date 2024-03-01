@@ -8,6 +8,7 @@ import Main from './pages/Main/Main';
 import NotFound from './pages/NotFound/NotFound';
 import About from './pages/About/About';
 import Documents from './pages/Documents/Documents';
+import Instructions from './pages/Instructions/Instructions';
 
 function App() {
   const formBlockRef = useRef(null);
@@ -21,7 +22,8 @@ function App() {
               <Route path="/" element={<Main formBlockRef={formBlockRef} />} />
               <Route path="/about" element={<About />} />
               <Route path="/documents" element={<Documents />} />
-              <Route path="*" element={<NotFound formBlockRef={formBlockRef} />} />
+              <Route path="/instructions" element={<Instructions />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
         </Container>
