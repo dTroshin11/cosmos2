@@ -11,6 +11,10 @@
     z-index: 100;
     display: flex;
     justify-content: center;
+
+    @media (max-width: $media-tablet-landscape) {
+        display: none;
+    }
 }
 
 .Wrapper {
@@ -77,12 +81,16 @@
 }
 
 .MobileHeader {
+    display: none;
     background: linear-gradient(0turn, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 60%);
     z-index: 100;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0px;
+    @media (max-width: $media-tablet-landscape) {
+        display: block;
+    }
 }
 
 .MobileWrapper {

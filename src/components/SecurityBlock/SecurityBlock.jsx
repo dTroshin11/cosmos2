@@ -16,7 +16,7 @@ const SecurityBlock = () => {
             <div className={Styles.image} alt="" />
             <div className={Styles.content}>
                 <div className={Styles.title}>
-                    Аппаратный ключ <br/>
+                    Аппаратный ключ 
                     безопасности
                 </div>
                 <ul className={Styles.items__list}>

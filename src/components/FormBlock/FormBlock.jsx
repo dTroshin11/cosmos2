@@ -110,7 +110,7 @@ const FormBlock = ({ formBlockRef }) => {
             <div className={Styles.info}>
                 <div className={Styles.info__text}>
                     <div className={Styles.text__title}>
-                        Актуальный и&nbsp;долговечный
+                        Актуальный и&nbsp;надёжный
                     </div>
                     <div className={Styles.text__subtitle}>
                         Ноутбук Vega Alpha не&nbsp;надо обновлять каждый год&nbsp;&mdash; устройство поставляется готовым к&nbsp;решению любых рабочих задач, а&nbsp;его мощности хватит

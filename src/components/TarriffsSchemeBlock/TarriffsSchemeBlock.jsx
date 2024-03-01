@@ -24,15 +24,6 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
         event.currentTarget.style.display = 'none'
     }
 
-    const backgroundButton = [
-        {
-            background: '#0F1424'
-        },
-        {
-            background: '#0072F8'
-        }
-    ]
-
     const items = [
         {
             text: <div className={Styles.small}>Цена</div>,
@@ -295,61 +286,61 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             </div>,
         },
         {
-            text: <div className={Styles.small}>Возможность обновить ноутбук</div>,
-            free: <div className={Styles.small}>
+            text: <div className={Styles.other}>Возможность обновить ноутбук</div>,
+            free: <div className={Styles.other}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M5 12.001H19" stroke="#818AA7" stroke-linejoin="round" />
                 </svg>
             </div>,
-            light: <div className={Styles.small}>
+            light: <div className={Styles.other}>
                 <span>Один раз в год</span>
                 <span></span>
             </div>,
-            standart: <div className={Styles.small}>
+            standart: <div className={Styles.other}>
                 <span>Один раз в год</span>
                 <span></span>
             </div>,
-            premium: <div className={Styles.small}>
+            premium: <div className={Styles.other}>
                 <span>Один раз в год</span>
                 <span></span>
             </div>,
         },
         {
-            text: <div className={Styles.small}>Горячая замена ноутбука</div>,
-            free: <div className={Styles.small}>
+            text: <div className={Styles.medium}>Горячая замена ноутбука</div>,
+            free: <div className={Styles.medium}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M5 12.001H19" stroke="#818AA7" stroke-linejoin="round" />
                 </svg>
             </div>,
-            light: <div className={Styles.small}>
+            light: <div className={Styles.medium}>
                 <span>Один раз в год</span>
                 <span>19 999 ₽*</span>
             </div>,
-            standart: <div className={Styles.small}>
+            standart: <div className={Styles.medium}>
                 <span>Один раз в год</span>
                 <span>9 999 ₽*</span>
             </div>,
-            premium: <div className={Styles.small}>
+            premium: <div className={Styles.medium}>
                 <span>Один раз в год</span>
                 <span></span>
             </div>,
         },
         {
-            text: <div className={Styles.small}>Возможность выкупа</div>,
-            free: <div className={Styles.small}>
+            text: <div className={Styles.medium}>Возможность выкупа</div>,
+            free: <div className={Styles.medium}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M5 12.001H19" stroke="#818AA7" stroke-linejoin="round" />
                 </svg>
             </div>,
-            light: <div className={Styles.small}>
+            light: <div className={Styles.medium}>
                 <span>Подписка</span>
                 <span>1049 ₽/мес*</span>
             </div>,
-            standart: <div className={Styles.small}>
+            standart: <div className={Styles.medium}>
                 <span>Подписка</span>
                 <span>2099 ₽/мес*</span>
             </div>,
-            premium: <div className={Styles.small}>
+            premium: <div className={Styles.medium}>
                 <span>Подписка</span>
                 <span>5250 ₽/мес*</span>
             </div>,
@@ -361,24 +352,24 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             text: <div className={Styles.high}>*Cтоимость указана без НДС</div>,
             buttonGrey: <div className={Styles.buttonHigh}>
                 <div className={Styles.info_go}>
-                    <div className={Styles.button} style={backgroundButton[0]} onClick={scrollToFormBlock}>
+                    <div className={Styles.button}  onClick={scrollToFormBlock}>
                         <div className={Styles.buttonText}>Оставить заявку</div>
                     </div>
                 </div>
                 <div className={Styles.info_goMob}>
-                    <div className={Styles.button} style={backgroundButton[0]} onClick={() => { setPopup(true) }}>
+                    <div className={Styles.button}  onClick={() => { setPopup(true) }}>
                         <div className={Styles.buttonText}>Оставить заявку</div>
                     </div>
                 </div>
             </div>,
             buttonBlue: <div className={Styles.buttonHigh}>
                 <div className={Styles.info_go}>
-                    <div className={Styles.button} style={backgroundButton[1]} onClick={scrollToFormBlock}>
+                    <div className={Styles.button + ' ' + Styles.premiumButton}  onClick={scrollToFormBlock}>
                         <div className={Styles.buttonText}>Оставить заявку</div>
                     </div>
                 </div>
                 <div className={Styles.info_goMob}>
-                    <div className={Styles.button} style={backgroundButton[1]} onClick={() => { setPopup(true) }}>
+                    <div className={Styles.button + ' ' + Styles.premiumButton}  onClick={() => { setPopup(true) }}>
                         <div className={Styles.buttonText}>Оставить заявку</div>
                     </div>
                 </div>
@@ -494,7 +485,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                         })}
                     </div>
                     <div className={Styles.info_goMob}>
-                        <div className={Styles.button} style={backgroundButton[1]} onClick={(event) => onClickBlockOpen(event, mobilePremiumRef)}>
+                        <div className={Styles.button + ' ' + Styles.premiumButton} onClick={(event) => onClickBlockOpen(event, mobilePremiumRef)}>
                             <div className={Styles.buttonText}>Подробнее</div>
                         </div>
                     </div>
@@ -522,7 +513,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                         })}
                     </div>
                     <div className={Styles.info_goMob}>
-                        <div className={Styles.button} style={backgroundButton[0]} onClick={(event) => onClickBlockOpen(event, mobileStandartRef)}>
+                        <div className={Styles.button} onClick={(event) => onClickBlockOpen(event, mobileStandartRef)}>
                             <div className={Styles.buttonText}>Подробнее</div>
                         </div>
                     </div>
@@ -550,7 +541,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                         })}
                     </div>
                     <div className={Styles.info_goMob}>
-                        <div className={Styles.button} style={backgroundButton[0]} onClick={(event) => onClickBlockOpen(event, mobileLightRef)}>
+                        <div className={Styles.button} onClick={(event) => onClickBlockOpen(event, mobileLightRef)}>
                             <div className={Styles.buttonText}>Подробнее</div>
                         </div>
                     </div>
@@ -578,7 +569,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                         })}
                     </div>
                     <div className={Styles.info_goMob}>
-                        <div className={Styles.button} style={backgroundButton[0]} onClick={(event) => onClickBlockOpen(event, mobileFreeRef)}>
+                        <div className={Styles.button} onClick={(event) => onClickBlockOpen(event, mobileFreeRef)}>
                             <div className={Styles.buttonText}>Подробнее</div>
                         </div>
                     </div>

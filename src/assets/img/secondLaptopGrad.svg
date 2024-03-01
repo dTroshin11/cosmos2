@@ -1,12 +1,9 @@
-<svg width="1400" height="1079" viewBox="0 0 1400 1079" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.43" filter="url(#filter0_f_2490_7855)">
-<ellipse cx="306" cy="145.5" rx="306" ry="145.5" transform="matrix(-1 0 0 1 1006 394)" fill="#6F84BB"/>
-</g>
+<svg width="372" height="259" viewBox="0 0 372 259" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="372" height="259" transform="matrix(1 0 0 -1 0 259)" fill="url(#paint0_linear_3615_4884)"/>
 <defs>
-<filter id="filter0_f_2490_7855" x="0.382965" y="0.382965" width="1399.23" height="1078.23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="196.809" result="effect1_foregroundBlur_2490_7855"/>
-</filter>
+<linearGradient id="paint0_linear_3615_4884" x1="186" y1="0" x2="186" y2="259" gradientUnits="userSpaceOnUse">
+<stop offset="0.541855"/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
 </defs>
 </svg>

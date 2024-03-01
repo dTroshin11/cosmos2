@@ -28,11 +28,13 @@
   font-size: 60px;
   line-height: 60px;
   text-align: left;
+  max-width: 650px;
 
   @media (max-width: $media-tablet-landscape) {
     font-size: 28px;
     line-height: 30px;
     margin-bottom: 36px;
+    max-width: 350px;
   }
 }
 

@@ -5,60 +5,7 @@ import TariffsCardBlue from "../../assets/img/tariffsCardBlue.svg"
 import FormPopup from '../ui/FormPopup/FormPopup';
 
 
-const item = [
-    {
-        title: "Бесплатно",
-        text: <>Дистрибутив ОС
-            для&nbsp;самостоятельной установки на&nbsp;собственное устройство. Ознакомительный вариант без поддержки
-            и&nbsp;обновлений</>,
-        price: "0 ₽/мес"
-    },
-    {
-        title: "Лайт",
-        text: <>Устройство с&nbsp;установленной ОС, поддержкой и&nbsp;обновлениями. Недоступны Windows-приложения и&nbsp;ряд B2B-функций</>,
-        price: "10 500 ₽/мес*"
-    },
-    {
-        title: "Стандарт",
-        text: <>Устройство с&nbsp;установленной ОС, поддержкой, обновлениями и&nbsp;работой Windows-приложений. Недоступны B2B-функции</>,
-        price: "21 000 ₽/мес*"
-    },
-    {
-        title: "Премиум",
-        text: <>Всё включено. Устройство с&nbsp;установленной ОС, поддержка и обновления, запуск Windows-приложений, B2B-функции</>,
-        price: "31 500 ₽/мес*"
-    }
-]
 
-const backgroundCard = [
-    {
-        backgroundImage: `url(${TariffsCard})`
-    },
-    {
-        backgroundImage: `url(${TariffsCard})`
-    },
-    {
-        backgroundImage: `url(${TariffsCard})`
-    },
-    {
-        backgroundImage: `url(${TariffsCardBlue})`
-    },
-]
-
-const backgroundButton = [
-    {
-        background: '#0F1424'
-    },
-    {
-        background: '#0F1424'
-    },
-    {
-        background: '#0F1424'
-    },
-    {
-        background: '#0072F8'
-    }
-]
 
 const TariffsBlock = ({ formBlockRef }) => {
 
@@ -67,6 +14,95 @@ const TariffsBlock = ({ formBlockRef }) => {
     const scrollToFormBlock = () => {
         formBlockRef.current.scrollIntoView({ behavior: 'smooth' });
     };
+
+    const item = [
+        {
+            title: "Бесплатно",
+            text: <>Дистрибутив ОС
+                для&nbsp;самостоятельной установки на&nbsp;собственное устройство. Ознакомительный вариант без поддержки
+                и&nbsp;обновлений</>,
+            price: "0 ₽/мес",
+            button: <>
+                <div className={Styles.info_go}>
+                    <div className={Styles.button} onClick={scrollToFormBlock}>
+                        <span className={Styles.buttonText}>Оставить заявку</span>
+                    </div>
+                </div>
+                <div className={Styles.info_goMob}>
+                    <div className={Styles.button} onClick={() => { setPopup(true) }}>
+                        <span className={Styles.buttonText}>Оставить заявку</span>
+                    </div>
+                </div>
+            </>
+
+        },
+        {
+            title: "Лайт",
+            text: <>Устройство с&nbsp;установленной ОС, поддержкой и&nbsp;обновлениями. Недоступны Windows-приложения и&nbsp;ряд B2B-функций</>,
+            price: "10 500 ₽/мес*",
+            button: <>
+                <div className={Styles.info_go}>
+                    <div className={Styles.button} onClick={scrollToFormBlock}>
+                        <span className={Styles.buttonText}>Оставить заявку</span>
+                    </div>
+                </div>
+                <div className={Styles.info_goMob}>
+                    <div className={Styles.button} onClick={() => { setPopup(true) }}>
+                        <span className={Styles.buttonText}>Оставить заявку</span>
+                    </div>
+                </div>
+            </>
+        },
+        {
+            title: "Стандарт",
+            text: <>Устройство с&nbsp;установленной ОС, поддержкой, обновлениями и&nbsp;работой Windows-приложений. Недоступны B2B-функции</>,
+            price: "21 000 ₽/мес*",
+            button: <>
+                <div className={Styles.info_go}>
+                    <div className={Styles.button} onClick={scrollToFormBlock}>
+                        <span className={Styles.buttonText}>Оставить заявку</span>
+                    </div>
+                </div>
+                <div className={Styles.info_goMob}>
+                    <div className={Styles.button} onClick={() => { setPopup(true) }}>
+                        <span className={Styles.buttonText}>Оставить заявку</span>
+                    </div>
+                </div>
+            </>
+        },
+        {
+            title: "Премиум",
+            text: <>Всё включено. Устройство с&nbsp;установленной ОС, поддержка и обновления, запуск Windows-приложений, B2B-функции</>,
+            price: "31 500 ₽/мес*",
+            button: <>
+                <div className={Styles.info_go}>
+                    <div className={Styles.button + ' ' + Styles.premiumButton} onClick={scrollToFormBlock}>
+                        <span className={Styles.buttonText}>Оставить заявку</span>
+                    </div>
+                </div>
+                <div className={Styles.info_goMob}>
+                    <div className={Styles.button + ' ' + Styles.premiumButton} onClick={() => { setPopup(true) }}>
+                        <span className={Styles.buttonText}>Оставить заявку</span>
+                    </div>
+                </div>
+            </>
+        }
+    ]
+
+    const backgroundCard = [
+        {
+            backgroundImage: `url(${TariffsCard})`
+        },
+        {
+            backgroundImage: `url(${TariffsCard})`
+        },
+        {
+            backgroundImage: `url(${TariffsCard})`
+        },
+        {
+            backgroundImage: `url(${TariffsCardBlue})`
+        },
+    ]
 
     return (
         <div className={Styles.TariffsBlock}>
@@ -87,16 +123,7 @@ const TariffsBlock = ({ formBlockRef }) => {
                         <div className={Styles.price}>
                             {obj.price}
                         </div>
-                        <div className={Styles.info_go}>
-                            <div className={Styles.button} style={backgroundButton[index]} onClick={scrollToFormBlock}>
-                                <span className={Styles.buttonText}>Оставить заявку</span>
-                            </div>
-                        </div>
-                        <div className={Styles.info_goMob}>
-                            <div className={Styles.button} style={backgroundButton[index]} onClick={() => { setPopup(true) }}>
-                                <span className={Styles.buttonText}>Оставить заявку</span>
-                            </div>
-                        </div>
+                        {obj.button}
                     </div>
                 })}
             </div>

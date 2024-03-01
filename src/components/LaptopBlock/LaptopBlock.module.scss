@@ -114,7 +114,7 @@
     content: " ";
     position: absolute;
     left: 0px;
-    bottom: -5px;
+    bottom: -8px;
     width: 292px;
     z-index: 10;
     height: 1px;
@@ -141,6 +141,20 @@
       top: -10px;
     }
     //transform: rotate(-14.285deg);
+  }
+  .info__center:before {
+    @media (max-width: $media-tablet-landscape) {
+      content: " ";
+      background: url("../../assets/img/secondLaptopGrad.svg");
+      position: absolute;
+      left: -30px;
+      top: 260px;
+      background-position: center;
+      background-size: cover;
+      width: 352px;
+      height: 249px;
+      z-index: 0;
+    }
   }
 
   .info__center:after {

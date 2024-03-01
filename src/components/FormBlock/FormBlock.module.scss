@@ -14,24 +14,24 @@
   border-radius: 32px;
   margin-bottom: 150px;
   @media (max-width: $media-tablet-landscape) {
+    background-image: url("../../assets/img/formBgMobile.svg");
+    background-size: cover;
     padding: 24px;
     flex-direction: column-reverse;
     margin-bottom: 90px;
   }
   .img {
     width: 500px;
-    height: 468px;
+    height: 450px;
     background-image: url("../../assets/img/FormLaptop.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    margin-right: 85px;
+    background-position: center center;
+    margin: 20px 60px 0px 25px;
     @media (max-width: $media-tablet-landscape) {
-      margin-top: 48px;
+      margin: 48px 0px 24px 0px;
       width: 268px;
       height: 250px;
-      margin-right: 0px;
-      margin-bottom: 24px;
     }
   }
   .info {

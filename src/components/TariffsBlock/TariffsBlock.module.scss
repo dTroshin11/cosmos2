@@ -49,6 +49,10 @@
     min-width: 280px;
   }
 
+  @media (max-width: $media-phone) {
+    width: 100%;
+  }
+
   .cardTitle {
     font-size: 20px;
     line-height: 26px;
@@ -61,86 +65,97 @@
     line-height: 22px;
     height: 160px;
 
-  @media (max-width: $media-tablet-landscape) {
-    height: 140px;
-  }
-}
-
-.price {
-  vertical-align: bottom;
-  font-size: 28px;
-  line-height: 28px;
-  margin-bottom: 16px;
-
-  @media (max-width: $media-tablet-landscape) {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-}
-
-.info_go {
-  display: block;
-
-  @media (max-width: $media-tablet-landscape) {
-    display: none;
-  }
-
-  .button {
-    vertical-align: bottom;
-    width: 100%;
-    display: flex;
-    height: 40px;
-    padding: 8px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    border-radius: 4px;
-    cursor: pointer;
-
-    .buttonText {
-      font-size: 14px;
-      line-height: 21px;
-      color: #E7EAFA;
-
-      @media (max-width: $media-tablet-landscape) {
-        font-size: 12px;
-        line-height: 18px;
-      }
+    @media (max-width: $media-tablet-landscape) {
+      height: 140px;
     }
   }
-}
 
-.info_goMob {
-  display: none;
+  .price {
+    vertical-align: bottom;
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 16px;
 
-  @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-tablet-landscape) {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .info_go {
     display: block;
-  }
+    background: #0F1424;
 
-  .button {
-    vertical-align: bottom;
-    width: 100%;
-    display: flex;
-    height: 40px;
-    padding: 8px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    border-radius: 4px;
-    cursor: pointer;
+    @media (max-width: $media-tablet-landscape) {
+      display: none;
+    }
 
-    .buttonText {
-      font-size: 14px;
-      line-height: 21px;
-      color: #E7EAFA;
+    .button {
+      vertical-align: bottom;
+      width: 100%;
+      display: flex;
+      height: 40px;
+      padding: 8px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      border-radius: 4px;
+      cursor: pointer;
+      background: #0F1424;
 
-      @media (max-width: $media-tablet-landscape) {
-        font-size: 12px;
-        line-height: 18px;
+      &:hover {
+        opacity: 0.65;
+      } 
+
+      .buttonText {
+        font-size: 14px;
+        line-height: 21px;
+        color: #E7EAFA;
+
+        @media (max-width: $media-tablet-landscape) {
+          font-size: 12px;
+          line-height: 18px;
+        }
       }
     }
   }
-}
+
+  .info_goMob {
+    display: none;
+
+    @media (max-width: $media-tablet-landscape) {
+      display: block;
+    }
+
+    .button {
+      vertical-align: bottom;
+      width: 100%;
+      display: flex;
+      height: 40px;
+      padding: 8px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      border-radius: 4px;
+      cursor: pointer;
+      background: #0F1424;
+
+      &:hover {
+        opacity: 0.65;
+      } 
+
+      .buttonText {
+        font-size: 14px;
+        line-height: 21px;
+        color: #E7EAFA;
+
+        @media (max-width: $media-tablet-landscape) {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
 }
 
 .description {
@@ -158,4 +173,13 @@
   @media (max-width: $media-phone) {
     text-align: left;
   }
+}
+
+.premiumButton {
+  background: #0072F8 !important;
+
+  &:hover {
+    background: #268AFF !important;
+    opacity: 1 !important;
+  } 
 }
