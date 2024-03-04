@@ -4,14 +4,11 @@ import { useWindowSize } from "../../hooks/useWindowSize"
 import { Link } from 'react-router-dom';
 
 
-const SecondaryHeader = ({ links, showAnchors }) => {
+const SecondaryHeader = ({ links, showAnchors, scrollToTop, scrollToFormBlock, bgBlack }) => {
   const { windowWidth } = useWindowSize();
   const [menuActive, setMenuActive] = useState(false)
   const [openAnchors, setOpenAnchors] = useState(false)
 
-  const scrollToFormBlock = (ref) => {
-    ref.current.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <>
@@ -23,7 +20,7 @@ const SecondaryHeader = ({ links, showAnchors }) => {
         </div>
       </div>
 
-      <div className={Styles.MobileHeader}>
+      <div style={bgBlack} className={Styles.MobileHeader}>
         <div className={Styles.MobileWrapper}>
           <Link to='/' className={Styles.Logo}>
             <img className={Styles.LogoIcon} src={'img/logo/logo.svg'} alt='Logo icon' width={'100%'} height={'100%'} />
@@ -58,7 +55,7 @@ const SecondaryHeader = ({ links, showAnchors }) => {
             }
           </div>
         </div>
-        <div className={!menuActive ? Styles.Menu : Styles.Menu + ' ' + Styles.Active}>
+        <div style={bgBlack} className={!menuActive ? Styles.Menu : Styles.Menu + ' ' + Styles.Active}>
           <div className={Styles.PageLinks}>
             <Link className={Styles.Link} to={links[0]?.href}>{links[0].text}</Link>
             <Link className={Styles.Link} to={links[1]?.href}>{links[1].text}</Link>
@@ -79,7 +76,7 @@ const SecondaryHeader = ({ links, showAnchors }) => {
           </div>
           <div className={!openAnchors ? Styles.AnchorsCollapse : Styles.AnchorsCollapse + ' ' + Styles.AnchorsOpen}>
             <div className={Styles.AnchorsBody}>
-              <div className={Styles.Link} onClick={() => scrollToFormBlock(links[3]?.href)}>{links[3]?.text}</div>
+              <div className={Styles.Link} onClick={() => scrollToTop()}>{links[3]?.text}</div>
               <div className={Styles.Link} onClick={() => scrollToFormBlock(links[4]?.href)}>{links[4]?.text}</div>
             </div>
           </div>

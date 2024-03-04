@@ -31,15 +31,20 @@
     gap: 24px;
 
     a {
-        color: #FFF;
+        color: #818AA7;
         font-size: 18px;
         font-weight: 400;
         line-height: 25px;
         text-decoration: underline;
+        transition: background-color .3s, opacity .3s;
 
-        &:first-child {
-            color: #818AA7;
+        &:hover {
+            opacity: 0.5;
         }
+
+        // &:first-child {
+        //     color: #818AA7;
+        // }
     }
 
     div {
@@ -49,10 +54,15 @@
         line-height: 25px;
         text-decoration: underline;
         cursor: pointer;
+        transition: background-color .3s, opacity .3s;
 
-        &:first-child {
-            color: #818AA7;
+        &:hover {
+            opacity: 0.5;
         }
+
+        // &:first-child {
+        //     color: #818AA7;
+        // }
     }
 }
 
@@ -178,58 +188,71 @@
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
+
         //align-items: center;
         @media (max-width: $media-tablet-landscape) {
-          margin-top: 36px;
-          flex-direction: column;
+            margin-top: 36px;
+            flex-direction: column;
         }
-      }
-      
-      .LeftLink,
-      .RightLink {
+    }
+
+    .LeftLink,
+    .RightLink {
         display: flex;
         text-align: left;
         flex-direction: row;
+
         //align-items: flex-start;
         @media (max-width: $media-tablet-landscape) {
-          flex-direction: column;
+            flex-direction: column;
         }
+
         a,
         p {
-          font-size: 16px;
-          line-height: 22px;
-          color: #fff;
-          //opacity: 0.5;
-          @media (min-width: $media-tablet) {
-            &:not(:last-child) {
-              margin: 0 24px 0 0;
+            font-size: 16px;
+            line-height: 22px;
+            color: #fff;
+
+            //opacity: 0.5;
+            @media (min-width: $media-tablet) {
+                &:not(:last-child) {
+                    margin: 0 24px 0 0;
+                }
             }
-          }
         }
+
         p:first-child {
-          margin-bottom: 8px;
+            margin-bottom: 8px;
         }
-      
+
         a {
-          text-decoration: underline;
+            text-decoration: underline;
+            transition: background-color .3s, opacity .3s;
+
+            &:hover {
+                opacity: 0.5;
+            }
         }
-      }
-      .LeftLink {
+    }
+
+    .LeftLink {
         @media (max-width: $media-tablet-landscape) {
-          flex-direction: column;
+            flex-direction: column;
         }
+
         a {
-          margin-bottom: 37px;
-      
-          @media (max-width: $media-tablet-landscape) {
-            margin-bottom: 28px;
-          }
+            margin-bottom: 37px;
+
+            @media (max-width: $media-tablet-landscape) {
+                margin-bottom: 28px;
+            }
         }
-      }
-      .footerText {
+    }
+
+    .footerText {
         font-size: 14px;
         line-height: 22px;
         color: #fff;
         opacity: 0.5;
-      }
+    }
 }

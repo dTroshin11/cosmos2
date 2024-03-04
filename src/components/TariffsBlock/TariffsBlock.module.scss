@@ -68,6 +68,10 @@
     @media (max-width: $media-tablet-landscape) {
       height: 140px;
     }
+
+    @media (max-width: $media-phone) {
+      height: 120px;
+    }
   }
 
   .price {
@@ -102,6 +106,7 @@
       border-radius: 4px;
       cursor: pointer;
       background: #0F1424;
+      transition: background-color .3s, opacity .3s;
 
       &:hover {
         opacity: 0.65;
@@ -139,6 +144,7 @@
       border-radius: 4px;
       cursor: pointer;
       background: #0F1424;
+      transition: background-color .3s, opacity .3s;
 
       &:hover {
         opacity: 0.65;
@@ -177,6 +183,7 @@
 
 .premiumButton {
   background: #0072F8 !important;
+  transition: background-color .3s, opacity .3s;
 
   &:hover {
     background: #268AFF !important;

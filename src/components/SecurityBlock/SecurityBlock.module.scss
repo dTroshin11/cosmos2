@@ -3,23 +3,38 @@
 
 
 .SecurityBlock {
+  position: relative;
   margin-bottom: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-image: url("../../assets/img/securityBg.svg");
   background-size: cover;
-  background-position: center left;
+  background-position: bottom left;
   padding: 60px;
   background-repeat: no-repeat;
   border-radius: 32px;
 
   @media (max-width: $media-tablet-landscape) {
-    background-size: 300%;
+    background-size: cover;
     background-position: bottom left 20%;
     flex-direction: column-reverse;
     padding: 24px;
     margin-bottom: 90px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -250px;
+      left: -200px;
+      width: 600px;
+      height: 460px;
+      background-image: url("../../assets/img/gradBgLaptop.svg");
+      background-size: cover;
+      background-position: center left;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
   }
 }
 
@@ -39,12 +54,13 @@
 }
 
 .image {
-  background-image: url(../../assets/img/security.png);  
+  background-image: url(../../assets/img/security.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 640px;
   height: 380px;
   scale: 1.15;
+
   @media (max-width: $media-tablet-landscape) {
     width: 300px;
     height: 240px;

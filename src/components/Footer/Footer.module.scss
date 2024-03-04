@@ -4,36 +4,44 @@
 .Footer {
   width: 100%;
   margin-bottom: 24px;
+
   @media (max-width: $media-tablet) {
     margin-bottom: 40px;
   }
 }
 
 .title {
-margin-bottom: 24px;
-font-size: 28px;
-line-height: 28px;
-@media (max-width: $media-tablet-landscape) {
-  font-size: 20px;
-  line-height: 26px;
-}
+  margin-bottom: 24px;
+  font-size: 28px;
+  line-height: 28px;
+
+  @media (max-width: $media-tablet-landscape) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .TopWrapper {
   margin-bottom: 40px;
   display: flex;
   gap: 66px;
+
   @media (max-width: $media-tablet-landscape) {
     flex-direction: column;
     gap: 16px;
     margin-bottom: 36px;
   }
 
-  a { 
+  a {
     font-size: 16px;
     line-height: 22px;
     color: #fff;
     text-decoration: underline;
+    transition: background-color .3s, opacity .3s;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -49,6 +57,7 @@ line-height: 28px;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+
   //align-items: center;
   @media (max-width: $media-tablet-landscape) {
     margin-top: 36px;
@@ -61,34 +70,45 @@ line-height: 28px;
   display: flex;
   text-align: left;
   flex-direction: row;
+
   //align-items: flex-start;
   @media (max-width: $media-tablet-landscape) {
     flex-direction: column;
   }
+
   a,
   p {
     font-size: 16px;
     line-height: 22px;
     color: #fff;
     //opacity: 0.5;
+
     @media (min-width: $media-tablet) {
       &:not(:last-child) {
         margin: 0 24px 0 0;
       }
     }
   }
+
   p:first-child {
     margin-bottom: 8px;
   }
 
   a {
     text-decoration: underline;
+    transition: background-color .3s, opacity .3s;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
+
 .LeftLink {
   @media (max-width: $media-tablet-landscape) {
     flex-direction: column;
   }
+
   a {
     margin-bottom: 37px;
 
@@ -97,10 +117,10 @@ line-height: 28px;
     }
   }
 }
+
 .footerText {
   font-size: 14px;
   line-height: 22px;
   color: #fff;
   opacity: 0.5;
 }
-

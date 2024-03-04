@@ -12,8 +12,13 @@ import CosmosSchemeBlock from '../../components/CosmosSchemeBlock/CosmosSchemeBl
 import TarriffsSchemeBlock from '../../components/TarriffsSchemeBlock/TarriffsSchemeBlock';
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
+import { useEffect } from 'react';
 
 const Main = ({formBlockRef}) => {
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, [])
 
     return (
         <>

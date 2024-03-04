@@ -13,22 +13,28 @@
   padding: 60px;
   background-repeat: no-repeat;
   border-radius: 32px;
+
   @media (max-width: $media-tablet-landscape) {
     flex-direction: column;
     padding: 24px;
     margin-bottom: 90px;
   }
+
   .chart__info {
     max-width: 485px;
+
     .texts {
       margin-bottom: 64px;
+
       @media (max-width: $media-tablet-landscape) {
         margin-bottom: 16px;
       }
+
       .info_title {
         font-size: 60px;
         line-height: 60px;
         margin-bottom: 24px;
+
         @media (max-width: $media-tablet-landscape) {
           text-align: left;
           font-size: 28px;
@@ -36,10 +42,12 @@
           margin-bottom: 16px;
         }
       }
+
       .info_subtitle {
         font-size: 18px;
         line-height: 25px;
         margin-bottom: 16px;
+
         @media (max-width: $media-tablet-landscape) {
           text-align: left;
           color: #818AA7;
@@ -48,10 +56,12 @@
           margin-bottom: 24px;
         }
       }
+
       .info_text {
         font-size: 18px;
         line-height: 25px;
         color: #818AA7;
+
         @media (max-width: $media-tablet-landscape) {
           text-align: left;
           font-size: 16px;
@@ -59,11 +69,14 @@
         }
       }
     }
+
     .info_go {
       display: block;
+
       @media (max-width: $media-tablet-landscape) {
-      display: none;
+        display: none;
       }
+
       .info_button {
         width: 180px;
         display: flex;
@@ -71,77 +84,133 @@
         padding: 8px 20px;
         justify-content: center;
         align-items: center;
-        gap:  4px;
+        gap: 4px;
         border-radius: 4px;
         background: #0072F8;
         cursor: pointer;
         margin-bottom: 16px;
-      }
-      .info_buttonText {
-        font-size: 14px;
-        line-height: 21px;
-        color: #818AA7;
-        @media (max-width: $media-tablet-landscape) {
-         font-size: 12px;
-          line-height: 18px;
+        transition: background-color .3s, opacity .3s;
+
+        &:hover {
+          background-color: #268AFF;
         }
       }
+    }
 
-    }
-  }
-  .Chart__img {
-    background-image: url("../../assets/img/Chart.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 434px;
-    height: 410px;
-    @media (max-width: $media-tablet-landscape) {
-      background-image: url("../../assets/img/chartMob.svg");
-      width: 293px;
-      height: 210px;
-    }
-  }
-  .info_goMob {
-    display: none;
-    width: 100%;
-    @media (max-width: $media-tablet-landscape) {
-      display: block;
-      margin-top: 24px;
-    }
-    .info_button {
-      width: 100%;
-      max-width: unset;
-      display: flex;
-      height: 40px;
-      padding: 8px 20px;
-      justify-content: center;
-      align-items: center;
-      gap:  4px;
-      border-radius: 4px;
-      background: #0072F8;
-      cursor: pointer;
-      margin-bottom: 16px;
-    }
     .info_buttonText {
-      font-size: 12px;
-      line-height: 18px;
+      font-size: 14px;
+      line-height: 21px;
       color: #818AA7;
+
+      @media (max-width: $media-tablet-landscape) {
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
+
   }
 }
+
+.Chart__img {
+  background-image: url("../../assets/img/Chart.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 434px;
+  height: 410px;
+
+  @media (max-width: $media-tablet-landscape) {
+    background-image: url("../../assets/img/chartMob.svg");
+    width: 293px;
+    height: 210px;
+  }
+}
+
+.info_goMob {
+  display: none;
+  width: 100%;
+
+  @media (max-width: $media-tablet-landscape) {
+    display: block;
+    margin-top: 24px;
+  }
+
+  .info_button {
+    width: 100%;
+    max-width: unset;
+    display: flex;
+    height: 40px;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    background: #0072F8;
+    cursor: pointer;
+    margin-bottom: 16px;
+    transition: background-color .3s, opacity .3s;
+
+    &:hover {
+      background-color: #268AFF;
+    }
+  }
+
+  .info_buttonText {
+    font-size: 12px;
+    line-height: 18px;
+    color: #818AA7;
+  }
+}
+
+// .ChartBlock:after {
+//   content: " ";
+//   background: url("../../assets/img/mainGradBg.svg");
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   width: 1406px;
+//   height: 996px;
+//   position: absolute;
+//   top: -189px;
+//   left: -125px;
+//   z-index: -1;
+
+//   @media (max-width: $media-tablet-landscape) {
+//     display: none;
+//   }
+// }
+
 .ChartBlock:after {
   content: " ";
   background: url("../../assets/img/mainGradBg.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 1406px;
-  height: 996px;
+  width: 1306px;
+  height: 1210px;
   position: absolute;
-  top: -189px;
-  left: -125px;
+  top: -200px;
+  left: 650px;
   z-index: -1;
+
+  @media (max-width: $media-tablet-landscape) {
+    display: none;
+  }
+}
+
+.ChartBlock:before {
+  content: " ";
+  background: url("../../assets/img/mainGradBg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1306px;
+  height: 1210px;
+  position: absolute;
+  top: -400px;
+  left: -850px;
+  z-index: -1;
+
   @media (max-width: $media-tablet-landscape) {
     display: none;
   }

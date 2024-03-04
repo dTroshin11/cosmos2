@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import SecondaryHeader from "../../components/SecondaryHeader/SecondaryHeader";
 import Styles from './Documents.module.scss'
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Documents = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const [showAnchors, setShowAnchors] = useState(true)
 
     const licenseRef = useRef(null)
@@ -12,6 +17,18 @@ const Documents = () => {
     const scrollToFormBlock = (ref) => {
         ref.current.scrollIntoView({ behavior: 'smooth' });
     };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+        })
+    }
+
+    const bgBlack = {
+        background: '#000'
+    }
 
     const links = [
         {
@@ -780,21 +797,21 @@ const Documents = () => {
 
     return (
         <>
-            <SecondaryHeader links={links} showAnchors={showAnchors} />
+            <SecondaryHeader links={links} showAnchors={showAnchors} scrollToTop={scrollToTop} scrollToFormBlock={scrollToFormBlock} bgBlack={bgBlack}/>
             <div className={Styles.Documents}>
                 <div className={Styles.Menu}>
                     <div className={Styles.Links}>
                         <Link to="/">Вернуться назад</Link>
-                        <div onClick={() => scrollToFormBlock(licenseRef)}>Электронное лицензионное соглашение с конечным пользователем</div>
+                        <div onClick={() => scrollToTop()}>Электронное лицензионное соглашение с конечным пользователем</div>
                         <div onClick={() => scrollToFormBlock(termsOfUseRef)}>Пользовательское соглашение об использовании Cервиса ИИ-Помощник</div>
                     </div>
                 </div>
                 <div className={Styles.Content}>
-                    <div className={Styles.Title}>
+                    <div id={"1"} name={"1"} ref={licenseRef} className={Styles.Title}>
                         Пользовательские <br />
                         соглашения
                     </div>
-                    <div id={"1"} name={"1"} className={Styles.SubTitle} ref={licenseRef}>
+                    <div className={Styles.SubTitle}>
                         Электронное лицензионное соглашение с конечным пользователем
                     </div>
                     <div className={Styles.ListTitle}>
@@ -922,13 +939,13 @@ const Documents = () => {
                                 <div className={Styles.ItemNumber}>
                                     {obj.number}
                                 </div>
-                                <div className={Styles.ItemText}>
+                                <div id={"2"} name={"2"} ref={termsOfUseRef} className={Styles.ItemText}>
                                     {obj.text}
                                 </div>
                             </div>
                         })}
                     </div>
-                    <div id={"2"} name={"2"} className={Styles.SubTitle} ref={termsOfUseRef}>
+                    <div className={Styles.SubTitle}>
                         Пользовательское соглашение об использовании сервиса ИИ-Помощник
                     </div>
                     <div className={Styles.Text}>

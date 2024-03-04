@@ -1,8 +1,13 @@
+import { useEffect } from 'react';
 import Footer from '../../components/Footer/Footer'
 import SecondaryHeader from '../../components/SecondaryHeader/SecondaryHeader';
 import Styles from './Instructions.module.scss'
 
 const Instructions = () => {
+    
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, [])
 
     const links = [
         {

@@ -108,6 +108,18 @@
   .form__button:hover {
     background-color: #268AFF;
   }
+
+  button[disabled] {
+    background: #144B94;
+    color: #838792;
+    cursor: not-allowed;
+  }
+
+  button[disabled]:hover {
+    background: #144B94;
+    color: #838792;
+    cursor: not-allowed;
+  }
 }
 .FormContainer {
   display: flex;

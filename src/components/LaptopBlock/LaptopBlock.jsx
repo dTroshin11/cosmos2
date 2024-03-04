@@ -48,7 +48,7 @@ const infoMob = [
         беспроводной связи</div>
     },
     {
-        title: "Автономный",
+        title: <div>Автономный</div>,
         subtitle: <div>Ёмкая батарея и&nbsp;быстрая<br/> зарядка на&nbsp;140W</div>
     },
     {

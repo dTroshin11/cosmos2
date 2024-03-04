@@ -6,9 +6,14 @@ import CtoMobile from '../../assets/img/aboutCtoMobile.png'
 import { useWindowSize } from '../../hooks/useWindowSize'
 import Footer from '../../components/Footer/Footer'
 import SecondaryHeader from '../../components/SecondaryHeader/SecondaryHeader'
+import { useEffect } from 'react'
 
 
 const About = () => {
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, [])
 
     const links = [
         {

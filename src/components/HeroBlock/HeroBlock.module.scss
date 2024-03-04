@@ -33,7 +33,7 @@
     background-image: url("../../assets/img/mainBg.svg");
     width: 1301px;
     height: 1301px;
-    left: -65px;
+    left: -102px;
     top: -160px;
     z-index: -10;
     position: absolute;
@@ -98,6 +98,7 @@
     }
     .HeroInfo__button {
         display: flex;
+        transition: background-color .3s, opacity .3s;
         @media (max-width: $media-tablet-landscape) {
          display: none;
         }
@@ -159,6 +160,7 @@
             margin-bottom: 36px;
             @media (max-width: $media-tablet-landscape) {
                 margin-bottom: 12px;
+                padding: 0px;
             }
             .item__title {
                 font-size: 20px;

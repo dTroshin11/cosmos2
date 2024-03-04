@@ -4,10 +4,12 @@
 .LaptopBlock {
   margin-bottom: 100px;
   position: relative;
+
   @media (max-width: $media-tablet-landscape) {
     margin-bottom: 15px;
   }
 }
+
 .LaptopBlock:after {
   content: " ";
   background: url("../../assets/img/gradBgLaptop.svg");
@@ -20,6 +22,7 @@
   top: 100px;
   left: -44px;
   z-index: -1;
+
   @media (max-width: $media-tablet-landscape) {
     display: block;
     width: 730px;
@@ -36,10 +39,11 @@
   display: flex;
   justify-content: center;
   text-align: center;
+
   @media (max-width: $media-tablet-landscape) {
-   font-size: 28px;
-   line-height: 30px;
-   text-align: left;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: left;
     justify-content: flex-start;
   }
 }
@@ -50,20 +54,24 @@
   grid-template-columns: 300px 600px 330px;
   align-items: center;
   justify-content: space-between;
+
   @media (max-width: $media-tablet-landscape) {
     flex-direction: column-reverse;
     //align-items: flex-start;
     align-items: unset;
     display: flex;
   }
+
   .info__left {
     @media (max-width: $media-tablet-landscape) {
       width: 100%;
       display: none;
     }
   }
+
   .info__mob {
     display: none;
+
     @media (max-width: $media-tablet-landscape) {
       width: 100%;
       display: block;
@@ -72,15 +80,18 @@
       top: -75px;
     }
   }
+
   .info__right {
     @media (max-width: $media-tablet-landscape) {
       display: none;
     }
   }
+
   .item {
     position: relative;
     margin-bottom: 50px;
     max-width: 400px;
+
     @media (max-width: $media-tablet-landscape) {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -88,20 +99,29 @@
       justify-content: space-between;
       margin-bottom: 16px;
       height: 48px;
+
+      &:nth-child(3) {
+        height: 36px;
+      }
     }
+
     .item__title {
       font-size: 28px;
       line-height: 28px;
       margin-bottom: 16px;
+
       @media (max-width: $media-tablet-landscape) {
+        margin-bottom: 0px;
         font-size: 12px;
         line-height: 15px;
         text-align: left;
       }
     }
+
     .item__subtitle {
       color: #818AA7;
       line-height: 25px;
+
       @media (max-width: $media-tablet-landscape) {
         font-size: 12px;
         line-height: 15px;
@@ -109,6 +129,7 @@
       }
     }
   }
+
   .item:not(:last-child):after {
     display: none;
     content: " ";
@@ -119,13 +140,16 @@
     z-index: 10;
     height: 1px;
     background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0%, #5C6C8C 51.56%, rgba(92, 108, 140, 0.00) 100%);
+
     @media (max-width: $media-tablet-landscape) {
       display: block;
     }
   }
+
   .item:last-child {
     margin-bottom: 0px;
   }
+
   .info__center {
     background-image: url("../../assets/img/SecondLaptop.png");
     background-size: cover;
@@ -133,6 +157,7 @@
     background-repeat: no-repeat;
     width: 614px;
     height: 615px;
+
     @media (max-width: $media-tablet-landscape) {
       width: 297px;
       height: 314px;
@@ -140,8 +165,10 @@
       position: relative;
       top: -10px;
     }
+
     //transform: rotate(-14.285deg);
   }
+
   .info__center:before {
     @media (max-width: $media-tablet-landscape) {
       content: " ";
@@ -159,7 +186,7 @@
 
   .info__center:after {
     content: " ";
-    animation:spin 60s linear infinite;
+    animation: spin 80s linear infinite;
     background-image: url("../../assets/img/animateLaptopLv3.svg");
     position: absolute;
     left: 155px;
@@ -169,6 +196,7 @@
     width: 891px;
     height: 891px;
     z-index: -1;
+
     @media (max-width: $media-tablet-landscape) {
       width: 370px;
       height: 370px;
@@ -177,37 +205,41 @@
     }
   }
 }
+
 .LaptopBlock__info:after {
   content: " ";
-  animation:spin 60s linear infinite;
-  background-image: url("../../assets/img/animateLaptopLv11.svg");
+  animation: spin 80s linear infinite;
+  background-image: url("../../assets/img/animateLaptopLv22.svg");
   position: absolute;
-  left: 296px;
-  top: 20px;
+  left: 180px;
+  top: -95px;
   background-position: center;
   background-size: cover;
-  width: 600px;
-  height: 600px;
+  width: 820px;
+  height: 820px;
   z-index: -1;
+
   @media (max-width: $media-tablet-landscape) {
-    width: 260px;
-    height: 260px;
-    top: 0px;
-    left: 27px;
+    width: 360px;
+    height: 360px;
+    top: -48px;
+    left: -26px;
   }
 }
+
 .LaptopBlock__info:before {
   content: " ";
-  animation:spin 60s linear infinite;
+  animation: spin 80s linear infinite;
   background-image: url("../../assets/img/animateLaptopLv11.svg");
   position: absolute;
-  left: 383px;
-  top: 100px;
+  left: 433px;
+  top: 160px;
   z-index: -1;
   background-position: center;
   background-size: cover;
-  width: 420px;
-  height: 420px;
+  width: 320px;
+  height: 320px;
+
   @media (max-width: $media-tablet-landscape) {
     width: 180px;
     height: 180px;
@@ -215,7 +247,13 @@
     left: 65px;
   }
 }
-@keyframes spin{
-  from{transform:rotate(0deg)}
-  to{transform:rotate(360deg)}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
 }

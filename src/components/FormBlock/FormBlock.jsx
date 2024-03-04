@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Styles from "./FormBlock.module.scss";
-// import Checkbox from "../ui/Checkbox/Checkbox";
 import FormPopup from "../ui/FormPopup/FormPopup";
 import * as yup from 'yup';
 import InputMask from 'react-input-mask';
@@ -10,6 +9,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import axios, { post } from "axios";
 import classNames from "classnames";
 import { date } from "yup";
+import CheckBox from '../ui/Checkbox/Checkbox';
+
 
 const FormBlock = ({ formBlockRef }) => {
     const [backend, setBackEnd] = useState([{}])
@@ -98,9 +99,9 @@ const FormBlock = ({ formBlockRef }) => {
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        formState: { errors, isDirty, isValid },
     } = useForm({
-        mode: 'onSubmit',
+        mode: 'onChange',
         resolver: yupResolver(schemaForm),
     });
 
@@ -117,33 +118,41 @@ const FormBlock = ({ formBlockRef }) => {
                         с&nbsp;запасом на&nbsp;несколько лет вперёд
                     </div>
                 </div>
-                {/*<div className={Styles.info__form}>*/}
-
-                <form className={Styles.info__form} onSubmit={handleSubmit(formSubmit)}>
-                    <div className={classNames(errors['name'] ? Styles.errorsInput : null, Styles.FormContainer)}>
-                        <input id={'name'} {...register("name")} type={"text"} placeholder={'ФИО*'} className={Styles.form__input} />
-                        {errors['name'] && <div className={Styles.errorText}>{errors['name']?.message}</div>}
-                    </div>
-                    <div className={classNames(errors['phone'] ? Styles.errorsInput : null, Styles.FormContainer)}>
-                        <InputMask
-                            mask='+7 (999) 999-99-99'
-                            maskChar=' '
-                            id={'phone'}
-                            {...register("phone")}
-                            placeholder={'Номер*'}
-                            className={Styles.form__input}
-                        />
-                        {errors['phone'] && <div className={Styles.errorText}>{errors['phone']?.message}</div>}
-                    </div>
-                    <div className={classNames(errors['email'] ? Styles.errorsInput : null, Styles.FormContainer)}>
-                        <input id={'email'} {...register("email")} type={"text"} placeholder={'Почта*'} className={Styles.form__input} />
-                        {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
-                    </div>
-                    <button className={Styles.form__button}>
-                        Оставить заявку
-                    </button>
-                </form>
-                {/* <form className={Styles.info__form}> */}
+                <div className={Styles.info__form}>
+                    <div className={Styles.form__title}>Оставьте заявку и убедитесь лично:</div>
+                    <form className={Styles.info__form} onSubmit={handleSubmit(formSubmit)}>
+                        <div className={classNames(errors['name'] ? Styles.errorsInput : null, Styles.FormContainer)}>
+                            <input id={'name'} {...register("name")} type={"text"} placeholder={'ФИО*'} className={Styles.form__input} />
+                            {errors['name'] && <div className={Styles.errorText}>{errors['name']?.message}</div>}
+                        </div>
+                        <div className={classNames(errors['phone'] ? Styles.errorsInput : null, Styles.FormContainer)}>
+                            <InputMask
+                                mask='+7 (999) 999-99-99'
+                                maskChar=' '
+                                id={'phone'}
+                                {...register("phone")}
+                                placeholder={'Номер*'}
+                                className={Styles.form__input}
+                            />
+                            {errors['phone'] && <div className={Styles.errorText}>{errors['phone']?.message}</div>}
+                        </div>
+                        <div className={classNames(errors['email'] ? Styles.errorsInput : null, Styles.FormContainer)}>
+                            <input id={'email'} {...register("email")} type={"text"} placeholder={'Почта*'} className={Styles.form__input} />
+                            {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
+                        </div>
+                        <div className={Styles.form__checkbox}>
+                            <div className={Styles.checkbox__checkbox}>
+                                <CheckBox />
+                            </div>
+                            <div className={Styles.checkbox__text}>
+                                Выражаю согласие с <a href="#">Политикой обработки персональных данных</a> и <a href="#">Условиями пользования сайтом</a>
+                            </div>
+                        </div>
+                        <button disabled={!isDirty || !isValid} className={Styles.form__button}>
+                            Отправить
+                        </button>
+                    </form>
+                    {/* <form className={Styles.info__form}> */}
                     {/* <div className={Styles.form__title}>Оставьте заявку и убедитесь лично:</div> */}
                     {/*        <div className={ classNames(errors['name'] ? Styles.errorsInput : null,Styles.FormContainer)}>*/}
                     {/*          <input id={'name'} {...register("name")} type={"text"} placeholder={'ФИО*'} className={Styles.form__input}/>*/}
@@ -163,14 +172,14 @@ const FormBlock = ({ formBlockRef }) => {
                     {/*        <button className={Styles.form__button}>*/}
                     {/*            Оставить заявку*/}
                     {/* </button> */}
-                {/* </form> */}
+                    {/* </form> */}
+                </div>
                 <div className={Styles.info__mobForm}>
                     <div className={Styles.form__title}>Оставьте заявку и убедитесь лично:</div>
                     <button className={Styles.form__button} onClick={() => { setPopup(true) }}>
                         Оставить заявку
                     </button>
                 </div>
-                {/*</div>*/}
                 <FormPopup active={popup} setActive={setPopup} />
             </div>
         </div>
