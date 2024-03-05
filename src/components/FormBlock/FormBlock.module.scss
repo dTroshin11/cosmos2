@@ -20,6 +20,20 @@
     padding: 24px;
     flex-direction: column-reverse;
     margin-bottom: 90px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -250px;
+      left: -200px;
+      width: 600px;
+      height: 460px;
+      background-image: url("../../assets/img/gradBgLaptop.svg");
+      background-size: cover;
+      background-position: center left;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
   }
 
   .img {
@@ -86,7 +100,7 @@
       }
 
       .form__input {
-        padding: 16px 32px 16px 20px;
+        padding: 11px 32px 11px 20px;
         margin-bottom: 8px;
         background: #12151F;
         border-radius: 4px;
@@ -189,8 +203,8 @@
           max-width: 293px;
           width: 100%;
           line-height: 20px;
-          height: 40px;
-          padding: 8px 20px;
+          height: 44px;
+          padding: 10px 20px;
           justify-content: center;
           align-items: center;
           gap: 4px;
@@ -215,7 +229,7 @@
   }
 
   .form__input {
-    padding: 16px 32px 16px 20px;
+    padding: 11px 32px 11px 20px;
     margin-bottom: 8px;
     background: #12151F;
     border-radius: 4px;

@@ -20,7 +20,7 @@ const BlockContent = () => {
           <Link to={"/instructions"}
             rel='noopener'
           >
-            Инструкции по установке и использованию ПО
+            Инструкции по&nbsp;установке и&nbsp;использованию ПО
           </Link>
         </div>
         <div className={Styles.divider}></div>

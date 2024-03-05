@@ -55,7 +55,7 @@ const FormBlock = ({ formBlockRef }) => {
     const schemaForm = yup.object().shape({
         name: yup.string().required('Введите ФИО').matches(/^([^0-9]*)$/, 'Имя не должно содержать цифр'),
         phone: yup.string().required('Введите телефон').min(12, 'Введите корректный телефон').transform(cleanPhoneNumber),
-        email: yup.string().required('Введите почту').email('Ведите корректную почту'),
+        email: yup.string().required('Введите почту').email('Введите корректную почту'),
         // message: yup.string(),
         // agreement: yup.boolean().oneOf([true], 'обязательное поле'),
     });

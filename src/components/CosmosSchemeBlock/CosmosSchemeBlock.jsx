@@ -40,7 +40,7 @@ const CosmosSchemeBlock = () => {
             </div>
         },
         {
-            text: <div className={Styles.high}>Стоимость лицензирования</div>,
+            text: <div className={Styles.high}>Стоимость лицензирования&nbsp;&nbsp;&nbsp;</div>,
             cosmos: <div className={Styles.high}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
@@ -121,7 +121,7 @@ const CosmosSchemeBlock = () => {
             </div>
         },
         {
-            text: <div className={Styles.high}>Персональный ИИ-помощник</div>,
+            text: <div className={Styles.high}>Персональный ИИ-помощник&nbsp;&nbsp;&nbsp;</div>,
             cosmos: <div className={Styles.high}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
