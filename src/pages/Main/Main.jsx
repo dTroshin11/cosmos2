@@ -3,7 +3,7 @@ import AppsBlock from "../../components/AppsBlock/AppsBlock";
 import FeatureBlock from "../../components/FeatureBlock/FeatureBlock";
 import LaptopBlock from "../../components/LaptopBlock/LaptopBlock";
 import ChartBlock from "../../components/ChartBlock/ChartBlock";
-import CalculatorBlock from "../../components/СalculatorBlock/CalculatorBlock";
+import CalculatorBlock from "../../components/CalculatorBlock/CalculatorBlock";
 import FormBlock from "../../components/FormBlock/FormBlock";
 import CosmosBlock from '../../components/CosmosBlock/CosmosBlock';
 import SecurityBlock from '../../components/SecurityBlock/SecurityBlock';
@@ -32,7 +32,7 @@ const Main = ({formBlockRef}) => {
             <CosmosSchemeBlock />
             <TariffsBlock formBlockRef={formBlockRef} />
             <ChartBlock formBlockRef={formBlockRef} />
-            <CalculatorBlock />
+            <CalculatorBlock/>
             <TarriffsSchemeBlock formBlockRef={formBlockRef} />
             <FormBlock formBlockRef={formBlockRef} />
             <Footer />

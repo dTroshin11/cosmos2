@@ -3,13 +3,16 @@
 
 .Calculator {
   margin-bottom: 150px;
+
   @media (max-width: $media-tablet-landscape) {
     margin-bottom: 90px;
   }
+
   .title {
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 60px;
+
     @media (max-width: $media-tablet-landscape) {
       font-size: 28px;
       line-height: 30px;
@@ -17,23 +20,29 @@
       margin-bottom: 36px;
     }
   }
+
   .calculate {
     display: flex;
     margin-bottom: 60px;
+
     @media (max-width: $media-tablet-landscape) {
       flex-direction: column;
       margin-bottom: 24px;
     }
+
     .calculate__item {
       margin-right: 58px;
+
       @media (max-width: $media-tablet-landscape) {
         margin-right: 0px;
         margin-bottom: 5px;
       }
+
       .item__title {
         font-size: 20px;
         line-height: 26px;
         margin-bottom: 24px;
+
         @media (max-width: $media-tablet-landscape) {
           font-size: 16px;
           line-height: 22px;
@@ -42,6 +51,7 @@
 
         }
       }
+
       .item__inputNum {
         padding: 8px;
         margin-bottom: 8px;
@@ -54,6 +64,7 @@
         width: 100%;
         max-width: 340px;
       }
+
       .item__input {
         width: 100%;
         max-width: 340px;
@@ -62,19 +73,23 @@
 
       }
     }
+
     .calculate__item:last-child {
       margin-right: 0px;
+
       @media (max-width: $media-tablet-landscape) {
         margin-bottom: 0px;
       }
     }
   }
+
   .result {
     .result__title {
       color: #818AA7;
       font-size: 28px;
       line-height: 28px;
       margin-bottom: 8px;
+
       @media (max-width: $media-tablet-landscape) {
         font-size: 16px;
         line-height: 22px;
@@ -82,21 +97,25 @@
         margin-bottom: 4px;
       }
     }
+
     .result__num {
       font-size: 60px;
       color: #0072F8;
       line-height: 60px;
       margin-bottom: 16px;
+
       @media (max-width: $media-tablet-landscape) {
         font-size: 32px;
         line-height: 35px;
         text-align: left;
       }
     }
+
     .result__subtitle {
       color: #818AA7;
       font-size: 14px;
       line-height: 21px;
+
       @media (max-width: $media-tablet-landscape) {
         font-size: 14px;
         line-height: 21px;
@@ -152,7 +171,7 @@ input[type="range"] {
 [dir="rtl"] input[type="range"] {
   background: #0072F8;
   background-image: linear-gradient(#fff, #fff);
-  background-size:  0% 100%;
+  background-size: 0% 100%;
   background-repeat: no-repeat;
 }
 
@@ -206,7 +225,7 @@ input[type="range"]::-ms-thumb:hover {
 }
 
 /* Input Track */
-input[type=range]::-webkit-slider-runnable-track  {
+input[type=range]::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   box-shadow: none;
   border: none;

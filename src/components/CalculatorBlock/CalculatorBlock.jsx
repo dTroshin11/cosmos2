@@ -8,9 +8,9 @@ const CalculatorBlock = () => {
     const [pay, setPay] = useState(0)
     const { windowWidth } = useWindowSize();
 
-    const summa = proPeople == 0 
-    ? Math.ceil((Number(pay) * Number(people / 23)) * Number(1.302) * Number(12) * Number(0.55) + Number(1620000)) 
-    : Math.ceil((Number(pay) * Number(proPeople)) * Number(1.302) * Number(12) * Number(0.55) + Number(1620000))
+    const summa = proPeople == 0
+        ? Math.ceil((Number(pay) * Number(people / 23)) * Number(1.302) * Number(12) * Number(0.55) + Number(1620000))
+        : Math.ceil((Number(pay) * Number(proPeople)) * Number(1.302) * Number(12) * Number(0.55) + Number(1620000))
 
     let isRTL = document.documentElement.dir === 'rtl'
 
@@ -148,7 +148,7 @@ const CalculatorBlock = () => {
             </div>
             <div className={Styles.result}>
                 <div className={Styles.result__title}>С нами вы сэкономите за год</div>
-                <div className={Styles.result__num}>{summa === 0 || summa === 1620000  ? 0 : summa} ₽*</div>
+                <div className={Styles.result__num}>{summa === 0 || summa === 1620000 ? 0 : summa} ₽*</div>
                 <div className={Styles.result__subtitle}>*на основе наших данных</div>
             </div>
         </div>
