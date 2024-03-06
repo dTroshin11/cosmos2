@@ -145,7 +145,7 @@ const FormBlock = ({ formBlockRef }) => {
                                 <CheckBox />
                             </div>
                             <div className={Styles.checkbox__text}>
-                                Выражаю согласие с <a href="#">Политикой обработки персональных данных</a> и <a href="#">Условиями пользования сайтом</a>
+                                Выражаю согласие с&nbsp;<a href="#">Политикой обработки персональных данных</a> и&nbsp;<a href="#">Условиями пользования сайтом</a>
                             </div>
                         </div>
                         <button disabled={!isDirty || !isValid} className={Styles.form__button}>

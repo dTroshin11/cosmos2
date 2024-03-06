@@ -153,10 +153,10 @@
   .info__center {
     background-image: url("../../assets/img/SecondLaptop.png");
     background-size: cover;
-    background-position: center;
+    background-position: right -30px bottom 10px;
     background-repeat: no-repeat;
     width: 614px;
-    height: 615px;
+    height: 714px;
 
     @media (max-width: $media-tablet-landscape) {
       width: 297px;

@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 const Documents = () => {
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0,0)
     }, [])
 
     const [showAnchors, setShowAnchors] = useState(true)
@@ -18,13 +18,13 @@ const Documents = () => {
         ref.current.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-        })
-    }
+    // const scrollToTop = () => {
+    //     window.scrollTo({
+    //         top: 0,
+    //         left: 0,
+    //         behavior: "smooth",
+    //     })
+    // }
 
     const bgBlack = {
         background: '#000'
@@ -797,12 +797,12 @@ const Documents = () => {
 
     return (
         <>
-            <SecondaryHeader links={links} showAnchors={showAnchors} scrollToTop={scrollToTop} scrollToFormBlock={scrollToFormBlock} bgBlack={bgBlack}/>
+            <SecondaryHeader links={links} showAnchors={showAnchors} scrollToFormBlock={scrollToFormBlock} bgBlack={bgBlack}/>
             <div className={Styles.Documents}>
                 <div className={Styles.Menu}>
                     <div className={Styles.Links}>
                         <Link to="/">Вернуться назад</Link>
-                        <div onClick={() => scrollToTop()}>Электронное лицензионное соглашение с конечным пользователем</div>
+                        <div onClick={() => scrollToFormBlock(licenseRef)}>Электронное лицензионное соглашение с конечным пользователем</div>
                         <div onClick={() => scrollToFormBlock(termsOfUseRef)}>Пользовательское соглашение об использовании Cервиса ИИ-Помощник</div>
                     </div>
                 </div>

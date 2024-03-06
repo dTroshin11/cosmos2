@@ -4,10 +4,16 @@ import { useWindowSize } from "../../hooks/useWindowSize"
 import { Link } from 'react-router-dom';
 
 
-const SecondaryHeader = ({ links, showAnchors, scrollToTop, scrollToFormBlock, bgBlack }) => {
+const SecondaryHeader = ({ links, showAnchors, scrollToFormBlock, bgBlack }) => {
   const { windowWidth } = useWindowSize();
   const [menuActive, setMenuActive] = useState(false)
   const [openAnchors, setOpenAnchors] = useState(false)
+
+
+  const scrollOnClick = (func, payload) =>  {
+    func(payload)
+    setOpenAnchors(false)
+  }
 
 
   return (
@@ -76,8 +82,8 @@ const SecondaryHeader = ({ links, showAnchors, scrollToTop, scrollToFormBlock, b
           </div>
           <div className={!openAnchors ? Styles.AnchorsCollapse : Styles.AnchorsCollapse + ' ' + Styles.AnchorsOpen}>
             <div className={Styles.AnchorsBody}>
-              <div className={Styles.Link} onClick={() => scrollToTop()}>{links[3]?.text}</div>
-              <div className={Styles.Link} onClick={() => scrollToFormBlock(links[4]?.href)}>{links[4]?.text}</div>
+              <div className={Styles.Link} onClick={() => scrollOnClick(scrollToFormBlock, links[3]?.href)}>{links[3]?.text}</div>
+              <div className={Styles.Link} onClick={() => scrollOnClick(scrollToFormBlock, links[4]?.href)}>{links[4]?.text}</div>
             </div>
           </div>
         </div>}

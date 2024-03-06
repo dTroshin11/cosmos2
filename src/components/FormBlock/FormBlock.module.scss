@@ -37,13 +37,13 @@
   }
 
   .img {
-    width: 550px;
-    height: 480px;
+    width: 520px;
+    height: 520px;
     background-image: url("../../assets/img/FormLaptop.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center center;
-    margin: 20px 110px 0px 25px;
+    margin: 25px 100px 0px 25px;
 
     @media (max-width: $media-tablet-landscape) {
       margin: 48px 0px 24px 0px;

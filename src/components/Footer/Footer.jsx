@@ -1,11 +1,9 @@
 import React from 'react';
-import Container from '@components/ui/Container/Container';
 import Styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
 
-const BlockContent = () => {
+const Footer = () => {
   return (
-    <Container className={Styles.Container}>
       <div className={Styles.Footer}>
         <div className={Styles.title}>
           Документация
@@ -46,12 +44,10 @@ const BlockContent = () => {
           </div>
         </div>
       </div>
-    </Container>
-
   );
 };
 
-export default BlockContent;
+export default Footer;
 
 
 
