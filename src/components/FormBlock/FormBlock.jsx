@@ -62,8 +62,10 @@ const FormBlock = ({ formBlockRef }) => {
     const formSubmit = (data) => {
         const distData = Object.values(data)
         console.log(distData);
-        const email = distData[2]
-        const name = distData[4]
+        const email = distData[0]
+        const tel = distData[1]
+        const name = distData[2]
+
         // const newData =  {
         //     "apikey" : "18WH7YhvxJb26UVZSIJhozKpThuhP7k7TnERRxnHCQMecr9bjrbbAi9zRDa3mo5bP1RtWtA"
         //     ,"action" : "member.set"
@@ -77,11 +79,10 @@ const FormBlock = ({ formBlockRef }) => {
         //     ,"return_fresh_obj" : "0"
         // }
         return instance
-            .post('https://www.googleapis.com/gmail/v1/users/me/messages/send', {
-                from: "eva11richards@gmail.com",
-                to: "troshind11@gmail.com",
-                subject: "test email",
-                message: "hello test message"
+            .post('/api/form', {
+                email,
+                tel,
+                name
             })
             .then((response) => {
                 console.log(response)

@@ -33,22 +33,28 @@ const FormPopup = ({ children, active, setActive }) => {
     const formSubmit = (data) => {
         const distData = Object.values(data)
         console.log(distData);
-        const email = distData[2]
-        const name = distData[4]
-        const newData = {
-            "apikey": "18WH7YhvxJb26UVZSIJhozKpThuhP7k7TnERRxnHCQMecr9bjrbbAi9zRDa3mo5bP1RtWtA"
-            , "action": "member.set"
-            , "email": email
-            , "addr_type": "email"
-            , "source": "81.23.182.239"
-            , "newbie.confirm": "0"
-            , "datakey": [
-                ["base.firstName", "set", name]
-            ]
-            , "return_fresh_obj": "0"
-        }
+        const email = distData[0]
+        const tel = distData[1]
+        const name = distData[2]
+
+        // const newData =  {
+        //     "apikey" : "18WH7YhvxJb26UVZSIJhozKpThuhP7k7TnERRxnHCQMecr9bjrbbAi9zRDa3mo5bP1RtWtA"
+        //     ,"action" : "member.set"
+        //     ,"email": email
+        //     ,"addr_type" : "email"
+        //     ,"source" : "81.23.182.239"
+        //     ,"newbie.confirm": "0"
+        //     ,"datakey" : [
+        //         [ "base.firstName", "set", name ]
+        //     ]
+        //     ,"return_fresh_obj" : "0"
+        // }
         return instance
-            .post('https://api.sendsay.ru/general/api/v100/json/x_1702990490671778', { newData })
+            .post('/api/form', {
+                email,
+                tel,
+                name
+            })
             .then((response) => {
                 console.log(response)
             })
