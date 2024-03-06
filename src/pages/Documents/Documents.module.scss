@@ -66,6 +66,7 @@
     }
 }
 
+
 .Content {
     width: 60%;
     padding-bottom: 93px;
@@ -147,6 +148,16 @@
 .Item {
     margin-top: 4px;
     display: flex;
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+        transition: background-color .3s, opacity .3s;
+    
+        &:hover {
+            opacity: 0.5;
+        }
+    }
 }
 
 .ItemNumber {
