@@ -4,13 +4,13 @@ import FormPopup from "../ui/FormPopup/FormPopup";
 import * as yup from 'yup';
 import InputMask from 'react-input-mask';
 
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios, { post } from "axios";
 import classNames from "classnames";
 import { date } from "yup";
 import CheckBox from '../ui/Checkbox/Checkbox';
-
+import SubmitPopup from '../ui/SubmitPopup/SubmitPopup';
 
 const FormBlock = ({ formBlockRef }) => {
     const [backend, setBackEnd] = useState([{}])
@@ -86,25 +86,34 @@ const FormBlock = ({ formBlockRef }) => {
             })
             .then((response) => {
                 console.log(response)
+                reset()
+                setIsSubmitMessage(true)
+                setIsActiveSubmitPopup(true)
             })
             .catch((error) => {
                 console.error('Ошибка при отправке запроса formSubmits:', error);
+                setIsSubmitMessage(false)
+                setIsActiveSubmitPopup(true)
                 throw error;
             });
-
         // console.log('data',data)
         // console.log('newData',newData)
-
     }
 
     const {
         register,
         handleSubmit,
         formState: { errors, isDirty, isValid },
+        reset,
     } = useForm({
         mode: 'onChange',
         resolver: yupResolver(schemaForm),
     });
+
+    //логика модалки появляющейся при отправке
+    const [isSubmitMessage, setIsSubmitMessage] = useState(false)
+    const [isActiveSubmitPopup, setIsActiveSubmitPopup] = useState(false)
+    
 
     return (
         <div className={Styles.FormBlock} ref={formBlockRef}>
@@ -182,6 +191,7 @@ const FormBlock = ({ formBlockRef }) => {
                     </button>
                 </div>
                 <FormPopup active={popup} setActive={setPopup} />
+                <SubmitPopup active={isActiveSubmitPopup} setActive={setIsActiveSubmitPopup} isSubmitMessage={isSubmitMessage}/>
             </div>
         </div>
     );

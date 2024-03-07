@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 
 import Styles from './FormPopup.module.scss';
@@ -7,8 +7,10 @@ import closeImg from '../../../assets/img/close.svg'
 import InputMask from "react-input-mask";
 import axios from "axios";
 import * as yup from "yup";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import SubmitPopup from '../SubmitPopup/SubmitPopup';
+
 const FormPopup = ({ children, active, setActive }) => {
 
     const instance = axios.create({
@@ -57,9 +59,14 @@ const FormPopup = ({ children, active, setActive }) => {
             })
             .then((response) => {
                 console.log(response)
+                setIsSubmitMessage(true)
+                setIsActiveSubmitPopup(true)
+                setActive(false)        
             })
             .catch((error) => {
                 console.error('Ошибка при отправке запроса formSubmits:', error);
+                setIsSubmitMessage(false)
+                setIsActiveSubmitPopup(true)
                 throw error;
             });
 
@@ -76,67 +83,75 @@ const FormPopup = ({ children, active, setActive }) => {
         mode: 'onChange',
         resolver: yupResolver(schemaForm),
     });
+
+    //логика модалки появляющейся при отправке
+    const [isSubmitMessage, setIsSubmitMessage] = useState(false)
+    const [isActiveSubmitPopup, setIsActiveSubmitPopup] = useState(false)
+
     return (
-        <div className={classNames(Styles.Modal, active === true && Styles.active)} onClick={() => setActive(false)}>
-            <div className={Styles.Modal__content} onClick={e => e.stopPropagation()}>
-                <div className={Styles.Modal__form}>
-                    <div className={Styles.Modal__title}>
-                        Оставить заявку
-                        <div className={Styles.Modal__close} onClick={() => { setActive(false) }}>
-                            <img src={closeImg} alt={"close"} />
+        <>
+            <div className={classNames(Styles.Modal, active === true && Styles.active)} onClick={() => setActive(false)}>
+                <div className={Styles.Modal__content} onClick={e => e.stopPropagation()}>
+                    <div className={Styles.Modal__form}>
+                        <div className={Styles.Modal__title}>
+                            Оставить заявку
+                            <div className={Styles.Modal__close} onClick={() => { setActive(false) }}>
+                                <img src={closeImg} alt={"close"} />
+                            </div>
                         </div>
+                        {/*<form className={Styles.form}>*/}
+                        {/*    <input  className={Styles.form__input} type={"text"} placeholder={"ФИО*"}/>*/}
+                        {/*    <input  className={Styles.form__input} type={"text"} placeholder={"Телефон*"}/>*/}
+                        {/*    <input  className={Styles.form__input} type={"text"} placeholder={"Email*"}/>*/}
+                        {/*    <div className={Styles.form__checkbox}>*/}
+                        {/*        <div className={Styles.checkbox__checkbox}>*/}
+                        {/*            <Checkbox/>*/}
+                        {/*        </div>*/}
+                        {/*        <div className={Styles.checkbox__text}>*/}
+                        {/*            Выражаю согласие с <a href="#">Политикой обработки персональных данных</a> и <a href="#">Условиями пользования сайтом</a>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*    <button className={Styles.form__button}>*/}
+                        {/*        Отправить*/}
+                        {/*    </button>*/}
+                        {/*</form>*/}
+                        <form className={Styles.form} onSubmit={handleSubmit(formSubmit)}>
+                            <div className={classNames(errors['name'] ? Styles.errorsInput : null, Styles.FormContainer)}>
+                                <input id={'name'} {...register("name")} type={"text"} placeholder={'ФИО*'} className={Styles.form__input} />
+                                {errors['name'] && <div className={Styles.errorText}>{errors['name']?.message}</div>}
+                            </div>
+                            <div className={classNames(errors['phone'] ? Styles.errorsInput : null, Styles.FormContainer)}>
+                                <InputMask
+                                    mask='+7 (999) 999-99-99'
+                                    maskChar=' '
+                                    id={'phone'}
+                                    {...register("phone")}
+                                    placeholder={'Номер*'}
+                                    className={Styles.form__input}
+                                />
+                                {errors['phone'] && <div className={Styles.errorText}>{errors['phone']?.message}</div>}
+                            </div>
+                            <div className={classNames(errors['email'] ? Styles.errorsInput : null, Styles.FormContainer)}>
+                                <input id={'email'} {...register("email")} type={"text"} placeholder={'Почта*'} className={Styles.form__input} />
+                                {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
+                            </div>
+                            <div className={Styles.form__checkbox}>
+                                <div className={Styles.checkbox__checkbox}>
+                                    <Checkbox />
+                                </div>
+                                <div className={Styles.checkbox__text}>
+                                    Выражаю согласие с&nbsp;<a href="#">Политикой обработки персональных данных</a> и&nbsp;<a href="#">Условиями пользования сайтом</a>
+                                </div>
+                            </div>
+                            <button className={Styles.form__button} disabled={!isDirty || !isValid}>
+                                Отправить
+                            </button>
+                        </form>
                     </div>
-                    {/*<form className={Styles.form}>*/}
-                    {/*    <input  className={Styles.form__input} type={"text"} placeholder={"ФИО*"}/>*/}
-                    {/*    <input  className={Styles.form__input} type={"text"} placeholder={"Телефон*"}/>*/}
-                    {/*    <input  className={Styles.form__input} type={"text"} placeholder={"Email*"}/>*/}
-                    {/*    <div className={Styles.form__checkbox}>*/}
-                    {/*        <div className={Styles.checkbox__checkbox}>*/}
-                    {/*            <Checkbox/>*/}
-                    {/*        </div>*/}
-                    {/*        <div className={Styles.checkbox__text}>*/}
-                    {/*            Выражаю согласие с <a href="#">Политикой обработки персональных данных</a> и <a href="#">Условиями пользования сайтом</a>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*    <button className={Styles.form__button}>*/}
-                    {/*        Отправить*/}
-                    {/*    </button>*/}
-                    {/*</form>*/}
-                    <form className={Styles.form} onSubmit={handleSubmit(formSubmit)}>
-                        <div className={classNames(errors['name'] ? Styles.errorsInput : null, Styles.FormContainer)}>
-                            <input id={'name'} {...register("name")} type={"text"} placeholder={'ФИО*'} className={Styles.form__input} />
-                            {errors['name'] && <div className={Styles.errorText}>{errors['name']?.message}</div>}
-                        </div>
-                        <div className={classNames(errors['phone'] ? Styles.errorsInput : null, Styles.FormContainer)}>
-                            <InputMask
-                                mask='+7 (999) 999-99-99'
-                                maskChar=' '
-                                id={'phone'}
-                                {...register("phone")}
-                                placeholder={'Номер*'}
-                                className={Styles.form__input}
-                            />
-                            {errors['phone'] && <div className={Styles.errorText}>{errors['phone']?.message}</div>}
-                        </div>
-                        <div className={classNames(errors['email'] ? Styles.errorsInput : null, Styles.FormContainer)}>
-                            <input id={'email'} {...register("email")} type={"text"} placeholder={'Почта*'} className={Styles.form__input} />
-                            {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
-                        </div>
-                        <div className={Styles.form__checkbox}>
-                            <div className={Styles.checkbox__checkbox}>
-                                <Checkbox />
-                            </div>
-                            <div className={Styles.checkbox__text}>
-                                Выражаю согласие с&nbsp;<a href="#">Политикой обработки персональных данных</a> и&nbsp;<a href="#">Условиями пользования сайтом</a>
-                            </div>
-                        </div>
-                        <button className={Styles.form__button} disabled={!isDirty || !isValid}>
-                            Отправить
-                        </button>
-                    </form>
                 </div>
             </div>
-        </div>
+            <SubmitPopup active={isActiveSubmitPopup} setActive={setIsActiveSubmitPopup} isSubmitMessage={isSubmitMessage}/>
+        </>
     );
 };
 
