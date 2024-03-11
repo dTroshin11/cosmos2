@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Styles from "./FormBlock.module.scss";
 import FormPopup from "../ui/FormPopup/FormPopup";
 import * as yup from 'yup';
@@ -63,7 +63,7 @@ const FormBlock = ({ formBlockRef }) => {
         const distData = Object.values(data)
         console.log(distData);
         const email = distData[0]
-        const tel = distData[1]
+        const phone = distData[1]
         const name = distData[2]
 
         // const newData =  {
@@ -81,11 +81,12 @@ const FormBlock = ({ formBlockRef }) => {
         return instance
             .post('/api/form', {
                 email,
-                tel,
+                phone,
                 name
             })
             .then((response) => {
                 console.log(response)
+                setValue('phone', '')
                 reset()
                 setIsSubmitMessage(true)
                 setIsActiveSubmitPopup(true)
@@ -105,6 +106,7 @@ const FormBlock = ({ formBlockRef }) => {
         handleSubmit,
         formState: { errors, isDirty, isValid },
         reset,
+        setValue,
     } = useForm({
         mode: 'onChange',
         resolver: yupResolver(schemaForm),
@@ -113,7 +115,6 @@ const FormBlock = ({ formBlockRef }) => {
     //логика модалки появляющейся при отправке
     const [isSubmitMessage, setIsSubmitMessage] = useState(false)
     const [isActiveSubmitPopup, setIsActiveSubmitPopup] = useState(false)
-    
 
     return (
         <div className={Styles.FormBlock} ref={formBlockRef}>
@@ -191,7 +192,7 @@ const FormBlock = ({ formBlockRef }) => {
                     </button>
                 </div>
                 <FormPopup active={popup} setActive={setPopup} />
-                <SubmitPopup active={isActiveSubmitPopup} setActive={setIsActiveSubmitPopup} isSubmitMessage={isSubmitMessage}/>
+                <SubmitPopup active={isActiveSubmitPopup} setActive={setIsActiveSubmitPopup} isSubmitMessage={isSubmitMessage} />
             </div>
         </div>
     );
