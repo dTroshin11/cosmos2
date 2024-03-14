@@ -36,6 +36,7 @@
     left: -65px;
     top: -160px;
     z-index: -10;
+    animation:spin 60s linear infinite;
     position: absolute;
     @media (max-width: $media-tablet-landscape) {
         left: -265px;
@@ -242,4 +243,10 @@
      //display: none;
      left: -450px;
     }
+}
+
+
+@keyframes spin{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
 }

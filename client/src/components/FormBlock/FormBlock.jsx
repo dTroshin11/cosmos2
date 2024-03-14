@@ -104,13 +104,13 @@ const FormBlock = ({ formBlockRef }) => {
                             maskChar=' '
                             id={'phone'}
                             {...register("phone")}
-                            placeholder={'Номер*'}
+                            placeholder={'Телефон*'}
                             className={Styles.form__input}
                         />
                         {errors['phone'] && <div className={Styles.errorText}>{errors['phone']?.message}</div>}
                     </div>
                     <div className={classNames(errors['email'] ? Styles.errorsInput : null, Styles.FormContainer)}>
-                        <input id={'email'} {...register("email")} type={"text"} placeholder={'Почта*'} className={Styles.form__input} />
+                        <input id={'email'} {...register("email")} type={"text"} placeholder={'Email*'} className={Styles.form__input} />
                         {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
                     </div>
                     <div className={Styles.form__checkbox}>

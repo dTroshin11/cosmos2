@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Styles from "./CalculatorBlock.module.scss";
 import { useWindowSize } from '../../hooks/useWindowSize';
+import classNames from "classnames";
 
 const CalculatorBlock = () => {
-    const [people, setPeople] = useState(0)
-    const [proPeople, setProPeople] = useState(0)
-    const [pay, setPay] = useState(0)
+    const [people, setPeople] = useState(150)
+    const [proPeople, setProPeople] = useState(4)
+    const [pay, setPay] = useState(300000)
     const { windowWidth } = useWindowSize();
     const formula = 0
     const summa = pay !== 0 ?  Math.round((Number(pay) * Number(proPeople) * Number(people))* Number(1.302) * Number(12) * Number(0.55) + Number(1620000)) : 0;
@@ -79,7 +80,7 @@ const CalculatorBlock = () => {
                 Рассчитайте вашу <br/> экономию на ИБ
             </div>
             <div className={Styles.calculate}>
-                <div className={Styles.calculate__item} id={"People"}>
+                <div className={classNames(Styles.people,Styles.calculate__item)} id={"People"}>
                     <div className={Styles.item__title}>{windowWidth < 1000 ?
                         <div>Сколько сотрудников у вас в компании?</div> : <div>Сколько сотрудников <br/> у вас в компании?</div>
                     }</div>
@@ -97,10 +98,10 @@ const CalculatorBlock = () => {
                            onChange={(e) => setPeople(e.target.value)}
                            step={1}
                            min={0}
-                           max={100}
+                           max={300}
                     />
                 </div>
-                <div className={Styles.calculate__item} id={"ProPeople"}>
+                <div className={classNames(Styles.proPeople,Styles.calculate__item)} id={"ProPeople"}>
                     <div className={Styles.item__title}>
                         {windowWidth < 1000 ?
                             <div>Сколько ИБ-специалистов?</div> : <div>Сколько <br/> ИБ-специалистов?</div>
@@ -122,7 +123,7 @@ const CalculatorBlock = () => {
                         max={20}
                     />
                 </div>
-                <div className={Styles.calculate__item} id={"Pay"}>
+                <div className={classNames(Styles.pay,Styles.calculate__item)} id={"Pay"}>
                     <div className={Styles.item__title}>Средняя зарплата <br/> для ИБ-специалистов в компании?</div>
                     <input
                         className={Styles.item__inputNum}
