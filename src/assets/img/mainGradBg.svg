@@ -12,17 +12,17 @@
 <filter id="filter0_f_2462_254" x="235.383" y="468.383" width="1754.23" height="1341.23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="196.809" result="effect1_foregroundBlur_2462_254"/>
+<feGaussianBlur stdDeviation="140" result="effect1_foregroundBlur_2462_254"/>
 </filter>
 <filter id="filter1_f_2462_254" x="299.383" y="0.382965" width="1626.23" height="1043.23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="196.809" result="effect1_foregroundBlur_2462_254"/>
+<feGaussianBlur stdDeviation="140" result="effect1_foregroundBlur_2462_254"/>
 </filter>
 <filter id="filter2_f_2462_254" x="0.382965" y="233.383" width="2224.23" height="1326.23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="196.809" result="effect1_foregroundBlur_2462_254"/>
+<feGaussianBlur stdDeviation="140" result="effect1_foregroundBlur_2462_254"/>
 </filter>
 </defs>
 </svg>

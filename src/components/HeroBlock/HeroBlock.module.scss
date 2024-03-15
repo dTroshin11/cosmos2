@@ -33,13 +33,16 @@
 
 .Hero:before {
     content: " ";
-    background-image: url("../../assets/img/mainBg.svg");
+    //background-image: url("../../assets/img/mainBg.svg");
+    background-image: url("../../assets/img/mainBg2.svg");
     width: 1301px;
     height: 1301px;
-    left: -102px;
+    //left: -102px;
+    left: -65px;
     top: -160px;
     z-index: -10;
     position: absolute;
+    animation: spin 80s linear infinite;
 
     @media (max-width: $media-tablet-landscape) {
         left: -265px;
@@ -296,5 +299,15 @@
         left: -420px;
         // display: none;
         // left: -450px;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
     }
 }

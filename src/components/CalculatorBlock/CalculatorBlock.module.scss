@@ -178,6 +178,16 @@ input[type="range"] {
   background-repeat: no-repeat;
 }
 
+.people > input[type="range"] {
+  background-size: 50% 100%;
+}
+.proPeople > input[type="range"] {
+  background-size: 22% 100%;
+}
+.pay > input[type="range"] {
+  background-size: 35% 100%;
+}
+
 [dir="rtl"] input[type="range"] {
   background: #0072F8;
   background-image: linear-gradient(#fff, #fff);
