@@ -68,8 +68,11 @@
         font-weight: 500;
         line-height: 65px;
         margin-bottom: 21px;
-
         @media (max-width: $media-tablet-landscape) {
+            text-align: left;
+            margin-bottom: 24px;
+        }
+        @media (max-width: $media-phone) {
             text-align: left;
             font-size: 32px;
             line-height: 35px;
@@ -83,6 +86,9 @@
         margin-bottom: 48px;
 
         @media (max-width: $media-tablet-landscape) {
+            text-align: left;
+        }
+        @media (max-width: $media-phone) {
             text-align: left;
             font-size: 16px;
             line-height: 22px;
@@ -106,8 +112,7 @@
         font-size: 14px;
         line-height: 20px;
         transition: background-color .3s;
-
-        @media (max-width: $media-tablet-landscape) {
+        @media (max-width: $media-phone) {
             max-width: unset;
         }
     }
@@ -142,7 +147,7 @@
     flex-direction: column;
 
     .HeroFeature__image {
-        background-image: url("../../assets/img/MainLaptop.png");
+        background-image: url("../../assets/img/mainLaptop2.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -177,12 +182,16 @@
             // top: -120px;
             bottom: 100px;
             grid-template-columns: 1fr;
-            padding: 24px 24px 12px 24px;
+            padding: 60px;
             background-position: unset;
+            max-width: 620px;
+        }
+        @media (max-width: $media-phone) {
+            padding: 24px 24px 12px 24px;
             max-width: 340px;
         }
 
-        //background: #000;
+        // background: #000;
         .features__item {
             position: relative;
             padding: 0px 20px;
@@ -240,7 +249,7 @@
             position: absolute;
             left: 0px;
             top: 99%;
-            width: 292px;
+            width: 500px;
             z-index: 10;
             height: 1px;
             background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0%, #5C6C8C 51.56%, rgba(92, 108, 140, 0.00) 100%);

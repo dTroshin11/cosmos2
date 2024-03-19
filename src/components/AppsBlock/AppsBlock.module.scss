@@ -27,6 +27,12 @@
 
       @media (max-width: $media-tablet-landscape) {
         text-align: left;
+        font-size: 60px;
+        line-height: 60px;
+        margin-bottom: 24px;
+      }
+      @media (max-width: $media-phone) {
+        text-align: left;
         font-size: 28px;
         line-height: 30px;
         margin-bottom: 16px;
@@ -65,6 +71,11 @@
 
       @media (max-width: $media-tablet-landscape) {
         height: 44px !important;
+        margin-top: 36px;
+        max-width: 240px;
+        margin-bottom: 16px;
+      }
+      @media (max-width: $media-phone) {
         margin-top: 24px;
         max-width: unset;
       }

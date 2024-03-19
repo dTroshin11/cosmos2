@@ -17,6 +17,11 @@
   text-align: center;
 
   @media (max-width: $media-tablet-landscape) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 60px;
+  }
+  @media (max-width: $media-phone) {
     max-width: 320px;
     text-align: left;
     font-size: 28px;
@@ -33,6 +38,8 @@
 
   @media (max-width: $media-tablet-landscape) {
     flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -46,8 +53,8 @@
   width: 380px;
 
   @media (max-width: $media-tablet-landscape) {
-    width: 65%;
-    min-width: 280px;
+    width: 100%;
+    max-width: 300px;
 
     &:nth-child(1) {
       order: 2;
@@ -191,7 +198,7 @@
   @media (max-width: $media-tablet-landscape) {
     font-size: 12px;
     line-height: 15px;
-    text-align: center;
+    //text-align: center;
   }
 
   @media (max-width: $media-phone) {

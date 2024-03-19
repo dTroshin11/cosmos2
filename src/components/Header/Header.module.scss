@@ -135,6 +135,12 @@
     position: relative;
     width: 100%;
     padding: 12px 17px 0px 17px;
+    @media (max-width: $media-tablet-landscape) {
+        padding: 16px 72px;
+    }
+    @media (max-width: $media-phone) {
+        padding: 12px 17px 0px 17px;
+    }
 }
 
 .Burger {

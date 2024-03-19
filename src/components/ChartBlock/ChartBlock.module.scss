@@ -15,6 +15,13 @@
   border-radius: 32px;
 
   @media (max-width: $media-tablet-landscape) {
+    padding: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 620px;
+    margin: 0 auto;
+  }
+  @media (max-width: $media-phone) {
     flex-direction: column;
     padding: 24px;
     margin-bottom: 90px;
@@ -36,6 +43,9 @@
         margin-bottom: 24px;
 
         @media (max-width: $media-tablet-landscape) {
+
+        }
+        @media (max-width: $media-phone) {
           text-align: left;
           font-size: 28px;
           line-height: 30px;
@@ -49,6 +59,9 @@
         margin-bottom: 16px;
 
         @media (max-width: $media-tablet-landscape) {
+
+        }
+        @media (max-width: $media-phone) {
           text-align: left;
           color: #818AA7;
           font-size: 16px;
@@ -66,6 +79,12 @@
           text-align: left;
           font-size: 16px;
           line-height: 22px;
+          margin-bottom: 55px;
+        }
+        @media (max-width: $media-phone) {
+          text-align: left;
+          font-size: 16px;
+          line-height: 22px;
         }
       }
     }
@@ -73,7 +92,8 @@
     .info_go {
       display: block;
 
-      @media (max-width: $media-tablet-landscape) {
+
+      @media (max-width: $media-phone) {
         display: none;
       }
 
@@ -104,6 +124,11 @@
       color: #818AA7;
 
       @media (max-width: $media-tablet-landscape) {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 55px;
+      }
+      @media (max-width: $media-phone) {
         font-size: 12px;
         line-height: 18px;
       }
@@ -121,6 +146,11 @@
   height: 410px;
 
   @media (max-width: $media-tablet-landscape) {
+    //background-image: url("../../assets/img/chartMob.svg");
+    //width: 293px;
+    //height: 210px;
+  }
+  @media (max-width: $media-phone) {
     background-image: url("../../assets/img/chartMob.svg");
     width: 293px;
     height: 210px;
@@ -131,7 +161,7 @@
   display: none;
   width: 100%;
 
-  @media (max-width: $media-tablet-landscape) {
+  @media (max-width: $media-phone) {
     display: block;
     margin-top: 24px;
   }

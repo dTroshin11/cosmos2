@@ -18,6 +18,11 @@
   text-align: center;
 
   @media (max-width: $media-tablet-landscape) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+  @media (max-width: $media-phone) {
     max-width: 320px;
     text-align: left;
     font-size: 28px;
@@ -41,6 +46,10 @@
   height: 45%;
 
   @media (max-width: $media-tablet-landscape) {
+    width: 620px;
+    height: 386px;
+  }
+  @media (max-width: $media-phone) {
     width: 340px;
     height: 212px;
   }

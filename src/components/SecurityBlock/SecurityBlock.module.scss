@@ -20,6 +20,29 @@
     background-size: cover;
     background-position: bottom left 20%;
     flex-direction: column-reverse;
+    padding: 60px;
+    margin: 0 auto;
+    margin-bottom: 90px;
+    width: 620px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -250px;
+      left: -200px;
+      width: 600px;
+      height: 460px;
+      background-image: url("../../assets/img/gradBgLaptop.svg");
+      background-size: cover;
+      background-position: center left;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+  @media (max-width: $media-phone) {
+    background-size: cover;
+    background-position: bottom left 20%;
+    flex-direction: column-reverse;
     padding: 24px;
     margin-bottom: 90px;
 
@@ -47,6 +70,11 @@
   max-width: 650px;
 
   @media (max-width: $media-tablet-landscape) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: $media-phone) {
     font-size: 28px;
     line-height: 30px;
     margin-bottom: 36px;

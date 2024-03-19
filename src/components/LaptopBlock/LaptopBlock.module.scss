@@ -41,10 +41,17 @@
   text-align: center;
 
   @media (max-width: $media-tablet-landscape) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    justify-content: flex-start;
+  }
+  @media (max-width: $media-phone) {
     font-size: 28px;
     line-height: 30px;
     text-align: left;
     justify-content: flex-start;
+
   }
 }
 
@@ -56,6 +63,12 @@
   justify-content: space-between;
 
   @media (max-width: $media-tablet-landscape) {
+    flex-direction: column-reverse;
+    //align-items: flex-start;
+    align-items: center;
+    display: flex;
+  }
+  @media (max-width: $media-phone) {
     flex-direction: column-reverse;
     //align-items: flex-start;
     align-items: unset;
@@ -73,11 +86,14 @@
     display: none;
 
     @media (max-width: $media-tablet-landscape) {
-      width: 100%;
+      //width: 100%;
       display: block;
       position: relative;
       z-index: 3;
       top: -75px;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
     }
   }
 

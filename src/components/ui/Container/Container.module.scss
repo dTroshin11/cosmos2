@@ -6,6 +6,9 @@
   max-width: 1180px;
 
   @media (max-width: $media-tablet-landscape) {
+    padding: 0 74px;
+  }
+  @media (max-width: $media-phone) {
     padding: 0 17px;
   }
 
