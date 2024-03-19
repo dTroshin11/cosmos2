@@ -14,6 +14,7 @@ const Tabs = ({ tabs, activeTab, setActiveTab }) => {
                         className={`${Styles.tab} ${i === activeTab ? Styles.active : ''}`}
                         onClick={openTab}
                         data-index={i}
+                        key={i}
                     >{n}</div>
                 ))}
             </div>

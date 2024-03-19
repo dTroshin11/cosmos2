@@ -1,11 +1,9 @@
 import Styles from './SecondaryHeader.module.scss';
-import { useEffect, useState } from "react";
-import { useWindowSize } from "../../hooks/useWindowSize"
+import { useState } from "react";
 import { Link } from 'react-router-dom';
 
 
 const SecondaryHeader = ({ links, showAnchors, scrollToFormBlock, bgBlack }) => {
-  const { windowWidth } = useWindowSize();
   const [menuActive, setMenuActive] = useState(false)
   const [openAnchors, setOpenAnchors] = useState(false)
 
@@ -33,10 +31,10 @@ const SecondaryHeader = ({ links, showAnchors, scrollToFormBlock, bgBlack }) => 
           </Link>
           <div className={Styles.Burger} onClick={() => setMenuActive(!menuActive)}>
             {!menuActive && <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37" fill="none">
-              <g clip-path="url(#clip0_2479_16088)">
-                <path d="M6 9.20996H30" stroke="white" stroke-width="2.25" stroke-linecap="square" stroke-linejoin="round" />
-                <path d="M6 18.21H30" stroke="white" stroke-width="2.25" stroke-linecap="square" stroke-linejoin="round" />
-                <path d="M6 27.21H30" stroke="white" stroke-width="2.25" stroke-linecap="square" stroke-linejoin="round" />
+              <g clipPath="url(#clip0_2479_16088)">
+                <path d="M6 9.20996H30" stroke="white" strokeWidth="2.25" strokeLinecap="square" strokeLinejoin="round" />
+                <path d="M6 18.21H30" stroke="white" strokeWidth="2.25" strokeLinecap="square" strokeLinejoin="round" />
+                <path d="M6 27.21H30" stroke="white" strokeWidth="2.25" strokeLinecap="square" strokeLinejoin="round" />
               </g>
               <defs>
                 <clipPath id="clip0_2479_16088">
@@ -47,10 +45,10 @@ const SecondaryHeader = ({ links, showAnchors, scrollToFormBlock, bgBlack }) => 
             }
 
             {menuActive && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="37" viewBox="0 0 20 37" fill="none">
-              <g clip-path="url(#clip0_2495_7892)">
-                <path d="M1.51465 27.3901L18.4852 10.4196" stroke="white" stroke-width="2.25" stroke-linecap="square" stroke-linejoin="round" />
-                <path d="M1.51465 27.3901L18.4852 10.4196" stroke="white" stroke-width="2.25" stroke-linecap="square" stroke-linejoin="round" />
-                <path d="M1.51465 10.4199L18.4852 27.3905" stroke="white" stroke-width="2.25" stroke-linecap="square" stroke-linejoin="round" />
+              <g clipPath="url(#clip0_2495_7892)">
+                <path d="M1.51465 27.3901L18.4852 10.4196" stroke="white" strokeWidth="2.25" strokeLinecap="square" strokeLinejoin="round" />
+                <path d="M1.51465 27.3901L18.4852 10.4196" stroke="white" strokeWidth="2.25" strokeLinecap="square" strokeLinejoin="round" />
+                <path d="M1.51465 10.4199L18.4852 27.3905" stroke="white" strokeWidth="2.25" strokeLinecap="square" strokeLinejoin="round" />
               </g>
               <defs>
                 <clipPath id="clip0_2495_7892">
@@ -76,7 +74,7 @@ const SecondaryHeader = ({ links, showAnchors, scrollToFormBlock, bgBlack }) => 
             </div>
             <div className={!openAnchors ? Styles.Arrow : Styles.Arrow + ' ' + Styles.ArrowOpen}>
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="38" viewBox="0 0 36 38" fill="none">
-                <path d="M26.4851 15.0005L17.9998 23.4858L9.51455 15.0001" stroke="#818AA7" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                <path d="M26.4851 15.0005L17.9998 23.4858L9.51455 15.0001" stroke="#818AA7" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round" />
               </svg>
             </div>
           </div>

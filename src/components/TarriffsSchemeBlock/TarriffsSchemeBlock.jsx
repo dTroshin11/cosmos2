@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Styles from "./TarriffsSchemeBlock.module.scss";
 import FormPopup from '../ui/FormPopup/FormPopup';
 import { useWindowSize } from "../../hooks/useWindowSize";
@@ -6,11 +6,11 @@ import { useWindowSize } from "../../hooks/useWindowSize";
 const TariffsSchemeBlock = ({ formBlockRef }) => {
     const { windowWidth } = useWindowSize();
     const plus = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-        <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
+        <path d="M12 5V19" stroke="#00FF75" strokeLinejoin="round" />
+        <path d="M5 12H19" stroke="#00FF75" strokeLinejoin="round" />
     </svg>
     const minus =   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
+    <path d="M5 12.0002H19" stroke="#818AA7" strokeLinejoin="round" />
 </svg>
     const items = [
         // цена
@@ -356,13 +356,13 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
     ]
     const MobileSchema = ({arr = itemsMobile,id,title}) => {
         return (
-            <div>
+            <div  >
                 <div className={Styles.mainTitle}>
                     {title}
                 </div>
                 {arr.map((obj, index) => {
-                    return <>
-                        <div className={Styles.mobileContent} key={index}>
+                    return <React.Fragment key={index}>
+                        <div className={Styles.mobileContent}>
                             <div className={Styles.text}>
                                 {obj.text}
                             </div>
@@ -371,7 +371,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                             </div>
                         </div>
                         <div className={Styles.divider}/>
-                    </>
+                    </React.Fragment>
                 })}
                 {buttons.map((obj, index) => {
                             return <div key={index}>
@@ -446,36 +446,36 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                             </div>
                         </div>
                         {items.map((obj, index) => {
-                            return <>
+                            return <React.Fragment key={index}>
                                 <div className={Styles.columnMainContent}>
-                                    <div className={Styles.text} key={index}>
+                                    <div className={Styles.text}>
                                         {obj.text}
                                     </div>
-                                    <div className={Styles.free} key={index}>
+                                    <div className={Styles.free}>
                                         {obj.free}
                                     </div>
-                                    <div className={Styles.light} key={index}>
+                                    <div className={Styles.light}>
                                         {obj.light}
                                     </div>
-                                    <div className={Styles.standart} key={index}>
+                                    <div className={Styles.standart}>
                                         {obj.standart}
                                     </div>
                                 </div>
                                 <div className={Styles.divider}></div>
-                            </>
+                            </React.Fragment>
                         })}
                         {buttons.map((obj, index) => {
-                            return <div className={Styles.buttons}>
-                                <div className={Styles.text} key={index}>
+                            return <div className={Styles.buttons} key={index}>
+                                <div className={Styles.text}>
                                     {obj.text}
                                 </div>
-                                <div className={Styles.free} key={index}>
+                                <div className={Styles.free}>
                                     {obj.buttonGrey}
                                 </div>
-                                <div className={Styles.light} key={index}>
+                                <div className={Styles.light}>
                                     {obj.buttonGrey}
                                 </div>
-                                <div className={Styles.standart} key={index}>
+                                <div className={Styles.standart}>
                                     {obj.buttonGrey}
                                 </div>
                             </div>
@@ -486,19 +486,19 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                             Премиум
                         </div>
                         {items.map((obj, index) => {
-                            return <>
-                                <div className={Styles.premium} key={index}>
+                            return <React.Fragment key={index}>
+                                <div className={Styles.premium}>
                                     {obj.premium}
                                 </div>
                                 <div className={Styles.divider}></div>
-                            </>
+                            </React.Fragment>
                         })}
                         {buttons.map((obj, index) => {
-                            return <>
-                                <div className={Styles.premium} key={index}>
+                            return <React.Fragment key={index}>
+                                <div className={Styles.premium}>
                                     {obj.buttonBlue}
                                 </div>
-                            </>
+                            </React.Fragment>
                         })}
                     </div>
                 </div>
@@ -507,8 +507,8 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
 
             {windowWidth <= 1024 && (
                 <>
-                    {mobileSchemaArr.map((obj) => (
-                        <MobileSchema title={obj.title} arr={obj.arr} id={obj.id} />
+                    {mobileSchemaArr.map((obj, index) => (
+                        <MobileSchema title={obj.title} key={index} arr={obj.arr} id={obj.id} />
                     ))}
                     <div className={Styles.description}>*Cтоимость указана без НДС</div>
                 </>
