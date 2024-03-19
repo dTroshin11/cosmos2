@@ -48,7 +48,7 @@ const AppsBlock = ({formBlockRef}) => {
                         поддерживаемого&nbsp;ПО*
                     </div>
                     <div className={Styles.texts_subtitle}>
-                        Поддерживаем приложения Windows в&nbsp;нашей&nbsp;ОС
+                        Запускайте любые, даже самые ресурсоёмкие Windows-приложения<br/> с&nbsp;минимальным падением производительности
                     </div>
                 </div>
                 <div className={Styles.Apps__mob}>
@@ -89,7 +89,7 @@ const AppsBlock = ({formBlockRef}) => {
                         </div>
                     </div>
                     <div className={Styles.Apps__buttonInfo}>
-                        *Не&nbsp;предустановлены на&nbsp;ноутбуке Vega Alpha.<br/>
+                        *Не&nbsp;предустановлены на&nbsp;ноутбуке Vega Alpha<br/>
                         Установить данные приложения пользователь может самостоятельно
                     </div>
                 </div>

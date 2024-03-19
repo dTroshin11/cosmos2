@@ -19,13 +19,13 @@ const SecurityBlock = () => {
                     Аппаратный ключ 
                     безопасности
                 </div>
-                <ul className={Styles.items__list}>
+                <div className={Styles.items__list}>
                 {item.map((el, index) => {
-                return  <li className={Styles.item} key={index}>
+                return  <div className={Styles.item} key={index}>
                             <span className={Styles.text}>{el}</span>
-                        </li>
+                        </div>
                     })}
-                </ul>
+                </div>
             </div>
         </div>
     );

@@ -81,8 +81,18 @@
 }
 
 .item {
-  list-style-type: disc;
-  color: #0072F8;
+  position: relative;
+}
+
+.item:before {
+  content: " ";
+  border-radius: 20px;
+  position: absolute;
+  left: -20px;
+  width: 4px;
+  top: 9px;
+  height: 4px;
+  background-color: #0072F8;
 }
 
 .text {

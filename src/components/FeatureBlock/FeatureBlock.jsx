@@ -12,7 +12,7 @@ const item = [
     {
         title: <div>Встроенные средства&nbsp;защиты</div>,
         text: <div>
-            Экономия на&nbsp;информационной безопасности в&nbsp;компании
+            Экономия на информационной безопасности в компании
         </div>
     },
     {
@@ -27,7 +27,6 @@ const FeatureBlock = () => {
             <div className={Styles.title}>Легко встраиваемся <br/>
                 в&nbsp;инфраструктуру компаний
             </div>
-
             <div className={Styles.Features}>
                 {item.map( (el,index) => {
                     return <div className={Styles.Features__item} key={index}>

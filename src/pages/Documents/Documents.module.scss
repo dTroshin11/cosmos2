@@ -15,7 +15,7 @@
 .Menu {
     padding: 60px 90px;
     width: 40%;
-    background: #101010;
+    background: #000000;
     margin-bottom: 36px;
 
     @media (max-width: $media-tablet-landscape) {
@@ -31,7 +31,7 @@
     gap: 24px;
 
     a {
-        color: #818AA7;
+        color: white;
         font-size: 18px;
         font-weight: 400;
         line-height: 25px;
@@ -102,7 +102,7 @@
 }
 
 .Text {
-    color: #818AA7;
+    color: white;
     font-size: 18px;
     line-height: 25px;
 
@@ -136,7 +136,7 @@
 
 .ListText {
     font-size: 18px;
-    color: #818AA7;
+    color: white;
     line-height: 25px;
 
     @media (max-width: $media-tablet-landscape) {
@@ -150,7 +150,7 @@
     display: flex;
 
     a {
-        color: #358fe9;
+        color: white;
         text-decoration: underline;
         transition: background-color .3s, opacity .3s;
     
@@ -162,7 +162,7 @@
 
 .ItemNumber {
     font-size: 18px;
-    color: #818AA7;
+    color: white;
     line-height: 25px;
     width: 8%;
 
@@ -175,7 +175,7 @@
 
 .ItemText {
     font-size: 18px;
-    color: #818AA7;
+    color: white;
     line-height: 25px;
     width: 92%;
 

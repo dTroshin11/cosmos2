@@ -74,7 +74,6 @@ const FormPopup = ({ children, active, setActive }) => {
         // console.log('newData',newData)
 
     }
-
     const {
         register,
         handleSubmit,
@@ -93,28 +92,12 @@ const FormPopup = ({ children, active, setActive }) => {
             <div className={classNames(Styles.Modal, active === true && Styles.active)} onClick={() => setActive(false)}>
                 <div className={Styles.Modal__content} onClick={e => e.stopPropagation()}>
                     <div className={Styles.Modal__form}>
-                        <div className={Styles.Modal__title}>
+                        <div className={Styles.Modal__title} onClick={() =>    setIsActiveSubmitPopup(true)}>
                             Оставить заявку
                             <div className={Styles.Modal__close} onClick={() => { setActive(false) }}>
                                 <img src={closeImg} alt={"close"} />
                             </div>
                         </div>
-                        {/*<form className={Styles.form}>*/}
-                        {/*    <input  className={Styles.form__input} type={"text"} placeholder={"ФИО*"}/>*/}
-                        {/*    <input  className={Styles.form__input} type={"text"} placeholder={"Телефон*"}/>*/}
-                        {/*    <input  className={Styles.form__input} type={"text"} placeholder={"Email*"}/>*/}
-                        {/*    <div className={Styles.form__checkbox}>*/}
-                        {/*        <div className={Styles.checkbox__checkbox}>*/}
-                        {/*            <Checkbox/>*/}
-                        {/*        </div>*/}
-                        {/*        <div className={Styles.checkbox__text}>*/}
-                        {/*            Выражаю согласие с <a href="#">Политикой обработки персональных данных</a> и <a href="#">Условиями пользования сайтом</a>*/}
-                        {/*        </div>*/}
-                        {/*    </div>*/}
-                        {/*    <button className={Styles.form__button}>*/}
-                        {/*        Отправить*/}
-                        {/*    </button>*/}
-                        {/*</form>*/}
                         <form className={Styles.form} onSubmit={handleSubmit(formSubmit)}>
                             <div className={classNames(errors['name'] ? Styles.errorsInput : null, Styles.FormContainer)}>
                                 <input id={'name'} {...register("name")} type={"text"} placeholder={'ФИО*'} className={Styles.form__input} />

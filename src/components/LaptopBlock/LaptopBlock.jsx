@@ -33,7 +33,7 @@ const infoRight = [
     },
     {
         title: "Высокоскоростная беспроводная связь",
-        subtitle: "Wi-Fi 6E, Bluetooth 5.2 и 4G/5G"
+        subtitle: "4G/5G, Wi-Fi 6E и Bluetooth 5.2"
     },
 ]
 const infoMob = [

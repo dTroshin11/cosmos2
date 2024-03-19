@@ -3,14 +3,21 @@ import Styles from "./CalculatorBlock.module.scss";
 import { useWindowSize } from '../../hooks/useWindowSize';
 import classNames from "classnames";
 
+
+
 const CalculatorBlock = () => {
+    // сотрудники
     const [people, setPeople] = useState(150)
+    //  иб спецы
     const [proPeople, setProPeople] = useState(4)
+    // зп
     const [pay, setPay] = useState(300000)
+
+    // const fullProPeople = people >= 23 ? proPeople !== 0 ? proPeople : people / 23 : 1
     const { windowWidth } = useWindowSize();
 
     const summa = proPeople == 0
-        ? Math.ceil((Number(pay) * Number(people / 23)) * Number(1.302) * Number(12) * Number(0.55) + Number(1620000))
+        ? people <= 23 ? Math.ceil((Number(pay) * Number(1)) * Number(1.302) * Number(12) * Number(0.55) + Number(1620000)) :  Math.ceil((Number(pay) * Number(people / 23)) * Number(1.302) * Number(12) * Number(0.55) + Number(1620000))
         : Math.ceil((Number(pay) * Number(proPeople)) * Number(1.302) * Number(12) * Number(0.55) + Number(1620000))
 
     const numbFmt = new Intl.NumberFormat('ru-RU').format(summa);

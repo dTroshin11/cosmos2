@@ -3,7 +3,6 @@
 
 .CosmosSchemeBlock {
   margin-bottom: 150px;
-
   @media (max-width: $media-tablet-landscape) {
     margin-bottom: 90px;
   }
@@ -32,10 +31,13 @@
 
 .columnText {
   padding-top: 76px;
-  width: 50%;
+  //width: 50%;
+  //width: 126px;
+  text-align: left;
 
   @media (max-width: $media-tablet-landscape) {
     padding-top: 32px;
+    width: 126px;
   }
 
   .text {
@@ -56,8 +58,12 @@
       gap: 4px;
 
       @media (max-width: $media-tablet-landscape) {
+
         justify-content: flex-start;
+        //align-items: flex-start;
+
         padding-top: 12px;
+        padding-bottom: 12px;
       }
     }
   }
@@ -67,6 +73,7 @@
   padding: 32px 16px;
   height: 880px;
   width: 25%;
+  //width: 90px;
   border-radius: 32px;
   border: 1px solid #4E5C77;
 
@@ -74,7 +81,8 @@
     border: none;
     height: auto;
     padding: 32px 0px 0px 0px;
-    width: 50%;
+    width: 90px;
+    margin-right: 10px;
   }
 
   .cosmosTitle {
@@ -102,6 +110,7 @@
     }
 
     div {
+
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -109,6 +118,9 @@
       gap: 4px;
 
       @media (max-width: $media-tablet-landscape) {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        justify-content: flex-start;
         align-items: flex-start;
       }
     }
@@ -117,10 +129,9 @@
 
 .columnOther {
   width: 25%;
-
   @media (max-width: $media-tablet-landscape) {
     padding-top: 32px;
-    width: 50%;
+    width: 90px;
   }
 
   .otherTitle {
@@ -149,6 +160,7 @@
     }
 
     div {
+
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -156,7 +168,10 @@
       gap: 4px;
 
       @media (max-width: $media-tablet-landscape) {
+        padding-top: 12px;
+        padding-bottom: 12px;
         align-items: flex-start;
+        justify-content: flex-start;
       }
     }
   }
@@ -166,7 +181,7 @@
   height: 82px;
 
   @media (max-width: $media-tablet-landscape) {
-    height: 76px;
+    height: 120px;
   }
 }
 
@@ -199,7 +214,7 @@
 }
 
 .dividerRight {
-  width: 100%;
+  width: 341px;
   height: 1px;
   background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0%, #5C6C8C 100%, rgba(92, 108, 140, 0.00) 100%), #000;
 

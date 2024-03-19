@@ -3,28 +3,17 @@ import Styles from "./TarriffsSchemeBlock.module.scss";
 import FormPopup from '../ui/FormPopup/FormPopup';
 import { useWindowSize } from "../../hooks/useWindowSize";
 
-
 const TariffsSchemeBlock = ({ formBlockRef }) => {
-
-    const mobilePremiumRef = useRef(null);
-    const mobileStandartRef = useRef(null);
-    const mobileLightRef = useRef(null);
-    const mobileFreeRef = useRef(null);
-
     const { windowWidth } = useWindowSize();
-
-    const [popup, setPopup] = useState(false)
-
-    const scrollToFormBlock = () => {
-        formBlockRef.current.scrollIntoView({ behavior: 'smooth' });
-    };
-
-    const onClickBlockOpen = (event, ref) => {
-        ref.current.classList.add(`${Styles.open}`)
-        event.currentTarget.style.display = 'none'
-    }
-
+    const plus = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
+        <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
+    </svg>
+    const minus =   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
+</svg>
     const items = [
+        // цена
         {
             text: <div className={Styles.small}>Цена</div>,
             free: <div className={Styles.small}>
@@ -56,261 +45,180 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                 }
             </div>,
         },
+        // Собственная ОС
         {
             text: <div className={Styles.small}>Собственная ОС</div>,
             free: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             light: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             standart: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             premium: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
         },
+        // Ноутбук Vega Alpha
         {
-            text: <div className={Styles.small}>Ноутбук Vega</div>,
+            text: <div className={Styles.small}>Ноутбук Vega Alpha</div>,
             free: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             light: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             standart: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             premium: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
         },
+        // 2 Secure Key в поставке
         {
-            text: <div className={Styles.small}>Secure Key</div>,
+            text: <div className={Styles.small}>2 Secure Key в поставке</div>,
             free: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             light: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             standart: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             premium: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
         },
+        // Интегрированный VPN
         {
             text: <div className={Styles.small}>Интегрированный VPN</div>,
             free: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             light: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             standart: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             premium: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
         },
+        // Облачное хранилище
         {
             text: <div className={Styles.high}>Облачное хранилище</div>,
             free: <div className={Styles.high}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             light: <div className={Styles.high}>
                 <span>Вторая память
                     Шифрование</span>
-                <span></span>
+                <span/>
             </div>,
             standart: <div className={Styles.high}>
                 <span>МТС Cloud, Шардирование, Шифрование</span>
-                <span></span>
+                <span/>
             </div>,
             premium: <div className={Styles.high}>
                 <span>МТС Cloud, Шардирование, Шифрование</span>
-                <span></span>
+                <span/>
             </div>,
         },
+        // Безопасный браузер
         {
             text: <div className={Styles.small}>Безопасный браузер</div>,
             free: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             light: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             standart: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             premium: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
         },
+        // Офисный пакет
         {
             text: <div className={Styles.small}>Офисный пакет</div>,
             free: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             light: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             standart: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             premium: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
         },
+        // ПО по запросу клиента: CAD
         {
             text: <div className={Styles.high}>ПО по запросу клиента: CAD/CAM/
                 Adobe/Microsoft/Autodesk/Siemens +
                 адаптация специализированного ПО*</div>,
             free: <div className={Styles.high}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             light: <div className={Styles.high}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             standart: <div className={Styles.high}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             premium: <div className={Styles.high}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
         },
+        // Поддержка
         {
             text: <div className={Styles.small}>Поддержка</div>,
             free: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.0002H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             light: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             standart: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
             premium: <div className={Styles.small}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5V19" stroke="#00FF75" stroke-linejoin="round" />
-                    <path d="M5 12H19" stroke="#00FF75" stroke-linejoin="round" />
-                </svg>
+                {plus}
             </div>,
         },
+        // Возможность обновить ноутбук
         {
             text: <div className={Styles.other}>Возможность обновить ноутбук</div>,
             free: <div className={Styles.other}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.001H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             light: <div className={Styles.other}>
                 <span>Один раз в год</span>
-                <span></span>
+                <span/>
             </div>,
             standart: <div className={Styles.other}>
                 <span>Один раз в год</span>
-                <span></span>
+                <span/>
             </div>,
             premium: <div className={Styles.other}>
                 <span>Один раз в год</span>
-                <span></span>
+                <span/>
             </div>,
         },
+        // Горячая замена ноутбука
         {
             text: <div className={Styles.medium}>Горячая замена ноутбука</div>,
             free: <div className={Styles.medium}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.001H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             light: <div className={Styles.medium}>
                 <span>Один раз в год</span>
@@ -322,15 +230,14 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             </div>,
             premium: <div className={Styles.medium}>
                 <span>Один раз в год</span>
-                <span></span>
+                <span/>
             </div>,
         },
+        // Возможность выкупа
         {
             text: <div className={Styles.medium}>Возможность выкупа</div>,
             free: <div className={Styles.medium}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12.001H19" stroke="#818AA7" stroke-linejoin="round" />
-                </svg>
+                {minus}
             </div>,
             light: <div className={Styles.medium}>
                 <span>Подписка</span>
@@ -346,6 +253,147 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             </div>,
         }
     ]
+    const itemsMobile = [
+        // Цена
+        {
+            text: <div className={Styles.small}>Цена</div>,
+            free: <div className={Styles.small}>
+                <span className={Styles.price}>0 ₽</span>
+                {windowWidth > 1024
+                    ? <span>в месяц</span>
+                    : ''
+                }
+            </div>,
+            light: <div className={Styles.small}>
+                <span className={Styles.price}>10 500 ₽*</span>
+                {windowWidth > 1024
+                    ? <span>в месяц</span>
+                    : ''
+                }
+            </div>,
+            standart: <div className={Styles.small}>
+                <span className={Styles.price}>21 000 ₽*</span>
+                {windowWidth > 1024
+                    ? <span>в месяц</span>
+                    : ''
+                }
+            </div>,
+            premium: <div className={Styles.small}>
+                <span className={Styles.price}>31 500 ₽*</span>
+                {windowWidth > 1024
+                    ? <span>в месяц</span>
+                    : ''
+                }
+            </div>,
+        },
+        // Ноутбук Vega Alpha
+        {
+            text: <div className={Styles.small}>Ноутбук Vega Alpha</div>,
+            free: <div className={Styles.small}>
+                {minus}
+            </div>,
+            light: <div className={Styles.small}>
+                {plus}
+            </div>,
+            standart: <div className={Styles.small}>
+                {plus}
+            </div>,
+            premium: <div className={Styles.small}>
+                {plus}
+            </div>,
+        },
+        // ПО по запросу клиента: CAD
+        {
+            text: <div className={Styles.small}>ПО по запросу клиента: CAD<br/>/CAM/Adobe/Microsoft/Autodesk<br/>/Siemens + адаптация<br/> специализированного ПО*</div>,
+            free: <div className={Styles.small}>
+                {minus}
+            </div>,
+            light: <div className={Styles.small}>
+                {minus}
+            </div>,
+            standart: <div className={Styles.small}>
+                {minus}
+            </div>,
+            premium: <div className={Styles.small}>
+                {plus}
+            </div>,
+        },
+        // Интегрированный VPN
+        {
+            text: <div className={Styles.small}>Интегрированный VPN</div>,
+            free: <div className={Styles.small}>
+                {minus}
+            </div>,
+            light: <div className={Styles.small}>
+                {plus}
+            </div>,
+            standart: <div className={Styles.small}>
+                {plus}
+            </div>,
+            premium: <div className={Styles.small}>
+                {plus}
+            </div>,
+        },
+        // Облачное хранилище
+        {
+            text: <div className={Styles.small}>Облачное хранилище</div>,
+            free: <div className={Styles.small}>
+                {minus}
+            </div>,
+            light: <div className={Styles.small}>
+                Вторая память
+                Шифрование
+            </div>,
+            standart: <div className={Styles.small}>
+                МТС Cloud, Шардирование, Шифрование
+            </div>,
+            premium: <div className={Styles.small}>
+                МТС Cloud,
+                Шардирование,
+                Шифрование
+            </div>,
+        },
+    ]
+    const MobileSchema = ({arr = itemsMobile,id,title}) => {
+        return (
+            <div>
+                <div className={Styles.mainTitle}>
+                    {title}
+                </div>
+                {arr.map((obj, index) => {
+                    return <>
+                        <div className={Styles.mobileContent} key={index}>
+                            <div className={Styles.text}>
+                                {obj.text}
+                            </div>
+                            <div className={Styles.free}>
+                                {obj[id]}
+                            </div>
+                        </div>
+                        <div className={Styles.divider}/>
+                    </>
+                })}
+                {buttons.map((obj, index) => {
+                            return <div key={index}>
+                             {obj.buttonGrey}
+                    </div>
+                    })}
+
+            </div>
+        );
+    };
+    const mobileSchemaArr = [
+        {title:"Премиум", id:"premium", arr:items},
+        {title:"Стандарт", id:"standart"},
+        {title:"Лайт", id:"light"},
+        {title:"Бесплатно", id:"free"},
+    ]
+
+    const [popup, setPopup] = useState(false)
+
+    const scrollToFormBlock = () => {
+        formBlockRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
 
     const buttons = [
         {
@@ -382,9 +430,8 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             <div className={Styles.title}>
                 Тарифы
             </div>
-
-            {windowWidth > 1024
-                ? <div className={Styles.content}>
+            {windowWidth > 1024 && (
+                <div className={Styles.content}>
                     <div className={Styles.columnMain}>
                         <div className={Styles.titles}>
                             <div className={Styles.mainTitle}></div>
@@ -455,128 +502,18 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                         })}
                     </div>
                 </div>
-                : ''}
+            )}
 
 
-
-            {windowWidth <= 1024
-                ? <div className={Styles.mobileColumn}>
-                    <div className={Styles.mobilePremium} ref={mobilePremiumRef}>
-                        <div className={Styles.premiumTitle}>
-                            Премиум
-                        </div>
-                        {items.map((obj, index) => {
-                            return <>
-                                <div className={Styles.mobileContent}>
-                                    <div className={Styles.text} key={index}>
-                                        {obj.text}
-                                    </div>
-                                    <div className={Styles.premium} key={index}>
-                                        {obj.premium}
-                                    </div>
-                                </div>
-                                <div className={Styles.divider}></div>
-                            </>
-                        })}
-                        {buttons.map((obj, index) => {
-                            return <div key={index}>
-                                {obj.buttonBlue}
-                            </div>
-                        })}
-                    </div>
-                    <div className={Styles.info_goMob}>
-                        <div className={Styles.button + ' ' + Styles.premiumButton} onClick={(event) => onClickBlockOpen(event, mobilePremiumRef)}>
-                            <div className={Styles.buttonText}>Подробнее</div>
-                        </div>
-                    </div>
-                    <div className={Styles.mobileStandart} ref={mobileStandartRef}>
-                        <div className={Styles.mainTitle}>
-                            Стандарт
-                        </div>
-                        {items.map((obj, index) => {
-                            return <>
-                                <div className={Styles.mobileContent}>
-                                    <div className={Styles.text} key={index}>
-                                        {obj.text}
-                                    </div>
-                                    <div className={Styles.standart} key={index}>
-                                        {obj.standart}
-                                    </div>
-                                </div>
-                                <div className={Styles.divider}></div>
-                            </>
-                        })}
-                        {buttons.map((obj, index) => {
-                            return <div key={index}>
-                                {obj.buttonGrey}
-                            </div>
-                        })}
-                    </div>
-                    <div className={Styles.info_goMob}>
-                        <div className={Styles.button} onClick={(event) => onClickBlockOpen(event, mobileStandartRef)}>
-                            <div className={Styles.buttonText}>Подробнее</div>
-                        </div>
-                    </div>
-                    <div className={Styles.mobileLight} ref={mobileLightRef}>
-                        <div className={Styles.mainTitle}>
-                            Лайт
-                        </div>
-                        {items.map((obj, index) => {
-                            return <>
-                                <div className={Styles.mobileContent}>
-                                    <div className={Styles.text} key={index}>
-                                        {obj.text}
-                                    </div>
-                                    <div className={Styles.light} key={index}>
-                                        {obj.light}
-                                    </div>
-                                </div>
-                                <div className={Styles.divider}></div>
-                            </>
-                        })}
-                        {buttons.map((obj, index) => {
-                            return <div key={index}>
-                                {obj.buttonGrey}
-                            </div>
-                        })}
-                    </div>
-                    <div className={Styles.info_goMob}>
-                        <div className={Styles.button} onClick={(event) => onClickBlockOpen(event, mobileLightRef)}>
-                            <div className={Styles.buttonText}>Подробнее</div>
-                        </div>
-                    </div>
-                    <div className={Styles.mobileFree} ref={mobileFreeRef}>
-                        <div className={Styles.mainTitle}>
-                            Бесплатно
-                        </div>
-                        {items.map((obj, index) => {
-                            return <>
-                                <div className={Styles.mobileContent}>
-                                    <div className={Styles.text} key={index}>
-                                        {obj.text}
-                                    </div>
-                                    <div className={Styles.free} key={index}>
-                                        {obj.free}
-                                    </div>
-                                </div>
-                                <div className={Styles.divider}></div>
-                            </>
-                        })}
-                        {buttons.map((obj, index) => {
-                            return <div key={index}>
-                                {obj.buttonGrey}
-                            </div>
-                        })}
-                    </div>
-                    <div className={Styles.info_goMob}>
-                        <div className={Styles.button} onClick={(event) => onClickBlockOpen(event, mobileFreeRef)}>
-                            <div className={Styles.buttonText}>Подробнее</div>
-                        </div>
-                    </div>
+            {windowWidth <= 1024 && (
+                <>
+                    {mobileSchemaArr.map((obj) => (
+                        <MobileSchema title={obj.title} arr={obj.arr} id={obj.id} />
+                    ))}
                     <div className={Styles.description}>*Cтоимость указана без НДС</div>
-                </div>
-                : ''
-            }
+                </>
+            )}
+
             <FormPopup active={popup} setActive={setPopup} />
         </div>
     );

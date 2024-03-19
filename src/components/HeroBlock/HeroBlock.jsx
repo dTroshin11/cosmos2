@@ -4,6 +4,8 @@ import FormPopup from "../ui/FormPopup/FormPopup";
 import React, { useState } from "react";
 
 
+
+
 const feature = [
     {
         title: <div>Собственная операционная&nbsp;система</div>,
@@ -15,9 +17,8 @@ const feature = [
         subtitle: <div>Полный контроль над системой и&nbsp;продвинутые функции кибербезопасности</div>
     },
     {
-        title: <div>Аппаратный ключ <br />
-            безопасности</div>,
-        subtitle: <div>Ваши данные надёжно защищены&nbsp;и&nbsp;всегда под рукой</div>
+        title: <div>Аппаратный ключ <br/> безопасности</div>,
+        subtitle: <div>Данные надёжно защищены благодаря контролю над аппаратной базой</div>
     },
     {
         title: <div>Персональный <br />
@@ -45,6 +46,7 @@ const HeroBlock = ({ formBlockRef }) => {
     const scrollToFormBlock = () => {
         formBlockRef.current.scrollIntoView({ behavior: 'smooth' });
     };
+    //
 
     return (
         <div className={Styles.Block}>
@@ -55,7 +57,7 @@ const HeroBlock = ({ formBlockRef }) => {
                             Премиальное защищённое <br /> рабочее место
                         </div>
                         <div className={Styles.HeroInfo__subtitle}>
-                            Собственная операционная система и&nbsp;производительный ноутбук.<br /> Новый уровень безопасности и&nbsp;приватности
+                            Собственная операционная система и&nbsp;производительный ноутбук <br/>Новый уровень безопасности и&nbsp;приватности
                         </div>
                         <div className={Styles.HeroInfo__button} onClick={scrollToFormBlock} >
                             Оставить заявку

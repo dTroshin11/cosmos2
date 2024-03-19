@@ -6,7 +6,7 @@ export const useWindowSize = () => {
   const mobile = 440;
   const tablet = 768;
   const desktop = 1200;
-  const miniDesk = 1100;
+  // const miniDesk = 1100;
 
   useEffect(() => {
     const handleResize = () => {

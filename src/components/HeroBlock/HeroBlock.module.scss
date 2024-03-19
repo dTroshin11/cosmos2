@@ -142,7 +142,7 @@
     flex-direction: column;
 
     .HeroFeature__image {
-        background-image: url("../../assets/img/MainLaptop.png");
+        background-image: url("../../assets/img/MainLaptop2.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -201,6 +201,7 @@
                 @media (max-width: $media-tablet-landscape) {
                     font-size: 18px;
                     line-height: 25px;
+                    margin-bottom: 8px;
                 }
             }
 
@@ -210,7 +211,9 @@
                 line-height: 22px;
 
                 @media (max-width: $media-tablet-landscape) {
-                    display: none;
+                    margin-bottom: 12px;
+                    font-size: 14px;
+                    line-height: 18px;
                 }
             }
         }

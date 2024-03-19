@@ -1,6 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 import Styles from './SubmitPopup.module.scss';
+import closeImg from "../../../assets/img/close.svg";
+import InputMask from "react-input-mask";
+import Checkbox from "../Checkbox/Checkbox";
 const SubmitPopup = ({ children, active, setActive, isSubmitMessage }) => {
 
     return (
@@ -8,11 +11,11 @@ const SubmitPopup = ({ children, active, setActive, isSubmitMessage }) => {
             <div className={Styles.Modal__content} onClick={e => e.stopPropagation()}>
                 <div className={Styles.Modal__form}>
                     <div className={Styles.Modal__title}>
-                        {isSubmitMessage ? 'Спасибо, ваша заявка отправлена!' : 'Ошибка при отправке запроса. Попробуйте снова!'}
+                        {isSubmitMessage ? 'Спасибо, ваша заявка отправлена!' : <span>Ошибка при отправке запроса.<br/> Попробуйте снова!</span>}
+                        <div className={Styles.Modal__close} onClick={() => { setActive(false) }}>
+                            <img src={closeImg} alt={"close"} />
+                        </div>
                     </div>
-                    <button className={Styles.form__button} onClick={() => { setActive(false) }}>
-                        Понятно
-                    </button>
                 </div>
             </div>
         </div>
