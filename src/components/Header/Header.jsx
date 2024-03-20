@@ -31,7 +31,7 @@ const Header = ({ formBlockRef, isMainHeader }) => {
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
     return () =>
-        window.removeEventListener("scroll", listenToScroll);
+      window.removeEventListener("scroll", listenToScroll);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

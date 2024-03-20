@@ -202,15 +202,15 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                 {minus}
             </div>,
             light: <div className={Styles.other}>
-                <span>Один раз в год</span>
+                <span>Один раз в&nbsp;год</span>
                 <span/>
             </div>,
             standart: <div className={Styles.other}>
-                <span>Один раз в год</span>
+                <span>Один раз в&nbsp;год</span>
                 <span/>
             </div>,
             premium: <div className={Styles.other}>
-                <span>Один раз в год</span>
+                <span>Один раз в&nbsp;год</span>
                 <span/>
             </div>,
         },
@@ -221,15 +221,15 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                 {minus}
             </div>,
             light: <div className={Styles.medium}>
-                <span>Один раз в год</span>
+                <span>Один раз в&nbsp;год</span>
                 <span>19 999 ₽*</span>
             </div>,
             standart: <div className={Styles.medium}>
-                <span>Один раз в год</span>
+                <span>Один раз в&nbsp;год</span>
                 <span>9 999 ₽*</span>
             </div>,
             premium: <div className={Styles.medium}>
-                <span>Один раз в год</span>
+                <span>Один раз в&nbsp;год</span>
                 <span/>
             </div>,
         },

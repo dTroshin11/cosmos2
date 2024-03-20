@@ -124,13 +124,7 @@
       color: #818AA7;
 
       @media (max-width: $media-tablet-landscape) {
-        font-size: 14px;
-        line-height: 21px;
         margin-bottom: 55px;
-      }
-      @media (max-width: $media-phone) {
-        font-size: 12px;
-        line-height: 18px;
       }
     }
 
@@ -213,12 +207,12 @@
 
 .ChartBlock:after {
   content: " ";
-  background: url("../../assets/img/mainGradBg.svg");
+  background: url("../../assets/img/chartBlockGradBg.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 1306px;
-  height: 1210px;
+  width: 1600px;
+  height: 1100px;
   position: absolute;
   top: -200px;
   left: 650px;
@@ -231,12 +225,12 @@
 
 .ChartBlock:before {
   content: " ";
-  background: url("../../assets/img/mainGradBg.svg");
+  background: url("../../assets/img/chartBlockGradBg.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 1306px;
-  height: 1210px;
+  width: 1600px;
+  height: 1100px;
   position: absolute;
   top: -400px;
   left: -850px;

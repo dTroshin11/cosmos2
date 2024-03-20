@@ -113,13 +113,13 @@
 
   .info_go {
     display: block;
-    background: #0F1424;
 
     @media (max-width: $media-tablet-landscape) {
       display: none;
     }
 
     .button {
+      border-radius: 4px !important;
       vertical-align: bottom;
       width: 100%;
       display: flex;
@@ -128,9 +128,8 @@
       justify-content: center;
       align-items: center;
       gap: 4px;
-      border-radius: 4px;
       cursor: pointer;
-      background: #0F1424;
+      background-color: #0F1424;
       transition: background-color .3s, opacity .3s;
 
       &:hover {
@@ -141,11 +140,6 @@
         font-size: 14px;
         line-height: 21px;
         color: #E7EAFA;
-
-        @media (max-width: $media-tablet-landscape) {
-          font-size: 12px;
-          line-height: 18px;
-        }
       }
     }
   }
@@ -158,6 +152,7 @@
     }
 
     .button {
+      border-radius: 4px !important;
       vertical-align: bottom;
       width: 100%;
       display: flex;
@@ -166,7 +161,6 @@
       justify-content: center;
       align-items: center;
       gap: 4px;
-      border-radius: 4px;
       cursor: pointer;
       background: #0F1424;
       transition: background-color .3s, opacity .3s;
@@ -179,11 +173,6 @@
         font-size: 14px;
         line-height: 21px;
         color: #E7EAFA;
-
-        @media (max-width: $media-tablet-landscape) {
-          font-size: 12px;
-          line-height: 18px;
-        }
       }
     }
   }

@@ -108,10 +108,6 @@ const CosmosSchemeBlock = () => {
                 и другие системы
             </div>
 
-            {
-                windowWidth <= 1024 ? <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} /> : ''
-            }
-
             <div className={Styles.content}>
 
                 {
@@ -158,6 +154,7 @@ const CosmosSchemeBlock = () => {
                         </>
                         : ''
                 }
+
 
                 {
                     windowWidth <= 1024

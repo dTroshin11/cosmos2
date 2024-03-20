@@ -1,5 +1,5 @@
 import Styles from './Checkbox.module.scss';
-import {useState} from "react";
+import { useState } from "react";
 
 const CheckBox = ({ ariaLabel = '', id, register }) => {
     const [isChecked, setIsChecked] = useState(false);
