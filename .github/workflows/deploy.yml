@@ -25,5 +25,5 @@ jobs:
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: rsync -avz -e ssh build/ c82116@h41.netangels.ru:/home/c82116/teskhdeploy.na4u.ru/www
+      - run: rsync -avz -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" build/ c82116@h41.netangels.ru:/home/c82116/teskhdeploy.na4u.ru/www
 
