@@ -6,15 +6,16 @@ import React, { useState } from "react";
 const feature = [
     {
         title: <div>Собственная операционная&nbsp;система</div>,
-        subtitle: <div>С&nbsp;необходимыми программами <br/>
-            и&nbsp;поддержкой Windows-приложений</div>
+        subtitle: <div>С&nbsp;необходимыми программами и&nbsp;поддержкой Windows-приложений</div>,
+        subtitleMob: <div>С&nbsp;необходимыми программами <br/>и&nbsp;поддержкой Windows-приложений</div>
     },
     {
         title: <div>Информационная безопасность</div>,
         subtitle: <div>Полный контроль над системой и&nbsp;продвинутые функции кибербезопасности</div>
     },
     {
-        title: <div>Аппаратный ключ <br /> безопасности</div>,
+        title: <div>Аппаратный ключ безопасности</div>,
+        titleMob: <div>Аппаратный ключ <br/> безопасности</div>,
         subtitle: <div>Данные надёжно защищены благодаря контролю над аппаратной базой</div>
     },
     {

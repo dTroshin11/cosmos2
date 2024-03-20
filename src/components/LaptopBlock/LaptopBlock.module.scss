@@ -25,6 +25,13 @@
 
   @media (max-width: $media-tablet-landscape) {
     display: block;
+    //width: 730px;
+    //height: 510px;
+    top: -34px;
+    left: -191px;
+  }
+  @media (max-width: $media-phone) {
+    display: block;
     width: 730px;
     height: 510px;
     top: -34px;
@@ -105,6 +112,17 @@
 
     @media (max-width: $media-tablet-landscape) {
       //width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      z-index: 3;
+      top: -75px;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+    }
+    @media (max-width: $media-phone) {
+      //width: 100%;
       display: block;
       position: relative;
       z-index: 3;
@@ -127,6 +145,14 @@
     max-width: 400px;
 
     @media (max-width: $media-tablet-landscape) {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      justify-content: space-between;
+      margin-bottom: 36px;
+      height: auto;
+    }
+    @media (max-width: $media-phone) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
@@ -165,6 +191,9 @@
       margin-bottom: 16px;
 
       @media (max-width: $media-tablet-landscape) {
+        text-align: left;
+      }
+      @media (max-width: $media-phone) {
         margin-bottom: 0px;
         font-size: 12px;
         line-height: 15px;
@@ -176,7 +205,13 @@
       color: #818AA7;
       line-height: 25px;
 
+
       @media (max-width: $media-tablet-landscape) {
+        font-size: 18px;
+        line-height: 25px;
+        text-align: left;
+      }
+      @media (max-width: $media-phone) {
         font-size: 12px;
         line-height: 15px;
         text-align: left;
@@ -195,7 +230,7 @@
     height: 1px;
     background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0%, #5C6C8C 51.56%, rgba(92, 108, 140, 0.00) 100%);
 
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-phone) {
       display: block;
     }
   }
@@ -213,6 +248,14 @@
     height: 714px;
 
     @media (max-width: $media-tablet-landscape) {
+      width: 566px;
+      height: 566px;
+      //left: 13px;
+      position: relative;
+      top: 0px;
+      background-position: right 0px bottom 0px;
+    }
+    @media (max-width: $media-phone) {
       width: 297px;
       height: 314px;
       left: 13px;
@@ -238,6 +281,12 @@
     z-index: -1;
 
     @media (max-width: $media-tablet-landscape) {
+      width: 576px;
+      height: 576px;
+      left: -37px;
+      top: -42px;
+    }
+    @media (max-width: $media-phone) {
       width: 370px;
       height: 370px;
       left: -37px;
@@ -260,6 +309,12 @@
   z-index: -1;
 
   @media (max-width: $media-tablet-landscape) {
+    width: 565px;
+    height: 565px;
+    top: -48px;
+    left: -20px;
+  }
+  @media (max-width: $media-phone) {
     width: 360px;
     height: 360px;
     top: -48px;
@@ -281,6 +336,12 @@
   height: 320px;
 
   @media (max-width: $media-tablet-landscape) {
+    width: 260px;
+    height: 260px;
+    top: 95px;
+    left: 130px;
+  }
+  @media (max-width: $media-phone) {
     width: 140px;
     height: 140px;
     top: 65px;

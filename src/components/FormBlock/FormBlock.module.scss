@@ -122,6 +122,9 @@
       flex-direction: column;
 
       @media (max-width: $media-tablet-landscape) {
+
+      }
+      @media (max-width: $media-phone) {
         display: none;
       }
 
@@ -218,7 +221,7 @@
     .info__mobForm {
       display: none;
 
-      @media (max-width: $media-tablet-landscape) {
+      @media (max-width: $media-phone) {
         display: block;
 
         .form__title {

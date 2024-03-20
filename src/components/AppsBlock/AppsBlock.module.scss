@@ -95,6 +95,9 @@
       @media (max-width: $media-tablet-landscape) {
         display: block;
       }
+      @media (max-width: $media-phone) {
+        display: block;
+      }
     }
 
     .Apps__button:hover {
@@ -138,6 +141,7 @@
   //max-width: 380px;
   @media (max-width: $media-tablet-landscape) {
     display: block;
+    overflow: hidden;
   }
 
   .wrap {
@@ -164,6 +168,9 @@
     position: absolute;
     z-index: 1;
     pointer-events: none;
+    @media (max-width: $media-tablet-landscape) {
+      width: 25%;
+    }
   }
 
   .items_wrap:before {
