@@ -4,12 +4,12 @@ import FormPopup from "../ui/FormPopup/FormPopup";
 
 const ChartBlock = ({formBlockRef}) => {
     const [popup ,setPopup] = useState(false)
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
+    // const scrollToTop = () => {
+    //     window.scrollTo({
+    //         top: 0,
+    //         behavior: 'smooth',
+    //     });
+    // };
 
     const scrollToFormBlock = () => {
         formBlockRef.current.scrollIntoView({ behavior: 'smooth' });

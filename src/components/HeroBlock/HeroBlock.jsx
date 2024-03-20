@@ -1,4 +1,4 @@
-import Header from '../Header/Header';
+
 import Styles from './HeroBlock.module.scss';
 import FormPopup from "../ui/FormPopup/FormPopup";
 import React, { useState } from "react";

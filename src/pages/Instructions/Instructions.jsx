@@ -9,20 +9,20 @@ const Instructions = () => {
         window.scrollTo(0, 0)
     }, [])
 
-    const links = [
-        {
-            text: 'Главная',
-            href: '/'
-        },
-        {
-            text: 'О нас',
-            href: '/about'
-        },
-        {
-            text: 'Документы',
-            href: '/documents'
-        }
-    ]
+    // const links = [
+    //     {
+    //         text: 'Главная',
+    //         href: '/'
+    //     },
+    //     {
+    //         text: 'О нас',
+    //         href: '/about'
+    //     },
+    //     {
+    //         text: 'Документы',
+    //         href: '/documents'
+    //     }
+    // ]
 
     return (
         <div>

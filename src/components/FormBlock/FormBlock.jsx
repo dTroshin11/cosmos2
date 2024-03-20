@@ -4,11 +4,11 @@ import FormPopup from "../ui/FormPopup/FormPopup";
 import * as yup from 'yup';
 import InputMask from 'react-input-mask';
 
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios, { post } from "axios";
 import classNames from "classnames";
-import { date } from "yup";
+
 import CheckBox from '../ui/Checkbox/Checkbox';
 import SubmitPopup from '../ui/SubmitPopup/SubmitPopup';
 
@@ -156,6 +156,7 @@ const FormBlock = ({ formBlockRef }) => {
                                 <CheckBox />
                             </div>
                             <div className={Styles.checkbox__text}>
+                                // eslint-disable-next-line
                                 Выражаю согласие с&nbsp;<a href="#">Политикой обработки персональных данных</a> и&nbsp;<a href="#">Условиями пользования сайтом</a>
                             </div>
                         </div>

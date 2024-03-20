@@ -20,7 +20,7 @@ import kion from '../../assets/img/apps/apps_kion.svg'
 import calendar from '../../assets/img/apps/apps_calendar.svg'
 import vpn from '../../assets/img/apps/apps_vpn.svg'
 
-import * as url from "url";
+
 import FormPopup from "../ui/FormPopup/FormPopup";
 
 const topSpin = [bird,chrome,cloud,fox,vsCode,office,note,kion]
@@ -29,12 +29,12 @@ const botSpin = [obsidian,tg,vm,vpn,mail,calculate,libre,krita,calendar]
 
 const AppsBlock = ({formBlockRef}) => {
     const [popup ,setPopup] = useState(false)
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
+    // const scrollToTop = () => {
+    //     window.scrollTo({
+    //         top: 0,
+    //         behavior: 'smooth',
+    //     });
+    // };
 
     const scrollToFormBlock = () => {
         formBlockRef.current.scrollIntoView({ behavior: 'smooth' });

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Styles from './Documents.module.scss'
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Header from "../../components/Header/Header";
 
 const Documents = () => {
@@ -9,7 +9,7 @@ const Documents = () => {
         window.scrollTo(0, 0)
     }, [])
 
-    const [showAnchors, setShowAnchors] = useState(true)
+    // const [showAnchors, setShowAnchors] = useState(true)
 
     const licenseRef = useRef(null)
     const termsOfUseRef = useRef(null)
@@ -19,32 +19,32 @@ const Documents = () => {
     };
 
 
-    const bgBlack = {
-        background: '#000'
-    }
+    // const bgBlack = {
+    //     background: '#000'
+    // }
 
-    const links = [
-        {
-            text: 'Главная',
-            href: '/'
-        },
-        {
-            text: 'О нас',
-            href: '/about'
-        },
-        {
-            text: <>Инструкции по&nbsp;установке и&nbsp;использованию ПО</>,
-            href: '/instructions'
-        },
-        {
-            text: <>Электронное лицензионное соглашение с&nbsp;конечным пользователем</>,
-            href: licenseRef
-        },
-        {
-            text: <>Пользовательское соглашение об&nbsp;использовании Cервиса ИИ-Помощник</>,
-            href: termsOfUseRef
-        },
-    ]
+    // const links = [
+    //     {
+    //         text: 'Главная',
+    //         href: '/'
+    //     },
+    //     {
+    //         text: 'О нас',
+    //         href: '/about'
+    //     },
+    //     {
+    //         text: <>Инструкции по&nbsp;установке и&nbsp;использованию ПО</>,
+    //         href: '/instructions'
+    //     },
+    //     {
+    //         text: <>Электронное лицензионное соглашение с&nbsp;конечным пользователем</>,
+    //         href: licenseRef
+    //     },
+    //     {
+    //         text: <>Пользовательское соглашение об&nbsp;использовании Cервиса ИИ-Помощник</>,
+    //         href: termsOfUseRef
+    //     },
+    // ]
 
     const termsOfUse = [
         [

@@ -11,12 +11,12 @@ import TariffsBlock from '../../components/TariffsBlock/TariffsBlock';
 import CosmosSchemeBlock from '../../components/CosmosSchemeBlock/CosmosSchemeBlock';
 import TarriffsSchemeBlock from '../../components/TarriffsSchemeBlock/TarriffsSchemeBlock';
 import Footer from '../../components/Footer/Footer'
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Header from '../../components/Header/Header';
 
 const Main = ({ formBlockRef }) => {
 
-    const [isMainHeader, setIsMainHeader] = useState(true)
+    // const [isMainHeader, setIsMainHeader] = useState(true)
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -24,7 +24,7 @@ const Main = ({ formBlockRef }) => {
 
     return (
         <>
-            <Header formBlockRef={formBlockRef} isMainHeader={isMainHeader}/>
+            <Header formBlockRef={formBlockRef} isMainHeader={true}/>
             <HeroBlock formBlockRef={formBlockRef} />
             <AppsBlock formBlockRef={formBlockRef} />
             <CosmosBlock />

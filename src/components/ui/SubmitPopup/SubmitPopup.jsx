@@ -2,8 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import Styles from './SubmitPopup.module.scss';
 import closeImg from "../../../assets/img/close.svg";
-import InputMask from "react-input-mask";
-import Checkbox from "../Checkbox/Checkbox";
 const SubmitPopup = ({ children, active, setActive, isSubmitMessage }) => {
 
     return (
