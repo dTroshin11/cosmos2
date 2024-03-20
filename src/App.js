@@ -20,11 +20,11 @@ function App() {
         <Container>
           <div className={Styles.mainWrapper}>
             <Routes>
-              <Route path="/" element={<Main formBlockRef={formBlockRef} />} />
+              <Route path="*" element={<Main formBlockRef={formBlockRef} />} />
               <Route path="/about" element={<About />} />
               <Route path="/documents" element={<Documents />} />
               <Route path="/instructions" element={<Instructions />} />
-              <Route path="*" element={<NotFound />} />
+              {/*<Route path="*" element={<NotFound />} />*/}
             </Routes>
           </div>
         </Container>
