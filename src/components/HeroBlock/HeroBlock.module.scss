@@ -77,6 +77,10 @@
             text-align: left;
             margin-bottom: 24px;
         }
+        @media (max-width: $media-tablet) {
+            text-align: left;
+            margin-bottom: 24px;
+        }
 
         @media (max-width: $media-phone) {
             text-align: left;
@@ -91,6 +95,9 @@
         line-height: 25px;
         margin-bottom: 48px;
 
+        @media (max-width: $media-tablet-landscape) {
+            text-align: left;
+        }
         @media (max-width: $media-tablet-landscape) {
             text-align: left;
         }
