@@ -2,7 +2,7 @@
 @import "@/assets/styles/index.scss";
 
 .LaptopBlock {
-  margin-bottom: 100px;
+  margin-bottom: 15px;
   position: relative;
 
   @media (max-width: $media-tablet-landscape) {
@@ -29,6 +29,24 @@
     height: 510px;
     top: -34px;
     left: -191px;
+  }
+}
+
+.LaptopBlock:before {
+  content: " ";
+  background: url("../../assets/img/gradBgLaptop.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1458px;
+  height: 1400px;
+  position: absolute;
+  top: -600px;
+  left: -800px;
+  z-index: -1;
+
+  @media (max-width: $media-tablet-landscape) {
+    display: none;
   }
 }
 
@@ -116,8 +134,28 @@
       margin-bottom: 16px;
       height: 48px;
 
+      &:nth-child(1) {
+        height: 32px;
+      }
+
+      &:nth-child(2) {
+        height: 48px;
+      }
+
       &:nth-child(3) {
-        height: 36px;
+        height: 32px;
+      }
+
+      &:nth-child(4) {
+        height: 48px;
+      }
+
+      &:nth-child(5) {
+        height: 48px;
+      }
+
+      &:nth-child(6) {
+        height: 32px;
       }
     }
 
@@ -179,25 +217,11 @@
       height: 314px;
       left: 13px;
       position: relative;
-      top: -10px;
+      top: 0px;
+      background-position: right 0px bottom 0px;
     }
 
     //transform: rotate(-14.285deg);
-  }
-
-  .info__center:before {
-    @media (max-width: $media-tablet-landscape) {
-      content: " ";
-      background: url("../../assets/img/secondLaptopGrad.svg");
-      position: absolute;
-      left: -30px;
-      top: 260px;
-      background-position: center;
-      background-size: cover;
-      width: 352px;
-      height: 249px;
-      z-index: 0;
-    }
   }
 
   .info__center:after {
@@ -257,10 +281,10 @@
   height: 320px;
 
   @media (max-width: $media-tablet-landscape) {
-    width: 180px;
-    height: 180px;
-    top: 40px;
-    left: 70px;
+    width: 140px;
+    height: 140px;
+    top: 65px;
+    left: 90px;
   }
 }
 

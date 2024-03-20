@@ -1,12 +1,11 @@
 import { useEffect } from 'react';
 import Footer from '../../components/Footer/Footer'
-import SecondaryHeader from '../../components/SecondaryHeader/SecondaryHeader';
-
+import Header from '../../components/Header/Header';
 
 const NotFound = () => {
 
     useEffect(() => {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }, [])
 
     const links = [
@@ -26,9 +25,9 @@ const NotFound = () => {
 
     return (
         <div>
-            <SecondaryHeader links={links} />
-                <div style={{padding: '240px 0 24px 0', fontSize: '222px', textAlign: 'center'}}>404</div>
-                <div style={{padding: '0 0 240px 0', fontSize: '32px', textAlign: 'center'}}>Такой страницы не существует</div>
+            <Header />
+            <div style={{ padding: '240px 0 24px 0', fontSize: '222px', textAlign: 'center' }}>404</div>
+            <div style={{ padding: '0 0 240px 0', fontSize: '32px', textAlign: 'center' }}>Такой страницы не существует</div>
             <Footer />
         </div>
 

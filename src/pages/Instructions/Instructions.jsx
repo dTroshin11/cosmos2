@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import Footer from '../../components/Footer/Footer'
-import SecondaryHeader from '../../components/SecondaryHeader/SecondaryHeader';
 import Styles from './Instructions.module.scss'
+import Header from '../../components/Header/Header';
 
 const Instructions = () => {
-    
+
     useEffect(() => {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }, [])
 
     const links = [
@@ -26,7 +26,7 @@ const Instructions = () => {
 
     return (
         <div>
-            <SecondaryHeader links={links} />
+            <Header />
             <div className={Styles.Instructions}>
                 <div className={Styles.Title}>
                     Инструкции по установке и&nbsp;использованию ПО

@@ -5,14 +5,13 @@ import CpoMobile from '../../assets/img/aboutCpoMobile.png'
 import CtoMobile from '../../assets/img/aboutCtoMobile.png'
 import { useWindowSize } from '../../hooks/useWindowSize'
 import Footer from '../../components/Footer/Footer'
-import SecondaryHeader from '../../components/SecondaryHeader/SecondaryHeader'
 import { useEffect } from 'react'
-
+import Header from '../../components/Header/Header'
 
 const About = () => {
 
     useEffect(() => {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }, [])
 
     const links = [
@@ -45,7 +44,7 @@ const About = () => {
 
     return (
         <div className={Styles.About}>
-            <SecondaryHeader links={links}/>
+            <Header />
             <div className={Styles.HeroBlock}>
                 <div className={Styles.HeroContent}>
                     <div className={Styles.Title}>О нас</div>

@@ -4,7 +4,7 @@ import FormPopup from '../ui/FormPopup/FormPopup';
 import { Link } from 'react-router-dom';
 
 
-const Header = ({ formBlockRef }) => {
+const Header = ({ formBlockRef, isMainHeader }) => {
   const [isVisible, setIsVisible] = useState(true);
   // const [height, setHeight] = useState(0)
   const [menuActive, setMenuActive] = useState(false)
@@ -48,9 +48,12 @@ const Header = ({ formBlockRef }) => {
             <img className={Styles.LogoIcon} src={'img/logo/logo.svg'} alt='Logo icon' width={'100%'} height={'100%'} />
           </Link>
           {/*<b>height: {height} - {isVisible?"show":"hide"}</b>*/}
-          <div id={"hide"} className={Styles.Btn} onClick={scrollToFormBlock} style={isVisible ? { opacity: "0", pointerEvents: "none", cursor: "auto" } : { opacity: "1", pointerEvents: "auto", cursor: "pointer" }} >
-            Оставить заявку
-          </div>
+          {isMainHeader
+            &&
+            <a id={"hide"} className={Styles.Btn} onClick={scrollToFormBlock} style={isVisible ? { opacity: "0", pointerEvents: "none", cursor: "auto" } : { opacity: "1", pointerEvents: "auto", cursor: "pointer" }} >
+              Оставить заявку
+            </a>
+          }
         </div>
       </div>
 
