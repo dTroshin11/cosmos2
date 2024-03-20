@@ -71,7 +71,7 @@
 
 .columnCosmos {
   padding: 32px 16px;
-  height: 880px;
+  height: 654px;
   width: 25%;
   //width: 90px;
   border-radius: 32px;
@@ -178,7 +178,7 @@
 }
 
 .small {
-  height: 82px;
+  height: 54px;
 
   @media (max-width: $media-tablet-landscape) {
     height: 120px;
@@ -186,10 +186,18 @@
 }
 
 .high {
-  height: 102px;
+  height: 76px;
 
   @media (max-width: $media-tablet-landscape) {
     height: 94px;
+  }
+}
+
+.w425px {
+  max-width: 425px;
+
+  @media (max-width: $media-tablet-landscape) {
+    max-width: none;
   }
 }
 

@@ -20,20 +20,20 @@ const item = [
         text: <div>Комфортная миграция и&nbsp;быстрый старт работы с&nbsp;привычными программами</div>
     },
 ]
-const backgroundImage = [FeatureCalc, FeatureGuard,FeatureMove]
+const backgroundImage = [FeatureCalc, FeatureGuard, FeatureMove]
 const FeatureBlock = () => {
     return (
         <div className={Styles.FeatureBlock}>
-            <div className={Styles.title}>Легко встраиваемся <br/>
+            <div className={Styles.title}>Легко встраиваемся <br />
                 в&nbsp;инфраструктуру компаний
             </div>
             <div className={Styles.Features}>
-                {item.map( (el,index) => {
+                {item.map((el, index) => {
                     return <div className={Styles.Features__item} key={index}>
                         <div className={Styles.icon}
-                             style={{
-                                 backgroundImage: `url(${backgroundImage[index]})`,
-                        }}
+                            style={{
+                                backgroundImage: `url(${backgroundImage[index]})`,
+                            }}
                         />
                         <div className={Styles.title}>
                             {el.title}

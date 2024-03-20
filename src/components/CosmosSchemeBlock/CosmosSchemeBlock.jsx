@@ -1,5 +1,5 @@
 import { useState } from "react";
-import  React from 'react';
+import React from 'react';
 import { useWindowSize } from "../../hooks/useWindowSize";
 import Styles from "./CosmosSchemeBlock.module.scss";
 import Tabs from "./Tabs/Tabs";
@@ -9,11 +9,11 @@ const CosmosSchemeBlock = () => {
 
     const item = [
         {
-            text: <div className={Styles.small}>Поставляется на&nbsp;проверенной аппаратной базе, гарантирующей безопасность и&nbsp;производительность</div>,
-            cosmos: <div className={Styles.small}>
+            text: <div className={Styles.high + ' ' + Styles.w425px}>Поставляется на&nbsp;проверенной аппаратной базе, гарантирующей безопасность и&nbsp;производительность</div>,
+            cosmos: <div className={Styles.high}>
                 <span>Да</span>
             </div>,
-            other: <div className={Styles.small}>
+            other: <div className={Styles.high}>
                 <span>Нет</span>
             </div>
         },
@@ -124,7 +124,7 @@ const CosmosSchemeBlock = () => {
                                         <div className={Styles.text}>
                                             {obj.text}
                                         </div>
-                                        <div className={Styles.divider}/>
+                                        <div className={Styles.divider} />
                                     </React.Fragment>
                                 })}
                             </div>
@@ -137,8 +137,8 @@ const CosmosSchemeBlock = () => {
                                         <div className={Styles.cosmos}>
                                             {obj.cosmos}
                                         </div>
-                                        <div className={Styles.divider}/>
-                                </React.Fragment>
+                                        <div className={Styles.divider} />
+                                    </React.Fragment>
                                 })}
                             </div>
 
@@ -151,7 +151,7 @@ const CosmosSchemeBlock = () => {
                                         <div className={Styles.other}>
                                             {obj.other}
                                         </div>
-                                        <div className={Styles.divider}/>
+                                        <div className={Styles.divider} />
                                     </React.Fragment>
                                 })}
                             </div>
@@ -165,11 +165,11 @@ const CosmosSchemeBlock = () => {
                         <>
                             <div className={Styles.columnText}>
                                 {item.map((obj, index) => {
-                                    return  <React.Fragment key={index}>
-                                    <div className={Styles.text}>
+                                    return <React.Fragment key={index}>
+                                        <div className={Styles.text}>
                                             {obj.text}
                                         </div>
-                                        <div className={Styles.dividerLeft}/>
+                                        <div className={Styles.dividerLeft} />
                                     </React.Fragment>
                                 })}
                             </div>

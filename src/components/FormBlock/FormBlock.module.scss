@@ -37,6 +37,7 @@
       z-index: -1;
     }
   }
+
   @media (max-width: $media-phone) {
     background-image: url("../../assets/img/formBgMobile.svg");
     background-size: cover;
@@ -74,6 +75,7 @@
       height: 468px;
       background-size: cover;
     }
+
     @media (max-width: $media-phone) {
       margin: 48px 0px 24px 0px;
       width: 268px;
@@ -90,9 +92,8 @@
         line-height: 60px;
         margin-bottom: 24px;
 
-        @media (max-width: $media-tablet-landscape) {
+        @media (max-width: $media-tablet-landscape) {}
 
-        }
         @media (max-width: $media-phone) {
           font-size: 28px;
           line-height: 30px;
@@ -132,12 +133,13 @@
       }
 
       .form__input {
-        padding: 11px 32px 11px 20px;
+        padding: 12px 8px;
         margin-bottom: 8px;
-        background: #12151F;
+        background: #12182E;
         border-radius: 4px;
-        color: #818AA7;
+        color: #FAFBFF;
         border: none;
+        font-size: 13px;
       }
 
       .FormContainer {
@@ -146,13 +148,13 @@
       }
 
       .errorsInput {
-        color: #F95721 !important;
-
+        border: 1px solid #FF5876 !important;
+        border-radius: 4px;
       }
 
       .errorText {
-        color: #F95721;
-        margin-top: 3px;
+        color: #FF5876;
+        font-size: 12px;
         margin-bottom: 10px;
       }
 
@@ -251,6 +253,7 @@
             margin-bottom: 0px;
             max-width: 500px;
           }
+
           @media (max-width: $media-phone) {
             margin-bottom: 0px;
             max-width: unset;
@@ -263,19 +266,20 @@
       }
     }
   }
+}
 
-  .form__input {
-    padding: 11px 32px 11px 20px;
-    margin-bottom: 8px;
-    background: #12151F;
-    border-radius: 4px;
-    color: #818AA7;
-    border: none;
-  }
+input::placeholder {
+  color: #9DA4C6;
+  font-size: 13px;
+}
 
-  input::placeholder {
-    color: #818AA7;
-  }
+input::selection {
+  background-color: #0055FB80;
+}
+
+input:focus {
+  outline: none !important;
+  border: 1px solid #0069E3 !important;
 }
 
 .FormBlock:after {
