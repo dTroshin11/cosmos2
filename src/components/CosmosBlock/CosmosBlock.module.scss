@@ -31,7 +31,7 @@
   gap: 48px;
 
   @media (max-width: $media-tablet-landscape) {
-    flex-direction: column; 
+    flex-direction: column;
     gap: 24px;
   }
 }
@@ -56,16 +56,11 @@
   }
 }
 
-.item {
-  list-style-type: disc;
+li {
   color: #0072F8;
-
-  &::marker {
-    font-size: 17px;
-  }
 }
 
-.text {
+li span {
   color: #818AA7;
   font-size: 18px;
   line-height: 25px;

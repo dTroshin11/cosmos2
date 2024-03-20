@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Styles from "./LaptopBlock.module.scss";
-import FormPopup from "../ui/FormPopup/FormPopup";
 
 const infoLeft = [
     {
@@ -62,7 +61,7 @@ const infoMob = [
     },
     {
         title: <div>Высокоскоростная <br/> беспроводная связь</div>,
-        subtitle: <div>Wi-Fi 6E, Bluetooth&nbsp;5.2<br/> и&nbsp;4G/5G</div>
+        subtitle: <div>4G/5G, Wi-Fi 6E<br/> и&nbsp;Bluetooth 5.2</div>
     },
 ]
 

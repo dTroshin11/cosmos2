@@ -290,18 +290,36 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 2437px;
-    height: 2022px;
+    width: 2337px;
+    height: 1900px;
     position: absolute;
-    top: -306px;
+    top: 0px;
     left: -600px;
     z-index: -1;
 
     @media (max-width: $media-tablet-landscape) {
-        top: 0;
-        left: -420px;
+        top: -170px;
+        left: -460px;
         // display: none;
         // left: -450px;
+    }
+}
+
+.HeroFeature:before {
+    content: " ";
+    background: url("../../assets/img/darker.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 900px;
+    position: absolute;
+    top: -600px;
+    left: 0px;
+    z-index: -1;
+
+    @media (max-width: $media-tablet-landscape) {
+        display: none;
     }
 }
 

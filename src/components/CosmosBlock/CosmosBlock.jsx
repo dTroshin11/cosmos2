@@ -22,11 +22,11 @@ const CosmosFeatureBlock = () => {
             </div>
             <div className={Styles.content}>
                 <img className={Styles.image} src={CosmosFeature} alt="" />
-                <div className={Styles.items__list}>
+                <ul className={Styles.items__list}>
                 {item.map((el, index) => {
-                return <div key={index} className={Styles.text}>{el}</div>
+                return <li key={index} className={Styles.text}><span>{el}</span></li>
                     })}
-                </div>
+                </ul>
             </div>
         </div >
     );

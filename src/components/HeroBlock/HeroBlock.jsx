@@ -3,13 +3,11 @@ import Styles from './HeroBlock.module.scss';
 import FormPopup from "../ui/FormPopup/FormPopup";
 import React, { useState } from "react";
 
-
-
-
 const feature = [
     {
         title: <div>Собственная операционная&nbsp;система</div>,
-        subtitle: <div>С&nbsp;необходимыми программами и&nbsp;поддержкой Windows-приложений</div>
+        subtitle: <div>С&nbsp;необходимыми программами <br/>
+            и&nbsp;поддержкой Windows-приложений</div>
     },
     {
         title: <div>Информационная <br />
@@ -17,7 +15,7 @@ const feature = [
         subtitle: <div>Полный контроль над системой и&nbsp;продвинутые функции кибербезопасности</div>
     },
     {
-        title: <div>Аппаратный ключ <br/> безопасности</div>,
+        title: <div>Аппаратный ключ <br /> безопасности</div>,
         subtitle: <div>Данные надёжно защищены благодаря контролю над аппаратной базой</div>
     },
     {
@@ -57,7 +55,7 @@ const HeroBlock = ({ formBlockRef }) => {
                             Премиальное защищённое <br /> рабочее место
                         </div>
                         <div className={Styles.HeroInfo__subtitle}>
-                            Собственная операционная система и&nbsp;производительный ноутбук <br/>Новый уровень безопасности и&nbsp;приватности
+                            Собственная операционная система и&nbsp;производительный ноутбук <br />Новый уровень безопасности и&nbsp;приватности
                         </div>
                         <div className={Styles.HeroInfo__button} onClick={scrollToFormBlock} >
                             Оставить заявку
