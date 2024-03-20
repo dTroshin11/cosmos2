@@ -15,6 +15,9 @@
   line-height: 60px;
 
   @media (max-width: $media-tablet-landscape) {
+
+  }
+  @media (max-width: $media-phone) {
     font-size: 28px;
     line-height: 30px;
     margin-bottom: 36px;
@@ -45,6 +48,13 @@
   width: 22.5%;
 
   @media (max-width: $media-tablet-landscape) {
+    font-size: 28px;
+    line-height: 28px;
+    text-align: left;
+    margin-top: 24px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: $media-phone) {
     font-size: 20px;
     line-height: 26px;
     text-align: left;
@@ -52,7 +62,8 @@
   }
 
   &:first-child {
-    width: 32.5%;
+    //width: 32.5%;
+    //color: #0072F8;
   }
 }
 
@@ -351,6 +362,7 @@
 
   @media (max-width: $media-tablet-landscape) {
     height: 44px;
+    max-width: 240px;
   }
 
   &:hover {
@@ -365,6 +377,7 @@
 
     @media (max-width: $media-tablet-landscape) {
       line-height: 18px;
+
     }
   }
 }

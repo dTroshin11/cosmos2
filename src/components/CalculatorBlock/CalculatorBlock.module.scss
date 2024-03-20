@@ -47,11 +47,16 @@
         margin-bottom: 24px;
 
         @media (max-width: $media-tablet-landscape) {
+          font-size: 20px;
+          line-height: 26px;
+          text-align: left;
+          margin-bottom: 16px;
+        }
+        @media (max-width: $media-phone) {
           font-size: 16px;
           line-height: 22px;
           text-align: left;
           margin-bottom: 8px;
-
         }
       }
 
