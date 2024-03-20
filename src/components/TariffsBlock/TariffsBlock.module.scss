@@ -42,6 +42,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  @media (max-width: $media-phone) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
