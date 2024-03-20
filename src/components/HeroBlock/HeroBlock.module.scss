@@ -81,7 +81,6 @@
             text-align: left;
             margin-bottom: 24px;
         }
-
         @media (max-width: $media-phone) {
             text-align: left;
             font-size: 32px;
@@ -171,6 +170,11 @@
 
         @media (max-width: $media-tablet-landscape) {
             background-size: cover;
+            background-position: -75px;
+            // height: 500px;
+        }
+        @media (max-width: $media-tablet) {
+            background-size: cover;
             background-position: -295px;
             // height: 500px;
         }
@@ -199,6 +203,15 @@
 
 
         @media (max-width: $media-tablet-landscape) {
+            // top: -120px;
+            bottom: 240px;
+            grid-template-columns: 1fr 1fr;
+            padding: 60px;
+            background-position: unset;
+            min-width: 940px;
+            width: 100%;
+        }
+        @media (max-width: $media-tablet) {
             // top: -120px;
             bottom: 240px;
             grid-template-columns: 1fr;
@@ -356,10 +369,39 @@
             background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0%, #5C6C8C 51.56%, rgba(92, 108, 140, 0.00) 100%);
 
             @media (max-width: $media-tablet-landscape) {
+
+            }
+            @media (max-width: $media-tablet) {
                 display: block;
             }
             @media (max-width: $media-phone) {
                 display: block;
+                width: 292px;
+            }
+        }
+        .features__item:last-child:after {
+            display: none;
+            content: " ";
+            position: absolute;
+            left: 0px;
+            top: 99%;
+            width: 500px;
+            z-index: 10;
+            height: 1px;
+            background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0%, #5C6C8C 51.56%, rgba(92, 108, 140, 0.00) 100%);
+
+            @media (max-width: $media-tablet-landscape) {
+                display: block;
+                transform: rotate(90deg);
+                left: -230px;
+                top: -20px;
+                width: 415px;
+            }
+            @media (max-width: $media-tablet) {
+                display: none;
+            }
+            @media (max-width: $media-phone) {
+                display: none;
                 width: 292px;
             }
         }

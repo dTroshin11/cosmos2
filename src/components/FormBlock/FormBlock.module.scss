@@ -20,6 +20,31 @@
     padding: 60px;
     flex-direction: column-reverse;
     margin-bottom: 120px;
+    max-width: 940px;
+    width: 100%;
+    align-items: flex-start;
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -250px;
+      left: -200px;
+      width: 600px;
+      height: 460px;
+      background-image: url("../../assets/img/gradBgLaptop.svg");
+      background-size: cover;
+      background-position: center left;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+  @media (max-width: $media-tablet) {
+    //background-image: url("../../assets/img/formBgMobile.svg");
+    background-size: cover;
+    padding: 60px;
+    flex-direction: column-reverse;
+    margin-bottom: 120px;
     width: 620px;
     align-items: flex-start;
 
@@ -37,7 +62,6 @@
       z-index: -1;
     }
   }
-
   @media (max-width: $media-phone) {
     background-image: url("../../assets/img/formBgMobile.svg");
     background-size: cover;
@@ -71,12 +95,17 @@
     margin: 25px 100px 0px 25px;
 
     @media (max-width: $media-tablet-landscape) {
+      margin: 0px auto;
+      width: 500px;
+      height: 468px;
+      background-size: cover;
+    }
+    @media (max-width: $media-tablet) {
       margin: 0px;
       width: 500px;
       height: 468px;
       background-size: cover;
     }
-
     @media (max-width: $media-phone) {
       margin: 48px 0px 24px 0px;
       width: 268px;

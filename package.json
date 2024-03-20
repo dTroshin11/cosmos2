@@ -27,7 +27,8 @@
     "scripts": {
         "start": "craco start",
         "build": "craco build",
-        "test": "craco test"
+        "test": "craco test",
+        "deploy": "rsync -avz -e ssh build/ c82116@h41.netangels.ru:/home/c82116/teskhdeploy.na4u.ru/www"
     },
     "eslintConfig": {
         "extends": [

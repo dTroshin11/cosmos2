@@ -15,18 +15,25 @@
   border-radius: 32px;
 
   @media (max-width: $media-tablet-landscape) {
+    max-width: 940px;
+    width: 100%;
     padding: 60px;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 120px;
+  }
+  @media (max-width: $media-tablet) {
+    max-width: 620px;
     flex-direction: column;
     align-items: flex-start;
-    width: 620px;
     margin: 0 auto;
     margin-bottom: 120px;
   }
   @media (max-width: $media-phone) {
+    max-width: unset;
     flex-direction: column;
     padding: 24px;
     margin-bottom: 90px;
-    width: auto;
   }
 
   .chart__info {
@@ -38,6 +45,7 @@
       @media (max-width: $media-tablet-landscape) {
         margin-bottom: 16px;
       }
+
 
       .info_title {
         font-size: 60px;
@@ -81,6 +89,11 @@
           font-size: 18px;
           line-height: 25px;
           margin-bottom: 36px;
+          max-width: 370px;
+          width: 100%;
+        }
+        @media (max-width: $media-tablet) {
+          max-width: unset;
         }
         @media (max-width: $media-phone) {
           text-align: left;
@@ -143,8 +156,10 @@
 
   @media (max-width: $media-tablet-landscape) {
     //background-image: url("../../assets/img/chartMob.svg");
-    //width: 293px;
-    //height: 210px;
+    width: 319px;
+    height: 404px;
+    background-size: contain;
+
   }
   @media (max-width: $media-phone) {
     background-image: url("../../assets/img/chartMob.svg");
