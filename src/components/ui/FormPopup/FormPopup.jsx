@@ -27,7 +27,7 @@ const FormPopup = ({ children, active, setActive }) => {
     };
     const schemaForm = yup.object().shape({
         name: yup.string().required('Введите ФИО').matches(/^([^0-9]*)$/, 'Имя не должно содержать цифр'),
-        phone: yup.string().required('Введите телефон').min(12, 'Введите корректный телефон').transform(cleanPhoneNumber),
+        phone: yup.string().required('Введите телефон').min(12, 'В номере телефона должно быть не менее 11-ти цифр').transform(cleanPhoneNumber),
         email: yup.string().required('Введите почту').email('Введите корректную почту'),
         // message: yup.string(),
         // agreement: yup.boolean().oneOf([true], 'обязательное поле'),
@@ -61,7 +61,7 @@ const FormPopup = ({ children, active, setActive }) => {
                 console.log(response)
                 setIsSubmitMessage(true)
                 setIsActiveSubmitPopup(true)
-                setActive(false)        
+                setActive(false)
             })
             .catch((error) => {
                 console.error('Ошибка при отправке запроса formSubmits:', error);
@@ -92,32 +92,32 @@ const FormPopup = ({ children, active, setActive }) => {
             <div className={classNames(Styles.Modal, active === true && Styles.active)} onClick={() => setActive(false)}>
                 <div className={Styles.Modal__content} onClick={e => e.stopPropagation()}>
                     <div className={Styles.Modal__form}>
-                        <div className={Styles.Modal__title} onClick={() =>    setIsActiveSubmitPopup(true)}>
+                        <div className={Styles.Modal__title} onClick={() => setIsActiveSubmitPopup(true)}>
                             Оставить заявку
                             <div className={Styles.Modal__close} onClick={() => { setActive(false) }}>
                                 <img src={closeImg} alt={"close"} />
                             </div>
                         </div>
                         <form className={Styles.form} onSubmit={handleSubmit(formSubmit)}>
-                            <div className={classNames(errors['name'] ? Styles.errorsInput : null, Styles.FormContainer)}>
-                                <input id={'name'} {...register("name")} type={"text"} placeholder={'ФИО*'} className={Styles.form__input} />
-                                {errors['name'] && <div className={Styles.errorText}>{errors['name']?.message}</div>}
+                            <div className={Styles.FormContainer}>
+                                <input id={'name'} {...register("name")} type={"text"} placeholder={'ФИО*'} className={classNames(errors['name'] ? Styles.errorsInput : null, Styles.form__input)} />
                             </div>
-                            <div className={classNames(errors['phone'] ? Styles.errorsInput : null, Styles.FormContainer)}>
+                            {errors['name'] && <div className={Styles.errorText}>{errors['name']?.message}</div>}
+                            <div className={Styles.FormContainer}>
                                 <InputMask
                                     mask='+7 (999) 999-99-99'
                                     maskChar=' '
                                     id={'phone'}
                                     {...register("phone")}
                                     placeholder={'Телефон*'}
-                                    className={Styles.form__input}
+                                    className={classNames(errors['phone'] ? Styles.errorsInput : null, Styles.form__input)}
                                 />
-                                {errors['phone'] && <div className={Styles.errorText}>{errors['phone']?.message}</div>}
                             </div>
-                            <div className={classNames(errors['email'] ? Styles.errorsInput : null, Styles.FormContainer)}>
-                                <input id={'email'} {...register("email")} type={"text"} placeholder={'Email*'} className={Styles.form__input} />
-                                {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
+                            {errors['phone'] && <div className={Styles.errorText}>{errors['phone']?.message}</div>}
+                            <div className={Styles.FormContainer}>
+                                <input id={'email'} {...register("email")} type={"text"} placeholder={'Email*'} className={classNames(errors['email'] ? Styles.errorsInput : null, Styles.form__input)} />
                             </div>
+                            {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
                             <div className={Styles.form__checkbox}>
                                 <div className={Styles.checkbox__checkbox}>
                                     <Checkbox />
@@ -133,7 +133,7 @@ const FormPopup = ({ children, active, setActive }) => {
                     </div>
                 </div>
             </div>
-            <SubmitPopup active={isActiveSubmitPopup} setActive={setIsActiveSubmitPopup} isSubmitMessage={isSubmitMessage}/>
+            <SubmitPopup active={isActiveSubmitPopup} setActive={setIsActiveSubmitPopup} isSubmitMessage={isSubmitMessage} />
         </>
     );
 };

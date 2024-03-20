@@ -54,7 +54,7 @@ const FormBlock = ({ formBlockRef }) => {
     };
     const schemaForm = yup.object().shape({
         name: yup.string().required('Введите ФИО').matches(/^([^0-9]*)$/, 'Имя не должно содержать цифр'),
-        phone: yup.string().required('Введите телефон').min(12, 'Введите корректный телефон').transform(cleanPhoneNumber),
+        phone: yup.string().required('Введите телефон').min(12, 'В номере телефона должно быть не менее 11-ти цифр').transform(cleanPhoneNumber),
         email: yup.string().required('Введите почту').email('Введите корректную почту'),
         // message: yup.string(),
         // agreement: yup.boolean().oneOf([true], 'обязательное поле'),
@@ -132,25 +132,25 @@ const FormBlock = ({ formBlockRef }) => {
                 <div className={Styles.info__form}>
                     <div className={Styles.form__title}>Оставьте заявку и убедитесь лично:</div>
                     <form className={Styles.info__form} onSubmit={handleSubmit(formSubmit)}>
-                        <div className={classNames(errors['name'] ? Styles.errorsInput : null, Styles.FormContainer)}>
-                            <input id={'name'} {...register("name")} type={"text"} placeholder={'ФИО*'} className={Styles.form__input} />
-                            {errors['name'] && <div className={Styles.errorText}>{errors['name']?.message}</div>}
+                        <div className={Styles.FormContainer}>
+                            <input id={'name'} {...register("name")} type={"text"} placeholder={'ФИО*'} className={classNames(errors['name'] ? Styles.errorsInput : null, Styles.form__input)} />
                         </div>
-                        <div className={classNames(errors['phone'] ? Styles.errorsInput : null, Styles.FormContainer)}>
+                        {errors['name'] && <div className={Styles.errorText}>{errors['name']?.message}</div>}
+                        <div className={Styles.FormContainer}>
                             <InputMask
                                 mask='+7 (999) 999-99-99'
                                 maskChar=' '
                                 id={'phone'}
                                 {...register("phone")}
                                 placeholder={'Телефон*'}
-                                className={Styles.form__input}
+                                className={classNames(errors['phone'] ? Styles.errorsInput : null, Styles.form__input)}
                             />
-                            {errors['phone'] && <div className={Styles.errorText}>{errors['phone']?.message}</div>}
                         </div>
-                        <div className={classNames(errors['email'] ? Styles.errorsInput : null, Styles.FormContainer)}>
-                            <input id={'email'} {...register("email")} type={"text"} placeholder={'Email*'} className={Styles.form__input} />
-                            {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
+                        {errors['phone'] && <div className={Styles.errorText}>{errors['phone']?.message}</div>}
+                        <div className={Styles.FormContainer}>
+                            <input id={'email'} {...register("email")} type={"text"} placeholder={'Email*'} className={classNames(errors['email'] ? Styles.errorsInput : null, Styles.form__input)} />
                         </div>
+                        {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
                         <div className={Styles.form__checkbox}>
                             <div className={Styles.checkbox__checkbox}>
                                 <CheckBox />

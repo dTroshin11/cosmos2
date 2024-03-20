@@ -490,7 +490,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                                 <div className={Styles.premium}>
                                     {obj.premium}
                                 </div>
-                                <div className={Styles.divider}></div>
+                                <div className={Styles.dividerPremium}></div>
                             </React.Fragment>
                         })}
                         {buttons.map((obj, index) => {
