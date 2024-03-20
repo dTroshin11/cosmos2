@@ -20,6 +20,7 @@
     align-items: flex-start;
     width: 620px;
     margin: 0 auto;
+    margin-bottom: 120px;
   }
   @media (max-width: $media-phone) {
     flex-direction: column;
@@ -77,9 +78,9 @@
 
         @media (max-width: $media-tablet-landscape) {
           text-align: left;
-          font-size: 16px;
-          line-height: 22px;
-          margin-bottom: 55px;
+          font-size: 18px;
+          line-height: 25px;
+          margin-bottom: 36px;
         }
         @media (max-width: $media-phone) {
           text-align: left;
@@ -111,7 +112,9 @@
         cursor: pointer;
         margin-bottom: 16px;
         transition: background-color .3s, opacity .3s;
-
+        @media (max-width: $media-tablet-landscape) {
+          width: 240px;
+        }
         &:hover {
           background-color: #268AFF;
         }

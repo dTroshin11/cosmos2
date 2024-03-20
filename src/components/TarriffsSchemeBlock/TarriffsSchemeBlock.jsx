@@ -357,7 +357,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
     const MobileSchema = ({arr = itemsMobile,id,title}) => {
         return (
             <div  >
-                <div className={Styles.mainTitle}>
+                <div className={Styles.mainTitle} style={ arr === items ? {  color:"#0072F8"} : null}>
                     {title}
                 </div>
                 {arr.map((obj, index) => {
@@ -375,7 +375,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                 })}
                 {buttons.map((obj, index) => {
                             return <div key={index}>
-                             {obj.buttonGrey}
+                             {arr === items ?obj.buttonBlue : obj.buttonGrey}
                     </div>
                     })}
 
