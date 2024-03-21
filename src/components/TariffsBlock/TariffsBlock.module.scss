@@ -99,6 +99,7 @@
   @media (max-width: $media-phone) {
     width: 100%;
     max-width: 300px;
+    border-radius: 20px;
 
     &:nth-child(1) {
       order: 2;

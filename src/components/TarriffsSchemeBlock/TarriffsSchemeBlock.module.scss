@@ -14,9 +14,8 @@
   font-size: 60px;
   line-height: 60px;
 
-  @media (max-width: $media-tablet-landscape) {
+  @media (max-width: $media-tablet-landscape) {}
 
-  }
   @media (max-width: $media-phone) {
     font-size: 28px;
     line-height: 30px;
@@ -54,6 +53,7 @@
     margin-top: 24px;
     margin-bottom: 18px;
   }
+
   @media (max-width: $media-phone) {
     font-size: 20px;
     line-height: 26px;
@@ -360,9 +360,18 @@
   background: #0F1424;
   transition: background-color .3s, opacity .3s;
 
+  @media (max-width: $media-phone) {
+    width: 100%;
+  }
+
   @media (max-width: $media-tablet-landscape) {
     height: 44px;
     max-width: 240px;
+  }
+
+
+  @media (max-width: $media-phone) {
+    max-width: 100%;
   }
 
   &:hover {
