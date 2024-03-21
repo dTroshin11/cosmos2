@@ -41,7 +41,7 @@ const CosmosSchemeBlock = () => {
                 <span>Нет</span>
             </div>,
             other: <div className={Styles.row4}>
-                <span>С&nbsp;ограничениями</span>
+                <span>С ограничениями</span>
             </div>
         },
         {
@@ -50,7 +50,7 @@ const CosmosSchemeBlock = () => {
                 <span>Полная</span>
             </div>,
             other: <div className={Styles.row5}>
-                <span>С&nbsp;ограничениями</span>
+                <span>С ограничениями</span>
             </div>
         },
         {
@@ -68,7 +68,7 @@ const CosmosSchemeBlock = () => {
                 <span>Под&nbsp;запрос клиента</span>
             </div>,
             other: <div className={Styles.row7}>
-                <span>С&nbsp;ограничениями</span>
+                <span>С ограничениями</span>
             </div>
         },
         {
@@ -89,6 +89,94 @@ const CosmosSchemeBlock = () => {
                 <span>Нет</span>
             </div>,
             other: <div className={Styles.row9}>
+                <span>Есть, н/д</span>
+            </div>
+        },
+    ]
+
+    const mobileItem = [
+        {
+            text: <div>Поставляется на проверенной аппаратной базе, гарантирующей безопасность и производительность</div>,
+            cosmos: <div>
+                <span>Да</span>
+            </div>,
+            other: <div>
+                <span>Нет</span>
+            </div>
+        },
+        {
+            text: <div>Поддержка и обновления</div>,
+            cosmos: <div>
+                <span>Полная</span>
+            </div>,
+            other: <div>
+                <span>С ограничениями</span>
+            </div>
+        },
+        {
+            text: <div>Стоимость лицензирования</div>,
+            cosmos: <div>
+                <span>Входит в стоимость подписки
+                    на рабочее устройство</span>
+            </div>,
+            other: <div>
+                <span>Лицензия</span>
+            </div>
+        },
+        {
+            text: <div>Ограничения по рынкам присутствия</div>,
+            cosmos: <div>
+                <span>Нет</span>
+            </div>,
+            other: <div>
+                <span>С ограничениями</span>
+            </div>
+        },
+        {
+            text: <div>Доступность инструментов дистрибуции приложений</div>,
+            cosmos: <div>
+                <span>Полная</span>
+            </div>,
+            other: <div>
+                <span>С ограничениями</span>
+            </div>
+        },
+        {
+            text: <div>Безопасность</div>,
+            cosmos: <div>
+                <span>Высокая</span>
+            </div>,
+            other: <div>
+                <span>От средней до высокой</span>
+            </div>
+        },
+        {
+            text: <div>Поддержка стандартных инструментов B2B-инфраструктуры клиентов</div>,
+            cosmos: <div>
+                <span>Под запрос клиента</span>
+            </div>,
+            other: <div>
+                <span>С ограничениями</span>
+            </div>
+        },
+        {
+            text: <div>Персональный ИИ-помощник</div>,
+            cosmos: <div>
+                <span>Есть, локально и облако
+                    (данные не используются)
+                </span>
+            </div>,
+            other: <div>
+                <span>Есть, данные пользователя
+                    используются компанией</span>
+            </div>
+        },
+        {
+            text: <div>Скрытые трекеры и логирование</div>,
+            cosmos: <div>
+                <span>Нет</span>
+            </div>,
+            other: <div>
                 <span>Есть, н/д</span>
             </div>
         },
@@ -159,66 +247,33 @@ const CosmosSchemeBlock = () => {
                 {
                     windowWidth <= 768
                         ?
-                        // <>
-                        //     <div className={Styles.columnText}>
-                        //         {item.map((obj, index) => {
-                        //             return <React.Fragment key={index}>
-                        //                 <div className={Styles.text}>
-                        //                     {obj.text}
-                        //                 </div>
-                        //                 <div className={Styles.dividerLeft} />
-                        //             </React.Fragment>
-                        //         })}
-                        //     </div>
-
-                        //     <div className={Styles.columnCosmos}>
-                        //         <div className={Styles.cosmosTitle}>
-                        //             Cosm OS
-                        //         </div>
-                        //         {item.map((obj, index) => {
-                        //             return <React.Fragment key={index}>
-                        //                 <div className={Styles.cosmos}>
-                        //                     {obj.cosmos}
-                        //                 </div>
-                        //                 <div className={Styles.dividerRight} />
-                        //             </React.Fragment>
-                        //         })}
-                        //     </div>
-                        //     <div className={Styles.columnOther}>
-                        //         <div className={Styles.otherTitle}>
-                        //             Другие
-                        //         </div>
-                        //         {item.map((obj, index) => {
-                        //             return <React.Fragment key={index}>
-                        //                 <div className={Styles.other} >
-                        //                     {obj.other}
-                        //                 </div>
-                        //                 <div style={{ height: '1px' }} />
-                        //             </React.Fragment>
-                        //         })}
-                        //     </div>
-                        // </>
                         <div className={Styles.Mobile}>
-                            {item.map((obj, index) => {
-                                return <div className={Styles.MobileRow}>
-                                    <div className={Styles.FirstTD}>
-                                        {obj.text}
+                            <div className={Styles.MobileTitles}>
+                                <div className={Styles.MobileTextTitle}></div>
+                                <div className={Styles.MobileCosmosTitle}>Cosm OS</div>
+                                <div className={Styles.MobileOtherTitle}>Другие</div>
+                            </div>
+                            {mobileItem.map((obj, index) => {
+                                return <>
+                                    <div className={Styles.MobileRow}>
+                                        <div className={Styles.FirstTD}>
+                                            {obj.text}
+                                        </div>
+                                        <div className={Styles.SecondTD}>
+                                            {obj.cosmos}
+                                        </div>
+                                        <div className={Styles.ThirdTD}>
+                                            {obj.other}
+                                        </div>
                                     </div>
-                                    <div className={Styles.SecondTD}>
-                                        {obj.cosmos}
-                                    </div>
-                                    <div className={Styles.ThirdTD}>
-                                        {obj.other}
-                                    </div>
-                                </div>
+                                    <div className={Styles.divider}></div>
+                                </>
                             })}
                         </div>
                         :
                         ''
                 }
-
             </div>
-
         </div >
     );
 };
