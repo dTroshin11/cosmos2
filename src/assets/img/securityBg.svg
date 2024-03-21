@@ -12,12 +12,12 @@
 <filter id="filter0_f_616_2457" x="-930.617" y="-202.617" width="1637.23" height="1182.23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="140" result="effect1_foregroundBlur_616_2457"/>
+<feGaussianBlur stdDeviation="99" result="effect1_foregroundBlur_616_2457"/>
 </filter>
 <filter id="filter1_f_616_2457" x="-702.398" y="329.383" width="1820.09" height="1669.73" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="140" result="effect1_foregroundBlur_616_2457"/>
+<feGaussianBlur stdDeviation="99" result="effect1_foregroundBlur_616_2457"/>
 </filter>
 <clipPath id="clip0_616_2457">
 <rect width="1180" height="475" rx="32" fill="white"/>

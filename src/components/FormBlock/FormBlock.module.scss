@@ -226,6 +226,7 @@
         font-size: 14px;
         display: flex;
         line-height: 20px;
+        font-family: $font-button;
         height: 40px;
         padding: 8px 20px;
         justify-content: center;
@@ -241,6 +242,7 @@
 
       .form__button:hover {
         background-color: #268AFF;
+
       }
 
       button[disabled] {

@@ -58,3 +58,14 @@ img {
         url("../fonts/Gilroy-Regular.woff2") format("woff2");
     //font-weight: 400;
 }
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-VariableFont_slnt,wght.ttf") format("ttf"),
+    url("../fonts/Inter-Light.ttf") format("ttf"),
+    url("../fonts/Inter-Medium.ttf") format("ttf"),
+    url("../fonts/Inter-Regular.ttf") format("ttf"),
+    url("../fonts/Inter-Bold.ttf") format("ttf"),
+    url("../fonts/Inter-SemiBold.ttf") format("ttf"),
+    url("../fonts/Inter-Black.ttf") format("ttf");
+    //font-weight: 400;
+}

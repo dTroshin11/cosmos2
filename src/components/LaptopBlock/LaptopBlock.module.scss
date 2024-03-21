@@ -166,31 +166,31 @@
       grid-template-columns: 1fr 1fr;
       gap: 14px;
       justify-content: space-between;
-      margin-bottom: 16px;
-      height: 48px;
+      margin-bottom: 24px!important;
+      //height: 48px;
 
       &:nth-child(1) {
-        height: 32px;
+        min-height: 32px;
       }
 
       &:nth-child(2) {
-        height: 48px;
+        min-height: 48px;
       }
 
       &:nth-child(3) {
-        height: 32px;
+        min-height: 32px;
       }
 
       &:nth-child(4) {
-        height: 48px;
+        min-height: 48px;
       }
 
       &:nth-child(5) {
-        height: 48px;
+        min-height: 48px;
       }
 
       &:nth-child(6) {
-        height: 32px;
+        min-height: 32px;
       }
     }
 
@@ -233,7 +233,7 @@
     content: " ";
     position: absolute;
     left: 0px;
-    bottom: -8px;
+    bottom: -12px;
     width: 292px;
     z-index: 10;
     height: 1px;
@@ -273,8 +273,9 @@
       background-position: right 0px bottom 0px;
     }
     @media (max-width: $media-phone) {
-      width: 297px;
-      height: 314px;
+      background-image: url("../../assets/img/SecondLaptopMob.png");
+      width: 298px;
+      height: 315px;
       left: 13px;
       position: relative;
       top: 0px;
@@ -313,7 +314,7 @@
       width: 370px;
       height: 370px;
       left: -37px;
-      top: -42px;
+      top: -52px;
     }
   }
 }
