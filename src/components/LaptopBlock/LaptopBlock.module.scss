@@ -70,6 +70,7 @@
     line-height: 60px;
     text-align: left;
     justify-content: flex-start;
+    margin-bottom: 60px;
   }
   @media (max-width: $media-phone) {
     font-size: 28px;
@@ -88,6 +89,7 @@
   justify-content: space-between;
 
   @media (max-width: $media-tablet-landscape) {
+    grid-template-columns: 1fr 400px 1fr;
     //flex-direction: column-reverse;
     ////align-items: flex-start;
     //align-items: center;
@@ -107,10 +109,6 @@
   }
 
   .info__left {
-    @media (max-width: $media-tablet-landscape) {
-      width: 100%;
-      display: none;
-    }
     @media (max-width: $media-tablet) {
       width: 100%;
       display: none;
@@ -120,7 +118,7 @@
   .info__mob {
     display: none;
 
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-tablet) {
       //width: 100%;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -144,7 +142,7 @@
   }
 
   .info__right {
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-tablet) {
       display: none;
     }
   }
@@ -259,8 +257,8 @@
     height: 714px;
 
     @media (max-width: $media-tablet-landscape) {
-      width: 566px;
-      height: 566px;
+      width: 435px;
+      height: 435px;
       //left: 13px;
       position: relative;
       top: 0px;
@@ -300,6 +298,12 @@
     z-index: -1;
 
     @media (max-width: $media-tablet-landscape) {
+      width: 664px;
+      height: 664px;
+      left: -80px;
+      top: -92px;
+    }
+    @media (max-width: $media-tablet) {
       width: 810px;
       height: 810px;
       left: -130px;
@@ -330,6 +334,12 @@
   @media (max-width: $media-tablet-landscape) {
     width: 577px;
     height: 577px;
+    top: -20px;
+    left: 210px;
+  }
+  @media (max-width: $media-tablet) {
+    width: 577px;
+    height: 577px;
     top: -10px;
     left: 10px;
   }
@@ -355,6 +365,12 @@
   height: 320px;
 
   @media (max-width: $media-tablet-landscape) {
+    width: 240px;
+    height: 240px;
+    top: 140px;
+    left: 380px;
+  }
+  @media (max-width: $media-tablet) {
     width: 240px;
     height: 240px;
     top: 140px;
