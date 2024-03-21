@@ -10,7 +10,8 @@ import Documents from './pages/Documents/Documents';
 import Instructions from './pages/Instructions/Instructions';
 import TermsOfUse from './pages/Documents/TermsOfUse/TermsOfUse';
 import PersonalData from './pages/Documents/PersonalData/PersonalData';
-
+import License from './pages/Documents/License/License';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   const formBlockRef = useRef(null);
@@ -23,11 +24,12 @@ function App() {
             <Routes>
               <Route path="*" element={<Main formBlockRef={formBlockRef} />} />
               <Route path="/about" element={<About />} />
-              <Route path="/documents" element={<Documents />} />
-              <Route path="/documents/termsofuse" element={<TermsOfUse />} />
-              <Route path="/documents/personaldata" element={<PersonalData />} />
+              <Route path="/agreements" element={<Documents />} />
+              <Route path="/end-user-agreement" element={<License />} />
+              <Route path="/user-agreement-ai" element={<TermsOfUse />} />
+              <Route path="/personal-data-agreement" element={<PersonalData />} />
               <Route path="/instructions" element={<Instructions />} />
-              {/*<Route path="*" element={<NotFound />} />*/}
+              {/* <Route path="*" element={<NotFound />} /> */}
             </Routes>
           </div>
         </Container>

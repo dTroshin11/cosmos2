@@ -10,6 +10,7 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import SubmitPopup from '../SubmitPopup/SubmitPopup';
+import { Link } from 'react-router-dom';
 
 const FormPopup = ({ children, active, setActive }) => {
 
@@ -123,7 +124,7 @@ const FormPopup = ({ children, active, setActive }) => {
                                     <Checkbox />
                                 </div>
                                 <div className={Styles.checkbox__text}>
-                                    Выражаю согласие с&nbsp; <a href="#">Политикой обработки персональных данных</a> и&nbsp;<a href="#">Условиями пользования сайтом</a>
+                                    Выражаю согласие с&nbsp; <Link to={'/agreements'}>Политикой обработки персональных данных</Link> и&nbsp;<Link to={'/personal-data-agreement'}>Условиями пользования сайтом</Link>
                                 </div>
                             </div>
                             <button className={Styles.form__button} disabled={!isDirty || !isValid}>
