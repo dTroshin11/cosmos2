@@ -8,6 +8,8 @@ import Main from './pages/Main/Main';
 import About from './pages/About/About';
 import Documents from './pages/Documents/Documents';
 import Instructions from './pages/Instructions/Instructions';
+import TermsOfUse from './pages/Documents/TermsOfUse/TermsOfUse';
+import PersonalData from './pages/Documents/PersonalData/PersonalData';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
               <Route path="*" element={<Main formBlockRef={formBlockRef} />} />
               <Route path="/about" element={<About />} />
               <Route path="/documents" element={<Documents />} />
+              <Route path="/documents/termsofuse" element={<TermsOfUse />} />
+              <Route path="/documents/personaldata" element={<PersonalData />} />
               <Route path="/instructions" element={<Instructions />} />
               {/*<Route path="*" element={<NotFound />} />*/}
             </Routes>
