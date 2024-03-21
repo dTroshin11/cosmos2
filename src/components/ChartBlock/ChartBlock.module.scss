@@ -244,6 +244,13 @@
   @media (max-width: $media-tablet-landscape) {
     display: none;
   }
+  @media (max-width: $media-phone) {
+    display: block;
+    top: 315px;
+    left: -190px;
+    width: 700px;
+    height: 500px;
+  }
 }
 
 .ChartBlock:before {

@@ -13,7 +13,7 @@ import SubmitPopup from '../SubmitPopup/SubmitPopup';
 import { Link } from 'react-router-dom';
 
 const FormPopup = ({ children, active, setActive }) => {
-
+    const [isChecked, setIsChecked] = useState(false);
     const instance = axios.create({
         headers: {
             'Access-Control-Allow-Origin': '*',
@@ -31,7 +31,7 @@ const FormPopup = ({ children, active, setActive }) => {
         phone: yup.string().required('Введите телефон').min(12, 'В номере телефона должно быть не менее 11-ти цифр').transform(cleanPhoneNumber),
         email: yup.string().required('Введите почту').email('Введите корректную почту'),
         // message: yup.string(),
-        // agreement: yup.boolean().oneOf([true], 'обязательное поле'),
+        agreement: yup.boolean().oneOf([true], 'обязательное поле'),
     });
     const formSubmit = (data) => {
         const distData = Object.values(data)
@@ -68,6 +68,7 @@ const FormPopup = ({ children, active, setActive }) => {
                 console.error('Ошибка при отправке запроса formSubmits:', error);
                 setIsSubmitMessage(false)
                 setIsActiveSubmitPopup(true)
+                setActive(false)
                 throw error;
             });
 
@@ -93,7 +94,7 @@ const FormPopup = ({ children, active, setActive }) => {
             <div className={classNames(Styles.Modal, active === true && Styles.active)} onClick={() => setActive(false)}>
                 <div className={Styles.Modal__content} onClick={e => e.stopPropagation()}>
                     <div className={Styles.Modal__form}>
-                        <div className={Styles.Modal__title} onClick={() => setIsActiveSubmitPopup(true)}>
+                        <div className={Styles.Modal__title}>
                             Оставить заявку
                             <div className={Styles.Modal__close} onClick={() => { setActive(false) }}>
                                 <img src={closeImg} alt={"close"} />
@@ -119,13 +120,24 @@ const FormPopup = ({ children, active, setActive }) => {
                                 <input id={'email'} {...register("email")} type={"text"} placeholder={'Email*'} className={classNames(errors['email'] ? Styles.errorsInput : null, Styles.form__input)} />
                             </div>
                             {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
-                            <div className={Styles.form__checkbox}>
-                                <div className={Styles.checkbox__checkbox}>
-                                    <Checkbox />
-                                </div>
-                                <div className={Styles.checkbox__text}>
-                                    Выражаю согласие с&nbsp; <Link to={'/agreements'}>Политикой обработки персональных данных</Link> и&nbsp;<Link to={'/personal-data-agreement'}>Условиями пользования сайтом</Link>
-                                </div>
+                            <div className={Styles.form__checkboxWrapper}>
+                                <label className={Styles.form__checkbox}  aria-label={'agreement'} for={"agreement"}>
+                                    <div className={Styles.checkbox__checkbox} >
+                                        <div className={Styles.CheckBox}>
+                                            <input
+                                                aria-label={"agreement"}
+                                                type='checkbox'
+                                                checked={isChecked}
+                                                id={'agreement'} {...register("agreement")}
+                                                onClick={() => setIsChecked((prev) => !prev)}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className={Styles.checkbox__text}>
+                                        Выражаю согласие с&nbsp;<Link to={'agreements'}>Политикой обработки персональных данных</Link> и&nbsp;<Link to={'/personal-data-agreement'}>Условиями пользования сайтом</Link>
+                                    </div>
+                                </label>
+                                {errors['agreement'] && <div className={Styles.errorText} style={{marginTop:"10px", marginLeft:"5px"}}>{errors['agreement']?.message}</div>}
                             </div>
                             <button className={Styles.form__button} disabled={!isDirty || !isValid}>
                                 Отправить

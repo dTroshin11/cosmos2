@@ -110,7 +110,7 @@ const CalculatorBlock = () => {
                         onChange={(e) => setPeople(e.target.value)}
                         step={1}
                         min={0}
-                        max={300}
+                        max={3000}
                     />
                 </div>
                 <div className={classNames(Styles.proPeople, Styles.calculate__item)} id={"ProPeople"}>

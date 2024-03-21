@@ -14,8 +14,10 @@ import SubmitPopup from '../ui/SubmitPopup/SubmitPopup';
 import { Link } from 'react-router-dom';
 
 
+
 const FormBlock = ({ formBlockRef }) => {
     const [backend, setBackEnd] = useState([{}])
+    const [isChecked, setIsChecked] = useState(false);
     // получение гетом списка данных юзера
     useEffect(() => {
         fetch('/api').then(
@@ -58,8 +60,7 @@ const FormBlock = ({ formBlockRef }) => {
         name: yup.string().required('Введите ФИО').matches(/^([^0-9]*)$/, 'Имя не должно содержать цифр'),
         phone: yup.string().required('Введите телефон').min(12, 'В номере телефона должно быть не менее 11-ти цифр').transform(cleanPhoneNumber),
         email: yup.string().required('Введите почту').email('Введите корректную почту'),
-        // message: yup.string(),
-        // agreement: yup.boolean().oneOf([true], 'обязательное поле'),
+        agreement: yup.boolean().oneOf([true], 'обязательное поле'),
     });
     const formSubmit = (data) => {
         const distData = Object.values(data)
@@ -153,39 +154,30 @@ const FormBlock = ({ formBlockRef }) => {
                             <input id={'email'} {...register("email")} type={"text"} placeholder={'Email*'} className={classNames(errors['email'] ? Styles.errorsInput : null, Styles.form__input)} />
                         </div>
                         {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
-                        <div className={Styles.form__checkbox}>
-                            <div className={Styles.checkbox__checkbox}>
-                                <CheckBox />
-                            </div>
-                            <div className={Styles.checkbox__text}>
-                                Выражаю согласие с&nbsp;<Link to={'agreements'}>Политикой обработки персональных данных</Link> и&nbsp;<Link to={'/personal-data-agreement'}>Условиями пользования сайтом</Link>
-                            </div>
+                        <div className={Styles.form__checkboxWrapper}>
+                            <label className={Styles.form__checkbox}  aria-label={'agreement'} for={"agreement"}>
+                                <div className={Styles.checkbox__checkbox} >
+                                    <div className={Styles.CheckBox}>
+                                        <input
+                                            aria-label={"agreement"}
+                                            type='checkbox'
+                                            checked={isChecked}
+                                            id={'agreement'} {...register("agreement")}
+                                            onClick={() => setIsChecked((prev) => !prev)}
+                                        />
+                                    </div>
+                                </div>
+                                <div className={Styles.checkbox__text}>
+                                    Выражаю согласие с&nbsp;<Link to={'agreements'}>Политикой обработки персональных данных</Link> и&nbsp;<Link to={'/personal-data-agreement'}>Условиями пользования сайтом</Link>
+                                </div>
+                            </label>
+                            {errors['agreement'] && <div className={Styles.errorText} style={{marginTop:"10px", marginLeft:"5px"}}>{errors['agreement']?.message}</div>}
                         </div>
+
                         <button disabled={!isDirty || !isValid} className={Styles.form__button}>
                             Отправить
                         </button>
                     </form>
-                    {/* <form className={Styles.info__form}> */}
-                    {/* <div className={Styles.form__title}>Оставьте заявку и убедитесь лично:</div> */}
-                    {/*        <div className={ classNames(errors['name'] ? Styles.errorsInput : null,Styles.FormContainer)}>*/}
-                    {/*          <input id={'name'} {...register("name")} type={"text"} placeholder={'ФИО*'} className={Styles.form__input}/>*/}
-                    {/*          {errors['name'] && <div className={Styles.errorText}>{  errors['name']?.message}</div>}*/}
-                    {/*        </div>*/}
-                    {/*        /!*<input className={Styles.form__input} id={"name"} placeholder={"ФИО*"} type={"text"} />*!/*/}
-                    {/*        <input className={Styles.form__input} placeholder={"Телефон*"} type={"text"} />*/}
-                    {/*        <input className={Styles.form__input} placeholder={"Email*"} type={"text"} />*/}
-                    {/*        <div className={Styles.form__checkbox}>*/}
-                    {/*            <div className={Styles.checkbox__checkbox}>*/}
-                    {/*                <Checkbox/>*/}
-                    {/*            </div>*/}
-                    {/*            <div className={Styles.checkbox__text}>*/}
-                    {/*                Выражаю согласие с&nbsp;<a href="#">Политикой обработки персональных данных</a> и&nbsp;<a href="#">Условиями пользования сайтом</a>*/}
-                    {/*            </div>*/}
-                    {/*        </div>*/}
-                    {/*        <button className={Styles.form__button}>*/}
-                    {/*            Оставить заявку*/}
-                    {/* </button> */}
-                    {/* </form> */}
                 </div>
                 <div className={Styles.info__mobForm}>
                     <div className={Styles.form__title}>Оставьте заявку и убедитесь лично:</div>

@@ -3,6 +3,7 @@
 
 .TariffsSchemeBlock {
   margin-bottom: 150px;
+  position: relative;
 
   @media (max-width: $media-tablet-landscape) {
     margin-bottom: 120px;
@@ -11,7 +12,21 @@
     margin-bottom: 90px;
   }
 }
-
+.TariffsSchemeBlock:after {
+  @media (max-width: $media-phone) {
+    content: " ";
+    background-image: url("../../assets/img/tarifBlueGrad.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1690px;
+    width: 692px;
+    position: absolute;
+    z-index: -1;
+    left: -50px;
+    top: -403px;
+  }
+}
 .title {
   margin-bottom: 60px;
   font-size: 60px;
@@ -62,6 +77,7 @@
     line-height: 26px;
     text-align: left;
     margin-top: 20px;
+    margin-bottom: 4px;
   }
 
   &:first-child {
