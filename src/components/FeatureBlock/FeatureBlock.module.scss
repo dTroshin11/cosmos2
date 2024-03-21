@@ -6,6 +6,9 @@
   position: relative;
 
   @media (max-width: $media-tablet-landscape) {
+    margin-bottom: 120px;
+  }
+  @media (max-width: $media-phone) {
     margin-bottom: 90px;
   }
 }
@@ -78,7 +81,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 32px;
+  border-radius: 20px;
   width: 380px;
 
   @media (max-width: $media-tablet-landscape) {

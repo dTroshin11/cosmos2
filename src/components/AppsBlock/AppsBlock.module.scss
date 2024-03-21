@@ -8,6 +8,10 @@
 
   @media (max-width: $media-tablet-landscape) {
     flex-direction: column;
+    margin-bottom: 120px;
+  }
+  @media (max-width: $media-phone) {
+    flex-direction: column;
     margin-bottom: 90px;
   }
 }
@@ -128,7 +132,8 @@
   //max-width: 418px;
   //max-height: 330px;
   width: 418px;
-  height: 330px;
+  height: auto;
+  max-width: 418px;
 
   @media (max-width: $media-tablet-landscape) {
     display: none;

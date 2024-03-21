@@ -11,7 +11,7 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 32px;
+  border-radius: 20px;
   margin-bottom: 150px;
 
   @media (max-width: $media-tablet-landscape) {
@@ -45,7 +45,8 @@
     padding: 60px;
     flex-direction: column-reverse;
     margin-bottom: 120px;
-    width: 620px;
+    max-width: 620px;
+    width: 100%;
     align-items: flex-start;
 
     &:before {
@@ -103,9 +104,9 @@
     }
     @media (max-width: $media-tablet) {
       margin: 0px;
-      width: 500px;
-      height: 468px;
-      background-size: cover;
+      width: 400px;
+      height: 368px;
+      background-size: contain;
     }
     @media (max-width: $media-phone) {
       margin: 48px 0px 24px 0px;
@@ -124,7 +125,6 @@
         font-size: 60px;
         line-height: 60px;
         margin-bottom: 24px;
-
         @media (max-width: $media-phone) {
           font-size: 28px;
           line-height: 30px;
@@ -291,6 +291,9 @@
           @media (max-width: $media-tablet-landscape) {
             margin-bottom: 0px;
             max-width: 500px;
+          }
+          @media (max-width: $media-phone) {
+
           }
 
           @media (max-width: $media-phone) {

@@ -4,10 +4,8 @@
   margin: 0 auto;
   width: 100%;
   max-width: 1180px;
+  padding: 0 10px;
 
-  @media (max-width: $media-tablet-landscape) {
-    padding: 0 10px;
-  }
   @media (max-width: $media-tablet) {
     padding: 0 74px;
   }

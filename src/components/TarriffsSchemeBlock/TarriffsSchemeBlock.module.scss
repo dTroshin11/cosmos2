@@ -5,6 +5,9 @@
   margin-bottom: 150px;
 
   @media (max-width: $media-tablet-landscape) {
+    margin-bottom: 120px;
+  }
+  @media (max-width: $media-phone) {
     margin-bottom: 90px;
   }
 }
@@ -222,7 +225,7 @@
   padding: 32px 16px;
   height: 1122px;
   width: 20%;
-  border-radius: 32px;
+  border-radius: 20px;
   border: 1px solid #4E5C77;
 }
 
