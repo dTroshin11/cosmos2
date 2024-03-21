@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import Styles from './Documents.module.scss'
+import Styles from './License.module.scss'
 import { useEffect, useRef } from "react";
-import Header from "../../components/Header/Header";
+import Header from "../../../components/Header/Header";
 
-const Documents = () => {
+const License = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -379,23 +379,167 @@ const Documents = () => {
 
     return (
         <>
+            <Header />
             <div className={Styles.Documents}>
-                <Header />
-                <Link className={Styles.Back} to="/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                        <path d="M19 13H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M11 19L5 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M11 7L5 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    Назад</Link>
-                <div className={Styles.Title}>Пользовательские <br />
-                    соглашения</div>
-                <div className={Styles.Links}>
-                    <ul>
-                        <li><Link to="/end-user-agreement">Электронное лицензионное соглашение с&nbsp;конечным пользователем</Link></li>
-                        <li><Link to="/user-agreement-ai">Пользовательское соглашение об&nbsp;использовании Cервиса ИИ-Помощник</Link></li>
-                        <li><Link to="/personal-data-agreement">Согласие на обработку персональных данных</Link></li>
-                    </ul>
+            <Link className={Styles.MobileBack} to="/agreements">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <path d="M19 13H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11 19L5 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11 7L5 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Назад</Link>
+                <div className={Styles.Menu}>
+                    <div className={Styles.Links}>
+                        <Link className={Styles.Back} to="/agreements">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                <path d="M19 13H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M11 19L5 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M11 7L5 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Назад</Link>
+                        <ul>
+                            <li><Link className={Styles.Active} to="/end-user-agreement">Электронное лицензионное соглашение с&nbsp;конечным пользователем</Link></li>
+                            <li><Link to="/user-agreement-ai">Пользовательское соглашение об&nbsp;использовании Cервиса ИИ-Помощник</Link></li>
+                            <li><Link to="/personal-data-agreement">Согласие на обработку персональных данных</Link></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className={Styles.Content}>
+                    <div id={"1"} name={"1"} ref={licenseRef} className={Styles.Title}>
+                        Электронное лицензионное соглашение с&nbsp;конечным пользователем
+                    </div>
+                    <div className={Styles.ListTitle}>
+                        1. ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ
+                    </div>
+                    <div className={Styles.Text}>
+                        <div>
+                            Внимательно прочитайте нижеследующие условия, прежде чем устанавливать, копировать или иным способом использовать операционную систему «Cosm OS» (далее – «Операционная система»).
+                        </div>
+                        <div>
+                            Установка или использование Операционной системы иным способом означает Ваше согласие с приведенными ниже условиями без каких-либо изъятий.
+                        </div>
+                    </div>
+                    <div className={Styles.ListTitle}>
+                        2.	СТОРОНЫ СОГЛАШЕНИЯ
+                    </div>
+                    <div className={Styles.ItemList}>
+                        {license[0].map((obj, index) => {
+                            return <div className={Styles.Item} key={index}>
+                                <div className={Styles.ItemNumber}>
+                                    {obj.number}
+                                </div>
+                                <div className={Styles.ItemText}>
+                                    {obj.text}
+                                </div>
+                            </div>
+                        })}
+                    </div>
+                    <div className={Styles.ListTitle}>
+                        3.	ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ
+                    </div>
+                    <div className={Styles.ItemList}>
+                        {license[1].map((obj, index) => {
+                            return <div className={Styles.Item} key={index}>
+                                <div className={Styles.ItemNumber}>
+                                    {obj.number}
+                                </div>
+                                <div className={Styles.ItemText}>
+                                    {obj.text}
+                                </div>
+                            </div>
+                        })}
+                    </div>
+                    <div className={Styles.ListTitle}>
+                        4.	ПРЕДМЕТ СОГЛАШЕНИЯ
+                    </div>
+                    <div className={Styles.ItemList}>
+                        {license[2].map((obj, index) => {
+                            return <div className={Styles.Item} key={index}>
+                                <div className={Styles.ItemNumber}>
+                                    {obj.number}
+                                </div>
+                                <div className={Styles.ItemText}>
+                                    {obj.text}
+                                </div>
+                            </div>
+                        })}
+                    </div>
+                    <div className={Styles.ListTitle}>
+                        5.	Способы передачи экземпляра Операционной системы Конечному пользователю
+                    </div>
+                    <div className={Styles.ItemList}>
+                        {license[3].map((obj, index) => {
+                            return <div className={Styles.Item} key={index}>
+                                <div className={Styles.ItemNumber}>
+                                    {obj.number}
+                                </div>
+                                <div className={Styles.ItemText}>
+                                    {obj.text}
+                                </div>
+                            </div>
+                        })}
+                    </div>
+                    <div className={Styles.ListTitle}>
+                        6.	Способы использования Операционной системы, ее Компонентов и Дополнительного программного обеспечения (совместно – «ПО»)
+                    </div>
+                    <div className={Styles.ItemList}>
+                        {license[4].map((obj, index) => {
+                            return <div className={Styles.Item} key={index}>
+                                <div className={Styles.ItemNumber}>
+                                    {obj.number}
+                                </div>
+                                <div className={Styles.ItemText}>
+                                    {obj.text}
+                                </div>
+                            </div>
+                        })}
+                    </div>
+                    <div className={Styles.ListTitle}>
+                        7.	Интеллектуальная собственность
+                    </div>
+                    <div className={Styles.ItemList}>
+                        {license[5].map((obj, index) => {
+                            return <div className={Styles.Item} key={index}>
+                                <div className={Styles.ItemNumber}>
+                                    {obj.number}
+                                </div>
+                                <div className={Styles.ItemText}>
+                                    {obj.text}
+                                </div>
+                            </div>
+                        })}
+                    </div>
+                    <div className={Styles.ListTitle}>
+                        8.	Ограничение ответственности Правообладателя
+                    </div>
+                    <div className={Styles.ItemList}>
+                        {license[6].map((obj, index) => {
+                            return <div className={Styles.Item} key={index}>
+                                <div className={Styles.ItemNumber}>
+                                    {obj.number}
+                                </div>
+                                <div className={Styles.ItemText}>
+                                    {obj.text}
+                                </div>
+                            </div>
+                        })}
+                    </div>
+                    <div className={Styles.ListTitle}>
+                        9.	Применимое право
+                    </div>
+                    <div className={Styles.ItemList}>
+                        {license[7].map((obj, index) => {
+                            return <div className={Styles.Item} key={index}>
+                                <div className={Styles.ItemNumber}>
+                                    {obj.number}
+                                </div>
+                                <div id={"2"} name={"2"} ref={termsOfUseRef} className={Styles.ItemText}>
+                                    {obj.text}
+                                </div>
+                            </div>
+                        })}
+                    </div>
+                    <div className={Styles.UpdateDateText}>Дата последнего обновления: 02 февраля 2024</div>
                 </div>
             </div>
             <div className={Styles.Footer}>
@@ -426,4 +570,4 @@ const Documents = () => {
     );
 };
 
-export default Documents;
+export default License;

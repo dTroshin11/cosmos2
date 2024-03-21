@@ -17,14 +17,14 @@ import Header from '../../components/Header/Header';
 const Main = ({ formBlockRef }) => {
 
     // const [isMainHeader, setIsMainHeader] = useState(true)
-
+    
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
 
     return (
         <>
-            <Header formBlockRef={formBlockRef} isMainHeader={true}/>
+            <Header formBlockRef={formBlockRef} isMainHeader={true} />
             <HeroBlock formBlockRef={formBlockRef} />
             <AppsBlock formBlockRef={formBlockRef} />
             <CosmosBlock />

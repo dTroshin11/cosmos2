@@ -460,11 +460,18 @@ const TermsOfUse = () => {
 
     return (
         <>
+            <Header />
             <div className={Styles.Documents}>
-                <Header />
+            <Link className={Styles.MobileBack} to="/agreements">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <path d="M19 13H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11 19L5 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11 7L5 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Назад</Link>
                 <div className={Styles.Menu}>
                     <div className={Styles.Links}>
-                        <Link className={Styles.Back} to="/">
+                        <Link className={Styles.Back} to="/agreements">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                                 <path d="M19 13H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 <path d="M11 19L5 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -472,9 +479,9 @@ const TermsOfUse = () => {
                             </svg>
                             Назад</Link>
                         <ul>
-                            <li><Link to="/documents">Электронное лицензионное соглашение с&nbsp;конечным пользователем</Link></li>
-                            <li><Link className={Styles.Active} to="/documents/termsofuse">Пользовательское соглашение об&nbsp;использовании Cервиса ИИ-Помощник</Link></li>
-                            <li><Link to="/documents/personaldata">Согласие на обработку персональных данных</Link></li>
+                            <li><Link to="/end-user-agreement">Электронное лицензионное соглашение с&nbsp;конечным пользователем</Link></li>
+                            <li><Link className={Styles.Active} to="/user-agreement-ai">Пользовательское соглашение об&nbsp;использовании Cервиса ИИ-Помощник</Link></li>
+                            <li><Link to="/personal-data-agreement">Согласие на обработку персональных данных</Link></li>
                         </ul>
                     </div>
                 </div>

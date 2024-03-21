@@ -42,7 +42,7 @@ const Header = ({ formBlockRef, isMainHeader }) => {
         <div className={Styles.Wrapper}>
           <div className={Styles.PageLinks}>
             <Link className={Styles.Link} to="/about">О нас</Link>
-            <Link className={Styles.Link} to="/documents">Документация</Link>
+            <Link className={Styles.Link} to="/agreements">Документация</Link>
           </div>
           <Link to='/' className={Styles.Logo}>
             <img className={Styles.LogoIcon} src={'img/logo/logo.svg'} alt='Logo icon' width={'100%'} height={'100%'} />
@@ -95,7 +95,7 @@ const Header = ({ formBlockRef, isMainHeader }) => {
         <div className={!menuActive ? Styles.Menu : Styles.Menu + ' ' + Styles.Active}>
           <div className={Styles.PageLinks}>
             <Link className={Styles.Link} to="/about">О нас</Link>
-            <Link className={Styles.Link} to="/documents">Документация</Link>
+            <Link className={Styles.Link} to="/agreements">Документация</Link>
           </div>
           <div className={Styles.MobileBtn} onClick={() => { setPopup(true) }}>
             Оставить заявку

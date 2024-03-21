@@ -11,6 +11,8 @@ import classNames from "classnames";
 
 import CheckBox from '../ui/Checkbox/Checkbox';
 import SubmitPopup from '../ui/SubmitPopup/SubmitPopup';
+import { Link } from 'react-router-dom';
+
 
 const FormBlock = ({ formBlockRef }) => {
     const [backend, setBackEnd] = useState([{}])
@@ -156,7 +158,7 @@ const FormBlock = ({ formBlockRef }) => {
                                 <CheckBox />
                             </div>
                             <div className={Styles.checkbox__text}>
-                                Выражаю согласие с&nbsp;<a href="#">Политикой обработки персональных данных</a> и&nbsp;<a href="#">Условиями пользования сайтом</a>
+                                Выражаю согласие с&nbsp;<Link to={'agreements'}>Политикой обработки персональных данных</Link> и&nbsp;<Link to={'/personal-data-agreement'}>Условиями пользования сайтом</Link>
                             </div>
                         </div>
                         <button disabled={!isDirty || !isValid} className={Styles.form__button}>
