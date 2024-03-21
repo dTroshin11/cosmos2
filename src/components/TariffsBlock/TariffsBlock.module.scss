@@ -39,7 +39,10 @@
 
 
   @media (max-width: $media-tablet-landscape) {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: $media-tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }

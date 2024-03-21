@@ -29,6 +29,10 @@
     margin-bottom: 60px;
 
     @media (max-width: $media-tablet-landscape) {
+      align-items: center;
+      justify-content: center;
+    }
+    @media (max-width: $media-tablet) {
       flex-direction: column;
       margin-bottom: 24px;
     }
@@ -37,6 +41,11 @@
       margin-right: 58px;
 
       @media (max-width: $media-tablet-landscape) {
+        max-width: 300px;
+        width: 100%;
+      }
+      @media (max-width: $media-tablet) {
+        max-width: unset;
         margin-right: 0px;
         margin-bottom: 5px;
       }
@@ -86,6 +95,7 @@
         }
       }
     }
+
 
     .calculate__item:last-child {
       margin-right: 0px;
@@ -196,6 +206,12 @@ input[type="range"] {
   background-size: 0% 100%;
   background-repeat: no-repeat;
   @media (max-width: $media-tablet-landscape) {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 20px;
+
+  }
+  @media (max-width: $media-tablet) {
     max-width: 600px;
   }
 }

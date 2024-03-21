@@ -115,14 +115,14 @@
 
   .info {
     max-width: 450px;
-
+    @media (max-width: $media-tablet-landscape) {
+      max-width: unset;
+    }
     .info__text {
       .text__title {
         font-size: 60px;
         line-height: 60px;
         margin-bottom: 24px;
-
-        @media (max-width: $media-tablet-landscape) {}
 
         @media (max-width: $media-phone) {
           font-size: 28px;
@@ -148,7 +148,12 @@
     }
 
     .info__form {
-
+      @media (max-width: $media-tablet-landscape) {
+        max-width: 480px;
+      }
+      @media (max-width: $media-tablet) {
+        max-width: unset;
+      }
       display: flex;
       flex-direction: column;
 

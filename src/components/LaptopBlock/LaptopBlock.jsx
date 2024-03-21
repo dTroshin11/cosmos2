@@ -4,6 +4,7 @@ import {useWindowSize} from "../../hooks/useWindowSize";
 
 const LaptopBlock = () => {
     const { windowWidth } = useWindowSize();
+
     const infoLeft = [
         {
             title: "Современный производительный ноутбук",

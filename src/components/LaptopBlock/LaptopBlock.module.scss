@@ -88,6 +88,12 @@
   justify-content: space-between;
 
   @media (max-width: $media-tablet-landscape) {
+    //flex-direction: column-reverse;
+    ////align-items: flex-start;
+    //align-items: center;
+    //display: flex;
+  }
+  @media (max-width: $media-tablet) {
     flex-direction: column-reverse;
     //align-items: flex-start;
     align-items: center;
@@ -102,6 +108,10 @@
 
   .info__left {
     @media (max-width: $media-tablet-landscape) {
+      width: 100%;
+      display: none;
+    }
+    @media (max-width: $media-tablet) {
       width: 100%;
       display: none;
     }
@@ -249,6 +259,14 @@
     height: 714px;
 
     @media (max-width: $media-tablet-landscape) {
+      width: 566px;
+      height: 566px;
+      //left: 13px;
+      position: relative;
+      top: 0px;
+      background-position: right 0px bottom 0px;
+    }
+    @media (max-width: $media-tablet) {
       width: 566px;
       height: 566px;
       //left: 13px;
