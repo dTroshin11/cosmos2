@@ -29,7 +29,7 @@
 
   .calculate {
     display: flex;
-    margin-bottom: 60px;
+    margin-bottom: 37px;
     align-items: flex-end;
 
     @media (max-width: $media-tablet-landscape) {
@@ -44,16 +44,10 @@
     }
 
     .calculate__item {
-      margin-right: 58px;
-      max-width: 300px;
+      margin-right: 60px;
       width: 100%;
 
-      @media (max-width: $media-tablet-landscape) {
-        max-width: unset;
-      }
-
       @media (max-width: $media-tablet) {
-        max-width: unset;
         margin-right: 0px;
         margin-bottom: 5px;
       }
@@ -83,12 +77,11 @@
         margin-bottom: 8px;
         background: #12151F;
         border-radius: 4px;
-        color: #FAFBFF;
+        color: #FFFFFF;
         font-size: 16px;
         line-height: 22px;
         border: 1px solid transparent;
         width: 100%;
-        max-width: 340px;
 
         @media (max-width: $media-tablet-landscape) {
           max-width: 600px;
@@ -97,7 +90,6 @@
 
       .item__input {
         width: 100%;
-        max-width: 340px;
         margin-left: 1px;
         height: 2px;
 
@@ -109,7 +101,7 @@
 
 
     .calculate__item:last-child {
-      margin-right: 0px;
+      margin-right: 40px;
 
       @media (max-width: $media-tablet-landscape) {
         margin-bottom: 0px;
