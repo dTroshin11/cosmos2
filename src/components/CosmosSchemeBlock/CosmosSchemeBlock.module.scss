@@ -177,12 +177,21 @@
     display: flex;
     gap: 20px;
 
+    @media (max-width: 580px) {
+      gap: 10px;
+    }
+
     .MobileTextTitle {
       width: 53%;
 
       @media (max-width: 670px) {
         width: 40%;
       }
+
+      @media (max-width: $media-phone) {
+        width: 36%;
+      }
+
     }
 
     .MobileCosmosTitle {
@@ -210,6 +219,7 @@
       @media (max-width: $media-phone) {
         font-size: 20px;
         line-height: 26px;
+        width: 30%;
       }
 
       @media (max-width: 360px) {
@@ -242,6 +252,7 @@
       @media (max-width: $media-phone) {
         font-size: 20px;
         line-height: 26px;
+        width: 34%;
       }
 
       @media (max-width: 360px) {
