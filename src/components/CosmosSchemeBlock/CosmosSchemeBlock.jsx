@@ -74,7 +74,7 @@ const CosmosSchemeBlock = () => {
         {
             text: <div className={Styles.row8}>Персональный ИИ-помощник</div>,
             cosmos: <div className={Styles.row8}>
-                <span>Есть, локально и&nbsp;облако
+                <span>Есть, локально и&nbsp;облако<br/>
                     (данные не используются)
                 </span>
             </div>,
@@ -162,7 +162,7 @@ const CosmosSchemeBlock = () => {
         {
             text: <div>Персональный ИИ-помощник</div>,
             cosmos: <div>
-                <span>Есть, локально и облако
+                <span>Есть, локально и&nbsp;облако<br/>
                     (данные не используются)
                 </span>
             </div>,

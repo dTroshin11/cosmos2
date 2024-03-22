@@ -121,13 +121,13 @@
 
   .text {
     color: #818AA7;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 16px;
+    line-height: 22px;
 
-    @media (max-width: $media-tablet-landscape) {
-      font-size: 16px;
-      line-height: 22px;
-    }
+    //@media (max-width: $media-tablet-landscape) {
+    //  font-size: 16px;
+    //  line-height: 22px;
+    //}
 
     &:last-child {
       max-width: 294px;

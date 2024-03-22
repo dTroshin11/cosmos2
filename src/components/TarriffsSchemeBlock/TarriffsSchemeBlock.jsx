@@ -397,7 +397,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
 
     const buttons = [
         {
-            text: <div className={Styles.high}>*Cтоимость указана без НДС</div>,
+            text: <div className={Styles.high} style={{fontSize:"14px"}}>*Cтоимость указана без НДС</div>,
             buttonGrey: <div className={Styles.buttonHigh}>
                 <div className={Styles.info_go}>
                     <div className={Styles.button}  onClick={scrollToFormBlock}>
@@ -434,7 +434,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                 <div className={Styles.content}>
                     <div className={Styles.columnMain}>
                         <div className={Styles.titles}>
-                            <div className={Styles.mainTitle}></div>
+                            <div className={Styles.mainTitle}  ></div>
                             <div className={Styles.mainTitle}>
                                 Бесплатно
                             </div>

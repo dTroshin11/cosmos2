@@ -178,9 +178,14 @@
         background: #12182E;
         border-radius: 4px;
         color: #FAFBFF;
-        border: none;
+        border: 1px solid transparent;
         font-size: 13px;
       }
+      /* Для всех значков в инпутах */
+      input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
+        background-color: #fff;
+      }
+
 
       .FormContainer {
         display: flex;
@@ -335,11 +340,11 @@ input:focus {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 1437px;
-  height: 1000px;
+  width: 1900px;
+  height: 1248px;
   position: absolute;
-  top: -173px;
-  left: -225px;
+  top: -246px;
+  left: -355px;
   z-index: -1;
 
   @media (max-width: $media-tablet-landscape) {
