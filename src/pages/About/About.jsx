@@ -7,6 +7,7 @@ import { useWindowSize } from '../../hooks/useWindowSize'
 import Footer from '../../components/Footer/Footer'
 import { useEffect } from 'react'
 import Header from '../../components/Header/Header'
+import { Link } from 'react-router-dom'
 
 const About = () => {
 
@@ -45,6 +46,13 @@ const About = () => {
     return (
         <div className={Styles.About}>
             <Header />
+            <Link className={Styles.Back} to="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <path d="M19 13H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11 19L5 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11 7L5 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Назад</Link>
             <div className={Styles.HeroBlock}>
                 <div className={Styles.HeroContent}>
                     <div className={Styles.Title}>О нас</div>
@@ -53,7 +61,7 @@ const About = () => {
                             Наша миссия — создать конкурентную, доступную и&nbsp;безопасную экосистему продуктов для&nbsp;защиты частной жизни пользователей в&nbsp;цифровом пространстве.
                         </div>
                         <div className={Styles.Description}>
-                            <div>Мыqqqqqqqqqs верим,sss что она позволит контролировать персональные данные и&nbsp;избегать рисков трекинга, слежки, таргетированной рекламы, персонализированных маркетинговых действий и&nbsp;манипуляций мнением, восприятием и&nbsp;выбором.</div>
+                            <div>Мы верим, что она позволит контролировать персональные данные и&nbsp;избегать рисков трекинга, слежки, таргетированной рекламы, персонализированных маркетинговых действий и&nbsp;манипуляций мнением, восприятием и&nbsp;выбором.</div>
                             <div>Наша команда делает всё, чтобы наш клиент мог не&nbsp;беспокоиться о&nbsp;своей безопасности и&nbsp;приватности.</div>
                         </div>
                     </div>

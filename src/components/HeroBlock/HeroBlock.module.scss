@@ -204,7 +204,7 @@
         padding: 60px;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: center;
-        border-radius: 20px;
+        border-radius: 32px;
 
 
         @media (max-width: $media-desktop) {
@@ -236,6 +236,7 @@
             background-position: unset;
             max-width: 620px;
             width: 100%;
+            border-radius: 20px;
         }
 
         @media (max-width: $media-phone) {
@@ -244,7 +245,6 @@
 
             padding: 24px 24px 12px 24px;
             max-width: 340px;
-            border-radius: 20px;
             //width: 100%;
         }
 
@@ -291,6 +291,7 @@
                 padding-right: 0px;
             }
         }
+        
 
         .features__item:nth-child(4) {
             padding-right: 20px;
@@ -309,7 +310,7 @@
         }
 
         .features__item:nth-child(2) {
-            padding-left: 14px;
+            padding-left: 24px;
             padding-right: 20px;
 
             @media (max-width: $media-desktop) {
@@ -327,7 +328,7 @@
         }
 
         .features__item:nth-child(5) {
-            padding-left: 14px;
+            padding-left: 24px;
             padding-right: 20px;
 
             @media (max-width: $media-desktop) {
@@ -337,7 +338,7 @@
         }
 
         .features__item:nth-child(3) {
-            padding-left: 22px;
+            padding-left: 20px;
 
             @media (max-width: $media-desktop) {
                 padding-left: 0px;
@@ -353,7 +354,7 @@
         }
 
         .features__item:nth-child(6) {
-            padding-left: 22px;
+            padding-left: 20px;
 
             @media (max-width: $media-desktop) {
                 padding-left: 0px;

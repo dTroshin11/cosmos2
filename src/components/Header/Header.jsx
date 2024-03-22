@@ -39,8 +39,8 @@ const Header = ({ formBlockRef, isMainHeader }) => {
     <>
 
       <div className={Styles.Header}>
-        <div className={Styles.Wrapper}>
-          <div className={Styles.PageLinks}>
+        <div className={isMainHeader ? Styles.Wrapper : Styles.SecondaryWrapper}>
+          <div className={isMainHeader ? Styles.PageLinks : Styles.SecondaryPageLinks}>
             <Link className={Styles.Link} to="/about">О нас</Link>
             <Link className={Styles.Link} to="/agreements">Документация</Link>
           </div>

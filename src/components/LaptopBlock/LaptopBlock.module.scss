@@ -31,6 +31,7 @@
     top: -34px;
     left: -191px;
   }
+
   @media (max-width: $media-phone) {
     display: block;
     width: 730px;
@@ -73,15 +74,16 @@
     justify-content: flex-start;
     margin-bottom: 60px;
   }
+
   @media (max-width: $media-tablet) {
     margin-bottom: 0px;
   }
+
   @media (max-width: $media-phone) {
     font-size: 28px;
     line-height: 30px;
     text-align: left;
     justify-content: flex-start;
-
   }
 }
 
@@ -92,19 +94,27 @@
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 1185px) {
+    grid-template-columns: 230px 430px 300px;
+    justify-content: center;
+  }
+
   @media (max-width: $media-tablet-landscape) {
     grid-template-columns: 1fr 400px 1fr;
     //flex-direction: column-reverse;
     ////align-items: flex-start;
     //align-items: center;
     //display: flex;
+    justify-content: space-between;
   }
+
   @media (max-width: $media-tablet) {
     flex-direction: column-reverse;
     //align-items: flex-start;
     align-items: center;
     display: flex;
   }
+
   @media (max-width: $media-phone) {
     flex-direction: column-reverse;
     //align-items: flex-start;
@@ -133,6 +143,7 @@
       align-items: center;
       width: fit-content;
     }
+
     @media (max-width: $media-phone) {
       //width: 100%;
       display: block;
@@ -162,15 +173,16 @@
       //grid-template-columns: 1fr;
       //gap: 14px;
       justify-content: space-between;
-      margin-bottom: 36px!important;
+      margin-bottom: 36px !important;
       height: auto;
     }
+
     @media (max-width: $media-phone) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
       justify-content: space-between;
-      margin-bottom: 24px!important;
+      margin-bottom: 24px !important;
       //height: 48px;
 
       &:nth-child(1) {
@@ -206,6 +218,7 @@
       @media (max-width: $media-tablet-landscape) {
         text-align: left;
       }
+
       @media (max-width: $media-phone) {
         margin-bottom: 0px;
         font-size: 12px;
@@ -224,6 +237,7 @@
         line-height: 25px;
         text-align: left;
       }
+
       @media (max-width: $media-phone) {
         font-size: 12px;
         line-height: 15px;
@@ -260,6 +274,11 @@
     width: 614px;
     height: 714px;
 
+    @media (max-width: 1185px) {
+      width: 465px;
+      height: 535px;
+    }
+
     @media (max-width: $media-tablet-landscape) {
       width: 435px;
       height: 435px;
@@ -268,6 +287,7 @@
       top: 0px;
       background-position: right 0px bottom 0px;
     }
+
     @media (max-width: $media-tablet) {
       background-image: url("../../assets/img/SecondLaptopTab.png");
       width: 566px;
@@ -277,6 +297,7 @@
       top: 0px;
       background-position: right 0px bottom 0px;
     }
+
     @media (max-width: $media-phone) {
       background-image: url("../../assets/img/SecondLaptopMob.png");
       width: 298px;
@@ -303,18 +324,26 @@
     height: 891px;
     z-index: -1;
 
+    @media (max-width: 1185px) {
+      left: 105px;
+      width: 791px;
+      height: 791px;
+    }
+
     @media (max-width: $media-tablet-landscape) {
       width: 664px;
       height: 664px;
       left: -80px;
       top: -92px;
     }
+
     @media (max-width: $media-tablet) {
       width: 721px;
       height: 721px;
       left: -80px;
       top: -110px;
     }
+
     @media (max-width: $media-phone) {
       width: 370px;
       height: 370px;
@@ -337,18 +366,26 @@
   height: 820px;
   z-index: -1;
 
+  @media (max-width: 1185px) {
+    left: 140px;
+    width: 720px;
+    height: 720px;
+  }
+
   @media (max-width: $media-tablet-landscape) {
     width: 577px;
     height: 577px;
     top: -20px;
     left: 210px;
   }
+
   @media (max-width: $media-tablet) {
     width: 577px;
     height: 577px;
     top: -30px;
     left: 10px;
   }
+
   @media (max-width: $media-phone) {
     width: 360px;
     height: 360px;
@@ -370,18 +407,26 @@
   width: 320px;
   height: 320px;
 
+  @media (max-width: 1185px) {
+    left: 383px;
+    width: 240px;
+    height: 240px;
+  }
+
   @media (max-width: $media-tablet-landscape) {
     width: 240px;
     height: 240px;
     top: 140px;
     left: 380px;
   }
+
   @media (max-width: $media-tablet) {
     width: 240px;
     height: 240px;
     top: 140px;
     left: 180px;
   }
+
   @media (max-width: $media-phone) {
     width: 140px;
     height: 140px;
