@@ -182,7 +182,6 @@ const CosmosSchemeBlock = () => {
         },
     ]
 
-
     const { windowWidth } = useWindowSize();
 
     const tabs = ['Cosm OS', 'Другие']
@@ -254,7 +253,7 @@ const CosmosSchemeBlock = () => {
                                 <div className={Styles.MobileOtherTitle}>Другие</div>
                             </div>
                             {mobileItem.map((obj, index) => {
-                                return <>
+                                return <React.Fragment key={index}>
                                     <div className={Styles.MobileRow}>
                                         <div className={Styles.FirstTD}>
                                             {obj.text}
@@ -267,7 +266,7 @@ const CosmosSchemeBlock = () => {
                                         </div>
                                     </div>
                                     <div className={Styles.divider}></div>
-                                </>
+                                </React.Fragment>
                             })}
                         </div>
                         :

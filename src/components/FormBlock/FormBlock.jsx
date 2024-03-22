@@ -155,7 +155,7 @@ const FormBlock = ({ formBlockRef }) => {
                         </div>
                         {errors['email'] && <div className={Styles.errorText}>{errors['email']?.message}</div>}
                         <div className={Styles.form__checkboxWrapper}>
-                            <label className={Styles.form__checkbox}  aria-label={'agreement'} for={"agreement"}>
+                            <label className={Styles.form__checkbox}  aria-label={'agreement'} htmlFor={"agreement"}>
                                 <div className={Styles.checkbox__checkbox} >
                                     <div className={Styles.CheckBox}>
                                         <input

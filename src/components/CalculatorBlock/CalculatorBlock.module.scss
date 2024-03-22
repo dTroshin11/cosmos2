@@ -30,10 +30,11 @@
   .calculate {
     display: flex;
     margin-bottom: 60px;
-
+    align-items: flex-end;
     @media (max-width: $media-tablet-landscape) {
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
+      flex-direction: column;
     }
     @media (max-width: $media-tablet) {
       flex-direction: column;
@@ -42,10 +43,10 @@
 
     .calculate__item {
       margin-right: 58px;
-
+      max-width: 300px;
+      width: 100%;
       @media (max-width: $media-tablet-landscape) {
-        max-width: 300px;
-        width: 100%;
+       max-width: unset;
       }
       @media (max-width: $media-tablet) {
         max-width: unset;
@@ -80,7 +81,7 @@
         color: #818AA7;
         font-size: 16px;
         line-height: 22px;
-        border: none;
+        border: 1px solid transparent;
         width: 100%;
         max-width: 340px;
         @media (max-width: $media-tablet-landscape) {
@@ -158,10 +159,10 @@
   }
 }
 
-input[type="number"]::-webkit-inner-spin-button, 
-input[type="number"]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="number"] {
@@ -190,11 +191,14 @@ input[type="number"] {
   border-radius: 3px;
 }
 
-/* input[type="range"]:focus,
-input[type="number"]:focus {
-  box-shadow: 0 0 3px 1px #4b81dd;
+ input[type="range"]:focus{
+  border: none !important;
   outline: none;
-} */
+}
+input:focus {
+  outline: none !important;
+
+}
 
 input[type="range"] {
   -webkit-appearance: none;
@@ -212,7 +216,6 @@ input[type="range"] {
     width: 100%;
     max-width: 300px;
     margin-right: 20px;
-
   }
   @media (max-width: $media-tablet) {
     max-width: 600px;
@@ -220,7 +223,7 @@ input[type="range"] {
 }
 
 .people > input[type="range"] {
-  background-size: 50% 100%;
+  background-size: 8% 100%;
 }
 .proPeople > input[type="range"] {
   background-size: 22% 100%;
