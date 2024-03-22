@@ -9,36 +9,56 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
         <path d="M12 5V19" stroke="#00FF75" strokeLinejoin="round" />
         <path d="M5 12H19" stroke="#00FF75" strokeLinejoin="round" />
     </svg>
-    const minus =   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-    <path d="M5 12.0002H19" stroke="#818AA7" strokeLinejoin="round" />
-</svg>
+    const minus = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M5 12.0002H19" stroke="#818AA7" strokeLinejoin="round" />
+    </svg>
     const items = [
         // цена
         {
             text: <div className={Styles.small}>Цена</div>,
             free: <div className={Styles.small}>
-                <span className={Styles.price}>0 ₽</span>
+                <span className={Styles.price}>
+                    {windowWidth > 1024
+                        ? <>0 ₽</>
+                        : <>0 ₽/мес*</>
+                    }
+                </span>
                 {windowWidth > 1024
                     ? <span>в месяц</span>
                     : ''
                 }
             </div>,
             light: <div className={Styles.small}>
-                <span className={Styles.price}>10 500 ₽*</span>
+                <span className={Styles.price}>
+                    {windowWidth > 1024
+                        ? <>10 500 ₽</>
+                        : <>10 500 ₽/мес*</>
+                    }
+                </span>
                 {windowWidth > 1024
                     ? <span>в месяц</span>
                     : ''
                 }
             </div>,
             standart: <div className={Styles.small}>
-                <span className={Styles.price}>21 000 ₽*</span>
+                <span className={Styles.price}>
+                    {windowWidth > 1024
+                        ? <>21 000 ₽</>
+                        : <>21 000 ₽/мес*</>
+                    }
+                </span>
                 {windowWidth > 1024
                     ? <span>в месяц</span>
                     : ''
                 }
             </div>,
             premium: <div className={Styles.small}>
-                <span className={Styles.price}>31 500 ₽*</span>
+                <span className={Styles.price}>
+                    {windowWidth > 1024
+                        ? <>31 500 ₽</>
+                        : <>31 500 ₽/мес*</>
+                    }
+                </span>
                 {windowWidth > 1024
                     ? <span>в месяц</span>
                     : ''
@@ -118,15 +138,15 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             light: <div className={Styles.high}>
                 <span>Вторая память
                     Шифрование</span>
-                <span/>
+                <span />
             </div>,
             standart: <div className={Styles.high}>
                 <span>МТС Cloud, Шардирование, Шифрование</span>
-                <span/>
+                <span />
             </div>,
             premium: <div className={Styles.high}>
                 <span>МТС Cloud, Шардирование, Шифрование</span>
-                <span/>
+                <span />
             </div>,
         },
         // Безопасный браузер
@@ -203,15 +223,15 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             </div>,
             light: <div className={Styles.other}>
                 <span>Один раз в&nbsp;год</span>
-                <span/>
+                <span />
             </div>,
             standart: <div className={Styles.other}>
                 <span>Один раз в&nbsp;год</span>
-                <span/>
+                <span />
             </div>,
             premium: <div className={Styles.other}>
                 <span>Один раз в&nbsp;год</span>
-                <span/>
+                <span />
             </div>,
         },
         // Горячая замена ноутбука
@@ -230,7 +250,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             </div>,
             premium: <div className={Styles.medium}>
                 <span>Один раз в&nbsp;год</span>
-                <span/>
+                <span />
             </div>,
         },
         // Возможность выкупа
@@ -258,28 +278,48 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
         {
             text: <div className={Styles.small}>Цена</div>,
             free: <div className={Styles.small}>
-                <span className={Styles.price}>0 ₽</span>
+                <span className={Styles.price}>
+                    {windowWidth > 1024
+                        ? <>0 ₽</>
+                        : <>0 ₽/мес*</>
+                    }
+                </span>
                 {windowWidth > 1024
                     ? <span>в месяц</span>
                     : ''
                 }
             </div>,
             light: <div className={Styles.small}>
-                <span className={Styles.price}>10 500 ₽*</span>
+                <span className={Styles.price}>
+                    {windowWidth > 1024
+                        ? <>10 500 ₽</>
+                        : <>10 500 ₽/мес*</>
+                    }
+                </span>
                 {windowWidth > 1024
                     ? <span>в месяц</span>
                     : ''
                 }
             </div>,
             standart: <div className={Styles.small}>
-                <span className={Styles.price}>21 000 ₽*</span>
+                <span className={Styles.price}>
+                    {windowWidth > 1024
+                        ? <>21 000 ₽</>
+                        : <>21 000 ₽/мес*</>
+                    }
+                </span>
                 {windowWidth > 1024
                     ? <span>в месяц</span>
                     : ''
                 }
             </div>,
             premium: <div className={Styles.small}>
-                <span className={Styles.price}>31 500 ₽*</span>
+                <span className={Styles.price}>
+                    {windowWidth > 1024
+                        ? <>31 500 ₽</>
+                        : <>31 500 ₽/мес*</>
+                    }
+                </span>
                 {windowWidth > 1024
                     ? <span>в месяц</span>
                     : ''
@@ -304,7 +344,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
         },
         // ПО по запросу клиента: CAD
         {
-            text: <div className={Styles.small}>ПО по запросу клиента: CAD<br/>/CAM/Adobe/Microsoft/Autodesk<br/>/Siemens + адаптация<br/> специализированного ПО*</div>,
+            text: <div className={Styles.small}>ПО по запросу клиента: CAD<br />/CAM/Adobe/Microsoft/Autodesk<br />/Siemens + адаптация<br /> специализированного ПО*</div>,
             free: <div className={Styles.small}>
                 {minus}
             </div>,
@@ -354,10 +394,10 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             </div>,
         },
     ]
-    const MobileSchema = ({arr = itemsMobile,id,title}) => {
+    const MobileSchema = ({ arr = itemsMobile, id, title }) => {
         return (
             <div  >
-                <div className={Styles.mainTitle} style={ arr === items ? {  color:"#0072F8"} : null}>
+                <div className={Styles.mainTitle} style={arr === items ? { color: "#0072F8" } : null}>
                     {title}
                 </div>
                 {arr.map((obj, index) => {
@@ -370,23 +410,23 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                                 {obj[id]}
                             </div>
                         </div>
-                        <div className={Styles.divider}/>
+                        <div className={Styles.divider} />
                     </React.Fragment>
                 })}
                 {buttons.map((obj, index) => {
-                            return <div key={index}>
-                             {arr === items ?obj.buttonBlue : obj.buttonGrey}
+                    return <div key={index}>
+                        {arr === items ? obj.buttonBlue : obj.buttonGrey}
                     </div>
-                    })}
+                })}
 
             </div>
         );
     };
     const mobileSchemaArr = [
-        {title:"Премиум", id:"premium", arr:items},
-        {title:"Стандарт", id:"standart"},
-        {title:"Лайт", id:"light"},
-        {title:"Бесплатно", id:"free"},
+        { title: "Премиум", id: "premium", arr: items },
+        { title: "Стандарт", id: "standart" },
+        { title: "Лайт", id: "light" },
+        { title: "Бесплатно", id: "free" },
     ]
 
     const [popup, setPopup] = useState(false)
@@ -397,27 +437,27 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
 
     const buttons = [
         {
-            text: <div className={Styles.high} style={{fontSize:"14px"}}>*Cтоимость указана без НДС</div>,
+            text: <div className={Styles.high} style={{ fontSize: "14px" }}>*Cтоимость указана без НДС</div>,
             buttonGrey: <div className={Styles.buttonHigh}>
                 <div className={Styles.info_go}>
-                    <div className={Styles.button}  onClick={scrollToFormBlock}>
+                    <div className={Styles.button} onClick={scrollToFormBlock}>
                         <div className={Styles.buttonText}>Оставить заявку</div>
                     </div>
                 </div>
                 <div className={Styles.info_goMob}>
-                    <div className={Styles.button}  onClick={() => { setPopup(true) }}>
+                    <div className={Styles.button} onClick={() => { setPopup(true) }}>
                         <div className={Styles.buttonText}>Оставить заявку</div>
                     </div>
                 </div>
             </div>,
             buttonBlue: <div className={Styles.buttonHigh}>
                 <div className={Styles.info_go}>
-                    <div className={Styles.button + ' ' + Styles.premiumButton}  onClick={scrollToFormBlock}>
+                    <div className={Styles.button + ' ' + Styles.premiumButton} onClick={scrollToFormBlock}>
                         <div className={Styles.buttonText}>Оставить заявку</div>
                     </div>
                 </div>
                 <div className={Styles.info_goMob}>
-                    <div className={Styles.button + ' ' + Styles.premiumButton}  onClick={() => { setPopup(true) }}>
+                    <div className={Styles.button + ' ' + Styles.premiumButton} onClick={() => { setPopup(true) }}>
                         <div className={Styles.buttonText}>Оставить заявку</div>
                     </div>
                 </div>
