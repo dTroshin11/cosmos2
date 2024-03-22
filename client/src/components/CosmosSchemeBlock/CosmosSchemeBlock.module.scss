@@ -17,10 +17,12 @@
   margin-bottom: 60px;
   font-size: 60px;
   line-height: 60px;
+
   @media (max-width: $media-phone) {
     font-size: 28px;
     line-height: 30px;
-    font-weight:400;
+    text-align: left;
+    margin-bottom: 36px;
   }
 }
 
@@ -53,7 +55,7 @@
   padding: 32px 16px;
   height: 654px;
   width: 25%;
-  border-radius: 20px;
+  border-radius: 32px;
   border: 1px solid #4E5C77;
 
   @media (max-width: $media-tablet-landscape) {

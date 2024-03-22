@@ -11,11 +11,11 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 32px;
   margin-bottom: 150px;
 
   @media (max-width: $media-tablet-landscape) {
-    //background-image: url("../../assets/img/formBgMobile.svg");
+    // background-image: url("../../assets/img/formBgMobile.svg");
     background-size: cover;
     padding: 60px;
     flex-direction: column-reverse;
@@ -39,6 +39,7 @@
       z-index: -1;
     }
   }
+
   @media (max-width: $media-tablet) {
     //background-image: url("../../assets/img/formBgMobile.svg");
     background-size: cover;
@@ -63,6 +64,7 @@
       z-index: -1;
     }
   }
+
   @media (max-width: $media-phone) {
     background-image: url("../../assets/img/formBgMobile.svg");
     background-size: cover;
@@ -79,7 +81,7 @@
       left: -600px;
       width: 600px + 600px + 600px;
       height: 460px + 460px + 460px;
-      background-image: url("../../assets/img/gradBgLaptop.svg");
+      // background-image: url("../../assets/img/gradBgLaptop.svg");
       background-size: cover;
       background-position: center left;
       background-repeat: no-repeat;
@@ -102,12 +104,14 @@
       height: 468px;
       background-size: cover;
     }
+
     @media (max-width: $media-tablet) {
       margin: 0px;
       width: 400px;
       height: 368px;
       background-size: contain;
     }
+
     @media (max-width: $media-phone) {
       width: 268px;
       height: 250px;
@@ -118,14 +122,17 @@
 
   .info {
     max-width: 450px;
+
     @media (max-width: $media-tablet-landscape) {
       max-width: unset;
     }
+
     .info__text {
       .text__title {
         font-size: 60px;
         line-height: 60px;
         margin-bottom: 24px;
+
         @media (max-width: $media-phone) {
           font-size: 28px;
           line-height: 30px;
@@ -153,15 +160,16 @@
       @media (max-width: $media-tablet-landscape) {
         max-width: 480px;
       }
+
       @media (max-width: $media-tablet) {
         max-width: unset;
       }
+
       display: flex;
       flex-direction: column;
 
-      @media (max-width: $media-tablet-landscape) {
+      @media (max-width: $media-tablet-landscape) {}
 
-      }
       @media (max-width: $media-phone) {
         display: none;
       }
@@ -181,6 +189,7 @@
         border: 1px solid transparent;
         font-size: 13px;
       }
+
       /* Для всех значков в инпутах */
       input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
         background-color: #fff;
@@ -206,6 +215,7 @@
       .form__checkboxWrapper {
         margin-bottom: 24px;
       }
+
       .form__checkbox {
         display: flex;
         margin-top: 8px;
@@ -302,9 +312,8 @@
             margin-bottom: 0px;
             max-width: 500px;
           }
-          @media (max-width: $media-phone) {
 
-          }
+          @media (max-width: $media-phone) {}
 
           @media (max-width: $media-phone) {
             margin-bottom: 0px;
@@ -336,7 +345,7 @@ input:focus {
 
 .FormBlock:after {
   content: " ";
-  background: url("../../assets/img/mainGradBg.svg");
+  background-image: url("../../assets/img/formBgGrad.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -357,6 +366,7 @@ input:focus {
 .CheckBox {
   z-index: 10;
   width: 20px;
+
   input {
     -webkit-appearance: none;
     appearance: none;

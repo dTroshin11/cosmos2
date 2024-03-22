@@ -232,11 +232,16 @@
     font-size: 18px;
     color: white;
     line-height: 25px;
-    width: 12%;
+    width: 9%;
+
+    @media (max-width: $media-tablet) {
+        width: 12%;
+    }
 
     @media (max-width: $media-phone) {
         font-size: 16px;
         line-height: 22px;
+        width: 16%;
     }
 }
 
@@ -244,7 +249,7 @@
     font-size: 18px;
     color: white;
     line-height: 25px;
-    width: 92%;
+    width: 91%;
 
     @media (max-width: $media-tablet) {
         width: 88%;
@@ -260,13 +265,8 @@
 .UpdateDateText {
     margin-top: 36px;
 
-    @media (max-width: $media-tablet) {
-        width: 12%;
-    }
-
     @media (max-width: $media-phone) {
         margin-top: 24px;
-        width: 16%;
     }
 }
 
