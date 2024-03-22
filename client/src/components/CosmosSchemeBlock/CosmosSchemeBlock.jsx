@@ -29,7 +29,7 @@ const CosmosSchemeBlock = () => {
             text: <div className={Styles.row3}>Стоимость лицензирования</div>,
             cosmos: <div className={Styles.row3}>
                 <span>Входит в&nbsp;стоимость подписки
-                    на&nbsp;рабочее устройство</span>
+                    на&nbsp;рабочее место</span>
             </div>,
             other: <div className={Styles.row3}>
                 <span>Лицензия</span>
@@ -74,7 +74,7 @@ const CosmosSchemeBlock = () => {
         {
             text: <div className={Styles.row8}>Персональный ИИ-помощник</div>,
             cosmos: <div className={Styles.row8}>
-                <span>Есть, локально и&nbsp;облако<br/>
+                <span>Есть, локально и&nbsp;облако<br />
                     (данные не используются)
                 </span>
             </div>,
@@ -96,89 +96,52 @@ const CosmosSchemeBlock = () => {
 
     const mobileItem = [
         {
-            text: <div>Поставляется на проверенной аппаратной базе, гарантирующей безопасность и производительность</div>,
-            cosmos: <div>
-                <span>Да</span>
-            </div>,
-            other: <div>
-                <span>Нет</span>
-            </div>
+            text: <div>Поставляется на&nbsp;проверенной аппаратной базе, гарантирующей безопасность и&nbsp;производительность</div>,
+            cosmos: <div>Да</div>,
+            other: <div>Нет</div>
         },
         {
-            text: <div>Поддержка и обновления</div>,
-            cosmos: <div>
-                <span>Полная</span>
-            </div>,
-            other: <div>
-                <span>С ограничениями</span>
-            </div>
+            text: <div>Поддержка и&nbsp;обновления</div>,
+            cosmos: <div>Полная</div>,
+            other: <div>С ограничениями</div>
         },
         {
             text: <div>Стоимость лицензирования</div>,
-            cosmos: <div>
-                <span>Входит в стоимость подписки
-                    на рабочее устройство</span>
-            </div>,
-            other: <div>
-                <span>Лицензия</span>
-            </div>
+            cosmos: <div>Входит в стоимость подписки
+                    на рабочее место</div>,
+            other: <div>Лицензия</div>
         },
         {
-            text: <div>Ограничения по рынкам присутствия</div>,
-            cosmos: <div>
-                <span>Нет</span>
-            </div>,
-            other: <div>
-                <span>С ограничениями</span>
-            </div>
+            text: <div>Ограничения по&nbsp;рынкам присутствия</div>,
+            cosmos: <div>Нет</div>,
+            other: <div>С ограничениями</div>
         },
         {
             text: <div>Доступность инструментов дистрибуции приложений</div>,
-            cosmos: <div>
-                <span>Полная</span>
-            </div>,
-            other: <div>
-                <span>С ограничениями</span>
-            </div>
+            cosmos: <div>Полная</div>,
+            other: <div>С ограничениями</div>
         },
         {
             text: <div>Безопасность</div>,
-            cosmos: <div>
-                <span>Высокая</span>
-            </div>,
-            other: <div>
-                <span>От средней до высокой</span>
-            </div>
+            cosmos: <div>Высокая</div>,
+            other: <div>От средней до&nbsp;высокой</div>
         },
         {
             text: <div>Поддержка стандартных инструментов B2B-инфраструктуры клиентов</div>,
-            cosmos: <div>
-                <span>Под запрос клиента</span>
-            </div>,
-            other: <div>
-                <span>С ограничениями</span>
-            </div>
+            cosmos: <div>Под запрос клиента</div>,
+            other: <div>С ограничениями</div>
         },
         {
-            text: <div>Персональный ИИ-помощник</div>,
-            cosmos: <div>
-                <span>Есть, локально и&nbsp;облако<br/>
-                    (данные не используются)
-                </span>
-            </div>,
-            other: <div>
-                <span>Есть, данные пользователя
-                    используются компанией</span>
-            </div>
+            text: <div>Персональный ИИ-&nbsp;помощник</div>,
+            cosmos: <div>Есть, локально и&nbsp;облако<br />
+            (данные не используются)</div>,
+            other: <div>Есть, данные пользователя
+            используются компанией</div>
         },
         {
-            text: <div>Скрытые трекеры и логирование</div>,
-            cosmos: <div>
-                <span>Нет</span>
-            </div>,
-            other: <div>
-                <span>Есть, н/д</span>
-            </div>
+            text: <div>Скрытые трекеры и&nbsp;логирование</div>,
+            cosmos: <div>Нет</div>,
+            other: <div>Есть, н/д</div>
         },
     ]
 
