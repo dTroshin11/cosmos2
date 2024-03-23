@@ -396,7 +396,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
     ]
     const MobileSchema = ({ arr = itemsMobile, id, title }) => {
         return (
-            <div  >
+            <div  className={Styles.container}>
                 <div className={Styles.mainTitle} style={arr === items ? { color: "#0072F8" } : null}>
                     {title}
                 </div>
@@ -410,7 +410,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                                 {obj[id]}
                             </div>
                         </div>
-                        <div className={Styles.divider} />
+                        {index  ? <div className={Styles.divider}/> : null}
                     </React.Fragment>
                 })}
                 {buttons.map((obj, index) => {

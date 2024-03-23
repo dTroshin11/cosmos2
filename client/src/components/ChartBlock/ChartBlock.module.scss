@@ -246,9 +246,10 @@
     display: none;
   }
   @media (max-width: $media-phone) {
+    //background: url("../../assets/img/chartBlockGradMobBg.svg");
     display: block;
     top: 315px;
-    left: -190px;
+    left: -160px;
     width: 700px;
     height: 500px;
   }
