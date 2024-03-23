@@ -4,8 +4,12 @@
 .CosmosSchemeBlock {
   margin-bottom: 150px;
 
-  @media (max-width: $media-tablet-landscape) {
-    margin-bottom: 90px;
+  @media (max-width: $media-tablet) {
+    margin-bottom: 120px;
+  }
+
+  @media (max-width: $media-phone) {
+    margin-bottom: 74px;
   }
 }
 
@@ -14,9 +18,10 @@
   font-size: 60px;
   line-height: 60px;
 
-  @media (max-width: $media-tablet-landscape) {
+  @media (max-width: $media-phone) {
     font-size: 28px;
     line-height: 30px;
+    text-align: left;
     margin-bottom: 36px;
   }
 }
@@ -24,29 +29,17 @@
 .content {
   display: flex;
   gap: 20px;
-
-  @media (max-width: $media-tablet-landscape) {
-    gap: 8px;
-  }
 }
 
 .columnText {
+  text-align: left;
   padding-top: 76px;
   width: 50%;
-
-  @media (max-width: $media-tablet-landscape) {
-    padding-top: 32px;
-  }
 
   .text {
     color: #818AA7;
     font-size: 16px;
     line-height: 22px;
-
-    @media (max-width: $media-tablet-landscape) {
-      font-size: 12px;
-      line-height: 15px;
-    }
 
     div {
       align-items: flex-start;
@@ -54,27 +47,19 @@
       flex-direction: column;
       justify-content: center;
       gap: 4px;
-
-      @media (max-width: $media-tablet-landscape) {
-        justify-content: flex-start;
-        padding-top: 12px;
-      }
     }
   }
 }
 
 .columnCosmos {
   padding: 32px 16px;
-  height: 880px;
+  height: 654px;
   width: 25%;
   border-radius: 32px;
   border: 1px solid #4E5C77;
 
   @media (max-width: $media-tablet-landscape) {
-    border: none;
-    height: auto;
-    padding: 32px 0px 0px 0px;
-    width: 50%;
+    height: 684px;
   }
 
   .cosmosTitle {
@@ -83,10 +68,6 @@
     text-align: center;
     margin-bottom: 16px;
     font-size: 28px;
-
-    @media (max-width: $media-tablet-landscape) {
-      display: none;
-    }
   }
 
   .cosmos {
@@ -94,22 +75,12 @@
     line-height: 22px;
     text-align: center;
 
-    @media (max-width: $media-tablet-landscape) {
-      font-size: 12px;
-      line-height: 15px;
-      text-align: left;
-    }
-
     div {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 4px;
-
-      @media (max-width: $media-tablet-landscape) {
-        align-items: flex-start;
-      }
     }
   }
 }
@@ -117,63 +88,77 @@
 .columnOther {
   width: 25%;
 
-  @media (max-width: $media-tablet-landscape) {
-    padding-top: 32px;
-    width: 50%;
-  }
-
   .otherTitle {
     padding-top: 32px;
     line-height: 28px;
     text-align: center;
     margin-bottom: 16px;
     font-size: 28px;
-
-    @media (max-width: $media-tablet-landscape) {
-      display: none;
-    }
   }
-
 
   .other {
     font-size: 16px;
     line-height: 22px;
     text-align: center;
 
-    @media (max-width: $media-tablet-landscape) {
-      font-size: 12px;
-      line-height: 15px;
-      text-align: left;
-    }
-
     div {
+
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 4px;
-
-      @media (max-width: $media-tablet-landscape) {
-        align-items: flex-start;
-      }
     }
   }
 }
 
-.small {
-  height: 82px;
+.row1 {
+  max-width: 425px;
+  height: 76px;
 
   @media (max-width: $media-tablet-landscape) {
-    height: 76px;
+    height: 92px;
   }
 }
 
-.high {
-  height: 102px;
+.row2 {
+  height: 54px;
+}
+
+.row3 {
+  height: 76px;
 
   @media (max-width: $media-tablet-landscape) {
-    height: 84px;
+    height: 92px;
   }
+}
+
+.row4 {
+  height: 54px;
+}
+
+.row5 {
+  height: 54px;
+}
+
+.row6 {
+  height: 54px;
+}
+
+.row7 {
+  height: 54px;
+}
+
+.row8 {
+  height: 76px;
+
+  @media (max-width: $media-tablet-landscape) {
+    height: 92px;
+  }
+}
+
+.row9 {
+  height: 54px;
 }
 
 .divider {
@@ -186,3 +171,196 @@
   }
 }
 
+.Mobile {
+
+  .MobileTitles {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 16px;
+
+    @media (max-width: 580px) {
+      gap: 10px;
+    }
+
+    .MobileTextTitle {
+      width: 53%;
+
+      @media (max-width: 670px) {
+        width: 40%;
+      }
+
+      @media (max-width: $media-phone) {
+        width: 36%;
+      }
+
+    }
+
+    .MobileCosmosTitle {
+      width: 23.5%;
+      color: #0072F8;
+      line-height: 28px;
+      font-size: 28px;
+
+      @media (max-width: 670px) {
+        width: 30%;
+      }
+
+      @media (max-width: 580px) {
+        font-size: 22px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 450px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: $media-phone) {
+        font-size: 20px;
+        line-height: 26px;
+        width: 30%;
+      }
+
+      @media (max-width: 360px) {
+        font-size: 17px;
+        line-height: 16px;
+      }
+    }
+
+    .MobileOtherTitle {
+      width: 23.5%;
+      line-height: 28px;
+      font-size: 28px;
+
+      @media (max-width: 670px) {
+        width: 30%;
+      }
+
+      @media (max-width: 580px) {
+        font-size: 22px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 450px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: $media-phone) {
+        font-size: 20px;
+        line-height: 26px;
+        width: 34%;
+      }
+
+      @media (max-width: 360px) {
+        font-size: 17px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .MobileRow {
+    display: flex;
+    padding: 16px 0px;
+    gap: 20px;
+
+    @media (max-width: 580px) {
+      gap: 10px;
+    }
+
+    .FirstTD {
+      width: 53%;
+      color: #818AA7;
+      font-size: 16px;
+      line-height: 22px;
+
+      @media (max-width: 670px) {
+        width: 40%;
+      }
+
+      @media (max-width: 580px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      @media (max-width: 460px) {
+        font-size: 11px;
+        line-height: 14px;
+      }
+
+      @media (max-width: $media-phone) {
+        font-size: 12px;
+        line-height: 15px;
+        width: 36%;
+      }
+    }
+
+    .SecondTD {
+      width: 23.5%;
+      font-size: 16px;
+      line-height: 22px;
+
+      @media (max-width: 670px) {
+        width: 30%;
+      }
+
+      @media (max-width: 580px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      @media (max-width: 460px) {
+        font-size: 11px;
+        line-height: 14px;
+      }
+
+      @media (max-width: $media-phone) {
+        font-size: 12px;
+        line-height: 15px;
+        width: 30%;
+      }
+    }
+
+    .ThirdTD {
+      width: 23.5%;
+      font-size: 16px;
+      line-height: 22px;
+
+      @media (max-width: 670px) {
+        width: 30%;
+      }
+
+      @media (max-width: 580px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      @media (max-width: 460px) {
+        font-size: 11px;
+        line-height: 14px;
+      }
+
+      @media (max-width: $media-phone) {
+        font-size: 12px;
+        line-height: 15px;
+        width: 34%;
+      }
+    }
+  }
+}

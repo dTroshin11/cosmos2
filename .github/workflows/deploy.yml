@@ -1,0 +1,21 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - actual
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Setup key
+      - run: set -eu
+      - run: mkdir "$HOME/.ssh"
+      - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
+      - run: chmod 600 "$HOME/.ssh/key"
+      - run: npm ci
+      - run: npm run build
+      - run: rsync -avz -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" build/ c82116@h41.netangels.ru:/home/c82116/teskhdeploy.na4u.ru/www
+

@@ -6,107 +6,231 @@
   display: flex;
   position: relative;
   align-items: center;
-  padding: 60px;
+  padding: 50px;
   background-image: url("../../assets/img/formBg.svg");
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 32px;
   margin-bottom: 150px;
+
   @media (max-width: $media-tablet-landscape) {
+    // background-image: url("../../assets/img/formBgMobile.svg");
+    background-size: cover;
+    padding: 60px;
+    flex-direction: column-reverse;
+    margin-bottom: 120px;
+    max-width: 940px;
+    width: 100%;
+    align-items: flex-start;
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -250px;
+      left: -200px;
+      width: 600px;
+      height: 460px;
+      background-image: url("../../assets/img/gradBgLaptop.svg");
+      background-size: cover;
+      background-position: center left;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+
+  @media (max-width: $media-tablet) {
+    //background-image: url("../../assets/img/formBgMobile.svg");
+    background-size: cover;
+    padding: 60px;
+    flex-direction: column-reverse;
+    margin-bottom: 120px;
+    max-width: 620px;
+    width: 100%;
+    align-items: flex-start;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -250px;
+      left: -200px;
+      width: 600px;
+      height: 460px;
+      background-image: url("../../assets/img/gradBgLaptop.svg");
+      background-size: cover;
+      background-position: center left;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+
+  @media (max-width: $media-phone) {
+    background-image: url("../../assets/img/formBgMobile.svg");
+    background-size: cover;
     padding: 24px;
     flex-direction: column-reverse;
     margin-bottom: 90px;
-  }
-  .img {
-    width: 500px;
-    height: 468px;
-    background-image: url("../../assets/img/FormLaptop.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-right: 85px;
-    @media (max-width: $media-tablet-landscape) {
-      margin-top: 48px;
-      width: 268px;
-      height: 250px;
-      margin-right: 0px;
-      margin-bottom: 24px;
+    width: auto;
+    border-radius: 20px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -650px;
+      left: -600px;
+      width: 600px + 600px + 600px;
+      height: 460px + 460px + 460px;
+      // background-image: url("../../assets/img/gradBgLaptop.svg");
+      background-size: cover;
+      background-position: center left;
+      background-repeat: no-repeat;
+      z-index: -1;
     }
   }
+
+  .img {
+    width: 520px;
+    height: 520px;
+    background-image: url("../../assets/img/FormLaptop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin: 25px 100px 0px 25px;
+
+    @media (max-width: $media-tablet-landscape) {
+      margin: 0px auto;
+      width: 500px;
+      height: 468px;
+      background-size: cover;
+    }
+
+    @media (max-width: $media-tablet) {
+      margin: 0px;
+      width: 400px;
+      height: 368px;
+      background-size: contain;
+    }
+
+    @media (max-width: $media-phone) {
+      width: 268px;
+      height: 250px;
+      margin: 0 auto;
+      margin-top: 48px;
+    }
+  }
+
   .info {
     max-width: 450px;
-   .info__text {
-     .text__title {
-       font-size: 60px;
-       line-height: 60px;
-       margin-bottom: 24px;
-       @media (max-width: $media-tablet-landscape) {
-         font-size: 28px;
-         line-height: 30px;
-         text-align: left;
-         margin-bottom: 16px;
-       }
-     }
-     .text__subtitle {
-       color: #818AA7;
-       font-size: 18px;
-       line-height: 25px;
-       margin-bottom: 36px;
-       @media (max-width: $media-tablet-landscape) {
-         font-size: 16px;
-         line-height: 22px;
-         text-align: left;
-         margin-bottom: 24px;
-       }
-     }
-   }
+
+    @media (max-width: $media-tablet-landscape) {
+      max-width: unset;
+    }
+
+    .info__text {
+      .text__title {
+        font-size: 60px;
+        line-height: 60px;
+        margin-bottom: 24px;
+
+        @media (max-width: $media-phone) {
+          font-size: 28px;
+          line-height: 30px;
+          text-align: left;
+          margin-bottom: 16px;
+        }
+      }
+
+      .text__subtitle {
+        color: #818AA7;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 36px;
+
+        @media (max-width: $media-tablet-landscape) {
+          font-size: 16px;
+          line-height: 22px;
+          text-align: left;
+          margin-bottom: 24px;
+        }
+      }
+    }
+
     .info__form {
+      @media (max-width: $media-tablet-landscape) {
+        max-width: 480px;
+      }
+
+      @media (max-width: $media-tablet) {
+        max-width: unset;
+      }
 
       display: flex;
       flex-direction: column;
-      @media (max-width: $media-tablet-landscape) {
+
+      @media (max-width: $media-tablet-landscape) {}
+
+      @media (max-width: $media-phone) {
         display: none;
       }
+
       .form__title {
         font-size: 18px;
         line-height: 25px;
         margin-bottom: 16px;
       }
+
       .form__input {
-        padding: 16px 32px 16px 20px;
+        padding: 12px 8px;
         margin-bottom: 8px;
-        background: #12151F;
+        background: #12182E;
         border-radius: 4px;
-        color: #818AA7;
-        border: none;
+        color: #FAFBFF;
+        border: 1px solid transparent;
+        font-size: 13px;
       }
+
+      /* Для всех значков в инпутах */
+      input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
+        background-color: #fff;
+      }
+
+
       .FormContainer {
         display: flex;
         flex-direction: column;
       }
-      .errorsInput {
-        color: #F95721 !important;
 
+      .errorsInput {
+        border: 1px solid #FF5876 !important;
+        border-radius: 4px;
       }
+
       .errorText {
-        color: #F95721;
-        margin-top: 3px;
+        color: #FF5876;
+        font-size: 12px;
         margin-bottom: 10px;
       }
+
+      .form__checkboxWrapper {
+        margin-bottom: 24px;
+      }
+
       .form__checkbox {
         display: flex;
         margin-top: 8px;
-        margin-bottom: 24px;
+
         .checkbox__checkbox {
           //width: 16px;
           //height: 16px;
           //background-color: gray;
           margin-right: 8px;
         }
+
         .checkbox__text {
           font-size: 12px;
           line-height: 18px;
+
           a {
             color: #80A7FF;
             text-decoration: underline;
@@ -114,16 +238,18 @@
         }
 
       }
+
       .form__button {
         color: white;
         font-size: 14px;
         display: flex;
         line-height: 20px;
+        font-family: $font-button;
         height: 40px;
         padding: 8px 20px;
         justify-content: center;
         align-items: center;
-        gap:  4px;
+        gap: 4px;
         border-radius: 4px;
         background: #0072F8;
         cursor: pointer;
@@ -131,15 +257,31 @@
         border: none;
         transition: background-color .3s;
       }
+
       .form__button:hover {
         background-color: #268AFF;
+
       }
 
+      button[disabled] {
+        background: #144B94;
+        color: #838792;
+        cursor: not-allowed;
+      }
+
+      button[disabled]:hover {
+        background: #144B94;
+        color: #838792;
+        cursor: not-allowed;
+      }
     }
+
     .info__mobForm {
       display: none;
-      @media (max-width: $media-tablet-landscape) {
+
+      @media (max-width: $media-phone) {
         display: block;
+
         .form__title {
           font-size: 16px;
           line-height: 22px;
@@ -147,59 +289,122 @@
           text-align: left;
           // color: #818AA7;
         }
+
         .form__button {
           color: white;
           font-size: 14px;
           max-width: 293px;
           width: 100%;
           line-height: 20px;
-          height: 40px;
-          padding: 8px 20px;
+          height: 44px;
+          padding: 10px 20px;
           justify-content: center;
           align-items: center;
-          gap:  4px;
+          gap: 4px;
           border-radius: 4px;
           background: #0072F8;
           cursor: pointer;
           margin-bottom: 16px;
           border: none;
           transition: background-color .3s;
+
           @media (max-width: $media-tablet-landscape) {
+            margin-bottom: 0px;
+            max-width: 500px;
+          }
+
+          @media (max-width: $media-phone) {}
+
+          @media (max-width: $media-phone) {
             margin-bottom: 0px;
             max-width: unset;
           }
         }
+
         .form__button:hover {
           background-color: #268AFF;
         }
       }
     }
   }
-  .form__input {
-    padding: 16px 32px 16px 20px;
-    margin-bottom: 8px;
-    background: #12151F;
-    border-radius: 4px;
-    color: #818AA7;
-    border: none;
-  }
-  input::placeholder {
-    color: #818AA7;
-  }
 }
+
+input::placeholder {
+  color: #9DA4C6;
+  font-size: 13px;
+}
+
+input::selection {
+  background-color: #0055FB80;
+}
+
+input:focus {
+  outline: none !important;
+  border: 1px solid #0069E3 !important;
+}
+
 .FormBlock:after {
   content: " ";
-  background: url("../../assets/img/mainGradBg.svg");
+  background-image: url("../../assets/img/formBgGrad.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 1437px;
-  height: 1000px;
+  width: 1900px;
+  height: 1248px;
   position: absolute;
-  top:  -173px;
-  left: -225px;
+  top: -246px;
+  left: -355px;
   z-index: -1;
+
   @media (max-width: $media-tablet-landscape) {
     display: none;
+  }
+}
+
+
+
+.CheckBox {
+  z-index: 10;
+  width: 20px;
+
+  input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    max-width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    border: 1px solid #818AA7;
+    outline: none;
+    cursor: pointer;
+
+    &.Disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &:checked {
+      position: relative;
+      border: 1px solid #0072F8;
+      background: #0072F8;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background: url("../../assets/img/Check.svg") no-repeat;
+        //background: transparent;
+        background-position: center;
+      }
+    }
+
+    &:focus {
+      opacity: 0.8;
+      border: 1px solid #818AA7;
+    }
   }
 }

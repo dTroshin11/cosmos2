@@ -2,12 +2,15 @@
 @import "@/assets/styles/index.scss";
 
 .LaptopBlock {
-  margin-bottom: 150px;
+  margin-bottom: 15px;
   position: relative;
-  @media (max-width: $media-tablet-landscape) {
-    margin-bottom: 15px;
+
+
+  @media (max-width: $media-phone) {
+    margin-bottom: 0px;
   }
 }
+
 .LaptopBlock:after {
   content: " ";
   background: url("../../assets/img/gradBgLaptop.svg");
@@ -20,12 +23,40 @@
   top: 100px;
   left: -44px;
   z-index: -1;
+
   @media (max-width: $media-tablet-landscape) {
+    display: block;
+    //width: 730px;
+    //height: 510px;
+    top: -34px;
+    left: -191px;
+  }
+
+  @media (max-width: $media-phone) {
+    background: url("../../assets/img/gradBgLaptopMob.svg");
     display: block;
     width: 730px;
     height: 510px;
     top: -34px;
     left: -191px;
+  }
+}
+
+.LaptopBlock:before {
+  content: " ";
+  background: url("../../assets/img/gradBgLaptop.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1458px;
+  height: 1400px;
+  position: absolute;
+  top: -600px;
+  left: -800px;
+  z-index: -1;
+
+  @media (max-width: $media-tablet-landscape) {
+    display: none;
   }
 }
 
@@ -36,10 +67,23 @@
   display: flex;
   justify-content: center;
   text-align: center;
+
   @media (max-width: $media-tablet-landscape) {
-   font-size: 28px;
-   line-height: 30px;
-   text-align: left;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    justify-content: flex-start;
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: $media-tablet) {
+    margin-bottom: 0px;
+  }
+
+  @media (max-width: $media-phone) {
+    font-size: 28px;
+    line-height: 30px;
+    text-align: left;
     justify-content: flex-start;
   }
 }
@@ -47,105 +91,231 @@
 .LaptopBlock__info {
   position: relative;
   display: grid;
-  grid-template-columns: 300px 600px 330px;
+  grid-template-columns: 1fr 600px 1fr;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1185px) {
+    grid-template-columns: 230px 430px 300px;
+    justify-content: center;
+  }
+
   @media (max-width: $media-tablet-landscape) {
+    grid-template-columns: 1fr 400px 1fr;
+    //flex-direction: column-reverse;
+    ////align-items: flex-start;
+    //align-items: center;
+    //display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $media-tablet) {
+    flex-direction: column-reverse;
+    //align-items: flex-start;
+    align-items: center;
+    display: flex;
+  }
+
+  @media (max-width: $media-phone) {
     flex-direction: column-reverse;
     //align-items: flex-start;
     align-items: unset;
     display: flex;
   }
+
   .info__left {
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-tablet) {
       width: 100%;
       display: none;
     }
   }
+
   .info__mob {
     display: none;
-    @media (max-width: $media-tablet-landscape) {
-      width: 100%;
+
+    @media (max-width: $media-tablet) {
+      //width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      z-index: 3;
+      top: -75px;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+    }
+
+    @media (max-width: $media-phone) {
+      //width: 100%;
       display: block;
       position: relative;
       z-index: 3;
       top: -75px;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
     }
   }
+
   .info__right {
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-tablet) {
       display: none;
     }
   }
+
   .item {
     position: relative;
     margin-bottom: 50px;
     max-width: 400px;
+
     @media (max-width: $media-tablet-landscape) {
+      display: flex;
+      flex-direction: column;
+      //grid-template-columns: 1fr;
+      //gap: 14px;
+      justify-content: space-between;
+      margin-bottom: 36px !important;
+      height: auto;
+    }
+
+    @media (max-width: $media-phone) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
       justify-content: space-between;
-      margin-bottom: 16px;
-      height: 48px;
+      margin-bottom: 24px !important;
+      //height: 48px;
+
+      &:nth-child(1) {
+        min-height: 32px;
+      }
+
+      &:nth-child(2) {
+        min-height: 48px;
+      }
+
+      &:nth-child(3) {
+        min-height: 32px;
+      }
+
+      &:nth-child(4) {
+        min-height: 48px;
+      }
+
+      &:nth-child(5) {
+        min-height: 48px;
+      }
+
+      &:nth-child(6) {
+        min-height: 32px;
+      }
     }
+
     .item__title {
       font-size: 28px;
       line-height: 28px;
       margin-bottom: 16px;
+
       @media (max-width: $media-tablet-landscape) {
+        text-align: left;
+      }
+
+      @media (max-width: $media-phone) {
+        margin-bottom: 0px;
         font-size: 12px;
         line-height: 15px;
         text-align: left;
       }
     }
+
     .item__subtitle {
       color: #818AA7;
       line-height: 25px;
+
+
       @media (max-width: $media-tablet-landscape) {
+        font-size: 18px;
+        line-height: 25px;
+        text-align: left;
+      }
+
+      @media (max-width: $media-phone) {
         font-size: 12px;
         line-height: 15px;
         text-align: left;
       }
     }
   }
+
   .item:not(:last-child):after {
     display: none;
     content: " ";
     position: absolute;
     left: 0px;
-    bottom: -5px;
+    bottom: -12px;
     width: 292px;
     z-index: 10;
     height: 1px;
     background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0%, #5C6C8C 51.56%, rgba(92, 108, 140, 0.00) 100%);
-    @media (max-width: $media-tablet-landscape) {
+
+    @media (max-width: $media-phone) {
       display: block;
     }
   }
+
   .item:last-child {
     margin-bottom: 0px;
   }
+
   .info__center {
     background-image: url("../../assets/img/SecondLaptop.png");
     background-size: cover;
-    background-position: center;
+    background-position: right -30px bottom 10px;
     background-repeat: no-repeat;
     width: 614px;
-    height: 615px;
-    @media (max-width: $media-tablet-landscape) {
-      width: 297px;
-      height: 314px;
-      left: 13px;
-      position: relative;
-      top: -10px;
+    height: 714px;
+
+    @media (max-width: 1185px) {
+      width: 465px;
+      height: 535px;
     }
+
+    @media (max-width: $media-tablet-landscape) {
+      width: 435px;
+      height: 435px;
+      //left: 13px;
+      position: relative;
+      top: 0px;
+      background-position: right 0px bottom 0px;
+    }
+
+    @media (max-width: $media-tablet) {
+      background-image: url("../../assets/img/SecondLaptopTab.png");
+      width: 566px;
+      height: 566px;
+      //left: 13px;
+      position: relative;
+      top: 0px;
+      background-position: right 0px bottom 0px;
+    }
+
+    @media (max-width: $media-phone) {
+      background-image: url("../../assets/img/SecondLaptopMob.png");
+      // width: 298px;
+      width: 298px;
+      height: 335px;
+      left: 18px;
+      position: relative;
+      top: 0px;
+      background-position: right 0px bottom 0px;
+    }
+
     //transform: rotate(-14.285deg);
   }
 
   .info__center:after {
     content: " ";
-    animation:spin 60s linear infinite;
+    animation: spin 80s linear infinite;
     background-image: url("../../assets/img/animateLaptopLv3.svg");
     position: absolute;
     left: 155px;
@@ -155,53 +325,124 @@
     width: 891px;
     height: 891px;
     z-index: -1;
+
+    @media (max-width: 1185px) {
+      left: 105px;
+      width: 791px;
+      height: 791px;
+    }
+
     @media (max-width: $media-tablet-landscape) {
+      width: 664px;
+      height: 664px;
+      left: -80px;
+      top: -92px;
+    }
+
+    @media (max-width: $media-tablet) {
+      width: 721px;
+      height: 721px;
+      left: -80px;
+      top: -110px;
+    }
+
+    @media (max-width: $media-phone) {
       width: 370px;
       height: 370px;
       left: -37px;
-      top: -42px;
+      top: -52px;
     }
   }
 }
+
 .LaptopBlock__info:after {
   content: " ";
-  animation:spin 60s linear infinite;
-  background-image: url("../../assets/img/animateLaptopLv2.svg");
+  animation: spin 80s linear infinite;
+  background-image: url("../../assets/img/animateLaptopLv22.svg");
   position: absolute;
-  left: 296px;
-  top: 20px;
+  left: 190px;
+  top: -85px;
   background-position: center;
   background-size: cover;
-  width: 600px;
-  height: 600px;
+  width: 820px;
+  height: 820px;
   z-index: -1;
+
+  @media (max-width: 1185px) {
+    left: 140px;
+    width: 720px;
+    height: 720px;
+  }
+
   @media (max-width: $media-tablet-landscape) {
-    width: 260px;
-    height: 260px;
-    top: 0px;
-    left: 27px;
+    width: 577px;
+    height: 577px;
+    top: -20px;
+    left: 210px;
+  }
+
+  @media (max-width: $media-tablet) {
+    width: 577px;
+    height: 577px;
+    top: -30px;
+    left: 10px;
+  }
+
+  @media (max-width: $media-phone) {
+    width: 360px;
+    height: 360px;
+    top: -48px;
+    left: -20px;
   }
 }
+
 .LaptopBlock__info:before {
   content: " ";
-  animation:spin 60s linear infinite;
-  background-image: url("../../assets/img/animateLaptopLv1.svg");
+  animation: spin 80s linear infinite;
+  background-image: url("../../assets/img/animateLaptopLv11.svg");
   position: absolute;
-  left: 383px;
-  top: 100px;
+  left: 443px;
+  top: 170px;
   z-index: -1;
   background-position: center;
   background-size: cover;
-  width: 420px;
-  height: 420px;
+  width: 320px;
+  height: 320px;
+
+  @media (max-width: 1185px) {
+    left: 383px;
+    width: 240px;
+    height: 240px;
+  }
+
   @media (max-width: $media-tablet-landscape) {
-    width: 180px;
-    height: 180px;
-    top: 40px;
-    left: 65px;
+    width: 240px;
+    height: 240px;
+    top: 140px;
+    left: 380px;
+  }
+
+  @media (max-width: $media-tablet) {
+    width: 240px;
+    height: 240px;
+    top: 140px;
+    left: 180px;
+  }
+
+  @media (max-width: $media-phone) {
+    width: 140px;
+    height: 140px;
+    top: 65px;
+    left: 90px;
   }
 }
-@keyframes spin{
-  from{transform:rotate(0deg)}
-  to{transform:rotate(360deg)}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
 }

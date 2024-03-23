@@ -7,10 +7,66 @@
     top: 0;
     left: 0;
     height: 100px;
-    background: linear-gradient(0turn,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 80%);
+    background: linear-gradient(0turn, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 80%);
     z-index: 100;
     display: flex;
     justify-content: center;
+    padding: 0px 10px;
+
+    @media (max-width: $media-tablet-landscape) {
+        justify-content: space-between;
+
+    }
+
+    @media (max-width: $media-tablet) {
+        justify-content: space-between;
+        padding: 0px 74px;
+    }
+
+    @media (max-width: $media-phone) {
+        display: none;
+    }
+}
+
+.SecondaryWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    gap: 26.4%;
+    max-width: 1180px;
+
+
+    @media (max-width: $media-tablet-landscape) {
+        gap: 0px;
+        margin-top: 16px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    @media (max-width: $media-phone) {
+        justify-content: flex-start;
+        margin-left: 17px;
+    }
+}
+
+.SecondaryPageLinks {
+    display: none;
+
+    @media (max-width: $media-tablet-landscape) {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (max-width: $media-phone) {
+        margin-top: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .Wrapper {
@@ -20,9 +76,18 @@
     position: relative;
     width: 100%;
     height: fit-content;
-    gap: 25%;
+    gap: 26.4%;
     max-width: 1180px;
+
+
     @media (max-width: $media-tablet-landscape) {
+        gap: 0px;
+        margin-top: 16px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    @media (max-width: $media-phone) {
         justify-content: flex-start;
         margin-left: 17px;
     }
@@ -33,7 +98,12 @@
     gap: 24px;
     align-items: center;
     justify-content: center;
+
     @media (max-width: $media-tablet-landscape) {
+        display: flex;
+    }
+
+    @media (max-width: $media-phone) {
         margin-top: 40px;
         flex-direction: column;
         align-items: flex-start;
@@ -44,9 +114,17 @@
     color: #FFF;
     font-size: 16px;
     line-height: 22px;
-    @media (max-width: $media-tablet-landscape) {
+    transition: background-color .3s, opacity .3s;
+
+    @media (max-width: $media-tablet-landscape) {}
+
+    @media (max-width: $media-phone) {
         font-size: 20px;
         border-bottom: 1px inset #fff;
+    }
+
+    &:hover {
+        opacity: 0.5;
     }
 }
 
@@ -56,6 +134,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
     @media (max-width: $media-tablet-landscape) {
         width: 157px;
         margin-top: 0px;
@@ -74,38 +153,44 @@
 .Btn {
     position: absolute;
     transition: background-color .3s, opacity .3s;
-    right:   0px;
+    right: 0px;
     margin-top: 17px;
     width: 180px;
     display: flex;
     height: 40px;
     padding: 8px 20px;
+    font-family: $font-button;
     justify-content: center;
     align-items: center;
-    gap:  4px;
+    gap: 4px;
     border-radius: 4px;
+    font-size: 14px;
     background: #0072F8;
     cursor: pointer;
     margin-bottom: 16px;
     color: white;
+
     @media (max-width: $media-tablet-landscape) {
         display: none;
     }
 }
+
 .Btn:hover {
     background-color: #268AFF;
 }
 
-
-
 .MobileHeader {
-    background: linear-gradient(0turn,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 60%);
+    display: none;
+    background: linear-gradient(0turn, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 60%);
     z-index: 100;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0px;
 
+    @media (max-width: $media-phone) {
+        display: block;
+    }
 }
 
 .MobileWrapper {
@@ -115,9 +200,19 @@
     position: relative;
     width: 100%;
     padding: 12px 17px 0px 17px;
+
+    @media (max-width: $media-tablet-landscape) {
+        padding: 16px 72px;
+    }
+
+    @media (max-width: $media-phone) {
+        padding: 12px 17px 0px 17px;
+    }
 }
 
 .Burger {
+    cursor: pointer;
+
     svg {
         width: 36px;
         height: 36px;
@@ -125,19 +220,23 @@
 }
 
 .Menu {
-    background: linear-gradient(0turn,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 40%);
-    display: none;
-    padding: 0px 17px 50px 17px;
+    background: rgba(1, 1, 1, 0.8);
+    padding: 0px 17px 0px 17px;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    height: 0;
 }
 
 .Active {
-    display: block;
+    height: 100vh;
+    width: 100vw;
 }
 
 .MobileBtn {
     width: 100%;
-    height: 40px;
+    height: 44px;
     padding: 8px 20px;
+    font-family: $font-button;
     text-align: center;
     border-radius: 4px;
     background: #0072F8;
@@ -148,8 +247,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color .3s, opacity .3s;
 }
+
 .MobileBtn:hover {
     background-color: #268AFF;
 }
-

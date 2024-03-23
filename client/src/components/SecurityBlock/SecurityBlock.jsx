@@ -3,10 +3,10 @@ import Styles from "./SecurityBlock.module.scss";
 
 
 const item = [
-    <>Обеспечение бесшовного защищённого доступа в&nbsp;систему и&nbsp;сервисы</>,
-    <>Надёжное хранение приватных данных&nbsp;и&nbsp;самых важных документов</>,
-    <>Лёгкая миграция рабочего состояния и&nbsp;данных между устройствами</>,
-    <>Аппаратные функции криптографии</>
+    <div>Обеспечение бесшовного защищённого доступа в&nbsp;систему и&nbsp;сервисы</div>,
+    <div>Надёжное хранение приватных данных&nbsp;и&nbsp;самых важных документов</div>,
+    <div>Лёгкая миграция рабочего состояния и&nbsp;данных между устройствами</div>,
+    <div>Аппаратные функции криптографии</div>
 ]
 
 
@@ -16,16 +16,16 @@ const SecurityBlock = () => {
             <div className={Styles.image} alt="" />
             <div className={Styles.content}>
                 <div className={Styles.title}>
-                    Аппаратный ключ <br/>
+                    Аппаратный ключ 
                     безопасности
                 </div>
-                <ul className={Styles.items__list}>
+                <div className={Styles.items__list}>
                 {item.map((el, index) => {
-                return  <li className={Styles.item} key={index}>
+                return  <div className={Styles.item} key={index}>
                             <span className={Styles.text}>{el}</span>
-                        </li>
+                        </div>
                     })}
-                </ul>
+                </div>
             </div>
         </div>
     );

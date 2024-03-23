@@ -3,23 +3,89 @@
 
 
 .SecurityBlock {
+  position: relative;
   margin-bottom: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: url("../../assets/img/securityBg.svg");
+  background-image: url("../../assets/img/securityBg.png");
+  fill: #000000 !important;
   background-size: cover;
-  background-position: center left;
+  background-position: bottom left;
   padding: 60px;
   background-repeat: no-repeat;
   border-radius: 32px;
 
   @media (max-width: $media-tablet-landscape) {
-    background-size: 300%;
+    background-size: cover;
+    background-position: bottom left 20%;
+    flex-direction: column-reverse;
+    padding: 60px;
+    align-items: flex-start;
+    margin-bottom: 120px;
+    max-width: 940px;
+    width: 100%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -250px;
+      left: -200px;
+      width: 600px;
+      height: 460px;
+      background-image: url("../../assets/img/gradBgLaptop.svg");
+      background-size: cover;
+      background-position: center left;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+  @media (max-width: $media-tablet) {
+    background-size: cover;
+    background-position: bottom left 20%;
+    flex-direction: column-reverse;
+    padding: 60px;
+    margin: 0 auto;
+    margin-bottom: 90px;
+    max-width: 620px;
+    width: 100%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -250px;
+      left: -200px;
+      width: 600px;
+      height: 460px;
+      background-image: url("../../assets/img/gradBgLaptop.svg");
+      background-size: cover;
+      background-position: center left;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+  @media (max-width: $media-phone) {
+    background-size: cover;
     background-position: bottom left 20%;
     flex-direction: column-reverse;
     padding: 24px;
     margin-bottom: 90px;
+    width: auto;
+    border-radius: 20px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -330px;
+      left: -600px;
+      width: 1600px;
+      height: 680px;
+      background-image: url("../../assets/img/gradBgLaptop.svg");
+      background-size: cover;
+      background-position: center left;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
   }
 }
 
@@ -28,27 +94,40 @@
   font-size: 60px;
   line-height: 60px;
   text-align: left;
+  max-width: 650px;
 
   @media (max-width: $media-tablet-landscape) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: $media-phone) {
     font-size: 28px;
     line-height: 30px;
-    margin-bottom: 36px;
+    margin-bottom: 16px;
+    max-width: 350px;
   }
 }
 
 .image {
-  background-image: url(../../assets/img/security.png);  
+  background-image: url(../../assets/img/security.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 640px;
   height: 380px;
   scale: 1.15;
+
   @media (max-width: $media-tablet-landscape) {
+    margin: 0 auto;
+  }
+  @media (max-width: $media-tablet) {
     width: 300px;
     height: 240px;
   }
 }
-
+//.content {
+//  width: 100%;
+//}
 .items__list {
   display: flex;
   flex-direction: column;
@@ -57,13 +136,33 @@
   max-width: 370px;
 
   @media (max-width: $media-tablet-landscape) {
-    gap: 16px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 16px;
+    max-width: unset;
   }
+  @media (max-width: $media-tablet) {
+    gap: 16px;
+    grid-template-columns: 1fr ;
+  }
+
 }
 
 .item {
-  list-style-type: disc;
-  color: #0072F8;
+  position: relative;
+}
+
+.item:before {
+  content: " ";
+  border-radius: 20px;
+  position: absolute;
+  left: -20px;
+  width: 4px;
+  top: 9px;
+  height: 4px;
+  background-color: #0072F8;
 }
 
 .text {
