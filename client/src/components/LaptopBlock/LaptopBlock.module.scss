@@ -33,11 +33,12 @@
   }
 
   @media (max-width: $media-phone) {
+    background: url("../../assets/img/gradBgLaptopMobile.svg");
     display: block;
     width: 730px;
-    height: 510px;
-    top: -34px;
-    left: -191px;
+    height: 710px;
+    top: -144px;
+    left: -251px;
   }
 }
 
