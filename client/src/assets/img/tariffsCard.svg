@@ -9,7 +9,7 @@
 <filter id="filter0_f_654_3381" x="-372.62" y="-372.62" width="1150.24" height="1344.24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="99" result="effect1_foregroundBlur_654_3381"/>
+<feGaussianBlur stdDeviation="149" result="effect1_foregroundBlur_654_3381"/>
 </filter>
 <clipPath id="clip0_654_3381">
 <rect width="280" height="342" rx="32" fill="white"/>
