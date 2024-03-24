@@ -9,7 +9,7 @@ const Footer = () => {
           Документация
         </div>
         <div className={Styles.TopWrapper}>
-          <Link to={"/user-agreement-ai"}
+          <Link to={"/agreements"}
             rel='noopener'
           >
             Пользовательские соглашения
