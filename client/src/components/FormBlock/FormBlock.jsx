@@ -9,9 +9,9 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import axios, { post } from "axios";
 import classNames from "classnames";
 
-import CheckBox from '../ui/Checkbox/Checkbox';
+
 import SubmitPopup from '../ui/SubmitPopup/SubmitPopup';
-import { Link } from 'react-router-dom';
+
 
 
 

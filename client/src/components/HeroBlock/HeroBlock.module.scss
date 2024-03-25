@@ -493,6 +493,21 @@
     z-index: -1;
 
     @media (max-width: $media-tablet-landscape) {
+        //background: url("../../assets/img/mainGradBg.svg");
+        top: -170px;
+        left: -460px;
+        // display: none;
+        // left: -450px;
+    }
+    @media (max-width: $media-tablet) {
+        //background: url("../../assets/img/mainGradBg.svg");
+        top: 0px;
+        left: -1160px;
+        // display: none;
+        // left: -450px;
+    }
+    @media (max-width: $media-phone) {
+        //background: url("../../assets/img/mainGradBg.svg");
         top: -170px;
         left: -460px;
         // display: none;
