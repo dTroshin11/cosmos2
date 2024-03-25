@@ -183,8 +183,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
         },
         // ПО по запросу клиента: CAD
         {
-            text: <div className={Styles.high}>ПО по запросу клиента: CAD/CAM/
-                Adobe/Microsoft/Autodesk/Siemens&nbsp;+ адаптация&nbsp;специализированного ПО*</div>,
+            text: <div className={Styles.high}>ПО по запросу клиента: CAD<wbr/>/CAM<wbr/>/Adobe<wbr/>/Microsoft<wbr/>/Autodesk<wbr/>/Siemens + адаптация специализированного ПО*</div>,
             free: <div className={Styles.high}>
                 {minus}
             </div>,
@@ -343,7 +342,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
         },
         // ПО по запросу клиента: CAD
         {
-            text: <div className={Styles.small}>ПО по запросу клиента: CAD<br />/CAM/Adobe/Microsoft/Autodesk<br />/Siemens + адаптация<br /> специализированного ПО*</div>,
+            text: <div className={Styles.small}>ПО по запросу клиента: CAD<wbr/>/CAM<wbr/>/Adobe<wbr/>/Microsoft<wbr/>/Autodesk<wbr/>/Siemens + адаптация специализированного ПО*</div>,
             free: <div className={Styles.small}>
                 {minus}
             </div>,
@@ -473,7 +472,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
                 <div className={Styles.content}>
                     <div className={Styles.columnMain}>
                         <div className={Styles.titles}>
-                            <div className={Styles.mainTitle}  ></div>
+                            <div className={Styles.mainTitle}></div>
                             <div className={Styles.mainTitle}>
                                 Бесплатно
                             </div>

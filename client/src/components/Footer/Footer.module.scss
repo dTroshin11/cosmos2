@@ -15,7 +15,7 @@
   font-size: 28px;
   line-height: 28px;
 
-  @media (max-width: $media-tablet-landscape) {
+  @media (max-width: $media-phone) {
     font-size: 20px;
     line-height: 26px;
   }
@@ -27,9 +27,17 @@
   gap: 66px;
 
   @media (max-width: $media-tablet-landscape) {
-    flex-direction: column;
     gap: 16px;
     margin-bottom: 36px;
+  }
+
+  @media (max-width: $media-tablet) {
+    gap: 31px;
+  }
+
+  @media (max-width: $media-phone) {
+    gap: 16px;
+    flex-direction: column;
   }
 
   a {
@@ -72,7 +80,7 @@
   flex-direction: row;
 
   //align-items: flex-start;
-  @media (max-width: $media-tablet-landscape) {
+  @media (max-width: $media-phone) {
     flex-direction: column;
   }
 
