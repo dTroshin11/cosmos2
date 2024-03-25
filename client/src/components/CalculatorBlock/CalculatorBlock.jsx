@@ -93,7 +93,7 @@ const CalculatorBlock = () => {
             </div>
             <div className={Styles.calculate}>
                 <div className={classNames(Styles.people, Styles.calculate__item)} id={"People"}>
-                    <div className={Styles.item__title}>Сколько сотрудников<br className="tablet-only"/> у вас в компании?</div>
+                    <div className={Styles.item__title}>Сколько сотрудников<br className="tablet-only-strict"/> у вас в компании?</div>
 
                     <input className={Styles.item__inputNum}
                         type={"number"}
@@ -113,7 +113,7 @@ const CalculatorBlock = () => {
                 </div>
                 <div className={classNames(Styles.proPeople, Styles.calculate__item)} id={"ProPeople"}>
                     <div className={Styles.item__title}>
-                        Сколько<br className="tablet-only" /> ИБ-специалистов?
+                        Сколько<br className="tablet-only-strict" /> ИБ-специалистов?
                         </div>
                     <input className={Styles.item__inputNum}
                         type={"number"}

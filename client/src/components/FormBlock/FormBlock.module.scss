@@ -15,7 +15,7 @@
   margin-bottom: 150px;
 
   @media (max-width: $media-tablet-landscape) {
-    // background-image: url("../../assets/img/formBgMobile.svg");
+    background-image: url("../../assets/img/formCirclesTablet.svg");
     background-size: cover;
     padding: 60px;
     flex-direction: column-reverse;
@@ -69,6 +69,7 @@
     background-image: url("../../assets/img/formBgMobile.svg");
     background-size: cover;
     padding: 24px;
+    padding-bottom: 48px;
     flex-direction: column-reverse;
     margin-bottom: 90px;
     width: auto;
@@ -90,8 +91,10 @@
   }
 
   .img {
-    width: 520px;
-    height: 520px;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    padding-bottom: 93%;
     background-image: url("../../assets/img/FormLaptop.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -100,23 +103,20 @@
 
     @media (max-width: $media-tablet-landscape) {
       margin: 0px auto;
-      width: 500px;
-      height: 468px;
-      background-size: cover;
+      padding-bottom: 64%;
+      max-width: 590px;
     }
 
     @media (max-width: $media-tablet) {
       margin: 0px;
-      width: 400px;
-      height: 368px;
-      background-size: contain;
+      padding-bottom: 92%;
+      margin-top: 48px;
     }
 
     @media (max-width: $media-phone) {
-      width: 268px;
-      height: 250px;
       margin: 0 auto;
       margin-top: 48px;
+      padding-bottom: 86%;
     }
   }
 
@@ -147,7 +147,7 @@
         line-height: 25px;
         margin-bottom: 36px;
 
-        @media (max-width: $media-tablet-landscape) {
+        @media (max-width: $media-phone) {
           font-size: 16px;
           line-height: 22px;
           text-align: left;
@@ -224,6 +224,10 @@
 
       .form__checkboxWrapper {
         margin-bottom: 24px;
+
+        @media (max-width: $media-tablet-landscape) {
+          margin-bottom: 21px;
+        }
       }
 
       .form__checkbox {
@@ -235,6 +239,18 @@
           //height: 16px;
           //background-color: gray;
           margin-right: 8px;
+        }
+
+        @media (max-width: $media-tablet-landscape) {
+          margin-top: 4px;
+
+          .checkbox__checkbox {
+            margin-right: 5px;
+          }
+        }
+
+        input {
+          margin: 0;
         }
 
         .checkbox__text {

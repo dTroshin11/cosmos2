@@ -33,14 +33,13 @@
 }
 
 .container > *:nth-last-child(2) {
-display: none;
+  display: none;
 }
+
 .title {
   margin-bottom: 60px;
   font-size: 60px;
   line-height: 60px;
-
-  @media (max-width: $media-tablet-landscape) {}
 
   @media (max-width: $media-phone) {
     font-size: 28px;
@@ -100,10 +99,14 @@ display: none;
     font-size: 28px;
     line-height: 28px;
     text-align: left;
-    margin-top: 24px;
-    margin-bottom: 18px;
+    margin-top: 36px;
+    margin-bottom: 7px;
   }
 
+  @media (max-width: $media-tablet) {
+    margin-bottom: 7px;
+  }
+  
   @media (max-width: $media-phone) {
     font-size: 20px;
     line-height: 26px;
@@ -132,21 +135,30 @@ display: none;
   font-size: 16px;
   line-height: 22px;
   width: 32.5%;
+  display: flex;
+  padding: 16px 0;
+  
+  div {
+    display: flex;
+  }
 
   @media (max-width: $media-tablet-landscape) {
-    font-size: 12px;
-    line-height: 15px;
-    display: flex;
-    width: 50%;
+    width: 68.5%;
+    padding: 11px 0;
   }
 
   @media (max-width: $media-tablet) {
-    width: 70%;
+    width: 65%;
   }
 
+  @media (max-width: $media-phone) {
+    font-size: 12px;
+    line-height: 15px;
+    width: 60%;
+  }
+  
   div {
     align-items: flex-start;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2px;
@@ -157,16 +169,20 @@ display: none;
   font-size: 16px;
   line-height: 22px;
   width: 22.5%;
+  padding: 16px 0;
 
   @media (max-width: $media-tablet-landscape) {
-    font-size: 12px;
-    line-height: 15px;
-    width: 50%;
+    padding: 11px 0;
   }
 
   @media (max-width: $media-tablet) {
-    width: 30%;
-    //display: flex;
+    width: 34.5%;
+  }
+  
+  @media (max-width: $media-phone) {
+    width: 39.9%;
+    font-size: 12px;
+    line-height: 15px;
   }
 
   div {
@@ -177,7 +193,7 @@ display: none;
     gap: 2px;
     text-align: center;
 
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-tablet-landscape) {
       align-items: flex-start;
       text-align: left;
     }
@@ -189,7 +205,6 @@ display: none;
         color: #818AA7;
       }
     }
-
   }
 }
 
@@ -197,15 +212,17 @@ display: none;
   font-size: 16px;
   line-height: 22px;
   width: 22.5%;
+  padding: 16px 0;
 
   @media (max-width: $media-tablet-landscape) {
     font-size: 12px;
     line-height: 15px;
     width: 50%;
+    padding: 11px 0;
   }
 
   @media (max-width: $media-tablet) {
-    width: 30%;
+    width: 34.5%;
   }
 
   div {
@@ -235,15 +252,17 @@ display: none;
   font-size: 16px;
   line-height: 22px;
   width: 22.5%;
+  padding: 16px 0;
 
   @media (max-width: $media-tablet-landscape) {
     font-size: 12px;
     line-height: 15px;
     width: 50%;
+    padding: 11px 0;
   }
 
   @media (max-width: $media-tablet) {
-    width: 30%;
+    width: 34.5%;
   }
 
   div {
@@ -294,15 +313,17 @@ display: none;
 .premium {
   font-size: 16px;
   line-height: 22px;
+  padding: 16px 0;
 
   @media (max-width: $media-tablet-landscape) {
     font-size: 12px;
     line-height: 15px;
     width: 50%;
+    padding: 11px 0;
   }
 
   @media (max-width: $media-tablet) {
-    width: 30%;
+    width: 34.5%;
   }
 
   div {
@@ -348,38 +369,38 @@ display: none;
 }
 
 .high {
-  height: 96px;
-
-  @media (max-width: $media-tablet-landscape) {
-    height: 80px;
-  }
-}
-
-.small {
   height: 64px;
 
   @media (max-width: $media-tablet-landscape) {
     height: auto;
-    padding: 12px 0px;
+  }
+}
+
+.small {
+  // height: 64px;
+
+  @media (max-width: $media-tablet-landscape) {
+    // height: auto;
+    // padding: 11px 0px;
     //max-height: 80px;
   }
 }
 
 .medium {
-  height: 84px;
+  height: 52px;
 
   @media (max-width: $media-tablet-landscape) {
-    height: 40px;
+    height: auto;
   }
 }
 
-.other {
-  height: 64px;
+// .other {
+//   height: 64px;
 
-  @media (max-width: $media-tablet-landscape) {
-    height: 56px;
-  }
-}
+//   @media (max-width: $media-tablet-landscape) {
+//     height: 56px;
+//   }
+// }
 
 .info_go {
   display: block !important;
@@ -450,8 +471,12 @@ display: none;
   height: 96px;
 
   @media (max-width: $media-tablet-landscape) {
-    margin-top: 24px;
+    margin-top: 13px;
     height: auto;
+  }
+
+  @media (max-width: $media-tablet) {
+    margin-top: 5px;
   }
 }
 
@@ -472,8 +497,13 @@ display: none;
 .description {
   margin-top: 16px;
   color: #818AA7;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (max-width: $media-tablet) {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
 .premiumButton {

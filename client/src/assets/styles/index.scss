@@ -69,9 +69,21 @@ img {
 }
 
 .tablet-only {
-    display: none;
+    display: none !important;
 
     @media (max-width: $media-tablet) {
-        display: block;
+        display: block !important;
+    }
+}
+
+.tablet-only-strict {
+    display: none !important;
+   
+    @media (max-width: $media-tablet) {
+        display: block !important;
+    }
+
+    @media (max-width: $media-tablet) {
+        display: none !important;
     }
 }
