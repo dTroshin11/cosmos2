@@ -106,9 +106,9 @@ const CosmosSchemeBlock = () => {
             other: <div>С ограничениями</div>
         },
         {
-            text: <div>Стоимость лицензирования</div>,
+            text: <div>Стоимость<br className="tablet-only"/> лицензирования</div>,
             cosmos: <div>Входит в стоимость подписки
-                    на рабочее место</div>,
+                    на рабочее устройство</div>,
             other: <div>Лицензия</div>
         },
         {
@@ -117,7 +117,7 @@ const CosmosSchemeBlock = () => {
             other: <div>С ограничениями</div>
         },
         {
-            text: <div>Доступность инструментов дистрибуции приложений</div>,
+            text: <div>Доступность инструментов<br className="tablet-only"/> дистрибуции приложений</div>,
             cosmos: <div>Полная</div>,
             other: <div>С ограничениями</div>
         },
@@ -132,7 +132,7 @@ const CosmosSchemeBlock = () => {
             other: <div>С ограничениями</div>
         },
         {
-            text: <div>Персональный ИИ-&nbsp;помощник</div>,
+            text: <div>Персональный<br className="tablet-only"/> ИИ-&nbsp;помощник</div>,
             cosmos: <div>Есть, локально и&nbsp;облако<br />
             (данные не используются)</div>,
             other: <div>Есть, данные пользователя
