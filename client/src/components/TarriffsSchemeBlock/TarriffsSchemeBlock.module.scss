@@ -134,14 +134,19 @@ display: none;
   width: 32.5%;
 
   @media (max-width: $media-tablet-landscape) {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 16px;
+    line-height: 22px;
     display: flex;
-    width: 50%;
+    width: 70%;
   }
 
   @media (max-width: $media-tablet) {
     width: 70%;
+  }
+
+  @media (max-width: $media-phone) {
+    font-size: 12px;
+    line-height: 15px;
   }
 
   div {
@@ -159,9 +164,9 @@ display: none;
   width: 22.5%;
 
   @media (max-width: $media-tablet-landscape) {
-    font-size: 12px;
-    line-height: 15px;
-    width: 50%;
+    font-size: 16px;
+    line-height: 22px;
+    width: 30%;
   }
 
   @media (max-width: $media-tablet) {
@@ -177,7 +182,7 @@ display: none;
     gap: 2px;
     text-align: center;
 
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-tablet-landscape) {
       align-items: flex-start;
       text-align: left;
     }
@@ -199,9 +204,9 @@ display: none;
   width: 22.5%;
 
   @media (max-width: $media-tablet-landscape) {
-    font-size: 12px;
-    line-height: 15px;
-    width: 50%;
+    font-size: 16px;
+    line-height: 22px;
+    width: 30%;
   }
 
   @media (max-width: $media-tablet) {
@@ -239,7 +244,7 @@ display: none;
   @media (max-width: $media-tablet-landscape) {
     font-size: 12px;
     line-height: 15px;
-    width: 50%;
+    width: 30%;
   }
 
   @media (max-width: $media-tablet) {
@@ -298,7 +303,7 @@ display: none;
   @media (max-width: $media-tablet-landscape) {
     font-size: 12px;
     line-height: 15px;
-    width: 50%;
+    width: 30%;
   }
 
   @media (max-width: $media-tablet) {
@@ -351,7 +356,8 @@ display: none;
   height: 96px;
 
   @media (max-width: $media-tablet-landscape) {
-    height: 80px;
+    height: auto;
+    padding: 12px 0px;
   }
 }
 
@@ -369,7 +375,9 @@ display: none;
   height: 84px;
 
   @media (max-width: $media-tablet-landscape) {
-    height: 40px;
+    height: auto;
+    padding: 12px 0px;
+    //max-height: 80px;
   }
 }
 
@@ -377,7 +385,9 @@ display: none;
   height: 64px;
 
   @media (max-width: $media-tablet-landscape) {
-    height: 56px;
+    height: auto;
+    padding: 12px 0px;
+    //max-height: 80px;
   }
 }
 
