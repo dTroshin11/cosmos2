@@ -103,11 +103,12 @@
 
     .checkbox__text {
       font-size: 12px;
-      line-height: 18px;
+      line-height: 19px;
+      margin-top: 2px;
 
       a {
         color: #80A7FF;
-        text-decoration: none;
+        text-decoration: underline;
       }
     }
 

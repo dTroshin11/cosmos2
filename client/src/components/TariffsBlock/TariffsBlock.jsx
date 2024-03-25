@@ -105,7 +105,7 @@ const TariffsBlock = ({ formBlockRef }) => {
     return (
         <div className={Styles.TariffsBlock}>
             <div className={Styles.title}>
-                Выберите свой тариф по подписке
+                Выберите свой тариф по&nbsp;подписке
             </div>
             <div className={Styles.cards__list}>
                 {item.map((obj, index) => {

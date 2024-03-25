@@ -108,6 +108,7 @@
     //align-items: center;
     //display: flex;
     justify-content: space-between;
+    padding-bottom: 90px;
   }
 
   @media (max-width: $media-tablet) {
@@ -115,6 +116,7 @@
     //align-items: flex-start;
     align-items: center;
     display: flex;
+    padding-bottom: 0px;
   }
 
   @media (max-width: $media-phone) {

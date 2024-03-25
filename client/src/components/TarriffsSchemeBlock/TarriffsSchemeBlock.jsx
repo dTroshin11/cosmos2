@@ -184,8 +184,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
         // ПО по запросу клиента: CAD
         {
             text: <div className={Styles.high}>ПО по запросу клиента: CAD/CAM/
-                Adobe/Microsoft/Autodesk/Siemens +
-                адаптация специализированного ПО*</div>,
+                Adobe/Microsoft/Autodesk/Siemens&nbsp;+ адаптация&nbsp;специализированного ПО*</div>,
             free: <div className={Styles.high}>
                 {minus}
             </div>,

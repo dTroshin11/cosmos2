@@ -4,8 +4,16 @@
 .Block {
     width: 100%;
     position: relative;
-    // height: 100vh;
     // margin-bottom: 150px;
+    // height: 100vh;
+
+    @media (max-width: $media-tablet-landscape) {
+        height: 185vh;
+    }
+
+    @media (max-width: $media-tablet) {
+        height: auto;
+    }
 }
 
 .Wrapper {

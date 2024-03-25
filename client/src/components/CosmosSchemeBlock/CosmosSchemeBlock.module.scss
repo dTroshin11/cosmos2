@@ -36,6 +36,10 @@
   padding-top: 76px;
   width: 50%;
 
+  @media (max-width: $media-tablet-landscape) {
+    width: 46%;
+  }
+
   .text {
     color: #818AA7;
     font-size: 16px;
@@ -59,7 +63,8 @@
   border: 1px solid #4E5C77;
 
   @media (max-width: $media-tablet-landscape) {
-    height: 684px;
+    height: 686px;
+    width: 30%;
   }
 
   .cosmosTitle {
@@ -87,6 +92,10 @@
 
 .columnOther {
   width: 25%;
+
+  @media (max-width: $media-tablet-landscape) {
+    width: 24%;
+  }
 
   .otherTitle {
     padding-top: 32px;
@@ -117,48 +126,72 @@
   height: 76px;
 
   @media (max-width: $media-tablet-landscape) {
-    height: 92px;
+    height: 76px;
   }
 }
 
 .row2 {
   height: 54px;
+
+  @media (max-width: $media-tablet-landscape) {
+    height: 54px;
+  }
 }
 
 .row3 {
   height: 76px;
 
   @media (max-width: $media-tablet-landscape) {
-    height: 92px;
+    height: 76px;
   }
 }
 
 .row4 {
   height: 54px;
+
+  @media (max-width: $media-tablet-landscape) {
+    height: 54px;
+  }
 }
 
 .row5 {
   height: 54px;
+
+  @media (max-width: $media-tablet-landscape) {
+    height: 54px;
+  }
 }
 
 .row6 {
   height: 54px;
+
+  @media (max-width: $media-tablet-landscape) {
+    height: 76px;
+  }
 }
 
 .row7 {
   height: 54px;
+
+  @media (max-width: $media-tablet-landscape) {
+    height: 76px;
+  }
 }
 
 .row8 {
   height: 76px;
 
   @media (max-width: $media-tablet-landscape) {
-    height: 92px;
+    height: 76px;
   }
 }
 
 .row9 {
   height: 54px;
+
+  @media (max-width: $media-tablet-landscape) {
+    height: 54px;
+  }
 }
 
 .divider {
