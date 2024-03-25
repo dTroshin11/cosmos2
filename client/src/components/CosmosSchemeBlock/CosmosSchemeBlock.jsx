@@ -107,8 +107,8 @@ const CosmosSchemeBlock = () => {
         },
         {
             text: <div>Стоимость<br className="tablet-only"/> лицензирования</div>,
-            cosmos: <div>Входит в стоимость подписки
-                    на рабочее устройство</div>,
+            cosmos: <div>Входит в&nbsp;стоимость подписки
+                на&nbsp;рабочее место</div>,
             other: <div>Лицензия</div>
         },
         {
@@ -183,7 +183,7 @@ const CosmosSchemeBlock = () => {
                                         <div className={Styles.cosmos}>
                                             {obj.cosmos}
                                         </div>
-                                        <div className={Styles.divider} />
+                                        <div className={Styles.dividerFix} />
                                     </React.Fragment>
                                 })}
                             </div>
@@ -197,7 +197,7 @@ const CosmosSchemeBlock = () => {
                                         <div className={Styles.other}>
                                             {obj.other}
                                         </div>
-                                        <div className={Styles.divider} />
+                                        <div className={Styles.dividerFix} />
                                     </React.Fragment>
                                 })}
                             </div>
