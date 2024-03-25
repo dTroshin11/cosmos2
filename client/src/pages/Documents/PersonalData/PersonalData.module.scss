@@ -8,6 +8,7 @@
 
     @media (max-width: $media-tablet-landscape) {
         padding-top: 120px;
+        gap: 44px;
     }
 
     @media (max-width: $media-tablet) {
@@ -20,6 +21,10 @@
     width: 40%;
     background: #000000;
     margin-bottom: 36px;
+
+    @media (max-width: $media-tablet-landscape) {
+        width: 35%;
+    }
 
     @media (max-width: $media-tablet) {
         display: none;
@@ -60,7 +65,7 @@
     gap: 36px;
 
     @media (max-width: $media-tablet-landscape) {
-        max-width: 240px;
+        max-width: 287px;
     }
 
     .Back {
@@ -124,6 +129,10 @@
     width: 60%;
     padding-bottom: 150px;
 
+    @media (max-width: $media-tablet-landscape) {
+        width: 65%;
+    }
+
     @media (max-width: $media-tablet) {
         width: 100%;
         padding-bottom: 120px;
@@ -140,13 +149,8 @@
     line-height: 64px;
     margin-bottom: 56px;
 
-    @media (max-width: $media-phone) {
+    @media (max-width: $media-tablet) {
         margin-bottom: 32px;
-    }
-
-    @media (max-width: 620px) {
-        font-size: 42px;
-        line-height: 35px;
     }
 
     @media (max-width: $media-phone) {
@@ -214,7 +218,7 @@
 }
 
 .Item {
-    margin-top: 32px;
+    margin-top: 4px;
     display: flex;
 
     a {

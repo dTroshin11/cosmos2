@@ -5,10 +5,6 @@
 .About {
     padding-top: 120px;
 
-    @media (max-width: $media-tablet-landscape) {
-        padding-top: 120px;
-    }
-
     @media (max-width: $media-phone) {
         padding-top: 70px;
     }
@@ -22,7 +18,7 @@
         line-height: 25px;
         text-decoration: none;
         transition: background-color .3s, opacity .3s;
-    
+
         &:hover {
             opacity: 0.5;
         }
@@ -40,7 +36,7 @@
         top: 25%;
         left: 0;
 
-        @media (max-width: $media-tablet-landscape) {
+        @media (max-width: $media-phone) {
             display: none;
         }
     }
@@ -57,9 +53,9 @@
         top: 25%;
         right: 0;
 
-        @media (max-width: $media-tablet-landscape) {
+        @media (max-width: $media-phone) {
             width: 400px;
-            top: 10%;
+            top: 15%;
         }
     }
 }
@@ -74,7 +70,7 @@
     display: flex;
     align-items: flex-end;
 
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-phone) {
         background-position: center top;
         height: 650px;
         background-size: 150%;
@@ -84,7 +80,7 @@
 .HeroContent {
     margin-bottom: 100px;
 
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-phone) {
         margin-bottom: 0px;
     }
 }
@@ -95,7 +91,7 @@
     line-height: 60px;
     padding-bottom: 24px;
 
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-phone) {
         font-size: 28px;
         line-height: 30px;
         padding-bottom: 36px;
@@ -107,7 +103,7 @@
     display: flex;
     gap: 80px;
 
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-phone) {
         flex-direction: column;
         gap: 24px;
     }
@@ -119,7 +115,7 @@
     font-size: 28px;
     line-height: 33px;
 
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-phone) {
         width: 100%;
         font-size: 20px;
         line-height: 26px;
@@ -132,7 +128,7 @@
     font-size: 18px;
     line-height: 25px;
 
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-phone) {
         width: 100%;
         font-size: 16px;
         line-height: 22px;
@@ -150,7 +146,7 @@
     display: flex;
     gap: 20px;
 
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-phone) {
         margin-top: 90px;
         margin-bottom: 90px;
         flex-direction: column;
@@ -171,7 +167,7 @@
     font-size: 28px;
     line-height: 120%;
 
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-phone) {
         line-height: 110%;
     }
 }
@@ -181,7 +177,7 @@
     font-size: 28px;
     line-height: 120%;
 
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-phone) {
         font-size: 18px;
         line-height: 140%;
     }

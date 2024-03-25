@@ -93,7 +93,7 @@ const CalculatorBlock = () => {
             </div>
             <div className={Styles.calculate}>
                 <div className={classNames(Styles.people, Styles.calculate__item)} id={"People"}>
-                    <div className={Styles.item__title}>{windowWidth < 1000 ?
+                    <div className={Styles.item__title}>{windowWidth < 900 ?
                         <div>Сколько сотрудников у вас в компании?</div> : <div>Сколько сотрудников <br /> у вас в компании?</div>
                     }</div>
 
@@ -115,7 +115,7 @@ const CalculatorBlock = () => {
                 </div>
                 <div className={classNames(Styles.proPeople, Styles.calculate__item)} id={"ProPeople"}>
                     <div className={Styles.item__title}>
-                        {windowWidth < 1000 ?
+                        {windowWidth < 900 ?
                             <div>Сколько ИБ-специалистов?</div> : <div>Сколько <br /> ИБ-специалистов?</div>
                         }</div>
                     <input className={Styles.item__inputNum}
@@ -136,7 +136,10 @@ const CalculatorBlock = () => {
                     />
                 </div>
                 <div className={classNames(Styles.pay, Styles.calculate__item)} id={"Pay"}>
-                    <div className={Styles.item__title}>Средняя зарплата <br /> для ИБ-специалистов в&nbsp;компании?</div>
+                    <div className={Styles.item__title}>
+                    {windowWidth < 900 ?
+                            <div>Средняя зарплата <br /> для ИБ-специалистов в&nbsp;компании?</div> : <div>Средняя зарплата для <br /> ИБ-специалистов в&nbsp;компании?</div>
+                        }</div>
                     <input
                         className={Styles.item__inputNum}
                         type={"number"}

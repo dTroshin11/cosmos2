@@ -27,19 +27,10 @@
     width: 100%;
 
     &:before {
-      content: '';
-      position: absolute;
-      top: -250px;
-      left: -200px;
-      width: 600px;
-      height: 460px;
-      background-image: url("../../assets/img/gradBgLaptop.svg");
-      background-size: cover;
-      background-position: center left;
-      background-repeat: no-repeat;
-      z-index: -1;
+      display: none;
     }
   }
+
   @media (max-width: $media-tablet) {
     background-size: cover;
     background-position: bottom left 20%;
@@ -51,6 +42,7 @@
     width: 100%;
 
     &:before {
+      display: block;
       content: '';
       position: absolute;
       top: -250px;

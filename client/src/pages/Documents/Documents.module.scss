@@ -30,16 +30,12 @@
     font-size: 72px;
     line-height: 64px;
     margin-bottom: 56px;
-    margin-top: 32px;
-
-
-    @media (max-width: $media-tablet) {
-        font-size: 32px;
-        line-height: 35px;
-    }
+    margin-top: 56px;
 
     @media (max-width: $media-phone) {
-        margin-top: 48px;
+        font-size: 32px;
+        line-height: 35px;
+        margin-bottom: 24px;
     }
 }
 
