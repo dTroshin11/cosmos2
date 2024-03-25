@@ -40,7 +40,7 @@
 
     @media (max-width: $media-tablet) {
       flex-direction: column;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .calculate__item {
@@ -84,7 +84,7 @@
         width: 100%;
 
         @media (max-width: $media-tablet-landscape) {
-          max-width: 600px;
+          margin-bottom: 4px;
         }
       }
 
@@ -92,10 +92,6 @@
         width: 100%;
         margin-left: 1px;
         height: 2px;
-
-        @media (max-width: $media-tablet-landscape) {
-          max-width: 600px;
-        }
       }
     }
 
@@ -211,12 +207,8 @@ input[type="range"] {
 
   @media (max-width: $media-tablet-landscape) {
     width: 100%;
-    max-width: 300px;
+    max-width: unset;
     margin-right: 20px;
-  }
-
-  @media (max-width: $media-tablet) {
-    max-width: 600px;
   }
 }
 
