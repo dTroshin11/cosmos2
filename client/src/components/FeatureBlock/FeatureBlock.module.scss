@@ -8,6 +8,7 @@
   @media (max-width: $media-tablet-landscape) {
     margin-bottom: 120px;
   }
+
   @media (max-width: $media-phone) {
     margin-bottom: 90px;
   }
@@ -56,10 +57,26 @@
   @media (max-width: $media-tablet-landscape) {
     overflow-y: scroll;
     justify-content: flex-start;
-
-    //width: 280px;
+    width: 100vw;
+    position: relative;
+    left: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
+  @media (max-width: $media-tablet) {
+    width: 100vw;
+    position: relative;
+    left: -74px;
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+  
+  @media (max-width: $media-tablet) {
+    left: -17px;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
 }
 
 .Features::-webkit-scrollbar {

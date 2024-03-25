@@ -68,3 +68,10 @@ img {
     url("../fonts/Gilroy-Regular.woff2") format("woff2");
 }
 
+.tablet-only {
+    display: none;
+
+    @media (max-width: $media-tablet) {
+        display: block;
+    }
+}

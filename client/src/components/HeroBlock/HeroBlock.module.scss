@@ -6,6 +6,11 @@
     position: relative;
     // height: 100vh;
     // margin-bottom: 150px;
+
+    @media (max-width: $media-tablet) {
+        margin-bottom: 120px;
+    }
+
 }
 
 .Wrapper {
@@ -164,6 +169,11 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    @media (max-width: $media-tablet) {
+        padding-top: 564px;
+    }
 
     .HeroFeature__image {
         background-image: url("../../assets/img/mainLaptop2.png");
@@ -181,6 +191,11 @@
         @media (max-width: $media-tablet) {
             background-size: cover;
             background-position: -295px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100vw;
+
             // height: 500px;
         }
         @media (max-width: $media-phone) {
@@ -230,13 +245,14 @@
         }
         @media (max-width: $media-tablet) {
             // top: -120px;
-            bottom: 240px;
+            bottom: unset;
             grid-template-columns: 1fr;
             padding: 60px;
             background-position: unset;
             max-width: 620px;
             width: 100%;
             border-radius: 20px;
+            padding-bottom: 48px;
         }
 
         @media (max-width: $media-phone) {

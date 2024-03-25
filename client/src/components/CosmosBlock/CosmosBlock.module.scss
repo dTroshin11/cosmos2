@@ -38,11 +38,12 @@
   display: flex;
   gap: 60px;
 
-  @media (max-width: $media-tablet-landscape) {
-
-  }
   @media (max-width: $media-tablet) {
     flex-direction: column;
+    gap: 39px;
+  }
+
+  @media (max-width: $media-phone) {
     gap: 24px;
   }
 }
@@ -90,7 +91,7 @@ li span {
   font-size: 18px;
   line-height: 25px;
 
-  @media (max-width: $media-tablet-landscape) {
+  @media (max-width: $media-phone) {
     font-size: 16px;
     line-height: 22px;
   }
