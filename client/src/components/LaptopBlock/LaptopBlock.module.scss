@@ -102,7 +102,7 @@
   }
 
   @media (max-width: $media-tablet-landscape) {
-    grid-template-columns: 1fr 400px 1fr;
+    grid-template-columns: 1fr 300px 1fr;
     //flex-direction: column-reverse;
     ////align-items: flex-start;
     //align-items: center;
@@ -289,7 +289,7 @@
       //left: 13px;
       position: relative;
       top: 0px;
-      background-position: right 0px bottom 0px;
+      background-position: right 60px bottom 0px;
     }
 
     @media (max-width: $media-tablet) {
@@ -319,9 +319,9 @@
   .info__center:after {
     content: " ";
     animation: spin 80s linear infinite;
-    background-image: url("../../assets/img/animateLaptopLv3.svg");
+    background-image: url("../../assets/img/animateLaptop.svg");
     position: absolute;
-    left: 155px;
+    left: 99px;
     top: -105px;
     background-position: center;
     background-size: cover;
@@ -338,8 +338,8 @@
     @media (max-width: $media-tablet-landscape) {
       width: 664px;
       height: 664px;
-      left: -80px;
-      top: -92px;
+      left: -170px;
+      top: -99px;
     }
 
     @media (max-width: $media-tablet) {
@@ -352,93 +352,93 @@
     @media (max-width: $media-phone) {
       width: 370px;
       height: 370px;
-      left: -37px;
+      left: -50px;
       top: -52px;
     }
   }
 }
 
-.LaptopBlock__info:after {
-  content: " ";
-  animation: spin 80s linear infinite;
-  background-image: url("../../assets/img/animateLaptopLv22.svg");
-  position: absolute;
-  left: 190px;
-  top: -85px;
-  background-position: center;
-  background-size: cover;
-  width: 820px;
-  height: 820px;
-  z-index: -1;
-
-  @media (max-width: 1185px) {
-    left: 140px;
-    width: 720px;
-    height: 720px;
-  }
-
-  @media (max-width: $media-tablet-landscape) {
-    width: 577px;
-    height: 577px;
-    top: -20px;
-    left: 210px;
-  }
-
-  @media (max-width: $media-tablet) {
-    width: 577px;
-    height: 577px;
-    top: -30px;
-    left: 10px;
-  }
-
-  @media (max-width: $media-phone) {
-    width: 360px;
-    height: 360px;
-    top: -48px;
-    left: -20px;
-  }
-}
-
-.LaptopBlock__info:before {
-  content: " ";
-  animation: spin 80s linear infinite;
-  background-image: url("../../assets/img/animateLaptopLv11.svg");
-  position: absolute;
-  left: 443px;
-  top: 170px;
-  z-index: -1;
-  background-position: center;
-  background-size: cover;
-  width: 320px;
-  height: 320px;
-
-  @media (max-width: 1185px) {
-    left: 383px;
-    width: 240px;
-    height: 240px;
-  }
-
-  @media (max-width: $media-tablet-landscape) {
-    width: 240px;
-    height: 240px;
-    top: 140px;
-    left: 380px;
-  }
-
-  @media (max-width: $media-tablet) {
-    width: 240px;
-    height: 240px;
-    top: 140px;
-    left: 180px;
-  }
-
-  @media (max-width: $media-phone) {
-    width: 140px;
-    height: 140px;
-    top: 65px;
-    left: 90px;
-  }
-}
+//.LaptopBlock__info:after {
+//  content: " ";
+//  animation: spin 80s linear infinite;
+//  background-image: url("../../assets/img/animateLaptopLv22.svg");
+//  position: absolute;
+//  left: 190px;
+//  top: -85px;
+//  background-position: center;
+//  background-size: cover;
+//  width: 820px;
+//  height: 820px;
+//  z-index: -1;
+//
+//  @media (max-width: 1185px) {
+//    left: 140px;
+//    width: 720px;
+//    height: 720px;
+//  }
+//
+//  @media (max-width: $media-tablet-landscape) {
+//    width: 577px;
+//    height: 577px;
+//    top: -20px;
+//    left: 210px;
+//  }
+//
+//  @media (max-width: $media-tablet) {
+//    width: 577px;
+//    height: 577px;
+//    top: -30px;
+//    left: 10px;
+//  }
+//
+//  @media (max-width: $media-phone) {
+//    width: 360px;
+//    height: 360px;
+//    top: -48px;
+//    left: -20px;
+//  }
+//}
+//
+//.LaptopBlock__info:before {
+//  content: " ";
+//  animation: spin 80s linear infinite;
+//  background-image: url("../../assets/img/animateLaptopLv11.svg");
+//  position: absolute;
+//  left: 443px;
+//  top: 170px;
+//  z-index: -1;
+//  background-position: center;
+//  background-size: cover;
+//  width: 320px;
+//  height: 320px;
+//
+//  @media (max-width: 1185px) {
+//    left: 383px;
+//    width: 240px;
+//    height: 240px;
+//  }
+//
+//  @media (max-width: $media-tablet-landscape) {
+//    width: 240px;
+//    height: 240px;
+//    top: 140px;
+//    left: 380px;
+//  }
+//
+//  @media (max-width: $media-tablet) {
+//    width: 240px;
+//    height: 240px;
+//    top: 140px;
+//    left: 180px;
+//  }
+//
+//  @media (max-width: $media-phone) {
+//    width: 140px;
+//    height: 140px;
+//    top: 65px;
+//    left: 90px;
+//  }
+//}
 
 @keyframes spin {
   from {
