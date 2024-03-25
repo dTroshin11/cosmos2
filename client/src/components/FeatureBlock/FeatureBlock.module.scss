@@ -4,10 +4,16 @@
 .FeatureBlock {
   margin-bottom: 150px;
   position: relative;
+
   @media (max-width: $media-tablet-landscape) {
+    margin-bottom: 120px;
+  }
+
+  @media (max-width: $media-phone) {
     margin-bottom: 90px;
   }
 }
+
 //.FeatureBlock:after {
 //  content: " ";
 //  background: url("../../assets/img/gradBgInfr.svg");
@@ -29,7 +35,14 @@
   margin-bottom: 60px;
   font-size: 60px;
   line-height: 60px;
+
   @media (max-width: $media-tablet-landscape) {
+    text-align: left;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (max-width: $media-phone) {
     text-align: left;
     font-size: 28px;
     line-height: 30px;
@@ -44,34 +57,63 @@
   @media (max-width: $media-tablet-landscape) {
     overflow-y: scroll;
     justify-content: flex-start;
-
-    //width: 280px;
+    width: 100vw;
+    position: relative;
+    left: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
+  @media (max-width: $media-tablet) {
+    width: 100vw;
+    position: relative;
+    left: -74px;
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+  
+  @media (max-width: $media-phone) {
+    left: -17px;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
 }
 
 .Features::-webkit-scrollbar {
   display: none;
 }
 
-/* Скрываем scrollbar для IE, Edge и Firefox */
+
 .Features {
-  -ms-overflow-style: none;  /* IE и Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE и Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .Features__item {
-  padding: 24px;
+  padding: 24px 0px 24px 24px;
   background-image: url("../../assets/img/1.svg");
+  fill: #000000 !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 32px;
   width: 380px;
+
   @media (max-width: $media-tablet-landscape) {
+    min-width: 380px;
+    width: 100%;
+    max-height: 216px;
+  }
+
+  @media (max-width: $media-phone) {
+    border-radius: 20px;
     min-width: 280px;
     width: 100%;
+    max-height: 216px;
   }
+
   .icon {
     width: 36px;
     height: 36px;
@@ -80,29 +122,36 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
     @media (max-width: $media-tablet-landscape) {
+      width: 30px;
+      height: 30px;
       margin-bottom: 24px;
     }
   }
+
   .title {
     font-size: 20px;
     line-height: 26px;
     margin-bottom: 16px;
   }
+
   .text {
     color: #818AA7;
-    font-size: 18px;
-    line-height: 25px;
-    @media (max-width: $media-tablet-landscape) {
-     font-size: 16px;
-      line-height: 22px;
-    }
+    font-size: 16px;
+    line-height: 22px;
 
+    //@media (max-width: $media-tablet-landscape) {
+    //  font-size: 16px;
+    //  line-height: 22px;
+    //}
+
+    &:last-child {
+      max-width: 294px;
+    }
   }
 }
+
 .Features__item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 16px;
 }
-
-
-

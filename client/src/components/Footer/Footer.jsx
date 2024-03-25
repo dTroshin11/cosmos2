@@ -1,29 +1,25 @@
 import React from 'react';
-import Container from '@components/ui/Container/Container';
-
 import Styles from './Footer.module.scss';
+import { Link } from 'react-router-dom';
 
-const BlockContent = () => {
+const Footer = () => {
   return (
-    <Container className={Styles.Container}>
       <div className={Styles.Footer}>
         <div className={Styles.title}>
           Документация
         </div>
         <div className={Styles.TopWrapper}>
-          <a href={"#"}
-            target="_blank"
+          <Link to={"/agreements"}
             rel='noopener'
           >
             Пользовательские соглашения
-          </a>
+          </Link>
 
-          <a href={"#"}
-            target="_blank"
+          <Link to={"/instructions"}
             rel='noopener'
           >
-            Инструкции по установке и использованию ПО
-          </a>
+            Инструкции по&nbsp;установке и&nbsp;использованию ПО
+          </Link>
         </div>
         <div className={Styles.divider}></div>
         <div className={Styles.BottomWrapper}>
@@ -48,12 +44,10 @@ const BlockContent = () => {
           </div>
         </div>
       </div>
-    </Container>
-
   );
 };
 
-export default BlockContent;
+export default Footer;
 
 
 

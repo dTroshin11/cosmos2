@@ -6,10 +6,12 @@ $font-mono-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
 
 $font-base: "Gilory", $font-serif-family, sans-serif;
 
+$font-button: "Inter", $font-serif-family, sans-serif;
+
 /*
 * Breakpoints
 */
-$media-phone: 375px;
-$media-tablet: 768px;
-$media-tablet-landscape: 1024px;
+$media-phone: 650px;
+$media-tablet: 850px;
+$media-tablet-landscape: 960px;
 $media-desktop: 1200px;

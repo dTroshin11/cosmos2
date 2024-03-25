@@ -1,7 +1,7 @@
 {
-    "name": "membrana-business-process",
+    "name": "cosmos-business-process",
     "version": "0.1.0",
-    "homepage": "./",
+    "homepage": "http://teskhdeploy.na4u.ru/",
     "proxy": "http://localhost:3001",
     "private": true,
     "dependencies": {
@@ -19,6 +19,7 @@
         "react-hook-form": "^7.50.0",
         "react-input-mask": "^2.0.4",
         "react-loader-spinner": "^5.4.5",
+        "react-router-dom": "^6.22.1",
         "react-scripts": "5.0.1",
         "web-vitals": "^2.1.0",
         "yup": "^1.3.3"
@@ -26,7 +27,8 @@
     "scripts": {
         "start": "craco start",
         "build": "craco build",
-        "test": "craco test"
+        "test": "craco test",
+        "deploy": "rsync -avz -e ssh build/ c82116@h41.netangels.ru:/home/c82116/teskhdeploy.na4u.ru/www"
     },
     "eslintConfig": {
         "extends": [

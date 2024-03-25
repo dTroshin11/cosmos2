@@ -6,7 +6,7 @@ import CosmosFeature from '../../assets/img/CosmosFeature.png'
 const item = [
     <>Предустановленное программное обеспечение</>,
     <>Продвинутые функции информационной безопасности</>,
-    <>Надёжная многофакторная аутентификация</>,
+    <>Надёжная трёхфакторная аутентификация</>,
     <>Изолированные защищённые профили пользователя для&nbsp;сегментирования личной и&nbsp;рабочей информации</>,
     <>Локальный ИИ на&nbsp;устройстве</>,
     <>Индивидуальный подход к&nbsp;поддержке требуемого программного&nbsp;обеспечения и&nbsp;периферии</>,
@@ -18,15 +18,13 @@ const CosmosFeatureBlock = () => {
     return (
         <div className={Styles.CosmosBlock}>
             <div className={Styles.title}>
-                Собственная защищённая операционная система Cosm OS
+                Собственная защищённая операционная система&nbsp;Cosm OS
             </div>
             <div className={Styles.content}>
                 <img className={Styles.image} src={CosmosFeature} alt="" />
                 <ul className={Styles.items__list}>
                 {item.map((el, index) => {
-                return  <li className={Styles.item} key={index}>
-                            <span className={Styles.text}>{el}</span>
-                        </li>
+                return <li key={index} className={Styles.text}><span>{el}</span></li>
                     })}
                 </ul>
             </div>

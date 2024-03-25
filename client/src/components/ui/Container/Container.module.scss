@@ -3,9 +3,13 @@
 .Container {
   margin: 0 auto;
   width: 100%;
-  max-width: 1180px;
+  max-width: 1200px;
+  padding: 0 10px;
 
-  @media (max-width: $media-tablet-landscape) {
+  @media (max-width: $media-tablet) {
+    padding: 0 74px;
+  }
+  @media (max-width: $media-phone) {
     padding: 0 17px;
   }
 

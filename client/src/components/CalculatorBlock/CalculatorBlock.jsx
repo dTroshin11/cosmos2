@@ -1,26 +1,38 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Styles from "./CalculatorBlock.module.scss";
 import { useWindowSize } from '../../hooks/useWindowSize';
 import classNames from "classnames";
 
+
+
 const CalculatorBlock = () => {
+    // сотрудники
     const [people, setPeople] = useState(150)
+    //  иб спецы
     const [proPeople, setProPeople] = useState(4)
+    // зп
     const [pay, setPay] = useState(300000)
+
+    // const fullProPeople = people >= 23 ? proPeople !== 0 ? proPeople : people / 23 : 1
     const { windowWidth } = useWindowSize();
-    const formula = 0
-    const summa = pay !== 0 ?  Math.round((Number(pay) * Number(proPeople) * Number(people))* Number(1.302) * Number(12) * Number(0.55) + Number(1620000)) : 0;
+
+    const summa = proPeople == 0
+        ? people <= 23 ? Math.ceil((Number(pay) * Number(1)) * Number(1.302) * Number(12) * Number(0.55) + Number(1620000)) :  Math.ceil((Number(pay) * Number(people / 23)) * Number(1.302) * Number(12) * Number(0.55) + Number(1620000))
+        : Math.ceil((Number(pay) * Number(proPeople)) * Number(1.302) * Number(12) * Number(0.55) + Number(1620000))
+
+    const numbFmt = new Intl.NumberFormat('ru-RU').format(summa);
+
     let isRTL = document.documentElement.dir === 'rtl'
 
 
     const handleInputChange = (e) => {
         let target = e.target
         let targetNum = e.target.type === 'number'
-        let val  = target.value
-        let parent  = target.parentElement.id
+        let val = target.value
+        let parent = target.parentElement.id
 
         if (targetNum) {
-            target = document.getElementById( "range" + `${parent}`)
+            target = document.getElementById("range" + `${parent}`)
         }
         const min = target.min
         const max = target.max
@@ -77,40 +89,37 @@ const CalculatorBlock = () => {
     return (
         <div className={Styles.Calculator}>
             <div className={Styles.title}>
-                Рассчитайте вашу <br/> экономию на ИБ
+                Рассчитайте вашу <br /> экономию на ИБ
             </div>
             <div className={Styles.calculate}>
-                <div className={classNames(Styles.people,Styles.calculate__item)} id={"People"}>
-                    <div className={Styles.item__title}>{windowWidth < 1000 ?
-                        <div>Сколько сотрудников у вас в компании?</div> : <div>Сколько сотрудников <br/> у вас в компании?</div>
-                    }</div>
+                <div className={classNames(Styles.people, Styles.calculate__item)} id={"People"}>
+                    <div className={Styles.item__title}>Сколько сотрудников<br className="tablet-only-strict"/> у вас в компании?</div>
 
                     <input className={Styles.item__inputNum}
-                           type={"number"}
-                           id={'numberPeople'}
-                           value={people}
-                           onChange={(e) => setPeople(e.target.value)}
+                        type={"number"}
+                        id={'numberPeople'}
+                        value={people}
+                        onChange={(e) => setPeople(e.target.value)}
                     />
                     <input className={Styles.item__input}
-                           type={"range"}
-                           id={"rangePeople"}
-                           value={people}
-                           onChange={(e) => setPeople(e.target.value)}
-                           step={1}
-                           min={0}
-                           max={300}
+                        type={"range"}
+                        id={"rangePeople"}
+                        value={people}
+                        onChange={(e) => setPeople(e.target.value)}
+                        step={1}
+                        min={0}
+                        max={3000}
                     />
                 </div>
-                <div className={classNames(Styles.proPeople,Styles.calculate__item)} id={"ProPeople"}>
+                <div className={classNames(Styles.proPeople, Styles.calculate__item)} id={"ProPeople"}>
                     <div className={Styles.item__title}>
-                        {windowWidth < 1000 ?
-                            <div>Сколько ИБ-специалистов?</div> : <div>Сколько <br/> ИБ-специалистов?</div>
-                        }</div>
+                        Сколько<br className="tablet-only-strict" /> ИБ-специалистов?
+                        </div>
                     <input className={Styles.item__inputNum}
-                           type={"number"}
-                           id={'numberProPeople'}
-                           value={proPeople}
-                           onChange={(e) => setProPeople(e.target.value)}
+                        type={"number"}
+                        id={'numberProPeople'}
+                        value={proPeople}
+                        onChange={(e) => setProPeople(e.target.value)}
                     />
                     <input
                         className={Styles.item__input}
@@ -123,8 +132,8 @@ const CalculatorBlock = () => {
                         max={20}
                     />
                 </div>
-                <div className={classNames(Styles.pay,Styles.calculate__item)} id={"Pay"}>
-                    <div className={Styles.item__title}>Средняя зарплата <br/> для ИБ-специалистов в компании?</div>
+                <div className={classNames(Styles.pay, Styles.calculate__item)} id={"Pay"}>
+                    <div className={Styles.item__title}>Средняя зарплата <br /> для ИБ-специалистов в&nbsp;компании?</div>
                     <input
                         className={Styles.item__inputNum}
                         type={"number"}
@@ -146,7 +155,7 @@ const CalculatorBlock = () => {
             </div>
             <div className={Styles.result}>
                 <div className={Styles.result__title}>С нами вы сэкономите за год</div>
-                <div className={Styles.result__num}>{summa !== 0 ? summa : 0} ₽*</div>
+                <div className={Styles.result__num}>{numbFmt === 0 || numbFmt === new Intl.NumberFormat('ru-RU').format(1620000) ? 0 : numbFmt} ₽*</div>
                 <div className={Styles.result__subtitle}>*на основе наших данных</div>
             </div>
         </div>

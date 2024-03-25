@@ -4,144 +4,279 @@
 .ChartBlock {
   margin-bottom: 150px;
   display: flex;
-  align-items: center;
   position: relative;
   justify-content: space-between;
   background-image: url("../../assets/img/chartBg.svg");
   background-size: cover;
   background-position: center;
   padding: 60px;
+  padding-bottom: 45px;
   background-repeat: no-repeat;
   border-radius: 32px;
+
   @media (max-width: $media-tablet-landscape) {
+    max-width: 940px;
+    width: 100%;
+    padding: 60px;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 120px;
+  }
+  @media (max-width: $media-tablet) {
+    max-width: 620px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    margin-bottom: 90px;
+  }
+  @media (max-width: $media-phone) {
+    max-width: unset;
     flex-direction: column;
     padding: 24px;
     margin-bottom: 90px;
+    width: auto;
+    border-radius: 20px;
   }
+
   .chart__info {
     max-width: 485px;
+
     .texts {
       margin-bottom: 64px;
+
       @media (max-width: $media-tablet-landscape) {
         margin-bottom: 16px;
       }
+
+
       .info_title {
         font-size: 60px;
         line-height: 60px;
         margin-bottom: 24px;
+
         @media (max-width: $media-tablet-landscape) {
+
+        }
+        @media (max-width: $media-phone) {
           text-align: left;
           font-size: 28px;
           line-height: 30px;
           margin-bottom: 16px;
         }
       }
+
       .info_subtitle {
         font-size: 18px;
         line-height: 25px;
         margin-bottom: 16px;
+
         @media (max-width: $media-tablet-landscape) {
+
+        }
+        @media (max-width: $media-phone) {
           text-align: left;
-          color: #818AA7;
           font-size: 16px;
           line-height: 22px;
           margin-bottom: 24px;
         }
       }
+
       .info_text {
         font-size: 18px;
         line-height: 25px;
         color: #818AA7;
+
         @media (max-width: $media-tablet-landscape) {
+          text-align: left;
+          font-size: 18px;
+          line-height: 25px;
+          margin-bottom: 36px;
+          max-width: 370px;
+          width: 100%;
+        }
+        @media (max-width: $media-tablet) {
+          max-width: unset;
+        }
+        @media (max-width: $media-phone) {
           text-align: left;
           font-size: 16px;
           line-height: 22px;
+          margin-bottom: 16px;
         }
       }
     }
+
     .info_go {
       display: block;
-      @media (max-width: $media-tablet-landscape) {
-      display: none;
+      @media (max-width: $media-phone) {
+        display: none;
       }
+
       .info_button {
-        width: 180px;
+        width: 240px;
         display: flex;
         height: 40px;
         padding: 8px 20px;
         justify-content: center;
         align-items: center;
-        gap:  4px;
+        font-family: $font-button;
+        gap: 4px;
+        font-size: 14px;
         border-radius: 4px;
         background: #0072F8;
+        //font-weight: 500;
         cursor: pointer;
         margin-bottom: 16px;
-      }
-      .info_buttonText {
-        font-size: 14px;
-        line-height: 21px;
-        color: #818AA7;
+        transition: background-color .3s, opacity .3s;
         @media (max-width: $media-tablet-landscape) {
-         font-size: 12px;
-          line-height: 18px;
+          width: 240px;
+        }
+        &:hover {
+          background-color: #268AFF;
         }
       }
+    }
 
-    }
-  }
-  .Chart__img {
-    background-image: url("../../assets/img/Chart.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 434px;
-    height: 410px;
-    @media (max-width: $media-tablet-landscape) {
-      background-image: url("../../assets/img/chartMob.svg");
-      width: 293px;
-      height: 210px;
-    }
-  }
-  .info_goMob {
-    display: none;
-    width: 100%;
-    @media (max-width: $media-tablet-landscape) {
-      display: block;
-      margin-top: 24px;
-    }
-    .info_button {
-      width: 100%;
-      max-width: unset;
-      display: flex;
-      height: 40px;
-      padding: 8px 20px;
-      justify-content: center;
-      align-items: center;
-      gap:  4px;
-      border-radius: 4px;
-      background: #0072F8;
-      cursor: pointer;
-      margin-bottom: 16px;
-    }
     .info_buttonText {
-      font-size: 12px;
-      line-height: 18px;
+      font-size: 14px;
+      line-height: 21px;
       color: #818AA7;
+
+      @media (max-width: $media-tablet) {
+        margin-bottom: 26px;
+      }
     }
   }
 }
+
+.Chart__img {
+  background-image: url("../../assets/img/Chart.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 434px;
+  height: auto;
+  padding-bottom: 42%;
+  align-self: flex-end;
+
+  @media (max-width: $media-tablet-landscape) {
+    background-image: url("../../assets/img/chartTablet.svg");
+    max-width: 319px;
+    padding-bottom: 50%;
+  }
+
+  @media (max-width: $media-tablet) {
+    background-image: url("../../assets/img/Chart.svg");
+    max-width: calc(100% - 66px);
+    padding-bottom: 94%;
+    margin: 0 33px;
+  }
+
+  @media (max-width: $media-phone) {
+    background-image: url("../../assets/img/chartMob.svg");
+    background-size: contain;
+    margin: 0;
+    max-width: 100%;
+    margin-top: -33px;
+  }
+}
+
+.info_goMob {
+  display: none;
+  width: 100%;
+
+  @media (max-width: $media-phone) {
+    display: block;
+    margin-top: -13px;
+  }
+
+  .info_button {
+    width: 100%;
+    max-width: unset;
+    display: flex;
+    height: 44px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-family: $font-button;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    background: #0072F8;
+    cursor: pointer;
+    margin-bottom: 16px;
+    transition: background-color .3s, opacity .3s;
+
+    &:hover {
+      background-color: #268AFF;
+    }
+  }
+
+  .info_buttonText {
+    font-size: 12px;
+    line-height: 18px;
+    color: #818AA7;
+  }
+}
+
+// .ChartBlock:after {
+//   content: " ";
+//   background: url("../../assets/img/mainGradBg.svg");
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   width: 1406px;
+//   height: 996px;
+//   position: absolute;
+//   top: -189px;
+//   left: -125px;
+//   z-index: -1;
+
+//   @media (max-width: $media-tablet-landscape) {
+//     display: none;
+//   }
+// }
+
 .ChartBlock:after {
   content: " ";
-  background: url("../../assets/img/mainGradBg.svg");
+  background: url("../../assets/img/chartBlockGradBg.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 1406px;
-  height: 996px;
+  width: 1600px;
+  height: 1100px;
   position: absolute;
-  top: -189px;
-  left: -125px;
+  top: -200px;
+  left: 650px;
   z-index: -1;
+
+  @media (max-width: $media-tablet-landscape) {
+    display: none;
+  }
+  @media (max-width: $media-phone) {
+    //background: url("../../assets/img/chartBlockGradMobBg.svg");
+    display: block;
+    top: 315px;
+    left: -160px;
+    width: 700px;
+    height: 500px;
+  }
+}
+
+.ChartBlock:before {
+  content: " ";
+  background: url("../../assets/img/chartBlockGradBg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1600px;
+  height: 1100px;
+  position: absolute;
+  top: -400px;
+  left: -850px;
+  z-index: -1;
+
   @media (max-width: $media-tablet-landscape) {
     display: none;
   }

@@ -43,6 +43,16 @@ a {
 img {
     display: block;
 }
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-Regular.ttf") format("truetype"),
+    url("../fonts/Inter-Light.ttf") format("truetype"),
+    url("../fonts/Inter-Medium.ttf") format("truetype"),
+    url("../fonts/Inter-Regular.ttf") format("truetype"),
+    url("../fonts/Inter-Bold.ttf") format("truetype"),
+    url("../fonts/Inter-SemiBold.ttf") format("truetype"),
+    url("../fonts/Inter-Black.ttf") format("truetype");
+}
 
 @font-face {
     font-family: "Gilory";
@@ -55,6 +65,25 @@ img {
     url("../fonts/Gilroy-Medium.woff2") format("woff2"),
     url("../fonts/Gilroy-Black.woff2") format("woff2"),
     url("../fonts/Gilroy-Light.woff2") format("woff2"),
-        url("../fonts/Gilroy-Regular.woff2") format("woff2");
-    //font-weight: 400;
+    url("../fonts/Gilroy-Regular.woff2") format("woff2");
+}
+
+.tablet-only {
+    display: none !important;
+
+    @media (max-width: $media-tablet) {
+        display: block !important;
+    }
+}
+
+.tablet-only-strict {
+    display: none !important;
+   
+    @media (max-width: $media-tablet) {
+        display: block !important;
+    }
+
+    @media (max-width: $media-tablet) {
+        display: none !important;
+    }
 }

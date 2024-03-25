@@ -17,14 +17,14 @@ const sendMail = (to, subject, text) => {
     const transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'troshind11@gmail.com',
-            pass: 'utcy hzrr ifox kgar'
+            user: 'vegaalphaweb24@gmail.com',
+            pass: 'sjlb vufn moyd xlna'
         }
     });
 
 
     const mailOptions = {
-        from: 'troshind11@gmail.com',
+        from: 'vegaalphaweb24@gmail.com',
         to: to,
 
         subject: subject,
@@ -47,18 +47,13 @@ app.post("/api/form", (req, res) => {
 res.json({"message": 'form submited'})
 
     let formSub = req.body
-    console.log(req.body)
+    // console.log(req.body)
     const email = req.body[0]
     const phone = req.body[1]
     const name = req.body[2]
-    console.log(email,phone,name)
+    // console.log(email,phone,name)
 
-
-    sendMail('trohin.danil2013@yandex.ru', 'Cosmos', `email: ${email},  Телефон: ${phone},  ФИО: ${name}`);
+    sendMail('futurecrew@mts.ru', 'VegaAlpha.ru | Форма обратной связи', `email: ${email}, Телефон: ${phone},  ФИО: ${name}`);
 })
 
 app.listen(3001, () => {console.log("server start port 3001")})
-
-
-
-

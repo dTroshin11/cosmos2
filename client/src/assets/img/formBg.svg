@@ -1,5 +1,5 @@
 <svg width="1180" height="692" viewBox="0 0 1180 692" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2409_12913)">
+<g clipPath="url(#clip0_2409_12913)">
 <rect width="1180" height="692" fill="black"/>
 <circle opacity="0.9" cx="334.498" cy="380.501" r="157.252" stroke="url(#paint0_linear_2409_12913)"/>
 <path d="M330.075 220.139L331.068 222.22L333.15 223.214L331.068 224.208L330.075 226.289L329.081 224.208L327 223.214L329.081 222.22L330.075 220.139Z" fill="#566582"/>
@@ -25,17 +25,17 @@
 <filter id="filter0_f_2409_12913" x="398" y="-259" width="1382" height="1363" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="110" result="effect1_foregroundBlur_2409_12913"/>
+<feGaussianBlur stdDeviation="99" result="effect1_foregroundBlur_2409_12913"/>
 </filter>
 <filter id="filter1_f_2409_12913" x="-511.617" y="-253.617" width="1462.23" height="1235.23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="196.809" result="effect1_foregroundBlur_2409_12913"/>
+<feGaussianBlur stdDeviation="99" result="effect1_foregroundBlur_2409_12913"/>
 </filter>
 <filter id="filter2_f_2409_12913" x="-901.62" y="355.38" width="2126.24" height="1755.24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="256.81" result="effect1_foregroundBlur_2409_12913"/>
+<feGaussianBlur stdDeviation="99" result="effect1_foregroundBlur_2409_12913"/>
 </filter>
 <linearGradient id="paint0_linear_2409_12913" x1="523.872" y1="-5263.25" x2="264.656" y2="-5263.25" gradientUnits="userSpaceOnUse">
 <stop stop-color="#5C6C8C" stop-opacity="0"/>
