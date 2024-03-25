@@ -9,9 +9,9 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import axios, { post } from "axios";
 import classNames from "classnames";
 
-import CheckBox from '../ui/Checkbox/Checkbox';
+
 import SubmitPopup from '../ui/SubmitPopup/SubmitPopup';
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -168,7 +168,7 @@ const FormBlock = ({ formBlockRef }) => {
                                     </div>
                                 </div>
                                 <div className={Styles.checkbox__text}>
-                                    Выражаю согласие с&nbsp;<a href={'https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/dokumenti-pao-mts/politika-obrabotka-personalnih-dannih-v-pao-mts'}>Политикой обработки персональных данных</a> и&nbsp;<Link to={'/personal-data-agreement'}>Условиями пользования сайтом</Link>
+                                    Выражаю согласие с&nbsp;<a href={'https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/dokumenti-pao-mts/politika-obrabotka-personalnih-dannih-v-pao-mts'}>Политикой обработки персональных данных</a>
                                 </div>
                             </label>
                             {errors['agreement'] && <div className={Styles.errorText} style={{marginTop:"10px", marginLeft:"5px"}}>{errors['agreement']?.message}</div>}

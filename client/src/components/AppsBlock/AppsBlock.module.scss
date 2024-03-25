@@ -147,7 +147,15 @@
   //max-width: 380px;
   @media (max-width: $media-tablet-landscape) {
     display: block;
+    //overflow: hidden;
+  }
+  @media (max-width: $media-tablet-landscape) {
+    //display: block;
     overflow: hidden;
+  }
+  @media (max-width: $media-phone) {
+    //display: block;
+    overflow: unset;
   }
 
   .wrap {
@@ -162,7 +170,8 @@
     display: flex;
     //overflow: hidden;
     user-select: none;
-    gap: 20px;
+    gap: 12px;
+
   }
 
   .items_wrap:before,
