@@ -170,7 +170,7 @@
     position: relative;
     margin-bottom: 120px;
 
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-tablet-landscape) {
         padding-top: 564px;
     }
 
@@ -193,14 +193,17 @@
             // background-position: -75px;
             // height: 500px;
         }
-        @media (max-width: $media-tablet) {
-            background-size: cover;
-            background-position: -295px;
+        @media (max-width: $media-tablet-landscape) {
             position: absolute;
             top: 0;
             right: 0;
             width: 100vw;
-            background-position: right top;
+            padding-bottom: 85%;
+            background-position: right top;            
+        }
+
+        @media (max-width: $media-tablet) {
+            background-size: cover;
             padding-bottom: 126%;
 
             // height: 500px;
@@ -223,7 +226,7 @@
         background-position: center;
         background-repeat: no-repeat;
         padding: 60px;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 26.18% 31.85% 28.35%;
         justify-content: center;
         border-radius: 32px;
         overflow: hidden;
@@ -233,7 +236,7 @@
         @media (max-width: $media-desktop) {
             // top: -120px;
             // bottom: 240px;
-            //grid-template-columns: 1fr 1fr;
+            // grid-template-columns: 1fr 1fr;
             padding: 60px;
             background-position: unset;
             // max-width: 940px;
@@ -245,13 +248,12 @@
             // bottom: 240px;
             grid-template-columns: 1fr 1fr;
             padding: 60px;
+            row-gap: 36px;
             background-position: unset;
             // max-width: 940px;
             width: 100%;
         }
-        @media (max-width: $media-tablet-landscape) {
 
-        }
         @media (max-width: $media-tablet) {
             // top: -120px;
             // bottom: unset;
@@ -260,6 +262,7 @@
             background-position: unset;
             // max-width: 620px;
             width: 100%;
+            row--gap: 24px;
             border-radius: 20px;
             padding-bottom: 48px;
         }
@@ -287,7 +290,7 @@
                 line-height: 26px;
                 margin-bottom: 16px;
 
-                @media (max-width: $media-desktop) {
+                @media (max-width: $media-tablet) {
                     font-size: 18px;
                     line-height: 25px;
                     margin-bottom: 8px;
@@ -299,7 +302,7 @@
                 font-size: 16px;
                 line-height: 22px;
 
-                @media (max-width: $media-desktop) {
+                @media (max-width: $media-tablet) {
                     margin-bottom: 12px;
                     font-size: 14px;
                     line-height: 18px;
@@ -333,7 +336,7 @@
         }
 
         .features__item:nth-child(2) {
-            padding-left: 24px;
+            // padding-left: 24px;
             // padding-right: 20px;
 
             @media (max-width: $media-desktop) {
@@ -351,8 +354,8 @@
         }
 
         .features__item:nth-child(5) {
-            padding-left: 24px;
-            padding-right: 20px;
+            // padding-left: 24px;
+            // padding-right: 20px;
 
             @media (max-width: $media-desktop) {
                 padding-left: 0px;
@@ -361,7 +364,7 @@
         }
 
         .features__item:nth-child(3) {
-            padding-left: 20px;
+            // padding-left: 20px;
 
             @media (max-width: $media-desktop) {
                 padding-left: 0px;
@@ -377,7 +380,7 @@
         }
 
         .features__item:nth-child(6) {
-            padding-left: 20px;
+            // padding-left: 20px;
 
             @media (max-width: $media-desktop) {
                 padding-left: 0px;
@@ -463,7 +466,7 @@
     .HeroFeature__features:before { 
         content: " ";
         position: absolute;
-        left: 34%;
+        left: 31.5%;
         top: 0;
         width: 1px;
         z-index: 10;
@@ -482,7 +485,7 @@
     .HeroFeature__features:after {
         content: " ";
         position: absolute;
-        right: 34%;
+        right: 33.5%;
         top: 0;
         width: 1px;
         z-index: 10;
