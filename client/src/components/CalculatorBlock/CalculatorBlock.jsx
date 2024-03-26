@@ -136,7 +136,10 @@ const CalculatorBlock = () => {
                     />
                 </div>
                 <div className={classNames(Styles.pay, Styles.calculate__item)} id={"Pay"}>
-                    <div className={Styles.item__title}>Средняя зарплата <br /> для ИБ-специалистов в&nbsp;компании?</div>
+                    <div className={Styles.item__title}>
+                    {windowWidth < 900 ?
+                            <div>Средняя зарплата <br /> для ИБ-специалистов в&nbsp;компании?</div> : <div>Средняя зарплата для <br /> ИБ-специалистов в&nbsp;компании?</div>
+                        }</div>
                     <input
                         className={Styles.item__inputNum}
                         type={"number"}

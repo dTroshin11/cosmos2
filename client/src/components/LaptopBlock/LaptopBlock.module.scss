@@ -26,10 +26,9 @@
 
   @media (max-width: $media-tablet-landscape) {
     display: block;
-    //width: 730px;
-    //height: 510px;
-    top: -34px;
-    left: -191px;
+    background: url("../../assets/img/gradBgLaptopTabletLandscape.svg");
+    top: 0px;
+    left: -100px;
   }
 
   @media (max-width: $media-phone) {
@@ -108,7 +107,7 @@
     //align-items: center;
     //display: flex;
     justify-content: space-between;
-    padding-bottom: 90px;
+    padding-bottom: 80px;
   }
 
   @media (max-width: $media-tablet) {
@@ -116,7 +115,7 @@
     //align-items: flex-start;
     align-items: center;
     display: flex;
-    padding-bottom: 0px;
+    padding-bottom: 90px;
   }
 
   @media (max-width: $media-phone) {
@@ -284,8 +283,8 @@
     }
 
     @media (max-width: $media-tablet-landscape) {
-      width: 435px;
-      height: 435px;
+      width: 485px;
+      height: 495px;
       //left: 13px;
       position: relative;
       top: 0px;

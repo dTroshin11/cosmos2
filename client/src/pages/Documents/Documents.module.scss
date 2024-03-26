@@ -2,6 +2,7 @@
 @import "@/assets/styles/index.scss";
 
 .Documents {
+    position: relative;
     padding-top: 120px;
     margin-bottom: 150px;
 
@@ -9,53 +10,11 @@
         padding-top: 70px;
         padding-bottom: 48px;
     }
-}
-
-.Back {
-    display: flex;
-    gap: 8px;
-    color: white;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 25px;
-    text-decoration: none;
-    transition: background-color .3s, opacity .3s;
-
-    &:hover {
-        opacity: 0.5;
-    }
-}
-
-.Title {
-    font-size: 72px;
-    line-height: 64px;
-    margin-bottom: 56px;
-    margin-top: 32px;
 
 
-    @media (max-width: $media-tablet) {
-        font-size: 32px;
-        line-height: 35px;
-    }
-
-    @media (max-width: $media-phone) {
-        margin-top: 48px;
-    }
-}
-
-.Links {
-    ul {
+    .Back {
         display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-left: 24px;
-
-        li {
-            color: white;
-        }
-    }
-
-    a {
+        gap: 8px;
         color: white;
         font-size: 18px;
         font-weight: 400;
@@ -63,112 +22,171 @@
         text-decoration: none;
         transition: background-color .3s, opacity .3s;
 
-        @media (max-width: $media-tablet) {
-            font-size: 16px;
-        }
-
         &:hover {
             opacity: 0.5;
         }
-
-        // &:first-child {
-        //     color: #818AA7;
-        // }
     }
-}
 
+    .Title {
+        font-size: 72px;
+        line-height: 64px;
+        margin-bottom: 56px;
+        margin-top: 56px;
 
-
-.Divider {
-    height: 1px;
-    background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0.5%, rgba(92, 108, 140, 0.27) 14%, #5C6C8C 29.69%, rgba(92, 108, 140, 0.00) 100%), #000;
-}
-
-
-.Footer {
-    .BottomWrapper {
-        margin-top: 24px;
-        display: flex;
-        //flex-direction: column;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-
-        @media (max-width: $media-tablet-landscape) {
-            flex-wrap: wrap;
-        }
-
-        //align-items: center;
         @media (max-width: $media-phone) {
-            margin-top: 36px;
-            flex-direction: column;
+            font-size: 32px;
+            line-height: 35px;
+            margin-bottom: 24px;
         }
     }
 
-    @media (max-width: $media-tablet) {
-        width: 100%;
-        padding-bottom: 90px;
-    }
-
-    .LeftLink,
-    .RightLink {
-        display: flex;
-        text-align: left;
-        flex-direction: row;
-
-        //align-items: flex-start;
-        @media (max-width: $media-tablet) {
+    .Links {
+        ul {
+            display: flex;
             flex-direction: column;
-        }
+            gap: 16px;
+            margin-left: 24px;
 
-        a,
-        p {
-            font-size: 16px;
-            line-height: 22px;
-            color: #fff;
-
-            //opacity: 0.5;
-            @media (min-width: $media-tablet) {
-                &:not(:last-child) {
-                    margin: 0 24px 0 0;
-                }
+            li {
+                color: white;
             }
         }
 
-        p:first-child {
-            margin-bottom: 8px;
-        }
-
         a {
-            text-decoration: underline;
+            color: white;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25px;
+            text-decoration: none;
             transition: background-color .3s, opacity .3s;
+
+            @media (max-width: $media-tablet) {
+                font-size: 16px;
+            }
 
             &:hover {
                 opacity: 0.5;
             }
+
+            // &:first-child {
+            //     color: #818AA7;
+            // }
         }
     }
 
-    .LeftLink {
+
+
+    .Divider {
+        height: 1px;
+        background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0.5%, rgba(92, 108, 140, 0.27) 14%, #5C6C8C 29.69%, rgba(92, 108, 140, 0.00) 100%), #000;
+    }
+
+
+
+    .Footer {
+        // width: 100%;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        max-width: 1200px;
+
         @media (max-width: $media-tablet) {
-            flex-direction: column;
+            width: 83%;
         }
 
-        a {
-            margin-bottom: 37px;
+        @media (max-width: $media-phone) {
+            width: 100%;
+        }
 
-            @media (max-width: 580px) {
-                margin-bottom: 28px;
+
+        .BottomWrapper {
+            margin-top: 24px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: row;
+            //flex-direction: column;
+
+
+            @media (max-width: $media-tablet-landscape) {
+                flex-direction: column;
+                margin-bottom: 24px;
+            }
+
+            //align-items: center;
+            @media (max-width: $media-phone) {
+                margin-top: 36px;
+                flex-direction: column;
             }
         }
-    }
 
-    
+        .LeftLink,
+        .RightLink {
+            display: flex;
+            text-align: left;
+            flex-direction: row;
+            justify-content: space-between;
 
-    .footerText {
-        font-size: 14px;
-        line-height: 22px;
-        color: #fff;
-        opacity: 0.5;
+            //align-items: flex-start;
+            @media (max-width: $media-tablet-landscape) {
+                justify-content: space-between;
+            }
+
+            @media (max-width: $media-phone) {
+                flex-direction: column;
+            }
+
+            a,
+            p {
+                font-size: 16px;
+                line-height: 22px;
+                color: #fff;
+
+                //opacity: 0.5;
+                @media (min-width: $media-tablet) {
+                    &:not(:last-child) {
+                        margin: 0 24px 0 0;
+                    }
+                }
+            }
+
+            p:first-child {
+                margin-bottom: 8px;
+            }
+
+            a {
+                text-decoration: underline;
+                transition: background-color .3s, opacity .3s;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        .RightLink {
+            padding-right: 10px;
+        }
+
+        .LeftLink {
+            @media (max-width: $media-tablet) {
+                flex-direction: column;
+            }
+
+            a {
+                margin-bottom: 37px;
+
+                @media (max-width: $media-tablet-landscape) {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+
+        .footerText {
+            font-size: 14px;
+            line-height: 22px;
+            color: #fff;
+            opacity: 0.5;
+        }
     }
 }

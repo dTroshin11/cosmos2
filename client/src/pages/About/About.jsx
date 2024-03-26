@@ -72,7 +72,7 @@ const About = () => {
                 {items.map((obj, index) => {
                     return <div className={Styles.Person} key={index}>
                         <div className={Styles.Image}>
-                            <img src={windowWidth <= 768 ? obj.imageMobile : obj.image} alt="" />
+                            <img src={windowWidth <= 650 ? obj.imageMobile : obj.image} alt="" />
                         </div>
                         <div className={Styles.Name}>
                             {obj.name}

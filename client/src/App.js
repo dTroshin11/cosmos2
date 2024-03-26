@@ -22,8 +22,8 @@ function App() {
         <Container>
           <div className={Styles.mainWrapper}>
             <Routes>
-              <Route path="*" element={<Main formBlockRef={formBlockRef} />} />
               <Route path="/about" element={<About />} />
+              <Route path="*" element={<Main formBlockRef={formBlockRef} />} />
               <Route path="/agreements" element={<Documents />} />
               <Route path="/end-user-agreement" element={<License />} />
               <Route path="/user-agreement-ai" element={<TermsOfUse />} />

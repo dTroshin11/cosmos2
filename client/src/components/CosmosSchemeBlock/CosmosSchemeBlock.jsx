@@ -79,7 +79,7 @@ const CosmosSchemeBlock = () => {
                 </span>
             </div>,
             other: <div className={Styles.row8}>
-                <span>Есть, данные пользователя
+                <span>Есть, <br /> данные пользователя
                     используются компанией</span>
             </div>
         },

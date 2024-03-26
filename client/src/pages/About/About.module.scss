@@ -1,13 +1,12 @@
 @import "@/assets/styles/variables.scss";
 @import "@/assets/styles/index.scss";
 
+.COntainer {
+    padding: 0px !important;
+}
 
 .About {
     padding-top: 120px;
-
-    @media (max-width: $media-tablet-landscape) {
-        padding-top: 120px;
-    }
 
     @media (max-width: $media-phone) {
         padding-top: 70px;
@@ -22,46 +21,46 @@
         line-height: 25px;
         text-decoration: none;
         transition: background-color .3s, opacity .3s;
-    
+
         &:hover {
             opacity: 0.5;
         }
     }
 
-    &::before {
-        content: '';
-        background: url('../../assets/img/AboutBgLeft.svg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 500px;
-        height: 900px;
-        position: absolute;
-        top: 25%;
-        left: 0;
+    // &::before {
+    //     content: '';
+    //     background: url('../../assets/img/AboutBgLeft.svg');
+    //     background-position: center;
+    //     background-size: cover;
+    //     background-repeat: no-repeat;
+    //     width: 500px;
+    //     height: 900px;
+    //     position: absolute;
+    //     top: 25%;
+    //     left: 0;
 
-        @media (max-width: $media-tablet-landscape) {
-            display: none;
-        }
-    }
+    //     @media (max-width: $media-phone) {
+    //         display: none;
+    //     }
+    // }
 
-    &::after {
-        content: '';
-        background: url('../../assets/img/AboutBgRight.svg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 500px;
-        height: 900px;
-        position: absolute;
-        top: 25%;
-        right: 0;
+    // &::after {
+    //     content: '';
+    //     background: url('../../assets/img/AboutBgRight.svg');
+    //     background-position: center;
+    //     background-size: cover;
+    //     background-repeat: no-repeat;
+    //     width: 500px;
+    //     height: 900px;
+    //     position: absolute;
+    //     top: 25%;
+    //     right: 0;
 
-        @media (max-width: $media-tablet-landscape) {
-            width: 400px;
-            top: 10%;
-        }
-    }
+    //     @media (max-width: $media-phone) {
+    //         width: 400px;
+    //         top: 15%;
+    //     }
+    // }
 }
 
 .HeroBlock {
@@ -76,6 +75,17 @@
 
     @media (max-width: $media-tablet-landscape) {
         background-position: center top;
+        height: 850px;
+        background-size: 140%;
+    }
+
+    @media (max-width: $media-tablet) {
+        height: 900px;
+        background-size: 146%;
+    }
+
+    @media (max-width: $media-phone) {
+        background-position: center top;
         height: 650px;
         background-size: 150%;
     }
@@ -84,7 +94,7 @@
 .HeroContent {
     margin-bottom: 100px;
 
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-phone) {
         margin-bottom: 0px;
     }
 }
@@ -95,7 +105,7 @@
     line-height: 60px;
     padding-bottom: 24px;
 
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-phone) {
         font-size: 28px;
         line-height: 30px;
         padding-bottom: 36px;
@@ -109,6 +119,10 @@
 
     @media (max-width: $media-tablet-landscape) {
         flex-direction: column;
+        gap: 36px;
+    }
+
+    @media (max-width: $media-phone) {
         gap: 24px;
     }
 }
@@ -120,6 +134,16 @@
     line-height: 33px;
 
     @media (max-width: $media-tablet-landscape) {
+        width: 100%;
+        max-width: 823px;
+    }
+
+    @media (max-width: $media-tablet) {
+        width: 100%;
+        max-width: 526px;
+    }
+
+    @media (max-width: $media-phone) {
         width: 100%;
         font-size: 20px;
         line-height: 26px;
@@ -134,6 +158,16 @@
 
     @media (max-width: $media-tablet-landscape) {
         width: 100%;
+        max-width: 700px;
+    }
+
+    @media (max-width: $media-tablet) {
+        width: 100%;
+        max-width: 591px;
+    }
+
+    @media (max-width: $media-phone) {
+        width: 100%;
         font-size: 16px;
         line-height: 22px;
     }
@@ -145,12 +179,21 @@
 
 
 .DirectionBlock {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 150px;
     display: flex;
     gap: 20px;
 
+    @media (max-width: $media-tablet-landscape) {
+        margin-top: 20px;
+        margin-bottom: 120px;
+    }
+
     @media (max-width: $media-tablet) {
+        margin-top: 0px;
+    }
+
+    @media (max-width: $media-phone) {
         margin-top: 90px;
         margin-bottom: 90px;
         flex-direction: column;
@@ -171,7 +214,7 @@
     font-size: 28px;
     line-height: 120%;
 
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-phone) {
         line-height: 110%;
     }
 }
@@ -181,7 +224,7 @@
     font-size: 28px;
     line-height: 120%;
 
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-phone) {
         font-size: 18px;
         line-height: 140%;
     }

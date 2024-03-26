@@ -17,8 +17,6 @@
     line-height: 60px;
     margin-bottom: 60px;
 
-    @media (max-width: $media-tablet-landscape) {}
-
     @media (max-width: $media-phone) {
       font-size: 28px;
       line-height: 30px;
@@ -32,7 +30,7 @@
     margin-bottom: 37px;
     align-items: flex-end;
 
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-tablet) {
       align-items: flex-start;
       justify-content: center;
       flex-direction: column;
@@ -47,6 +45,10 @@
       margin-right: 60px;
       width: 100%;
 
+      @media (max-width: $media-tablet-landscape) {
+        margin-right: 20px;
+      }
+
       @media (max-width: $media-tablet) {
         margin-right: 0px;
         margin-bottom: 5px;
@@ -57,7 +59,7 @@
         line-height: 26px;
         margin-bottom: 24px;
 
-        @media (max-width: $media-tablet-landscape) {
+        @media (max-width: $media-tablet) {
           font-size: 20px;
           line-height: 26px;
           text-align: left;
@@ -100,7 +102,7 @@
       margin-right: 40px;
 
       @media (max-width: $media-tablet-landscape) {
-        margin-bottom: 0px;
+        margin-right: 0px;
       }
     }
   }
@@ -111,7 +113,6 @@
       font-size: 28px;
       line-height: 28px;
       margin-bottom: 8px;
-      @media (max-width: $media-tablet-landscape) {}
 
       @media (max-width: $media-phone) {
         font-size: 16px;
@@ -127,8 +128,6 @@
       line-height: 60px;
       margin-bottom: 16px;
 
-      @media (max-width: $media-tablet-landscape) {}
-
       @media (max-width: $media-phone) {
         font-size: 32px;
         line-height: 35px;
@@ -141,7 +140,7 @@
       font-size: 14px;
       line-height: 21px;
 
-      @media (max-width: $media-tablet-landscape) {
+      @media (max-width: $media-tablet) {
         font-size: 14px;
         line-height: 21px;
         text-align: left;
@@ -205,7 +204,7 @@ input[type="range"] {
   background-size: 0% 100%;
   background-repeat: no-repeat;
 
-  @media (max-width: $media-tablet-landscape) {
+  @media (max-width: $media-tablet) {
     width: 100%;
     max-width: unset;
     margin-right: 20px;
