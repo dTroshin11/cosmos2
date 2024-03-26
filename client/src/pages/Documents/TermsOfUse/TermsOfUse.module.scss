@@ -221,6 +221,10 @@
     margin-top: 4px;
     display: flex;
 
+    // @media (max-width: $media-phone) {
+    //     gap: 8px;
+    // }
+
     a {
         color: white;
         text-decoration: underline;
@@ -245,7 +249,7 @@
     @media (max-width: $media-phone) {
         font-size: 16px;
         line-height: 22px;
-        width: 16%;
+        width: 53px;
     }
 }
 
@@ -262,7 +266,7 @@
     @media (max-width: $media-phone) {
         font-size: 16px;
         line-height: 22px;
-        width: 84%;
+        width: 100%;
     }
 }
 
@@ -366,6 +370,3 @@
         opacity: 0.5;
     }
 }
-
-    
-
