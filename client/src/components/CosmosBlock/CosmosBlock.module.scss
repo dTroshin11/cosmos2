@@ -100,3 +100,18 @@ li span {
     line-height: 22px;
   }
 }
+
+.text {
+  position: relative;
+}
+
+.text:before {
+  content: " ";
+  border-radius: 20px;
+  position: absolute;
+  left: -20px;
+  width: 4px;
+  top: 8px;
+  height: 4px;
+  background-color: #0072F8;
+}
