@@ -3,10 +3,9 @@
 
 .Footer {
   width: 100%;
-  margin-bottom: 24px;
 
   @media (max-width: $media-tablet) {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 }
 
@@ -15,7 +14,7 @@
   font-size: 28px;
   line-height: 28px;
 
-  @media (max-width: $media-tablet-landscape) {
+  @media (max-width: $media-phone) {
     font-size: 20px;
     line-height: 26px;
   }
@@ -27,6 +26,10 @@
   gap: 66px;
 
   @media (max-width: $media-tablet-landscape) {
+    gap: 32px;
+  }
+
+  @media (max-width: $media-phone) {
     flex-direction: column;
     gap: 16px;
     margin-bottom: 36px;
@@ -58,8 +61,12 @@
   width: 100%;
   justify-content: space-between;
 
+  @media (max-width: $media-tablet) {
+    flex-direction: column;
+  }
+
   //align-items: center;
-  @media (max-width: $media-tablet-landscape) {
+  @media (max-width: $media-phone) {
     margin-top: 36px;
     flex-direction: column;
   }
@@ -72,7 +79,7 @@
   flex-direction: row;
 
   //align-items: flex-start;
-  @media (max-width: $media-tablet-landscape) {
+  @media (max-width: $media-phone) {
     flex-direction: column;
   }
 
@@ -104,15 +111,27 @@
   }
 }
 
+.RightLink {
+
+  @media (max-width: $media-tablet) {
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
 .LeftLink {
-  @media (max-width: $media-tablet-landscape) {
+  @media (max-width: $media-phone) {
     flex-direction: column;
   }
 
   a {
     margin-bottom: 37px;
 
-    @media (max-width: $media-tablet-landscape) {
+    @media (max-width: $media-tablet) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: $media-phone) {
       margin-bottom: 28px;
     }
   }

@@ -2,6 +2,7 @@
 @import "@/assets/styles/index.scss";
 
 .Instructions {
+    position: relative;
     padding-top: 120px;
     padding-bottom: 150px;
 
@@ -54,17 +55,17 @@
             padding: 16px;
             border-radius: 4px;
             background: #101010;
-            
+
 
             @media (max-width: $media-phone) {
                 width: 100%;
             }
-    
+
             .ItemLeft {
                 display: flex;
                 flex-direction: column;
                 gap: 4px;
-    
+
                 .ItemLink {
                     color: #FFF;
                     font-size: 18px;
@@ -72,13 +73,13 @@
                     text-decoration-line: underline;
                 }
             }
-    
+
             .ItemRight {
                 display: flex;
                 align-items: center;
                 gap: 6px;
                 align-self: flex-start;
-    
+
                 .ItemSize {
                     font-size: 12px;
                     line-height: 16px;
@@ -89,23 +90,38 @@
     }
 }
 
-
 .Divider {
     height: 1px;
     background: linear-gradient(270deg, rgba(92, 108, 140, 0.00) 0.5%, rgba(92, 108, 140, 0.27) 14%, #5C6C8C 29.69%, rgba(92, 108, 140, 0.00) 100%), #000;
 }
 
 .Footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    max-width: 1200px;
+
+    @media (max-width: $media-tablet) {
+        position: relative;
+    }
+
+    @media (max-width: $media-phone) {
+        width: 100%;
+    }
+
+
     .BottomWrapper {
         margin-top: 24px;
         display: flex;
-        //flex-direction: column;
-        flex-direction: row;
         width: 100%;
         justify-content: space-between;
+        flex-direction: row;
+        //flex-direction: column;
+
 
         @media (max-width: $media-tablet-landscape) {
-            flex-wrap: wrap;
+            margin-bottom: 24px;
+            flex-direction: column;
         }
 
         //align-items: center;
@@ -115,19 +131,19 @@
         }
     }
 
-    @media (max-width: $media-tablet) {
-        width: 100%;
-        padding-bottom: 90px;
-    }
-
     .LeftLink,
     .RightLink {
         display: flex;
         text-align: left;
         flex-direction: row;
+        justify-content: space-between;
 
         //align-items: flex-start;
-        @media (max-width: $media-tablet) {
+        @media (max-width: $media-tablet-landscape) {
+            justify-content: space-between;
+        }
+
+        @media (max-width: $media-phone) {
             flex-direction: column;
         }
 
@@ -159,6 +175,10 @@
         }
     }
 
+    .RightLink {
+        padding-right: 10px;
+    }
+
     .LeftLink {
         @media (max-width: $media-tablet) {
             flex-direction: column;
@@ -167,13 +187,11 @@
         a {
             margin-bottom: 37px;
 
-            @media (max-width: 580px) {
-                margin-bottom: 28px;
+            @media (max-width: $media-tablet-landscape) {
+                margin-bottom: 16px;
             }
         }
     }
-
-
 
     .footerText {
         font-size: 14px;
