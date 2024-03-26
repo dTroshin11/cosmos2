@@ -32,11 +32,11 @@
   }
 
   @media (max-width: $media-phone) {
-    //background: url("../../assets/img/gradBgLaptopMob.svg");
+    // background: url("../../assets/img/gradBgLaptopMob.svg");
     background: url("../../assets/img/gradBgLaptopMobile.svg");
     display: block;
-    width: 730px;
-    height: 710px;
+    width: 930px;
+    height: 1000px;
     top: -144px;
     left: -251px;
   }
@@ -101,21 +101,22 @@
   }
 
   @media (max-width: $media-tablet-landscape) {
-    grid-template-columns: 1fr 300px 1fr;
+    grid-template-columns: 230px 340px 280px;
     //flex-direction: column-reverse;
     ////align-items: flex-start;
     //align-items: center;
     //display: flex;
     justify-content: space-between;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
   }
 
   @media (max-width: $media-tablet) {
+    grid-template-columns: 1fr 300px 1fr;
     flex-direction: column-reverse;
     //align-items: flex-start;
     align-items: center;
     display: flex;
-    padding-bottom: 90px;
+    padding-bottom: 20px;
   }
 
   @media (max-width: $media-phone) {
@@ -123,6 +124,7 @@
     //align-items: flex-start;
     align-items: unset;
     display: flex;
+    padding-bottom: 0px;
   }
 
   .info__left {
@@ -302,6 +304,7 @@
     }
 
     @media (max-width: $media-phone) {
+      margin: 0px auto;
       background-image: url("../../assets/img/SecondLaptopMob.png");
       // width: 298px;
       width: 298px;

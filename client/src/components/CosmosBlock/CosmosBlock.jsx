@@ -18,7 +18,7 @@ const CosmosFeatureBlock = () => {
     return (
         <div className={Styles.CosmosBlock}>
             <div className={Styles.title}>
-                Собственная защищённая операционная система&nbsp;Cosm OS
+                Собственная защищённая операционная система Cosm&nbsp;OS
             </div>
             <div className={Styles.content}>
                 <img className={Styles.image} src={CosmosFeature} alt="" />

@@ -27,40 +27,40 @@
         }
     }
 
-    // &::before {
-    //     content: '';
-    //     background: url('../../assets/img/AboutBgLeft.svg');
-    //     background-position: center;
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    //     width: 500px;
-    //     height: 900px;
-    //     position: absolute;
-    //     top: 25%;
-    //     left: 0;
+    &::before {
+        content: '';
+        background: url('../../assets/img/AboutBgLeft.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 500px;
+        height: 900px;
+        position: absolute;
+        top: 25%;
+        left: 0;
 
-    //     @media (max-width: $media-phone) {
-    //         display: none;
-    //     }
-    // }
+        @media (max-width: $media-phone) {
+            display: none;
+        }
+    }
 
-    // &::after {
-    //     content: '';
-    //     background: url('../../assets/img/AboutBgRight.svg');
-    //     background-position: center;
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    //     width: 500px;
-    //     height: 900px;
-    //     position: absolute;
-    //     top: 25%;
-    //     right: 0;
+    &::after {
+        content: '';
+        background: url('../../assets/img/AboutBgRight.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 500px;
+        height: 900px;
+        position: absolute;
+        top: 25%;
+        right: 0;
 
-    //     @media (max-width: $media-phone) {
-    //         width: 400px;
-    //         top: 15%;
-    //     }
-    // }
+        @media (max-width: $media-phone) {
+            width: 400px;
+            top: 15%;
+        }
+    }
 }
 
 .HeroBlock {
