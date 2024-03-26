@@ -15,7 +15,7 @@ const Footer = () => {
             Пользовательские соглашения
           </Link>
 
-          <Link to={"/instructions"}
+          <Link to={""}
             rel='noopener'
           >
             Инструкции по&nbsp;установке и&nbsp;использованию ПО

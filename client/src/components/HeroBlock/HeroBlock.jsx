@@ -6,13 +6,13 @@ import React, { useState } from "react";
 const feature = [
     {
         title: <div>Собственная операционная&nbsp;система</div>,
-        subtitle: <div>С&nbsp;необходимыми программами и&nbsp;поддержкой Windows-приложений</div>,
+        subtitle: <div>С&nbsp;необходимыми программами и&nbsp;поддержкой&nbsp;Windows-приложений</div>,
         subtitleMob: <div>С&nbsp;необходимыми программами <br/>и&nbsp;поддержкой Windows-приложений</div>
     },
     {
         title: <div>Информационная
             безопасность</div>,
-        subtitle: <div>Полный контроль над системой и&nbsp;продвинутые функции кибербезопасности</div>
+        subtitle: <div>Полный контроль над системой и&nbsp;продвинутые&nbsp;функции кибербезопасности</div>
     },
     {
         title: <div>Аппаратный ключ безопасности</div>,
@@ -20,15 +20,15 @@ const feature = [
     },
     {
         title: <div>Персональный ИИ-помощник</div>,
-        subtitle: <div>Возьмёт на&nbsp;себя рутинные задачи</div>
+        subtitle: <div className={Styles.tablet_landscape_text_layouts}>Возьмёт на&nbsp;себя рутинные задачи</div>
     },
     {
         title: <div>Регулярные обновления и&nbsp;оперативная поддержка</div>,
-        subtitle: <div>Ваша безопасность всегда в&nbsp;актуальном&nbsp;состоянии</div>
+        subtitle: <div>Ваша безопасность всегда в&nbsp;актуальном состоянии</div>
     },
     {
-        title: <div style={{ maxWidth: '250px' }}>Производительный ноутбук</div>,
-        subtitle: <div>Мощности хватит для&nbsp;любых&nbsp;рабочих&nbsp;задач</div>
+        title: <div className={Styles.title_desk_layout}>Производительный ноутбук</div>,
+        subtitle: <div className={Styles.tablet_landscape_text_layouts}>Мощности хватит для&nbsp;любых&nbsp;рабочих&nbsp;задач</div>
     },
 ]
 const HeroBlock = ({ formBlockRef }) => {

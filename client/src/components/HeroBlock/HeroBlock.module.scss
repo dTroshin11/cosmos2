@@ -252,6 +252,7 @@
             background-position: unset;
             // max-width: 940px;
             width: 100%;
+            column-gap: 100px;
         }
 
         @media (max-width: $media-tablet) {
@@ -571,3 +572,22 @@
         transform: rotate(360deg)
     }
 }
+
+.tablet_landscape_text_layouts {
+
+    @media (max-width: $media-tablet-landscape) {
+        max-width: 215px;
+    }
+
+    @media (max-width: $media-tablet) {
+        max-width: none;
+    }
+}
+
+.title_desk_layout {
+    max-width: 250px;
+
+    @media (max-width: $media-tablet-landscape) {
+        max-width: none;
+    }
+} 
