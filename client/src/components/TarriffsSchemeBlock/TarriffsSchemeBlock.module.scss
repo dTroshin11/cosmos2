@@ -163,6 +163,7 @@
     justify-content: center;
     gap: 2px;
   }
+
 }
 
 .free {
@@ -484,6 +485,8 @@
 .mobileContent {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 20;
 }
 
 .buttons {
