@@ -101,7 +101,7 @@
   }
 
   @media (max-width: $media-tablet-landscape) {
-    grid-template-columns: 230px 340px 280px;
+    grid-template-columns: 230px 340px 330px;
     //flex-direction: column-reverse;
     ////align-items: flex-start;
     //align-items: center;
@@ -291,7 +291,7 @@
       //left: 13px;
       position: relative;
       top: 0px;
-      background-position: right 60px bottom 0px;
+      background-position: right 70px bottom 0px;
     }
 
     @media (max-width: $media-tablet) {
@@ -335,9 +335,10 @@
     z-index: -1;
 
     @media (max-width: 1185px) {
-      left: 105px;
+      left: 190px;
       width: 791px;
       height: 791px;
+      top: -121px;
     }
 
     @media (max-width: $media-tablet-landscape) {
