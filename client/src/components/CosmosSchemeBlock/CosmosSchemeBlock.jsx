@@ -161,7 +161,7 @@ const CosmosSchemeBlock = () => {
             <div className={Styles.content}>
 
                 {
-                    windowWidth > 768
+                    windowWidth > 850
                         ?
                         <>
                             <div className={Styles.columnText}>
@@ -207,7 +207,7 @@ const CosmosSchemeBlock = () => {
 
 
                 {
-                    windowWidth <= 768
+                    windowWidth <= 850
                         ?
                         <div className={Styles.Mobile}>
                             <div className={Styles.MobileTitles}>
