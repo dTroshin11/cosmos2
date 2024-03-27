@@ -120,6 +120,7 @@
   }
 
   @media (max-width: $media-phone) {
+    margin-top: -17px;
     flex-direction: column-reverse;
     //align-items: flex-start;
     align-items: unset;
