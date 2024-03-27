@@ -24,46 +24,45 @@
     width: 100%;
     align-items: flex-start;
 
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: -250px;
-      left: -200px;
-      width: 600px;
-      height: 460px;
-      background-image: url("../../assets/img/gradBgLaptop.svg");
-      background-size: cover;
-      background-position: center left;
-      background-repeat: no-repeat;
-      z-index: -1;
-    }
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   top: -250px;
+    //   left: -200px;
+    //   width: 600px;
+    //   height: 460px;
+    //   background-image: url("../../assets/img/gradBgLaptop.svg");
+    //   background-size: cover;
+    //   background-position: center left;
+    //   background-repeat: no-repeat;
+    //   z-index: -1;
+    // }
   }
 
-  @media (max-width: $media-tablet) {
-    //background-image: url("../../assets/img/formBgMobile.svg");
-    background-size: cover;
-    padding: 60px;
-    flex-direction: column-reverse;
-    margin-bottom: 120px;
-    max-width: 620px;
-    width: 100%;
-    align-items: flex-start;
+  // @media (max-width: $media-tablet) {
+  //   //background-image: url("../../assets/img/formBgMobile.svg");
+  //   background-size: cover;
+  //   padding: 60px;
+  //   flex-direction: column-reverse;
+  //   margin-bottom: 120px;
+  //   max-width: 620px;
+  //   width: 100%;
+  //   align-items: flex-start;
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: -250px;
-      left: -200px;
-      width: 600px;
-      height: 460px;
-      background-image: url("../../assets/img/gradBgLaptop.svg");
-      background-size: cover;
-      background-position: center left;
-      background-repeat: no-repeat;
-      z-index: -1;
-    }
-  }
+  //   &:before {
+  //     content: '';
+  //     position: absolute;
+  //     top: -250px;
+  //     left: -200px;
+  //     width: 600px;
+  //     height: 460px;
+  //     background-image: url("../../assets/img/gradBgLaptop.svg");
+  //     background-size: cover;
+  //     background-position: center left;
+  //     background-repeat: no-repeat;
+  //     z-index: -1;
+  //   }
+  // }
 
   @media (max-width: $media-phone) {
     background-image: url("../../assets/img/formBgMobile.svg");
@@ -82,7 +81,7 @@
       left: -600px;
       width: 600px + 600px + 600px;
       height: 460px + 460px + 460px;
-      // background-image: url("../../assets/img/gradBgLaptop.svg");
+      background-image: url("../../assets/img/gradBgLaptop.svg");
       background-size: cover;
       background-position: center left;
       background-repeat: no-repeat;
@@ -194,14 +193,16 @@
       input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
         background-color: #fff;
       }
+
       input::-webkit-contacts-auto-fill-button {
         background-color: #fff;
       }
+
       input:-webkit-autofill,
       input:-webkit-autofill:hover,
       input:-webkit-autofill:focus,
-      input:-webkit-autofill:active{
-        -webkit-text-fill-color: #ffffff!important;
+      input:-webkit-autofill:active {
+        -webkit-text-fill-color: #ffffff !important;
         transition: background-color 5000s ease-in-out 0s;
       }
 
@@ -258,6 +259,7 @@
           font-size: 12px;
           line-height: 25px;
           margin-top: 2px;
+
           a {
             color: #80A7FF;
             text-decoration: underline;
@@ -384,6 +386,20 @@ input:focus {
   z-index: -1;
 
   @media (max-width: $media-tablet-landscape) {
+    width: 2400px;
+    height: 1848px;
+    top: -400px;
+    left: -900px;
+  }
+
+  @media (max-width: $media-tablet) {
+    width: 2400px;
+    height: 1848px;
+    top: -350px;
+    left: -900px;
+  }
+
+  @media (max-width: $media-phone) {
     display: none;
   }
 }

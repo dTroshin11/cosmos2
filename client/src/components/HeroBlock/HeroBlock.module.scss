@@ -518,30 +518,33 @@
     z-index: -1;
 
     @media (max-width: $media-tablet-landscape) {
-        top: 20px;
-        left: -660px;
-        width: 2137px;
-        height: 1700px;
+        width: 2437px;
+        height: 2100px;
         //background: url("../../assets/img/mainGradBg.svg");
-        top: -170px;
-        left: -460px;
+        top: -550px;
+        left: -560px;
         opacity: 0.5;
         // display: none;
         // left: -450px;
     }
     @media (max-width: $media-tablet) {
         //background: url("../../assets/img/mainGradBg.svg");
-        width: 2337px;
-        height: 1900px;
-        top: -195px;
+        width: 2637px;
+        height: 2300px;
+        top: -600px;
         left: -1160px;
+      //
+      //width: 2337px;
+      //height: 1900px;
+      //top: -195px;
+      //left: -1160px;
         // display: none;
         // left: -450px;
     }
     @media (max-width: $media-phone) {
         //background: url("../../assets/img/mainGradBg.svg");
-        top: -170px;
-        left: -460px;
+        top: -770px;
+        left: -560px;
         // display: none;
         // left: -450px;
     }
