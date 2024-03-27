@@ -180,11 +180,13 @@
     }
 
     .HeroFeature__image {
-        background-image: url("../../assets/img/mainLaptop2.png");
-        background-size: fit;
+        background-image: url("../../assets/img/mainLaptop2X2.png");
+        //background-image: url("../../assets/img/mainLaptop2.png");
+        background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
-        width: 100%;
+        //width: 100%;
+        width: 1082px;
         height: auto;
         padding-bottom: 53%;
 
