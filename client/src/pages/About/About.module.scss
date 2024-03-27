@@ -37,6 +37,7 @@
         height: 900px;
         position: absolute;
         top: 25%;
+        pointer-events: none;
         left: 0;
 
         @media (max-width: $media-phone) {
