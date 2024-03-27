@@ -386,14 +386,14 @@ input:focus {
   z-index: -1;
 
   @media (max-width: $media-tablet-landscape) {
-    width: 2400px;
-    height: 1848px;
-    top: -400px;
-    left: -900px;
+    width: 2100px;
+    height: 1648px;
+    top: -300px;
+    left: -700px;
   }
 
   @media (max-width: $media-tablet) {
-    width: 2400px;
+    width: 2200px;
     height: 1848px;
     top: -350px;
     left: -900px;
