@@ -14,7 +14,12 @@
   font-size: 28px;
   line-height: 28px;
 
+  @media (max-width: $media-tablet-landscape) {
+    margin-bottom: 36px;
+  }
+
   @media (max-width: $media-phone) {
+    margin-bottom: 24px;
     font-size: 20px;
     line-height: 26px;
   }
@@ -51,8 +56,17 @@
     text-decoration: underline;
     transition: background-color .3s, opacity .3s;
 
-    &:hover {
-      opacity: 0.5;
+    &:first-child {
+
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &:last-child {
+      opacity: 0.4;
+      cursor: default;
     }
   }
 }

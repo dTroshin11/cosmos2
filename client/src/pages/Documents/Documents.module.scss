@@ -1,6 +1,8 @@
 @import "@/assets/styles/variables.scss";
 @import "@/assets/styles/index.scss";
 
+
+
 .Documents {
     position: relative;
     padding-top: 120px;
@@ -9,22 +11,6 @@
     @media (max-width: $media-phone) {
         padding-top: 70px;
         padding-bottom: 48px;
-    }
-
-
-    .Back {
-        display: flex;
-        gap: 8px;
-        color: white;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 25px;
-        text-decoration: none;
-        transition: background-color .3s, opacity .3s;
-
-        &:hover {
-            opacity: 0.5;
-        }
     }
 
     .Title {
@@ -39,6 +25,22 @@
             margin-bottom: 24px;
         }
     }
+
+    .Back {
+        display: flex;
+        gap: 8px;
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        text-decoration: none;
+        transition: background-color .3s, opacity .3s;
+    
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
 
     .Links {
         ul {

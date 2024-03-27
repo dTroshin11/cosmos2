@@ -137,17 +137,16 @@
     margin-bottom: 36px;
 
     @media (max-width: $media-tablet-landscape) {
-      height: 120px;
+      height: 70px;
 
     }
     @media (max-width: $media-tablet) {
-      //height: 140px;
+      height: fit-content;
       margin-bottom: 36px;
     }
 
 
     @media (max-width: $media-phone) {
-      height: fit-content;
       margin-bottom: 20px;
     }
   }
