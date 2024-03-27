@@ -162,6 +162,12 @@
     flex-direction: column;
     justify-content: center;
     gap: 2px;
+    @media (max-width: $media-tablet-landscape) {
+      max-width: 600px;
+    }
+    @media (max-width: $media-tablet) {
+      max-width: unset;
+    }
   }
 
 }
