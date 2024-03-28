@@ -22,9 +22,9 @@ const Documents = () => {
 
     return (
         <>
+            <Header />
             <div className={Styles.Documents}>
-                <Header />
-                <Back className={Styles.Back}/>
+                <Back className={Styles.Back} />
                 <div className={Styles.Title}>Пользовательские <br />
                     соглашения</div>
                 <div className={Styles.Links}>
