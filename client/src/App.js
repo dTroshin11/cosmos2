@@ -23,13 +23,13 @@ function App() {
           <div className={Styles.mainWrapper}>
             <Routes>
               <Route path="/about" element={<About />} />
-              <Route path="/" element={<Main formBlockRef={formBlockRef} />} />
+              <Route path="*" element={<Main formBlockRef={formBlockRef} />} />
               <Route path="/agreements" element={<Documents />} />
               <Route path="/end-user-agreement" element={<License />} />
               <Route path="/user-agreement-ai" element={<TermsOfUse />} />
               <Route path="/personal-data-agreement" element={<PersonalData />} />
               <Route path="/instructions" element={<Instructions />} />
-              <Route path="*" element={<NotFound />} />
+              {/*<Route path="*" element={<NotFound />} />*/}
             </Routes>
           </div>
         </Container>
