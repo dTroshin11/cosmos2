@@ -101,7 +101,7 @@
   }
 
   @media (max-width: $media-tablet-landscape) {
-    grid-template-columns: 230px 340px 280px;
+    grid-template-columns: 230px 375px 330px;
     //flex-direction: column-reverse;
     ////align-items: flex-start;
     //align-items: center;
@@ -120,6 +120,7 @@
   }
 
   @media (max-width: $media-phone) {
+    margin-top: -17px;
     flex-direction: column-reverse;
     //align-items: flex-start;
     align-items: unset;
@@ -285,12 +286,12 @@
     }
 
     @media (max-width: $media-tablet-landscape) {
-      width: 485px;
-      height: 495px;
-      //left: 13px;
+      background-image: url("../../assets/img/SecondLaptopTab.png");
+      width: 522px;
+      height: 500px;
       position: relative;
       top: 0px;
-      background-position: right 60px bottom 0px;
+      background-position: right 83px bottom -9px;
     }
 
     @media (max-width: $media-tablet) {
@@ -300,7 +301,7 @@
       //left: 13px;
       position: relative;
       top: 0px;
-      background-position: right 0px bottom 0px;
+      background-position: right 0px bottom 30px;
     }
 
     @media (max-width: $media-phone) {
@@ -334,16 +335,17 @@
     z-index: -1;
 
     @media (max-width: 1185px) {
-      left: 105px;
+      left: 190px;
       width: 791px;
       height: 791px;
+      top: -121px;
     }
 
     @media (max-width: $media-tablet-landscape) {
       width: 664px;
       height: 664px;
-      left: -170px;
-      top: -99px;
+      left: -149px;
+      top: -77px;
     }
 
     @media (max-width: $media-tablet) {

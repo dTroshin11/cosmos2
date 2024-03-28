@@ -24,7 +24,7 @@ const CosmosFeatureBlock = () => {
                 <img className={Styles.image} src={CosmosFeature} alt="" />
                 <div className={Styles.items__list}>
                 {item.map((el, index) => {
-                return <div key={index} className={Styles.text}><span>{el}</span></div>
+                return <div key={index} className={Styles.text}><span className={Styles.textElement}>{el}</span></div>
                     })}
                 </div>
             </div>
