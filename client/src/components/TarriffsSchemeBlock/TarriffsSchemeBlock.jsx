@@ -18,48 +18,48 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             text: <div className={Styles.small}>Цена</div>,
             free: <div className={Styles.small}>
                 <span className={Styles.price}>
-                    {windowWidth > 1024
+                    {windowWidth > 1100
                         ? <>0 ₽</>
                         : <>0 ₽/мес*</>
                     }
                 </span>
-                {windowWidth > 1024
+                {windowWidth > 1100
                     ? <span>в месяц</span>
                     : ''
                 }
             </div>,
             light: <div className={Styles.small}>
                 <span className={Styles.price}>
-                    {windowWidth > 1024
+                    {windowWidth > 1100
                         ? <>10 500 ₽</>
                         : <>10 500 ₽/мес*</>
                     }
                 </span>
-                {windowWidth > 1024
+                {windowWidth > 1100
                     ? <span>в месяц</span>
                     : ''
                 }
             </div>,
             standart: <div className={Styles.small}>
                 <span className={Styles.price}>
-                    {windowWidth > 1024
+                    {windowWidth > 1100
                         ? <>21 000 ₽</>
                         : <>21 000 ₽/мес*</>
                     }
                 </span>
-                {windowWidth > 1024
+                {windowWidth > 1100
                     ? <span>в месяц</span>
                     : ''
                 }
             </div>,
             premium: <div className={Styles.small}>
                 <span className={Styles.price}>
-                    {windowWidth > 1024
+                    {windowWidth > 1100
                         ? <>31 500 ₽</>
                         : <>31 500 ₽/мес*</>
                     }
                 </span>
-                {windowWidth > 1024
+                {windowWidth > 1100
                     ? <span>в месяц</span>
                     : ''
                 }
@@ -277,48 +277,48 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             text: <div className={Styles.small}>Цена</div>,
             free: <div className={Styles.small}>
                 <span className={Styles.price}>
-                    {windowWidth > 1024
+                    {windowWidth > 1100
                         ? <>0 ₽</>
                         : <>0 ₽/мес*</>
                     }
                 </span>
-                {windowWidth > 1024
+                {windowWidth > 1100
                     ? <span>в месяц</span>
                     : ''
                 }
             </div>,
             light: <div className={Styles.small}>
                 <span className={Styles.price}>
-                    {windowWidth > 1024
+                    {windowWidth > 1100
                         ? <>10 500 ₽</>
                         : <>10 500 ₽/мес*</>
                     }
                 </span>
-                {windowWidth > 1024
+                {windowWidth > 1100
                     ? <span>в месяц</span>
                     : ''
                 }
             </div>,
             standart: <div className={Styles.small}>
                 <span className={Styles.price}>
-                    {windowWidth > 1024
+                    {windowWidth > 1100
                         ? <>21 000 ₽</>
                         : <>21 000 ₽/мес*</>
                     }
                 </span>
-                {windowWidth > 1024
+                {windowWidth > 1100
                     ? <span>в месяц</span>
                     : ''
                 }
             </div>,
             premium: <div className={Styles.small}>
                 <span className={Styles.price}>
-                    {windowWidth > 1024
+                    {windowWidth > 1100
                         ? <>31 500 ₽</>
                         : <>31 500 ₽/мес*</>
                     }
                 </span>
-                {windowWidth > 1024
+                {windowWidth > 1100
                     ? <span>в месяц</span>
                     : ''
                 }
