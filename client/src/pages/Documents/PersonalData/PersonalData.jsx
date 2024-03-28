@@ -46,7 +46,7 @@ const PersonalData = () => {
 
 
     return (
-        <div>
+        <>
             <Header />
             <div className={Styles.Documents}>
                 <Back className={Styles.MobileBack} />
@@ -62,7 +62,7 @@ const PersonalData = () => {
                 </div>
                 <div className={Styles.Content}>
                     <div id={"1"} name={"1"} ref={licenseRef} className={Styles.Title}>
-                        Согласие на обработку персональных данных
+                        Согласие на&nbsp;обработку персональных данных
                     </div>
                     <div className={Styles.ItemList}>
                         {items.map((obj, index) => {
@@ -99,7 +99,7 @@ const PersonalData = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

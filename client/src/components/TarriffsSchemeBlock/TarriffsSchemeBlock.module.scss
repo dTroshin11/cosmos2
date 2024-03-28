@@ -515,6 +515,10 @@
   background: #0072F8 !important;
   transition: background-color .3s, opacity .3s;
 
+  .buttonText {
+    z-index: 20;
+  }
+
   @media (max-width: $media-tablet-landscape) {
     height: 44px;
   }

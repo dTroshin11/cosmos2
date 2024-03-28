@@ -468,7 +468,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             <div className={Styles.title}>
                 Тарифы
             </div>
-            {windowWidth > 1024 && (
+            {windowWidth > 960 && (
                 <div className={Styles.content}>
                     <div className={Styles.columnMain}>
                         <div className={Styles.titles}>
@@ -543,7 +543,7 @@ const TariffsSchemeBlock = ({ formBlockRef }) => {
             )}
 
 
-            {windowWidth <= 1024 && (
+            {windowWidth <= 960 && (
                 <>
                     {mobileSchemaArr.map((obj, index) => (
                         <MobileSchema title={obj.title} key={index} arr={obj.arr} id={obj.id} />

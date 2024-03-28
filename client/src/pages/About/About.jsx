@@ -45,41 +45,43 @@ const About = () => {
     ]
 
     return (
-        <div className={Styles.About}>
+        <>
             <Header />
-            <Back className={Styles.Back}/>
-            <div className={Styles.HeroBlock}>
-                <div className={Styles.HeroContent}>
-                    <div className={Styles.Title}>О нас</div>
-                    <div className={Styles.Text}>
-                        <div className={Styles.Mission}>
-                            Наша миссия — создать конкурентную, доступную и&nbsp;безопасную экосистему продуктов для&nbsp;защиты частной жизни пользователей в&nbsp;цифровом пространстве.
+            <div className={Styles.About}>
+                <Back className={Styles.Back} />
+                <div className={Styles.HeroBlock}>
+                    <div className={Styles.HeroContent}>
+                        <div className={Styles.Title}>О нас</div>
+                        <div className={Styles.Text}>
+                            <div className={Styles.Mission}>
+                                Наша миссия — создать конкурентную, доступную и&nbsp;безопасную экосистему продуктов для&nbsp;защиты частной жизни пользователей в&nbsp;цифровом пространстве.
+                            </div>
+                            <div className={Styles.Description}>
+                                <div>Мы верим, что она позволит контролировать персональные данные и&nbsp;избегать рисков трекинга, слежки, таргетированной рекламы, персонализированных маркетинговых действий и&nbsp;манипуляций мнением, восприятием и&nbsp;выбором.</div>
+                                <div>Наша команда делает всё, чтобы наш клиент мог не&nbsp;беспокоиться о&nbsp;своей безопасности и&nbsp;приватности.</div>
+                            </div>
                         </div>
-                        <div className={Styles.Description}>
-                            <div>Мы верим, что она позволит контролировать персональные данные и&nbsp;избегать рисков трекинга, слежки, таргетированной рекламы, персонализированных маркетинговых действий и&nbsp;манипуляций мнением, восприятием и&nbsp;выбором.</div>
-                            <div>Наша команда делает всё, чтобы наш клиент мог не&nbsp;беспокоиться о&nbsp;своей безопасности и&nbsp;приватности.</div>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-            <div className={Styles.DirectionBlock}>
-                {items.map((obj, index) => {
-                    return <div className={Styles.Person} key={index}>
-                        <div className={Styles.Image}>
-                            <img src={windowWidth <= 650 ? obj.imageMobile : obj.image} alt="" />
-                        </div>
-                        <div className={Styles.Name}>
-                            {obj.name}
-                        </div>
-                        <div className={Styles.JobTitle}>
-                            {obj.jobTitle}
-                        </div>
                     </div>
-                })}
+                </div>
+                <div className={Styles.DirectionBlock}>
+                    {items.map((obj, index) => {
+                        return <div className={Styles.Person} key={index}>
+                            <div className={Styles.Image}>
+                                <img src={windowWidth <= 650 ? obj.imageMobile : obj.image} alt="" />
+                            </div>
+                            <div className={Styles.Name}>
+                                {obj.name}
+                            </div>
+                            <div className={Styles.JobTitle}>
+                                {obj.jobTitle}
+                            </div>
+                        </div>
+                    })}
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        </>
     );
 };
 
